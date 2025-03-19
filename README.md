@@ -1,4 +1,4 @@
-# OCTOPUS
+# FANTASY
 ![image](https://github.com/user-attachments/assets/58c29eff-75a4-4299-af42-b0da09a21451)
 # 게임 초안
 ![image](https://github.com/user-attachments/assets/368eda0b-a154-4200-b7e6-3e58465bdf64)
