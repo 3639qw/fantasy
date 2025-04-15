@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class PopupManager : MonoBehaviour
 {
+    
+    
     public GameObject popupPanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        ClosePopup();
+        //ClosePopup();
     }
     public void OpenPopup()
     {
