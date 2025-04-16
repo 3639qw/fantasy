@@ -2315,7 +2315,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 417}
-  m_SizeDelta: {x: 700, y: 200}
+  m_SizeDelta: {x: 2000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1726764186
 MonoBehaviour:
@@ -2337,7 +2337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fantasy
+  m_text: Hero's Harvest
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5fc2c4e0c2626b94b9e7a18024d7c2d5, type: 2}
   m_sharedMaterial: {fileID: -4746842769007879639, guid: 5fc2c4e0c2626b94b9e7a18024d7c2d5, type: 2}

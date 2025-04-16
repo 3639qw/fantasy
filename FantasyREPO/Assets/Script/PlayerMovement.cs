@@ -15,14 +15,14 @@ public class PlayerMovement : MonoBehaviour
     private const string _lastHorizontal = "LastHorizontal";
     private const string _lastVertical = "LastVertical";
 
-    // === Ÿ�� ���� ���� ===
-    [Header("Ÿ�� ���� ����")]
-    [SerializeField] private Tilemap tilemap;                    // Ÿ�ϸ�
+    [Header("룰타일")]
+    [SerializeField] private Tilemap tilemap;                    
     [SerializeField] private TileBase grassTile;                 // Grass_1_Middle_0
     [SerializeField] private TileBase tilledTile;                // Grass_Tiles_1_41
     [SerializeField] private TileBase farmTile;
+    [SerializeField] private TileBase wetfarmTile;
 
-    private Vector2 _lastDirection = Vector2.down;  // ������ ���� ����
+    private Vector2 _lastDirection = Vector2.down;
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // === �̵� ó�� ===
+    
         vector.Set(InputManager.Movement.x, InputManager.Movement.y);
         _rb.linearVelocity = vector * _moveSpeed;
 
@@ -46,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
             _lastDirection = vector.normalized;
         }
 
-        // === �� ���� (�����̽���) ===
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TryTillGround();
@@ -55,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     void TryTillGround()
 {
-    Vector3 targetWorldPos = transform.position + (Vector3)_lastDirection;
+    Vector3 targetWorldPos = transform.position;
     Vector3Int tilePos = tilemap.WorldToCell(targetWorldPos);
 
     TileBase currentTile = tilemap.GetTile(tilePos);
@@ -71,8 +70,15 @@ public class PlayerMovement : MonoBehaviour
         Vector3Int centerPos = tilePos; // 중심 타일로 간주
         if (Is3x3Tilled(centerPos))
         {
-            Replace3x3WithFarm(centerPos);
+            Replace3x3WithFarm(centerPos,farmTile);
         }
+    }
+    else
+    {
+        Vector3Int centerPos = tilePos;
+        Replace3x3WithFarm(centerPos,wetfarmTile);
+        
+        Debug.Log("abc");
     }
 }
 
@@ -90,14 +96,14 @@ bool Is3x3Tilled(Vector3Int center)
     return true;
 }
 
-void Replace3x3WithFarm(Vector3Int center)
+void Replace3x3WithFarm(Vector3Int center, TileBase tile)
 {
     for (int x = -1; x <= 1; x++)
     {
         for (int y = -1; y <= 1; y++)
         {
             Vector3Int changePos = center + new Vector3Int(x, y, 0);
-            tilemap.SetTile(changePos, farmTile);
+            tilemap.SetTile(changePos, tile);
         }
     }
 }
