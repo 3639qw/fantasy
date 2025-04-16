@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Tilemap tilemap;                    // Ÿ�ϸ�
     [SerializeField] private TileBase grassTile;                 // Grass_1_Middle_0
     [SerializeField] private TileBase tilledTile;                // Grass_Tiles_1_41
+    [SerializeField] private TileBase farmTile;
 
     private Vector2 _lastDirection = Vector2.down;  // ������ ���� ����
 
@@ -53,15 +54,52 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void TryTillGround()
+{
+    Vector3 targetWorldPos = transform.position + (Vector3)_lastDirection;
+    Vector3Int tilePos = tilemap.WorldToCell(targetWorldPos);
+
+    TileBase currentTile = tilemap.GetTile(tilePos);
+
+    if (currentTile == grassTile)
     {
-        Vector3 targetWorldPos = transform.position + (Vector3)_lastDirection;
-        Vector3Int tilePos = tilemap.WorldToCell(targetWorldPos);
-
-        TileBase currentTile = tilemap.GetTile(tilePos);
-
-        if (currentTile == grassTile)
+        // 1단계: 풀 → 밭으로
+        tilemap.SetTile(tilePos, tilledTile);
+    }
+    else if (currentTile == tilledTile)
+    {
+        // 2단계: 밭 상태에서 주변 3x3이 전부 밭이면 → 농장으로
+        Vector3Int centerPos = tilePos; // 중심 타일로 간주
+        if (Is3x3Tilled(centerPos))
         {
-            tilemap.SetTile(tilePos, tilledTile);
+            Replace3x3WithFarm(centerPos);
         }
     }
+}
+
+bool Is3x3Tilled(Vector3Int center)
+{
+    for (int x = -1; x <= 1; x++)
+    {
+        for (int y = -1; y <= 1; y++)
+        {
+            Vector3Int checkPos = center + new Vector3Int(x, y, 0);
+            if (tilemap.GetTile(checkPos) != tilledTile)
+                return false;
+        }
+    }
+    return true;
+}
+
+void Replace3x3WithFarm(Vector3Int center)
+{
+    for (int x = -1; x <= 1; x++)
+    {
+        for (int y = -1; y <= 1; y++)
+        {
+            Vector3Int changePos = center + new Vector3Int(x, y, 0);
+            tilemap.SetTile(changePos, farmTile);
+        }
+    }
+}
+
 }
