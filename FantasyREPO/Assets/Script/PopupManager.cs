@@ -2,22 +2,23 @@ using UnityEngine;
 
 public class PopupManager : MonoBehaviour
 {
-    
-    
-    public GameObject popupPanel;
+
+    public GameObject loginPanel;
+    public GameObject registerPanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        //ClosePopup();
-    }
-    public void OpenPopup()
-    {
-        popupPanel.SetActive(true);
+        loginPanel.SetActive(true);
+        registerPanel.SetActive(false);
     }
 
-    // Update is called once per frame
-    public void ClosePopup()
+    /// <summary>
+    /// 회원가입 버튼 클릭시 해당 dialog active
+    /// </summary>
+    public void registerButtonClick()
     {
-        popupPanel.SetActive(false);
+        loginPanel.SetActive(!loginPanel.activeSelf);
+        registerPanel.SetActive(!registerPanel.activeSelf);
     }
+    
 }
