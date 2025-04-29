@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private const string _lastHorizontal = "LastHorizontal";
     private const string _lastVertical = "LastVertical";
 
-    [Header("룰타일")]
-    [SerializeField] private Tilemap tilemap;                    
+    [Header("룰타일 설정")]
+    [SerializeField] private Tilemap tilemap;
     [SerializeField] private TileBase grassTile;                 // Grass_1_Middle_0
     [SerializeField] private TileBase tilledTile;                // Grass_Tiles_1_41
     [SerializeField] private TileBase farmTile;
@@ -24,15 +25,35 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 _lastDirection = Vector2.down;
 
+    [Header("스태미나 설정")]
+    [SerializeField] private float maxStamina = 100f;
+    [SerializeField] private float staminaRecoverySpeed = 10f;
+    [SerializeField] private float staminaConsumption = 5f;
+    [SerializeField] private float staminaConsumptionFor3x3 = 15f;
+
+    private float stamina;
+
+    [Header("스태미나 UI (Image Fill)")]
+    [SerializeField] private Image staminaFillImage;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
     }
 
-    void Update()
+    private void Start()
     {
-    
+        stamina = maxStamina;
+
+        if (staminaFillImage != null)
+        {
+            staminaFillImage.fillAmount = 1f;
+        }
+    }
+
+    private void Update()
+    {
         vector.Set(InputManager.Movement.x, InputManager.Movement.y);
         _rb.linearVelocity = vector * _moveSpeed;
 
@@ -46,66 +67,97 @@ public class PlayerMovement : MonoBehaviour
             _lastDirection = vector.normalized;
         }
 
+        RecoverStamina();
+
+        if (staminaFillImage != null)
+        {
+            staminaFillImage.fillAmount = stamina / maxStamina;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TryTillGround();
         }
     }
 
+    void RecoverStamina()
+    {
+        if (stamina < maxStamina)
+        {
+            stamina += staminaRecoverySpeed * Time.deltaTime;
+            if (stamina > maxStamina)
+                stamina = maxStamina;
+        }
+    }
+
+    void ConsumeStamina(float amount)
+    {
+        stamina -= amount;
+        if (stamina < 0f)
+        {
+            stamina = 0f;
+        }
+    }
+
     void TryTillGround()
-{
-    Vector3 targetWorldPos = transform.position;
-    Vector3Int tilePos = tilemap.WorldToCell(targetWorldPos);
-
-    TileBase currentTile = tilemap.GetTile(tilePos);
-
-    if (currentTile == grassTile)
     {
-        // 1단계: 풀 → 밭으로
-        tilemap.SetTile(tilePos, tilledTile);
-    }
-    else if (currentTile == tilledTile)
-    {
-        // 2단계: 밭 상태에서 주변 3x3이 전부 밭이면 → 농장으로
-        Vector3Int centerPos = tilePos; // 중심 타일로 간주
-        if (Is3x3Tilled(centerPos))
+        if (stamina <= 0f)
         {
-            Replace3x3WithFarm(centerPos,farmTile);
+            Debug.Log("스태미나가 부족해서 작업할 수 없습니다!");
+            return; // 스태미나 없으면 작업 중단
+        }
+
+        Vector3 targetWorldPos = transform.position;
+        Vector3Int tilePos = tilemap.WorldToCell(targetWorldPos);
+
+        TileBase currentTile = tilemap.GetTile(tilePos);
+
+        if (currentTile == grassTile)
+        {
+            tilemap.SetTile(tilePos, tilledTile);
+            ConsumeStamina(staminaConsumption); // 기본 소모
+        }
+        else if (currentTile == tilledTile)
+        {
+            Vector3Int centerPos = tilePos;
+            if (Is3x3Tilled(centerPos))
+            {
+                Replace3x3WithFarm(centerPos, farmTile);
+                ConsumeStamina(staminaConsumptionFor3x3); // 3x3 소모
+            }
+        }
+        else
+        {
+            Vector3Int centerPos = tilePos;
+            Replace3x3WithFarm(centerPos, wetfarmTile);
+            ConsumeStamina(staminaConsumptionFor3x3); // 3x3 소모
+            Debug.Log("abc");
         }
     }
-    else
-    {
-        Vector3Int centerPos = tilePos;
-        Replace3x3WithFarm(centerPos,wetfarmTile);
-        
-        Debug.Log("abc");
-    }
-}
 
-bool Is3x3Tilled(Vector3Int center)
-{
-    for (int x = -1; x <= 1; x++)
+    bool Is3x3Tilled(Vector3Int center)
     {
-        for (int y = -1; y <= 1; y++)
+        for (int x = -1; x <= 1; x++)
         {
-            Vector3Int checkPos = center + new Vector3Int(x, y, 0);
-            if (tilemap.GetTile(checkPos) != tilledTile)
-                return false;
+            for (int y = -1; y <= 1; y++)
+            {
+                Vector3Int checkPos = center + new Vector3Int(x, y, 0);
+                if (tilemap.GetTile(checkPos) != tilledTile)
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    void Replace3x3WithFarm(Vector3Int center, TileBase tile)
+    {
+        for (int x = -1; x <= 1; x++)
+        {
+            for (int y = -1; y <= 1; y++)
+            {
+                Vector3Int changePos = center + new Vector3Int(x, y, 0);
+                tilemap.SetTile(changePos, tile);
+            }
         }
     }
-    return true;
-}
-
-void Replace3x3WithFarm(Vector3Int center, TileBase tile)
-{
-    for (int x = -1; x <= 1; x++)
-    {
-        for (int y = -1; y <= 1; y++)
-        {
-            Vector3Int changePos = center + new Vector3Int(x, y, 0);
-            tilemap.SetTile(changePos, tile);
-        }
-    }
-}
-
 }
