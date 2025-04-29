@@ -3,14 +3,34 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    static public Inventory instance = null;
+    
     [Header("인벤토리 아이템")]
     public Image hand1; // 1번째 기구
     public Image hand2; // 2번째 기구
     public Image hand3; // 3번째 기구
-    public int states; // 최초 장착기구 (1,2,3)
+    protected internal int states = 1; // 최초 장착기구 (1,2,3)
+    
+    
+    public static Inventory Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                return null;
+            }
+            return instance;
+        }
+    }
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        
         SetHandAlpha(states);
     }
 
