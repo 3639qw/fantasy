@@ -69,14 +69,34 @@ public class PlayerMovement : MonoBehaviour
 
         RecoverStamina();
 
+        // 스태미나 UI 업데이트
         if (staminaFillImage != null)
         {
             staminaFillImage.fillAmount = stamina / maxStamina;
         }
 
+        // 스페이스 키 입력
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            TryTillGround();
+            Vector3 targetWorldPos = transform.position;
+            Vector3Int tilePos = tilemap.WorldToCell(targetWorldPos);
+            TileBase currentTile = tilemap.GetTile(tilePos);
+
+            float requiredStamina = 0f;
+
+            if (currentTile == grassTile)
+                requiredStamina = staminaConsumption;
+            else if (currentTile == tilledTile || currentTile == farmTile || currentTile == wetfarmTile)
+                requiredStamina = staminaConsumptionFor3x3;
+
+            if (stamina >= requiredStamina)
+            {
+                TryTillGround(); // 여기서 실제 타일 변경 + ConsumeStamina()
+            }
+            else
+            {
+                Debug.Log("스태미나가 부족해서 작업할 수 없습니다!");
+            }
         }
     }
 
@@ -101,11 +121,6 @@ public class PlayerMovement : MonoBehaviour
 
     void TryTillGround()
     {
-        if (stamina <= 0f)
-        {
-            Debug.Log("스태미나가 부족해서 작업할 수 없습니다!");
-            return; // 스태미나 없으면 작업 중단
-        }
 
         Vector3 targetWorldPos = transform.position;
         Vector3Int tilePos = tilemap.WorldToCell(targetWorldPos);
