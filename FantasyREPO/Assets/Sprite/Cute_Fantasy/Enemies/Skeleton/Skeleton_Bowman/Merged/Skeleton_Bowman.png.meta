@@ -247,7 +247,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -261,7 +261,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -285,7 +285,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -313,10 +313,10 @@ TextureImporter:
       name: Skeleton_Bowman_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 390
-        width: 20
-        height: 22
+        x: 8
+        y: 391
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,10 +335,10 @@ TextureImporter:
       name: Skeleton_Bowman_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 390
-        width: 20
-        height: 22
+        x: 40
+        y: 391
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: Skeleton_Bowman_2
       rect:
         serializedVersion: 2
-        x: 71
-        y: 390
-        width: 20
-        height: 21
+        x: 72
+        y: 391
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +379,10 @@ TextureImporter:
       name: Skeleton_Bowman_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 390
-        width: 20
-        height: 21
+        x: 104
+        y: 391
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -401,10 +401,10 @@ TextureImporter:
       name: Skeleton_Bowman_4
       rect:
         serializedVersion: 2
-        x: 135
-        y: 390
-        width: 20
-        height: 22
+        x: 136
+        y: 391
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,10 +423,10 @@ TextureImporter:
       name: Skeleton_Bowman_5
       rect:
         serializedVersion: 2
-        x: 167
-        y: 390
-        width: 20
-        height: 22
+        x: 168
+        y: 391
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,10 +445,10 @@ TextureImporter:
       name: Skeleton_Bowman_6
       rect:
         serializedVersion: 2
-        x: 5
-        y: 358
-        width: 19
-        height: 22
+        x: 6
+        y: 359
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,10 +467,10 @@ TextureImporter:
       name: Skeleton_Bowman_7
       rect:
         serializedVersion: 2
-        x: 37
-        y: 358
-        width: 19
-        height: 22
+        x: 38
+        y: 359
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -489,10 +489,10 @@ TextureImporter:
       name: Skeleton_Bowman_8
       rect:
         serializedVersion: 2
-        x: 69
-        y: 358
-        width: 20
-        height: 21
+        x: 70
+        y: 359
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -511,10 +511,10 @@ TextureImporter:
       name: Skeleton_Bowman_9
       rect:
         serializedVersion: 2
-        x: 101
-        y: 358
-        width: 20
-        height: 21
+        x: 102
+        y: 359
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,10 +533,10 @@ TextureImporter:
       name: Skeleton_Bowman_10
       rect:
         serializedVersion: 2
-        x: 133
-        y: 358
-        width: 19
-        height: 22
+        x: 134
+        y: 359
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,10 +555,10 @@ TextureImporter:
       name: Skeleton_Bowman_11
       rect:
         serializedVersion: 2
-        x: 165
-        y: 358
-        width: 19
-        height: 22
+        x: 166
+        y: 359
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,10 +577,10 @@ TextureImporter:
       name: Skeleton_Bowman_12
       rect:
         serializedVersion: 2
-        x: 6
-        y: 326
-        width: 22
-        height: 22
+        x: 7
+        y: 327
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,10 +599,10 @@ TextureImporter:
       name: Skeleton_Bowman_13
       rect:
         serializedVersion: 2
-        x: 38
-        y: 326
-        width: 22
-        height: 22
+        x: 39
+        y: 327
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -621,10 +621,10 @@ TextureImporter:
       name: Skeleton_Bowman_14
       rect:
         serializedVersion: 2
-        x: 70
-        y: 326
-        width: 22
-        height: 21
+        x: 71
+        y: 327
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +643,10 @@ TextureImporter:
       name: Skeleton_Bowman_15
       rect:
         serializedVersion: 2
-        x: 102
-        y: 326
-        width: 22
-        height: 21
+        x: 103
+        y: 327
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -665,10 +665,10 @@ TextureImporter:
       name: Skeleton_Bowman_16
       rect:
         serializedVersion: 2
-        x: 134
-        y: 326
-        width: 22
-        height: 22
+        x: 135
+        y: 327
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -687,10 +687,10 @@ TextureImporter:
       name: Skeleton_Bowman_17
       rect:
         serializedVersion: 2
-        x: 166
-        y: 326
-        width: 22
-        height: 22
+        x: 167
+        y: 327
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -709,10 +709,10 @@ TextureImporter:
       name: Skeleton_Bowman_18
       rect:
         serializedVersion: 2
-        x: 7
-        y: 294
-        width: 20
-        height: 23
+        x: 8
+        y: 295
+        width: 18
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -731,10 +731,10 @@ TextureImporter:
       name: Skeleton_Bowman_19
       rect:
         serializedVersion: 2
-        x: 39
-        y: 294
-        width: 20
-        height: 22
+        x: 40
+        y: 295
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -753,10 +753,10 @@ TextureImporter:
       name: Skeleton_Bowman_20
       rect:
         serializedVersion: 2
-        x: 71
-        y: 294
-        width: 20
-        height: 21
+        x: 72
+        y: 295
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -775,10 +775,10 @@ TextureImporter:
       name: Skeleton_Bowman_21
       rect:
         serializedVersion: 2
-        x: 103
-        y: 294
-        width: 20
-        height: 23
+        x: 104
+        y: 295
+        width: 18
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -797,10 +797,10 @@ TextureImporter:
       name: Skeleton_Bowman_22
       rect:
         serializedVersion: 2
-        x: 135
-        y: 294
-        width: 20
-        height: 22
+        x: 136
+        y: 295
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -819,10 +819,10 @@ TextureImporter:
       name: Skeleton_Bowman_23
       rect:
         serializedVersion: 2
-        x: 167
-        y: 294
-        width: 20
-        height: 21
+        x: 168
+        y: 295
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -841,10 +841,10 @@ TextureImporter:
       name: Skeleton_Bowman_24
       rect:
         serializedVersion: 2
-        x: 5
-        y: 262
-        width: 18
-        height: 23
+        x: 6
+        y: 263
+        width: 16
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -863,10 +863,10 @@ TextureImporter:
       name: Skeleton_Bowman_25
       rect:
         serializedVersion: 2
-        x: 38
-        y: 262
-        width: 17
-        height: 22
+        x: 39
+        y: 263
+        width: 15
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -885,10 +885,10 @@ TextureImporter:
       name: Skeleton_Bowman_26
       rect:
         serializedVersion: 2
-        x: 70
-        y: 262
-        width: 17
-        height: 21
+        x: 71
+        y: 263
+        width: 15
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -907,10 +907,10 @@ TextureImporter:
       name: Skeleton_Bowman_27
       rect:
         serializedVersion: 2
-        x: 101
-        y: 262
-        width: 19
-        height: 23
+        x: 102
+        y: 263
+        width: 17
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -929,10 +929,10 @@ TextureImporter:
       name: Skeleton_Bowman_28
       rect:
         serializedVersion: 2
-        x: 133
-        y: 262
-        width: 20
-        height: 22
+        x: 134
+        y: 263
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -951,10 +951,10 @@ TextureImporter:
       name: Skeleton_Bowman_29
       rect:
         serializedVersion: 2
-        x: 165
-        y: 262
-        width: 19
-        height: 22
+        x: 166
+        y: 263
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -973,10 +973,10 @@ TextureImporter:
       name: Skeleton_Bowman_30
       rect:
         serializedVersion: 2
-        x: 8
-        y: 230
-        width: 20
-        height: 23
+        x: 9
+        y: 231
+        width: 18
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -995,10 +995,10 @@ TextureImporter:
       name: Skeleton_Bowman_31
       rect:
         serializedVersion: 2
-        x: 40
-        y: 230
-        width: 20
-        height: 22
+        x: 41
+        y: 231
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1017,10 +1017,10 @@ TextureImporter:
       name: Skeleton_Bowman_32
       rect:
         serializedVersion: 2
-        x: 72
-        y: 230
-        width: 20
-        height: 21
+        x: 73
+        y: 231
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1039,10 +1039,10 @@ TextureImporter:
       name: Skeleton_Bowman_33
       rect:
         serializedVersion: 2
-        x: 104
-        y: 230
-        width: 20
-        height: 23
+        x: 105
+        y: 231
+        width: 18
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1061,10 +1061,10 @@ TextureImporter:
       name: Skeleton_Bowman_34
       rect:
         serializedVersion: 2
-        x: 136
-        y: 230
-        width: 20
-        height: 22
+        x: 137
+        y: 231
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1083,10 +1083,10 @@ TextureImporter:
       name: Skeleton_Bowman_35
       rect:
         serializedVersion: 2
-        x: 168
-        y: 230
-        width: 20
-        height: 21
+        x: 169
+        y: 231
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1105,10 +1105,10 @@ TextureImporter:
       name: Skeleton_Bowman_36
       rect:
         serializedVersion: 2
-        x: 7
-        y: 191
-        width: 20
-        height: 29
+        x: 8
+        y: 192
+        width: 18
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1127,10 +1127,10 @@ TextureImporter:
       name: Skeleton_Bowman_37
       rect:
         serializedVersion: 2
-        x: 40
-        y: 196
-        width: 19
-        height: 24
+        x: 41
+        y: 197
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1149,10 +1149,10 @@ TextureImporter:
       name: Skeleton_Bowman_38
       rect:
         serializedVersion: 2
-        x: 73
-        y: 197
-        width: 18
-        height: 23
+        x: 74
+        y: 198
+        width: 16
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1171,10 +1171,10 @@ TextureImporter:
       name: Skeleton_Bowman_39
       rect:
         serializedVersion: 2
-        x: 103
-        y: 197
-        width: 20
-        height: 23
+        x: 104
+        y: 198
+        width: 18
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1193,10 +1193,10 @@ TextureImporter:
       name: Skeleton_Bowman_40
       rect:
         serializedVersion: 2
-        x: 135
-        y: 197
-        width: 20
-        height: 23
+        x: 136
+        y: 198
+        width: 18
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1215,10 +1215,10 @@ TextureImporter:
       name: Skeleton_Bowman_41
       rect:
         serializedVersion: 2
-        x: 167
-        y: 197
-        width: 20
-        height: 23
+        x: 168
+        y: 198
+        width: 18
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1237,10 +1237,10 @@ TextureImporter:
       name: Skeleton_Bowman_42
       rect:
         serializedVersion: 2
-        x: 5
-        y: 166
-        width: 27
-        height: 22
+        x: 6
+        y: 167
+        width: 25
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1259,10 +1259,10 @@ TextureImporter:
       name: Skeleton_Bowman_43
       rect:
         serializedVersion: 2
-        x: 37
-        y: 166
-        width: 22
-        height: 22
+        x: 38
+        y: 167
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1281,10 +1281,10 @@ TextureImporter:
       name: Skeleton_Bowman_44
       rect:
         serializedVersion: 2
-        x: 69
-        y: 166
-        width: 21
-        height: 22
+        x: 70
+        y: 167
+        width: 19
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1303,10 +1303,10 @@ TextureImporter:
       name: Skeleton_Bowman_45
       rect:
         serializedVersion: 2
-        x: 101
-        y: 166
-        width: 21
-        height: 22
+        x: 102
+        y: 167
+        width: 19
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1325,10 +1325,10 @@ TextureImporter:
       name: Skeleton_Bowman_46
       rect:
         serializedVersion: 2
-        x: 133
-        y: 166
-        width: 21
-        height: 22
+        x: 134
+        y: 167
+        width: 19
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1347,10 +1347,10 @@ TextureImporter:
       name: Skeleton_Bowman_47
       rect:
         serializedVersion: 2
-        x: 165
-        y: 166
-        width: 21
-        height: 22
+        x: 166
+        y: 167
+        width: 19
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1369,10 +1369,10 @@ TextureImporter:
       name: Skeleton_Bowman_48
       rect:
         serializedVersion: 2
-        x: 6
-        y: 134
-        width: 19
-        height: 27
+        x: 7
+        y: 135
+        width: 17
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1391,10 +1391,10 @@ TextureImporter:
       name: Skeleton_Bowman_49
       rect:
         serializedVersion: 2
-        x: 38
-        y: 134
-        width: 18
-        height: 24
+        x: 39
+        y: 135
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1413,10 +1413,10 @@ TextureImporter:
       name: Skeleton_Bowman_50
       rect:
         serializedVersion: 2
-        x: 70
-        y: 134
-        width: 18
-        height: 24
+        x: 71
+        y: 135
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1435,10 +1435,10 @@ TextureImporter:
       name: Skeleton_Bowman_51
       rect:
         serializedVersion: 2
-        x: 102
-        y: 134
-        width: 19
-        height: 24
+        x: 103
+        y: 135
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1457,10 +1457,10 @@ TextureImporter:
       name: Skeleton_Bowman_52
       rect:
         serializedVersion: 2
-        x: 134
-        y: 134
-        width: 19
-        height: 24
+        x: 135
+        y: 135
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1479,10 +1479,10 @@ TextureImporter:
       name: Skeleton_Bowman_53
       rect:
         serializedVersion: 2
-        x: 166
-        y: 134
-        width: 19
-        height: 24
+        x: 167
+        y: 135
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1501,10 +1501,10 @@ TextureImporter:
       name: Skeleton_Bowman_54
       rect:
         serializedVersion: 2
-        x: 4
-        y: 102
-        width: 19
-        height: 24
+        x: 5
+        y: 103
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1523,10 +1523,10 @@ TextureImporter:
       name: Skeleton_Bowman_55
       rect:
         serializedVersion: 2
-        x: 33
-        y: 102
-        width: 24
-        height: 15
+        x: 34
+        y: 103
+        width: 22
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1545,10 +1545,10 @@ TextureImporter:
       name: Skeleton_Bowman_56
       rect:
         serializedVersion: 2
-        x: 40
-        y: 111
-        width: 14
-        height: 13
+        x: 41
+        y: 112
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1567,10 +1567,10 @@ TextureImporter:
       name: Skeleton_Bowman_57
       rect:
         serializedVersion: 2
-        x: 64
-        y: 102
-        width: 26
-        height: 19
+        x: 65
+        y: 103
+        width: 24
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1589,10 +1589,10 @@ TextureImporter:
       name: Skeleton_Bowman_58
       rect:
         serializedVersion: 2
-        x: 96
-        y: 99
-        width: 27
-        height: 18
+        x: 97
+        y: 100
+        width: 25
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1611,10 +1611,10 @@ TextureImporter:
       name: Skeleton_Bowman_59
       rect:
         serializedVersion: 2
-        x: 7
-        y: 70
-        width: 20
-        height: 22
+        x: 8
+        y: 71
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1633,10 +1633,10 @@ TextureImporter:
       name: Skeleton_Bowman_60
       rect:
         serializedVersion: 2
-        x: 39
-        y: 70
-        width: 20
-        height: 22
+        x: 40
+        y: 71
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1655,10 +1655,10 @@ TextureImporter:
       name: Skeleton_Bowman_61
       rect:
         serializedVersion: 2
-        x: 71
-        y: 70
-        width: 20
-        height: 22
+        x: 72
+        y: 71
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1677,10 +1677,10 @@ TextureImporter:
       name: Skeleton_Bowman_62
       rect:
         serializedVersion: 2
-        x: 103
-        y: 70
-        width: 20
-        height: 22
+        x: 104
+        y: 71
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1699,10 +1699,10 @@ TextureImporter:
       name: Skeleton_Bowman_63
       rect:
         serializedVersion: 2
-        x: 5
-        y: 38
-        width: 19
-        height: 22
+        x: 6
+        y: 39
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1721,10 +1721,10 @@ TextureImporter:
       name: Skeleton_Bowman_64
       rect:
         serializedVersion: 2
-        x: 37
-        y: 38
-        width: 19
-        height: 22
+        x: 38
+        y: 39
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1743,10 +1743,10 @@ TextureImporter:
       name: Skeleton_Bowman_65
       rect:
         serializedVersion: 2
-        x: 69
-        y: 38
-        width: 19
-        height: 22
+        x: 70
+        y: 39
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1765,10 +1765,10 @@ TextureImporter:
       name: Skeleton_Bowman_66
       rect:
         serializedVersion: 2
-        x: 101
-        y: 38
-        width: 19
-        height: 22
+        x: 102
+        y: 39
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1787,10 +1787,10 @@ TextureImporter:
       name: Skeleton_Bowman_67
       rect:
         serializedVersion: 2
-        x: 6
-        y: 6
-        width: 22
-        height: 22
+        x: 7
+        y: 7
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1809,10 +1809,10 @@ TextureImporter:
       name: Skeleton_Bowman_68
       rect:
         serializedVersion: 2
-        x: 38
-        y: 6
-        width: 22
-        height: 22
+        x: 39
+        y: 7
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1831,10 +1831,10 @@ TextureImporter:
       name: Skeleton_Bowman_69
       rect:
         serializedVersion: 2
-        x: 70
-        y: 6
-        width: 22
-        height: 22
+        x: 71
+        y: 7
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1853,10 +1853,10 @@ TextureImporter:
       name: Skeleton_Bowman_70
       rect:
         serializedVersion: 2
-        x: 102
-        y: 6
-        width: 22
-        height: 22
+        x: 103
+        y: 7
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1875,7 +1875,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5a2ac3d2cbe955244945d19ec6a13bba
     internalID: 0
     vertices: []
     indices: 
