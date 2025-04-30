@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
 
@@ -13,11 +15,9 @@ public class PlayerMovement : MonoBehaviour
     private const string _vertical = "Vertical";
     private const string _lastHorizontal = "LastHorizontal";
     private const string _lastVertical = "LastVertical";
+    
+    private Vector2 _lastDirection = Vector2.down;
 
-    void Start()
-    {
-
-    }
 
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    void Update()
+    private void Update()
     {
         vector.Set(InputManager.Movement.x, InputManager.Movement.y);
         _rb.linearVelocity = vector * _moveSpeed;
@@ -33,10 +33,13 @@ public class PlayerMovement : MonoBehaviour
         _animator.SetFloat(_horizontal, vector.x);
         _animator.SetFloat(_vertical, vector.y);
 
-        if (vector != Vector2.zero) {
+        if (vector != Vector2.zero)
+        {
             _animator.SetFloat(_lastHorizontal, vector.x);
             _animator.SetFloat(_lastVertical, vector.y);
+            _lastDirection = vector.normalized;
         }
+
     }
 
 }
