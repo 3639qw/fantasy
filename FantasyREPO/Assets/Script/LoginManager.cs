@@ -1,34 +1,37 @@
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LoginManager : MonoBehaviour
 {
-    //·Î±×ÀÎ È­¸é Root 
+    // ë¡œê·¸ì¸ íŒ¨ë„ Root 
     public GameObject LoginView;
 
-    public InputField inputField_ID;
-    public InputField inputField_PW;
+    public TMP_InputField inputField_ID;
+    public TMP_InputField inputField_PW;
     public Button Button_Login;
 
-    //Test¸¦ À§ÇØ ÀÓÀÇ·Î »ç¿ëÀÚ º¯¼ö¸¦ Ãß°¡ÇßÀ½
+    //Testë¥¼ ìœ„í•´ ì„ì˜ë¡œ ì‚¬ìš©ì ë³€ìˆ˜ë¥¼ ì¶”ê°€
     private string user = "admin";
     private string password = "admin";
 
     /// <summary>
-    /// ·Î±×ÀÎ ¹öÆ° Å¬¸¯½Ã ½ÇÇà
+    /// ë¡œê·¸ì¸ ë²„íŠ¼ í´ë¦­ì‹œ ì‹¤í–‰
     /// </summary>
     public void LoginButtonClick()
     {
+        Debug.Log(inputField_ID.text + ", " + inputField_PW.text);
+
         if (inputField_ID.text == user && inputField_PW.text == password)
         {
-            Debug.Log("·Î±×ÀÎ ¼º°ø");
-            //·Î±×ÀÎ ¼º°ø½Ã ·Î±×ÀÎ Ã¢ ´İÀ½
+            Debug.Log("ë¡œê·¸ì¸ ì„±ê³µ");
+            // ë¡œê·¸ì¸ ì„±ê³µì‹œ ì”¬ ì´ë™
             SceneManager.LoadScene("Main1");
         }
         else
         {
-            Debug.Log("·Î±×ÀÎ ½ÇÆĞ");
+            Debug.Log("ë¡œê·¸ì¸ ì‹¤íŒ¨");
         }
     }
 }
