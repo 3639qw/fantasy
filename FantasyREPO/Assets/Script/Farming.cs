@@ -51,7 +51,7 @@ public class Farming : MonoBehaviour
     {
         
         // 개간
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             BuildFarm(5);
         }
@@ -73,41 +73,51 @@ public class Farming : MonoBehaviour
         {
             // 현재 남은 힘이 파라미터로 받은 힘보다 많은 경우 개간 돌입
 
-            if (currentTile == grassTile)
+            if (currentTile == tilledTile)
             {
-                // 잔디를 1차 농지화
-                if (inv.states == 2)
-                {
-                    farmLand.SetTile(tilePos, tilledTile); // 1차 농지화
-                    gm.ConsumeSkill(3,reqST); // 힘을 감소
-                    Debug.Log("1차농지 성공!!");
-                }
-                
-            }else if (currentTile == tilledTile)
+                farmLand.SetTile(tilePos,farmTile);
+                gm.ConsumeSkill(3,reqST);
+            }else if (currentTile == farmTile)
             {
-                // 1차 농지를 2차 농지화
-                if (inv.states == 2)
-                {
-                    Vector3Int centerPos = tilePos;
-                    if (Is3x3Tilled(centerPos))
-                    {
-                        Replace3x3WithFarm(tilePos,farmTile);
-                        gm.ConsumeSkill(3,reqST);
-                        Debug.Log("2차농지 성공!!");
-                    }
-                }
+                farmLand.SetTile(tilePos,wetfarmTile);
+                gm.ConsumeSkill(3,reqST);
             }
-            else if(currentTile == farmTile) 
-            {
-                // 2차 농지에 급수
-                if (inv.states == 1)
-                {
-                    Vector3Int centerPos = tilePos;
-                    Replace3x3WithFarm(centerPos,wetfarmTile);
-                    gm.ConsumeSkill(3,reqST);
-                    Debug.Log("2차농지 급수성공!!");   
-                }
-            }
+            
+            // if (currentTile == grassTile)
+            // {
+            //     // 잔디를 1차 농지화
+            //     if (inv.states == 2)
+            //     {
+            //         farmLand.SetTile(tilePos, tilledTile); // 1차 농지화
+            //         gm.ConsumeSkill(3,reqST); // 힘을 감소
+            //         Debug.Log("1차농지 성공!!");
+            //     }
+            //     
+            // }else if (currentTile == tilledTile)
+            // {
+            //     // 1차 농지를 2차 농지화
+            //     if (inv.states == 2)
+            //     {
+            //         Vector3Int centerPos = tilePos;
+            //         if (Is3x3Tilled(centerPos))
+            //         {
+            //             Replace3x3WithFarm(tilePos,farmTile);
+            //             gm.ConsumeSkill(3,reqST);
+            //             Debug.Log("2차농지 성공!!");
+            //         }
+            //     }
+            // }
+            // else if(currentTile == farmTile) 
+            // {
+            //     // 2차 농지에 급수
+            //     if (inv.states == 1)
+            //     {
+            //         Vector3Int centerPos = tilePos;
+            //         Replace3x3WithFarm(centerPos,wetfarmTile);
+            //         gm.ConsumeSkill(3,reqST);
+            //         Debug.Log("2차농지 급수성공!!");   
+            //     }
+            // }
         }
         else
         {
