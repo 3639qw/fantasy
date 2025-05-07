@@ -4,22 +4,22 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     static public Inventory instance = null;
-    
+
     [Header("인벤토리 아이템")]
-    public Image hand1; // 1번째 기구
-    public Image hand2; // 2번째 기구
-    public Image hand3; // 3번째 기구
-    protected internal int states = 1; // 최초 장착기구 (1,2,3)
-    
-    
+    public Image hand1; // 1번 슬롯 (양동이)
+    public Image hand2; // 2번 슬롯 (삽)
+    public Image hand3; // 3번 슬롯 (빈손)
+
+    [Header("플레이어 손 오브젝트")]
+    public GameObject water; // Hand/water
+    public GameObject axe;   // Hand/axe
+
+    protected internal int states = 1;
+
     public static Inventory Instance
     {
         get
         {
-            if (instance == null)
-            {
-                return null;
-            }
             return instance;
         }
     }
@@ -27,11 +27,10 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         if (instance == null)
-        {
             instance = this;
-        }
-        
+
         SetHandAlpha(states);
+        ApplyHandItem(states);
     }
 
     private void Update()
@@ -40,16 +39,19 @@ public class Inventory : MonoBehaviour
         {
             states = 1;
             SetHandAlpha(1);
+            ApplyHandItem(1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             states = 2;
             SetHandAlpha(2);
+            ApplyHandItem(2);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             states = 3;
             SetHandAlpha(3);
+            ApplyHandItem(3);
         }
     }
 
@@ -66,4 +68,22 @@ public class Inventory : MonoBehaviour
         c.a = alpha;
         renderer.color = c;
     }
+
+    private void ApplyHandItem(int index)
+    {
+        water.SetActive(false);
+        axe.SetActive(false);
+
+        if (index == 1)
+        {
+            Debug.Log("Water 선택됨 - SetActive(true)");
+            water.SetActive(true);
+        }
+        else if (index == 2)
+        {
+            Debug.Log("Axe 선택됨 - SetActive(true)");
+            axe.SetActive(true);
+        }
+    }
+
 }

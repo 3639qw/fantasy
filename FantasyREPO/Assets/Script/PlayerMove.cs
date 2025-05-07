@@ -41,5 +41,8 @@ public class PlayerMove : MonoBehaviour
         }
 
     }
+    // PlayerMove.cs 맨 아래에 추가:
+    public Vector2 LastDirection => _lastDirection;
+
 
 }
