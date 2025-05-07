@@ -1,81 +1,123 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
+/// <summary>
+/// 인벤토리: 5 슬롯(Quick Bar 포함) + 스택 개수(TMP) + 숫자 1‑5 선택 + Bag (E) 토글 + 아이템 소비
+/// </summary>
 public class Inventory : MonoBehaviour
 {
-    /* ──────────── 싱글톤 ──────────── */
-    public static Inventory instance = null;
+    /* ────────── 싱글톤 ────────── */
+    public static Inventory instance;
     public static Inventory Instance => instance;
 
-    /* ──────────── 슬롯 & 설정 ──────────── */
-    [Header("인벤토리 아이템(슬롯 1~5)")]
-    public Image hand1;   // 1번 슬롯
-    public Image hand2;   // 2번 슬롯
-    public Image hand3;   // 3번 슬롯
-    public Image hand4;   // 4번 슬롯
-    public Image hand5;   // 5번 슬롯
+    /* ────────── 슬롯 구조 ────────── */
+    [System.Serializable]
+    public class ItemSlot
+    {
+        public Image icon;       // 아이콘 이미지 UI
+        public TextMeshProUGUI countLabel;// 수량 표시 TMP
+        [HideInInspector] public int count = 0;
+    }
+
+    [Header("슬롯 1~5 (순서대로)")]
+    public ItemSlot[] slots = new ItemSlot[5];
 
     [Header("빈 슬롯 플레이스홀더")]
-    [SerializeField] private Sprite emptySprite;   // Source Image = 빈 칸 배경
+    [SerializeField] private Sprite emptySprite;
 
-    /* 현재 선택된 슬롯 번호 (1~5) */
+    [Header("Bag UI 패널")]
+    [SerializeField] private GameObject bagPanel;
+
+    /* 현재 선택 슬롯 번호 (1~5) */
     protected internal int states = 1;
 
-    /* ──────────── 초기화 ──────────── */
+    /* ────────── 초기화 ────────── */
     private void Awake()
     {
         if (instance == null) instance = this;
         else { Destroy(gameObject); return; }
     }
 
-    /* ──────────── 입력 처리 ──────────── */
+    /* ────────── 입력 처리 ────────── */
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) { states = 1; SetHandAlpha(1); }
-        else if (Input.GetKeyDown(KeyCode.Alpha2)) { states = 2; SetHandAlpha(2); }
-        else if (Input.GetKeyDown(KeyCode.Alpha3)) { states = 3; SetHandAlpha(3); }
-        else if (Input.GetKeyDown(KeyCode.Alpha4)) { states = 4; SetHandAlpha(4); }
-        else if (Input.GetKeyDown(KeyCode.Alpha5)) { states = 5; SetHandAlpha(5); }
+        // Bag 열기/닫기
+        if (Input.GetKeyDown(KeyCode.E) && bagPanel != null)
+            bagPanel.SetActive(!bagPanel.activeSelf);
+
+        // 숫자 키 선택
+        if (Input.GetKeyDown(KeyCode.Alpha1)) SelectSlot(1);
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) SelectSlot(2);
+        else if (Input.GetKeyDown(KeyCode.Alpha3)) SelectSlot(3);
+        else if (Input.GetKeyDown(KeyCode.Alpha4)) SelectSlot(4);
+        else if (Input.GetKeyDown(KeyCode.Alpha5)) SelectSlot(5);
     }
 
-    /* ──────────── 아이템 자동 배치 ──────────── */
-    /// <summary>
-    /// hand1 → hand5 순으로 sprite == null 또는 emptySprite 인 첫 슬롯에 아이콘을 배치
-    /// 성공:true, 인벤토리 가득:false
-    /// </summary>
-    public bool AddItemToFirstEmptySlot(Sprite icon)
+    private void SelectSlot(int idx)
     {
-        Image[] slots = { hand1, hand2, hand3, hand4, hand5 };
+        states = idx;
+        for (int i = 0; i < slots.Length; i++)
+            SetAlpha(slots[i].icon, i == idx - 1);
+    }
 
-        foreach (var slot in slots)
+    /* ────────── 아이템 추가 / 소비 ────────── */
+    public void AddItem(Sprite icon, int amount)
+    {
+        // 1) 동일 아이콘 스택 찾기
+        foreach (var s in slots)
         {
-            if (slot == null) continue;
-
-            bool isEmpty = slot.sprite == null || slot.sprite == emptySprite;
-            if (!isEmpty) continue;
-
-            slot.sprite = icon;
-            slot.color = Color.white;   // 투명도 복구
-            return true;
+            if (s.icon.sprite == icon)
+            {
+                s.count += amount;
+                UpdateSlotVisual(s);
+                return;
+            }
         }
-        return false;
+        // 2) 빈 칸 찾기
+        foreach (var s in slots)
+        {
+            if (s.icon.sprite == null || s.icon.sprite == emptySprite)
+            {
+                s.icon.sprite = icon;
+                s.count = amount;
+                s.icon.color = Color.white;
+                UpdateSlotVisual(s);
+                return;
+            }
+        }
+        Debug.LogWarning("인벤토리가 가득 찼습니다");
     }
 
-    /* ──────────── 슬롯 UI 알파 조정 ──────────── */
-    private void SetHandAlpha(int handIndex)
+    /// <summary>현재 선택 슬롯에서 amount 만큼 소비. 성공:true/실패:false</summary>
+    public bool ConsumeSelectedItem(int amount)
     {
-        SetAlpha(hand1, handIndex == 1);
-        SetAlpha(hand2, handIndex == 2);
-        SetAlpha(hand3, handIndex == 3);
-        SetAlpha(hand4, handIndex == 4);
-        SetAlpha(hand5, handIndex == 5);
+        var slot = slots[states - 1];
+        if (slot.count < amount) return false;
+
+        slot.count -= amount;
+        if (slot.count == 0)
+        {
+            slot.icon.sprite = emptySprite;
+            slot.icon.color = new Color(1, 1, 1, 0.3f);
+        }
+        UpdateSlotVisual(slot);
+        return true;
     }
 
+    /* ────────── 헬퍼 ────────── */
+    private void UpdateSlotVisual(ItemSlot s)
+    {
+        s.countLabel.text = s.count > 1 ? $"×{s.count}" : "";
+    }
     private void SetAlpha(Image img, bool selected)
     {
         if (img == null) return;
-        Color c = img.color;
+        var c = img.color;
         c.a = selected ? 1f : 60f / 255f;
         img.color = c;
     }
+
+    public Sprite GetSelectedSprite() => slots[states - 1].icon.sprite;
+    public bool IsSelectedEmpty() => GetSelectedSprite() == null || GetSelectedSprite() == emptySprite;
 }
