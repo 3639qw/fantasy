@@ -7,17 +7,17 @@ using System.Collections;
 
 public class LoginManager : MonoBehaviour
 {
-    // 로그인 패널 Root 
+    //�α��� ȭ�� Root 
     public GameObject LoginView;
 
-    public TMP_InputField inputField_ID;
-    public TMP_InputField inputField_PW;
+    public InputField inputField_ID;
+    public InputField inputField_PW;
     public Button Button_Login;
 
     private string apiUrl = "http://localhost:5106/api/login";
 
     /// <summary>
-    /// 로그인 버튼 클릭시 실행
+    /// �α��� ��ư Ŭ���� ����
     /// </summary>
     public void LoginButtonClick()
     {
