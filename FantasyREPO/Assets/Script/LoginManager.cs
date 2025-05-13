@@ -10,9 +10,16 @@ public class LoginManager : MonoBehaviour
     //�α��� ȭ�� Root 
     public GameObject LoginView;
 
-    public InputField inputField_ID;
-    public InputField inputField_PW;
-    public Button Button_Login;
+    public TMP_InputField inputField_ID;
+    public TMP_InputField inputField_PW;
+    
+    
+    [Header("Register Form")]
+    public TMP_InputField registerID; // id
+    public TMP_InputField registerPW; // pw
+    public TMP_InputField registerMail; // email
+    public TMP_InputField registerName; // 성명
+    public TMP_InputField registerNick; // 닉네임
 
     private string apiUrl = "http://localhost:5106/api/login";
 
@@ -26,6 +33,19 @@ public class LoginManager : MonoBehaviour
 
         StartCoroutine(LoginRequest(userId, password));
     }
+
+    public void RegisterButtonClick()
+    {
+        string userId = registerID.text;
+        string password = registerPW.text;
+        string mail = registerMail.text;
+        string name = registerName.text;
+        string nickname = registerNick.text;
+
+        Debug.Log("회원가입 요청");
+        // StartCoroutine(RegisterRequest(userId, password, mail, name, nickname));
+    }
+    
     private IEnumerator LoginRequest(string userId, string password)
     {
         // 로그인 요청을 위한 JSON 객체
@@ -63,6 +83,30 @@ public class LoginManager : MonoBehaviour
         }
 
     }
+
+    /// <summary>
+    /// 회원가입요청
+    /// </summary>
+    /// <param name="userId">로그인 ID</param>
+    /// <param name="password">로그인 PW</param>
+    /// <param name="mail">이메일주소</param>
+    /// <param name="name">성명</param>
+    /// <param name="nickname">닉네임</param>
+    /// <returns></returns>
+    // private IEnumerator RegisterRequest(string userId, string password, string mail, string name, string nickname)
+    // {
+    //     RegisterRequest regRequest = new RegisterRequest
+    //     {
+    //         ID = userId,
+    //         Password = password,
+    //         Mail = mail,
+    //         Name = name,
+    //         Nickname = nickname
+    //     };
+    //     
+    //     string json = JsonUtility.ToJson(regRequest);
+    //
+    // }
 }
 
 [System.Serializable]
@@ -70,4 +114,14 @@ public class LoginRequest
 {
     public string ID;
     public string Password;
+}
+
+[System.Serializable]
+public class RegisterRequest
+{
+    public string ID;
+    public string Password;
+    public string Mail;
+    public string Name;
+    public string Nickname;
 }

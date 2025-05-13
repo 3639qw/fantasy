@@ -102,26 +102,17 @@ public class Farming : MonoBehaviour
 
         if (gm.ST < reqST) { Debug.Log("힘 부족"); return; }
 
-        // 1) 잔디 → 1차 농지 (슬롯2)
-        if (cur == grassTile && inv.states == 2)
+        // 2) 1차 농지 → 2차 농지 (슬롯2)
+        if (cur == tilledTile && inv.states == 2)
         {
-            farmLand.SetTile(pos, tilledTile);
+            farmLand.SetTile(pos, farmTile);
             gm.ConsumeSkill(3, reqST);
-            return;
         }
-
-        // 2) 1차 농지 3x3 → 2차 농지 (슬롯2)
-        if (cur == tilledTile && inv.states == 2 && Is3x3All(pos, tilledTile))
-        {
-            Replace3x3(pos, farmTile);
-            gm.ConsumeSkill(3, reqST);
-            return;
-        }
-
-        // 3) 2차 농지 3x3 → 젖은 밭 (슬롯1)
+        
+        // 3) 2차 농지 -> 급수 (슬롯1)
         if (cur == farmTile && inv.states == 1)
         {
-            Replace3x3(pos, wetfarmTile);
+            farmLand.SetTile(pos,wetfarmTile);
             gm.ConsumeSkill(3, reqST);
         }
     }
@@ -138,8 +129,9 @@ public class Farming : MonoBehaviour
 
     private void Replace3x3(Vector3Int center, TileBase tile)
     {
-        for (int x = -1; x <= 1; x++)
-            for (int y = -1; y <= 1; y++)
-                farmLand.SetTile(center + new Vector3Int(x, y, 0), tile);
+        // for (int x = -1; x <= 1; x++)
+        //     for (int y = -1; y <= 1; y++)
+        //         farmLand.SetTile(center + new Vector3Int(x, y, 0), tile);
+        // farmLand.SetTile(center,tile);
     }
 }
