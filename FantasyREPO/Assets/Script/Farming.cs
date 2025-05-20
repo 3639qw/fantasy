@@ -1,151 +1,137 @@
-using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Farming : MonoBehaviour
 {
-    static public Farming instance = null;
+    public static Farming instance;
 
+    /* ──────────── 레퍼런스 ──────────── */
     private GameManager gm;
-    private  Inventory inv;
+    private Inventory inv;
 
+    /* ──────────── 농지 타일맵 & 타일 ──────────── */
+    [Header("농지 타일맵 & 타일")]
+    [SerializeField] private Tilemap farmLand;
+    [SerializeField] private TileBase grassTile;
+    [SerializeField] private TileBase tilledTile;
+    [SerializeField] private TileBase farmTile;
+    [SerializeField] private TileBase wetfarmTile;
 
-    [Header("농지 룰타일")] 
-    [SerializeField] private Tilemap farmLand; // 농지의 타일맵
+    [Header("Seed & Crop 타일맵")]
+    [SerializeField] private Tilemap seedLand;
+    [SerializeField] private TileBase seedTile;
+    [SerializeField] private TileBase cropsTile;
+    [SerializeField] private Sprite foodIcon;
 
-    [SerializeField] private TileBase grassTile; // 농지화 할수 있는 잔디 타일
-    [SerializeField] private TileBase tilledTile; // 1차 농지
-    [SerializeField] private TileBase farmTile; // 2차 농지
-    [SerializeField] private TileBase wetfarmTile; // 급수를 실시한 농지
-    
-
-    public static Farming Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                return null;
-            }
-            return instance;
-        }
-    }
-
+    /* ──────────── 초기화 ──────────── */
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        if (instance == null) instance = this;
+        else { Destroy(gameObject); return; }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         gm = GameManager.Instance;
         inv = Inventory.Instance;
     }
 
-    // Update is called once per frame
-    void Update()
+    /* ──────────── 매 프레임 입력 처리 ──────────── */
+    private void Update()
     {
-        
-        // 개간
-        if (Input.GetKey(KeyCode.Space))
+        if (!Input.GetKeyDown(KeyCode.Space)) return;
+
+        // 1) Food 아이콘 슬롯 + 젖은 밭 → 씨앗 심기 & 수량 -1
+        if (inv.GetSelectedSprite() == foodIcon && TryPlantCrop())
         {
-            BuildFarm(5);
+            inv.ConsumeSelectedItem(1);
+            return;
         }
-        
+
+        // 2) 빈 손이면 Seed 수확
+        if (inv.IsSelectedEmpty() && TryHarvestSeed()) return;
+
+        // 3) 그 외 개간/급수 로직
+        BuildFarm(5f);
     }
 
-
-    /// <summary>
-    /// 잔디를 개간한다
-    /// </summary>
-    /// <param name="reqST">개간을 수행함으로 감소할 힘</param>
-    void BuildFarm(float reqST)
+    /* ──────────── 씨앗 심기 ──────────── */
+    private bool TryPlantCrop()
     {
-        Vector3 targetWorldPos = gm.player.transform.position;
-        Vector3Int tilePos = farmLand.WorldToCell(targetWorldPos);
-        TileBase currentTile = farmLand.GetTile(tilePos);
+        Vector3 worldPos = gm.player.transform.position + new Vector3(0f, -0.25f, 0f);
+        Vector3Int farmCell = farmLand.WorldToCell(worldPos);
 
-        if (gm.ST >= reqST)
-        {
-            // 현재 남은 힘이 파라미터로 받은 힘보다 많은 경우 개간 돌입
+        // 젖은 밭 여부 확인
+        TileBase cur = farmLand.GetTile(farmCell);
+        bool isWet = cur == wetfarmTile || (cur && wetfarmTile && cur.name == wetfarmTile.name);
+        if (!isWet) return false;
 
-            if (currentTile == grassTile)
-            {
-                // 잔디를 1차 농지화
-                if (inv.states == 2)
-                {
-                    farmLand.SetTile(tilePos, tilledTile); // 1차 농지화
-                    gm.ConsumeSkill(3,reqST); // 힘을 감소
-                    Debug.Log("1차농지 성공!!");
-                }
-                
-            }else if (currentTile == tilledTile)
-            {
-                // 1차 농지를 2차 농지화
-                if (inv.states == 2)
-                {
-                    Vector3Int centerPos = tilePos;
-                    if (Is3x3Tilled(centerPos))
-                    {
-                        Replace3x3WithFarm(tilePos,farmTile);
-                        gm.ConsumeSkill(3,reqST);
-                        Debug.Log("2차농지 성공!!");
-                    }
-                }
-            }
-            else if(currentTile == farmTile) 
-            {
-                // 2차 농지에 급수
-                if (inv.states == 1)
-                {
-                    Vector3Int centerPos = tilePos;
-                    Replace3x3WithFarm(centerPos,wetfarmTile);
-                    gm.ConsumeSkill(3,reqST);
-                    Debug.Log("2차농지 급수성공!!");   
-                }
-            }
-        }
-        else
-        {
-            Debug.Log("힘이 부족해서 개간을 실패했습니다");   
-        }
-    }
-    
-    
-    
-    bool Is3x3Tilled(Vector3Int center)
-    {
-        for (int x = -1; x <= 1; x++)
-        {
-            for (int y = -1; y <= 1; y++)
-            {
-                Vector3Int checkPos = center + new Vector3Int(x, y, 0);
-                if (farmLand.GetTile(checkPos) != tilledTile)
-                    return false;
-            }
-        }
+        // farm 셀 → worldCenter → seed 셀 변환
+        Vector3 worldCenter = farmLand.GetCellCenterWorld(farmCell);
+        Vector3Int seedCell = seedLand.WorldToCell(worldCenter);
+
+        seedLand.SetTile(seedCell, cropsTile);
+        seedLand.RefreshTile(seedCell);
+        seedLand.CompressBounds();
+        Debug.Log("✅ 씨앗 심기 & 수량 -1");
         return true;
     }
-    
-    
-    /// <summary>
-    /// 2차 농지화
-    /// </summary>
-    /// <param name="center"></param>
-    /// <param name="tile"></param>
-    void Replace3x3WithFarm(Vector3Int center, TileBase tile)
+
+    /* ──────────── Seed 수확 ──────────── */
+    private bool TryHarvestSeed()
+    {
+        Vector3Int pos = seedLand.WorldToCell(gm.player.transform.position);
+        if (seedLand.GetTile(pos) != seedTile) return false;
+        StartCoroutine(HarvestSeedCoroutine(pos));
+        return true;
+    }
+
+    private IEnumerator HarvestSeedCoroutine(Vector3Int pos)
+    {
+        yield return new WaitForSeconds(1f);
+        seedLand.SetTile(pos, null);
+        inv.AddItem(foodIcon, 1);
+    }
+
+    /* ──────────── 농지: 개간 / 업그레이드 / 급수 ──────────── */
+    private void BuildFarm(float reqST)
+    {
+        Vector3Int pos = farmLand.WorldToCell(gm.player.transform.position);
+        TileBase cur = farmLand.GetTile(pos);
+
+        if (gm.ST < reqST) { Debug.Log("힘 부족"); return; }
+
+        // 2) 1차 농지 → 2차 농지 (슬롯2)
+        if (cur == tilledTile && inv.states == 2)
+        {
+            farmLand.SetTile(pos, farmTile);
+            gm.ConsumeSkill(3, reqST);
+        }
+        
+        // 3) 2차 농지 -> 급수 (슬롯1)
+        if (cur == farmTile && inv.states == 1)
+        {
+            farmLand.SetTile(pos,wetfarmTile);
+            gm.ConsumeSkill(3, reqST);
+        }
+    }
+
+    /* ──────────── 보조 메서드 ──────────── */
+    private bool Is3x3All(Vector3Int center, TileBase target)
     {
         for (int x = -1; x <= 1; x++)
-        {
             for (int y = -1; y <= 1; y++)
-            {
-                Vector3Int changePos = center + new Vector3Int(x, y, 0);
-                farmLand.SetTile(changePos, tile);
-            }
-        }
+                if (farmLand.GetTile(center + new Vector3Int(x, y, 0)) != target)
+                    return false;
+        return true;
+    }
+
+    private void Replace3x3(Vector3Int center, TileBase tile)
+    {
+        // for (int x = -1; x <= 1; x++)
+        //     for (int y = -1; y <= 1; y++)
+        //         farmLand.SetTile(center + new Vector3Int(x, y, 0), tile);
+        // farmLand.SetTile(center,tile);
     }
 }

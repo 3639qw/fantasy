@@ -15,7 +15,6 @@ public class LoginManager : MonoBehaviour
     public Button Button_Login;
 
     private string apiUrl = "http://localhost:5106/api/login";
-
     /// <summary>
     /// 로그인 버튼 클릭시 실행
     /// </summary>
@@ -26,6 +25,8 @@ public class LoginManager : MonoBehaviour
 
         StartCoroutine(LoginRequest(userId, password));
     }
+
+
     private IEnumerator LoginRequest(string userId, string password)
     {
         // 로그인 요청을 위한 JSON 객체
