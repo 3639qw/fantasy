@@ -4,14 +4,14 @@ using GameServer.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// DbContext µî·Ï
+// DbContext ï¿½ï¿½ï¿½
 builder.Services.AddDbContext<GameDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(8, 0, 42)) // ½ÇÁ¦ MySQL ¹öÀü
+        new MySqlServerVersion(new Version(8, 0, 42)) // ï¿½ï¿½ï¿½ï¿½ MySQL ï¿½ï¿½ï¿½ï¿½
     ));
 
-// OpenAPI ¼³Á¤ (°³¹ß È¯°æ¿¡¼­¸¸)
+// OpenAPI ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ï¿½ï¿½)
 builder.Services.AddOpenApi();
 
 builder.Services.AddCors(options =>
@@ -26,16 +26,16 @@ var app = builder.Build();
 
 app.UseCors("AllowAll");
 
-// OpenAPI ¼³Á¤
+// OpenAPI ï¿½ï¿½ï¿½ï¿½
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
-// HTTPS ¼³Á¤
+// HTTPS ï¿½ï¿½ï¿½ï¿½
 app.UseHttpsRedirection();
 
-// ·Î±×ÀÎ API
+// ï¿½Î±ï¿½ï¿½ï¿½ API
 app.MapPost("/api/login", async (GameDbContext db, LoginRequest req) =>
 {
     var user = await db.UserAccount
@@ -53,6 +53,35 @@ app.MapPost("/api/login", async (GameDbContext db, LoginRequest req) =>
     };
 
     return Results.Ok(response); // 200 OK + JSON
+});
+
+app.MapPost("/api/register", async (GameDbContext db, RegisterRequest req) =>
+{
+    var existingUser = await db.UserAccount.FirstOrDefaultAsync(u => u.ID == req.ID);
+    if (existingUser != null)
+    {
+        return Results.Conflict(new { message = "This ID is already in use" });
+    }
+
+    var newUser = new UserAccount
+    {
+        ID = req.ID,
+        Password = req.Password,
+        Email = req.Email,
+        Name = req.Name,
+        Nickname = req.Nickname
+    };
+
+    db.UserAccount.Add(newUser);
+    await db.SaveChangesAsync();
+
+    var response = new RegisterResponse
+    {
+        UserUniqueID = newUser.UserUniqueID,
+        Nickname = newUser.Nickname
+    };
+
+    return Results.Ok(response);
 });
 
 app.Run();
