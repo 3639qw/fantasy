@@ -41,9 +41,13 @@ public class GameManager : MonoBehaviour
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        
+        if (PlayerPositionManager.NextPlayerPosition != null)
+        {
+            transform.position = (Vector2)PlayerPositionManager.NextPlayerPosition;
+            PlayerPositionManager.NextPlayerPosition = null; // 위치 설정 후 초기화
+        }
     }
 
     // Update is called once per frame

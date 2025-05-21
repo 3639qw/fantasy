@@ -13,9 +13,12 @@ public class InputManager : MonoBehaviour
         
         _playerInput = GetComponent<PlayerInput>();
         _moveAction = _playerInput.actions["Move"];
+        Debug.Log("Move");
+
     }
     private void Update()
     {
         Movement = _moveAction.ReadValue<Vector2>();
+        Debug.Log("Movement: " + Movement);
     }
 }
