@@ -271,7 +271,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -285,7 +285,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -309,7 +309,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -337,10 +337,10 @@ TextureImporter:
       name: Skeleton_Mage_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 390
-        width: 15
-        height: 24
+        x: 0
+        y: 384
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +359,10 @@ TextureImporter:
       name: Skeleton_Mage_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 390
-        width: 17
-        height: 24
+        x: 32
+        y: 384
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: Skeleton_Mage_2
       rect:
         serializedVersion: 2
-        x: 71
-        y: 390
-        width: 19
-        height: 23
+        x: 64
+        y: 384
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: Skeleton_Mage_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 390
-        width: 19
-        height: 23
+        x: 96
+        y: 384
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: Skeleton_Mage_4
       rect:
         serializedVersion: 2
-        x: 135
-        y: 390
-        width: 19
-        height: 24
+        x: 128
+        y: 384
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: Skeleton_Mage_5
       rect:
         serializedVersion: 2
-        x: 168
-        y: 390
-        width: 17
-        height: 24
+        x: 160
+        y: 384
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: Skeleton_Mage_6
       rect:
         serializedVersion: 2
-        x: 7
-        y: 358
-        width: 16
-        height: 23
+        x: 0
+        y: 352
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: Skeleton_Mage_7
       rect:
         serializedVersion: 2
-        x: 39
-        y: 358
-        width: 16
-        height: 23
+        x: 32
+        y: 352
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: Skeleton_Mage_8
       rect:
         serializedVersion: 2
-        x: 71
-        y: 358
-        width: 16
-        height: 22
+        x: 64
+        y: 352
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +535,10 @@ TextureImporter:
       name: Skeleton_Mage_9
       rect:
         serializedVersion: 2
-        x: 103
-        y: 358
-        width: 16
-        height: 22
+        x: 96
+        y: 352
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,10 +557,10 @@ TextureImporter:
       name: Skeleton_Mage_10
       rect:
         serializedVersion: 2
-        x: 135
-        y: 358
-        width: 16
-        height: 23
+        x: 128
+        y: 352
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +579,10 @@ TextureImporter:
       name: Skeleton_Mage_11
       rect:
         serializedVersion: 2
-        x: 167
-        y: 358
-        width: 16
-        height: 23
+        x: 160
+        y: 352
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: Skeleton_Mage_12
       rect:
         serializedVersion: 2
-        x: 9
-        y: 326
-        width: 15
-        height: 24
+        x: 0
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +623,10 @@ TextureImporter:
       name: Skeleton_Mage_13
       rect:
         serializedVersion: 2
-        x: 40
-        y: 326
-        width: 17
-        height: 24
+        x: 32
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,10 +645,10 @@ TextureImporter:
       name: Skeleton_Mage_14
       rect:
         serializedVersion: 2
-        x: 71
-        y: 326
-        width: 19
-        height: 23
+        x: 64
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,10 +667,10 @@ TextureImporter:
       name: Skeleton_Mage_15
       rect:
         serializedVersion: 2
-        x: 103
-        y: 326
-        width: 19
-        height: 23
+        x: 96
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,10 +689,10 @@ TextureImporter:
       name: Skeleton_Mage_16
       rect:
         serializedVersion: 2
-        x: 135
-        y: 326
-        width: 19
-        height: 24
+        x: 128
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +711,10 @@ TextureImporter:
       name: Skeleton_Mage_17
       rect:
         serializedVersion: 2
-        x: 168
-        y: 326
-        width: 17
-        height: 24
+        x: 160
+        y: 320
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,10 +733,10 @@ TextureImporter:
       name: Skeleton_Mage_18
       rect:
         serializedVersion: 2
-        x: 8
-        y: 294
-        width: 17
-        height: 25
+        x: 0
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,10 +755,10 @@ TextureImporter:
       name: Skeleton_Mage_19
       rect:
         serializedVersion: 2
-        x: 39
-        y: 294
-        width: 19
-        height: 24
+        x: 32
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: Skeleton_Mage_20
       rect:
         serializedVersion: 2
-        x: 71
-        y: 294
-        width: 19
-        height: 23
+        x: 64
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -799,10 +799,10 @@ TextureImporter:
       name: Skeleton_Mage_21
       rect:
         serializedVersion: 2
-        x: 103
-        y: 294
-        width: 19
-        height: 25
+        x: 96
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -821,10 +821,10 @@ TextureImporter:
       name: Skeleton_Mage_22
       rect:
         serializedVersion: 2
-        x: 135
-        y: 294
-        width: 19
-        height: 24
+        x: 128
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -843,10 +843,10 @@ TextureImporter:
       name: Skeleton_Mage_23
       rect:
         serializedVersion: 2
-        x: 167
-        y: 294
-        width: 19
-        height: 23
+        x: 160
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -865,10 +865,10 @@ TextureImporter:
       name: Skeleton_Mage_24
       rect:
         serializedVersion: 2
-        x: 7
-        y: 262
-        width: 16
-        height: 24
+        x: 0
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -887,10 +887,10 @@ TextureImporter:
       name: Skeleton_Mage_25
       rect:
         serializedVersion: 2
-        x: 39
-        y: 262
-        width: 16
-        height: 23
+        x: 32
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -909,10 +909,10 @@ TextureImporter:
       name: Skeleton_Mage_26
       rect:
         serializedVersion: 2
-        x: 71
-        y: 262
-        width: 16
-        height: 22
+        x: 64
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -931,10 +931,10 @@ TextureImporter:
       name: Skeleton_Mage_27
       rect:
         serializedVersion: 2
-        x: 103
-        y: 262
-        width: 16
-        height: 24
+        x: 96
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -953,10 +953,10 @@ TextureImporter:
       name: Skeleton_Mage_28
       rect:
         serializedVersion: 2
-        x: 135
-        y: 262
-        width: 16
-        height: 23
+        x: 128
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -975,10 +975,10 @@ TextureImporter:
       name: Skeleton_Mage_29
       rect:
         serializedVersion: 2
-        x: 167
-        y: 262
-        width: 16
-        height: 23
+        x: 160
+        y: 256
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,10 +997,10 @@ TextureImporter:
       name: Skeleton_Mage_30
       rect:
         serializedVersion: 2
-        x: 8
-        y: 230
-        width: 17
-        height: 24
+        x: 0
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1019,10 +1019,10 @@ TextureImporter:
       name: Skeleton_Mage_31
       rect:
         serializedVersion: 2
-        x: 39
-        y: 230
-        width: 19
-        height: 23
+        x: 32
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1041,10 +1041,10 @@ TextureImporter:
       name: Skeleton_Mage_32
       rect:
         serializedVersion: 2
-        x: 71
-        y: 230
-        width: 19
-        height: 22
+        x: 64
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1063,10 +1063,10 @@ TextureImporter:
       name: Skeleton_Mage_33
       rect:
         serializedVersion: 2
-        x: 103
-        y: 230
-        width: 19
-        height: 24
+        x: 96
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1085,10 +1085,10 @@ TextureImporter:
       name: Skeleton_Mage_34
       rect:
         serializedVersion: 2
-        x: 135
-        y: 230
-        width: 19
-        height: 23
+        x: 128
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1107,10 +1107,10 @@ TextureImporter:
       name: Skeleton_Mage_35
       rect:
         serializedVersion: 2
-        x: 167
-        y: 230
-        width: 19
-        height: 22
+        x: 160
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1129,10 +1129,10 @@ TextureImporter:
       name: Skeleton_Mage_36
       rect:
         serializedVersion: 2
-        x: 9
-        y: 198
-        width: 15
-        height: 24
+        x: 0
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1151,10 +1151,10 @@ TextureImporter:
       name: Skeleton_Mage_37
       rect:
         serializedVersion: 2
-        x: 40
-        y: 198
-        width: 17
-        height: 24
+        x: 32
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1173,10 +1173,10 @@ TextureImporter:
       name: Skeleton_Mage_38
       rect:
         serializedVersion: 2
-        x: 70
-        y: 198
-        width: 20
-        height: 25
+        x: 64
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1195,10 +1195,10 @@ TextureImporter:
       name: Skeleton_Mage_39
       rect:
         serializedVersion: 2
-        x: 100
-        y: 198
-        width: 22
-        height: 23
+        x: 96
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1217,10 +1217,10 @@ TextureImporter:
       name: Skeleton_Mage_40
       rect:
         serializedVersion: 2
-        x: 133
-        y: 198
-        width: 21
-        height: 23
+        x: 128
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1239,10 +1239,10 @@ TextureImporter:
       name: Skeleton_Mage_41
       rect:
         serializedVersion: 2
-        x: 167
-        y: 198
-        width: 19
-        height: 24
+        x: 160
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1261,10 +1261,10 @@ TextureImporter:
       name: Skeleton_Mage_42
       rect:
         serializedVersion: 2
-        x: 200
-        y: 198
-        width: 17
-        height: 24
+        x: 192
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1283,10 +1283,10 @@ TextureImporter:
       name: Skeleton_Mage_43
       rect:
         serializedVersion: 2
-        x: 233
-        y: 198
-        width: 15
-        height: 24
+        x: 224
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1305,10 +1305,10 @@ TextureImporter:
       name: Skeleton_Mage_44
       rect:
         serializedVersion: 2
-        x: 7
-        y: 166
-        width: 16
-        height: 23
+        x: 0
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1327,10 +1327,10 @@ TextureImporter:
       name: Skeleton_Mage_45
       rect:
         serializedVersion: 2
-        x: 39
-        y: 166
-        width: 16
-        height: 23
+        x: 32
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1349,10 +1349,10 @@ TextureImporter:
       name: Skeleton_Mage_46
       rect:
         serializedVersion: 2
-        x: 68
-        y: 166
-        width: 19
-        height: 22
+        x: 64
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1371,10 +1371,10 @@ TextureImporter:
       name: Skeleton_Mage_47
       rect:
         serializedVersion: 2
-        x: 102
-        y: 166
-        width: 18
-        height: 22
+        x: 96
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1393,10 +1393,10 @@ TextureImporter:
       name: Skeleton_Mage_48
       rect:
         serializedVersion: 2
-        x: 134
-        y: 166
-        width: 18
-        height: 22
+        x: 128
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1415,10 +1415,10 @@ TextureImporter:
       name: Skeleton_Mage_49
       rect:
         serializedVersion: 2
-        x: 167
-        y: 166
-        width: 16
-        height: 23
+        x: 160
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1437,10 +1437,10 @@ TextureImporter:
       name: Skeleton_Mage_50
       rect:
         serializedVersion: 2
-        x: 199
-        y: 166
-        width: 16
-        height: 23
+        x: 192
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1459,10 +1459,10 @@ TextureImporter:
       name: Skeleton_Mage_51
       rect:
         serializedVersion: 2
-        x: 231
-        y: 166
-        width: 16
-        height: 23
+        x: 224
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1481,10 +1481,10 @@ TextureImporter:
       name: Skeleton_Mage_52
       rect:
         serializedVersion: 2
-        x: 9
-        y: 134
-        width: 18
-        height: 24
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1503,10 +1503,10 @@ TextureImporter:
       name: Skeleton_Mage_53
       rect:
         serializedVersion: 2
-        x: 40
-        y: 134
-        width: 20
-        height: 24
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1525,10 +1525,10 @@ TextureImporter:
       name: Skeleton_Mage_54
       rect:
         serializedVersion: 2
-        x: 72
-        y: 134
-        width: 17
-        height: 25
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1547,10 +1547,10 @@ TextureImporter:
       name: Skeleton_Mage_55
       rect:
         serializedVersion: 2
-        x: 86
-        y: 139
-        width: 7
-        height: 10
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1569,10 +1569,10 @@ TextureImporter:
       name: Skeleton_Mage_56
       rect:
         serializedVersion: 2
-        x: 103
-        y: 134
-        width: 25
-        height: 23
+        x: 128
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1591,10 +1591,10 @@ TextureImporter:
       name: Skeleton_Mage_57
       rect:
         serializedVersion: 2
-        x: 135
-        y: 134
-        width: 23
-        height: 23
+        x: 160
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1613,10 +1613,10 @@ TextureImporter:
       name: Skeleton_Mage_58
       rect:
         serializedVersion: 2
-        x: 167
-        y: 134
-        width: 19
-        height: 24
+        x: 192
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1635,10 +1635,10 @@ TextureImporter:
       name: Skeleton_Mage_59
       rect:
         serializedVersion: 2
-        x: 200
-        y: 134
-        width: 17
-        height: 24
+        x: 224
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1657,10 +1657,10 @@ TextureImporter:
       name: Skeleton_Mage_60
       rect:
         serializedVersion: 2
-        x: 233
-        y: 134
-        width: 15
-        height: 24
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1679,10 +1679,10 @@ TextureImporter:
       name: Skeleton_Mage_61
       rect:
         serializedVersion: 2
-        x: 7
-        y: 113
-        width: 16
-        height: 14
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1701,10 +1701,10 @@ TextureImporter:
       name: Skeleton_Mage_62
       rect:
         serializedVersion: 2
-        x: 8
-        y: 102
-        width: 15
-        height: 12
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1723,10 +1723,10 @@ TextureImporter:
       name: Skeleton_Mage_63
       rect:
         serializedVersion: 2
-        x: 39
-        y: 111
-        width: 16
-        height: 14
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1745,10 +1745,10 @@ TextureImporter:
       name: Skeleton_Mage_64
       rect:
         serializedVersion: 2
-        x: 70
-        y: 102
-        width: 20
-        height: 20
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1767,10 +1767,10 @@ TextureImporter:
       name: Skeleton_Mage_65
       rect:
         serializedVersion: 2
-        x: 99
-        y: 101
-        width: 24
-        height: 17
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1789,10 +1789,10 @@ TextureImporter:
       name: Skeleton_Mage_66
       rect:
         serializedVersion: 2
-        x: 39
-        y: 102
-        width: 18
-        height: 10
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1811,10 +1811,10 @@ TextureImporter:
       name: Skeleton_Mage_67
       rect:
         serializedVersion: 2
-        x: 9
-        y: 70
-        width: 15
-        height: 24
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1833,10 +1833,10 @@ TextureImporter:
       name: Skeleton_Mage_68
       rect:
         serializedVersion: 2
-        x: 41
-        y: 70
-        width: 15
-        height: 24
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1855,10 +1855,10 @@ TextureImporter:
       name: Skeleton_Mage_69
       rect:
         serializedVersion: 2
-        x: 73
-        y: 70
-        width: 15
-        height: 24
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1877,10 +1877,10 @@ TextureImporter:
       name: Skeleton_Mage_70
       rect:
         serializedVersion: 2
-        x: 105
-        y: 70
-        width: 15
-        height: 24
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1899,10 +1899,10 @@ TextureImporter:
       name: Skeleton_Mage_71
       rect:
         serializedVersion: 2
-        x: 7
-        y: 38
-        width: 16
-        height: 23
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1921,10 +1921,10 @@ TextureImporter:
       name: Skeleton_Mage_72
       rect:
         serializedVersion: 2
-        x: 39
-        y: 38
-        width: 16
-        height: 23
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1943,10 +1943,10 @@ TextureImporter:
       name: Skeleton_Mage_73
       rect:
         serializedVersion: 2
-        x: 71
-        y: 38
-        width: 16
-        height: 23
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1965,10 +1965,10 @@ TextureImporter:
       name: Skeleton_Mage_74
       rect:
         serializedVersion: 2
-        x: 103
-        y: 38
-        width: 16
-        height: 23
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1987,10 +1987,10 @@ TextureImporter:
       name: Skeleton_Mage_75
       rect:
         serializedVersion: 2
-        x: 9
-        y: 6
-        width: 15
-        height: 24
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2005,77 +2005,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Skeleton_Mage_76
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 6
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94511acef6a1c4d10800000000000000
-      internalID: 2111091393343591753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton_Mage_77
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 6
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 491f743f4df219820800000000000000
-      internalID: 2923170224801313172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton_Mage_78
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 6
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1df7df220bf8d09d0800000000000000
-      internalID: -2806429006117896239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e1aabe65c57ac264c902ef2670f25796
     internalID: 0
     vertices: []
     indices: 
@@ -2159,9 +2093,6 @@ TextureImporter:
       Skeleton_Mage_73: -176417682854900811
       Skeleton_Mage_74: 6483973156003920353
       Skeleton_Mage_75: 761413181228752511
-      Skeleton_Mage_76: 2111091393343591753
-      Skeleton_Mage_77: 2923170224801313172
-      Skeleton_Mage_78: -2806429006117896239
       Skeleton_Mage_8: -45744741542817567
       Skeleton_Mage_9: -5084508212031681465
   mipmapLimitGroupName: 
