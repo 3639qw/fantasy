@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] protected internal float MP = 50f; // 현재 마법능력
     [SerializeField] protected internal float ST = 100f; // 현재 힘
 
+    // 플레이어 위치 저장
+    protected internal Vector2? playerStartPosition = null;
+    
     public static GameManager Instance
     {
         get
@@ -37,20 +41,40 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    
+    private void OnEnable()
     {
-        
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // 씬이 로드 될 때마다 실행
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"씬이 로드됨: {scene.name}");
+        // 씬이 로드될 때 실행할 코드 작성
+        if (scene.name == "Overworld")
+        {
+            if(playerStartPosition.HasValue)
+                GameObject.Find("Player").transform.position = playerStartPosition.Value;   
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         RecoverSkill(3,10); // 1초에 10씩 힘을 회복함
-        Debug.Log(ST);
+        if (playerStartPosition.HasValue)
+        {
+            Debug.Log($"x: {playerStartPosition.Value.x}, y: {playerStartPosition.Value.y}");
+        }
         
     }
     
