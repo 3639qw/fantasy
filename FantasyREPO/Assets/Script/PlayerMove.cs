@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _runSpeed = 8f;
 
     private Vector2 vector;
-
     private Rigidbody2D _rb;
     private Animator _animator;
 
@@ -15,9 +15,8 @@ public class PlayerMove : MonoBehaviour
     private const string _vertical = "Vertical";
     private const string _lastHorizontal = "LastHorizontal";
     private const string _lastVertical = "LastVertical";
-    
-    private Vector2 _lastDirection = Vector2.down;
 
+    private Vector2 _lastDirection = Vector2.down;
 
     private void Awake()
     {
@@ -28,7 +27,12 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         vector.Set(InputManager.Movement.x, InputManager.Movement.y);
-        _rb.linearVelocity = vector * _moveSpeed;
+
+        float currentSpeed = (Input.GetKey(KeyCode.LeftShift) && GameManager.Instance.ST > 0)
+            ? _runSpeed
+            : _moveSpeed;
+
+        _rb.linearVelocity = vector * currentSpeed;
 
         _animator.SetFloat(_horizontal, vector.x);
         _animator.SetFloat(_vertical, vector.y);
@@ -39,10 +43,7 @@ public class PlayerMove : MonoBehaviour
             _animator.SetFloat(_lastVertical, vector.y);
             _lastDirection = vector.normalized;
         }
-
     }
-    // PlayerMove.cs 맨 아래에 추가:
+
     public Vector2 LastDirection => _lastDirection;
-
-
 }
