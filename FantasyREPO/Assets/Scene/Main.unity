@@ -491,11 +491,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!1 &441655066
-=======
 --- !u!1 &439794626
->>>>>>> kyoon
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -503,72 +499,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 441655067}
-  - component: {fileID: 441655069}
-  - component: {fileID: 441655068}
-  m_Layer: 5
-  m_Name: Text
-=======
   - component: {fileID: 439794627}
   - component: {fileID: 439794628}
   m_Layer: 5
   m_Name: Text Area
->>>>>>> kyoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!224 &441655067
-=======
 --- !u!224 &439794627
->>>>>>> kyoon
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 441655066}
-=======
   m_GameObject: {fileID: 439794626}
->>>>>>> kyoon
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-<<<<<<< HEAD
-  m_Children: []
-  m_Father: {fileID: 1005869894}
-=======
   m_Children:
   - {fileID: 1185826591}
   - {fileID: 1645395180}
   m_Father: {fileID: 1910938726}
->>>>>>> kyoon
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
---- !u!114 &441655068
-=======
 --- !u!114 &439794628
->>>>>>> kyoon
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 441655066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-=======
   m_GameObject: {fileID: 439794626}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -623,7 +589,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 441655066}
   m_Enabled: 1
   m_EditorHideFlags: 0
->>>>>>> kyoon
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -742,11 +707,7 @@ RectTransform:
   m_GameObject: {fileID: 492726396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-  m_LocalScale: {x: 1, y: 1, z: 1}
-=======
   m_LocalScale: {x: 1, y: 0.9, z: 1}
->>>>>>> kyoon
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1746983515}
@@ -754,11 +715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: -15}
-=======
   m_AnchoredPosition: {x: 0, y: 5}
->>>>>>> kyoon
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492726398
@@ -1421,10 +1378,7 @@ GameObject:
   - component: {fileID: 839885745}
   - component: {fileID: 839885744}
   - component: {fileID: 839885743}
-<<<<<<< HEAD
-=======
   - component: {fileID: 839885746}
->>>>>>> kyoon
   m_Layer: 5
   m_Name: Resister
   m_TagString: Untagged
@@ -1496,13 +1450,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-<<<<<<< HEAD
-      - m_Target: {fileID: 1955233617}
-        m_TargetAssemblyTypeName: LoginManager, Assembly-CSharp
-=======
       - m_Target: {fileID: 839885746}
         m_TargetAssemblyTypeName: RegisterManager, Assembly-CSharp
->>>>>>> kyoon
         m_MethodName: RegisterButtonClick
         m_Mode: 1
         m_Arguments:
@@ -1551,8 +1500,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839885741}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-=======
 --- !u!114 &839885746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1570,7 +1517,6 @@ MonoBehaviour:
   registerMail: {fileID: 1764527391}
   registerName: {fileID: 492726398}
   registerNick: {fileID: 1910938727}
->>>>>>> kyoon
 --- !u!1 &925745386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,11 +1825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: 90}
-=======
   m_AnchoredPosition: {x: 0, y: 95}
->>>>>>> kyoon
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986268512
@@ -2288,11 +2230,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
-  m_text: "\uBCF8\uBA85"
-=======
   m_text: "\uC131\uD568"
->>>>>>> kyoon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5fc2c4e0c2626b94b9e7a18024d7c2d5, type: 2}
   m_sharedMaterial: {fileID: -4746842769007879639, guid: 5fc2c4e0c2626b94b9e7a18024d7c2d5, type: 2}
@@ -2407,19 +2345,12 @@ RectTransform:
   - {fileID: 2115832455}
   - {fileID: 1764527390}
   - {fileID: 492726397}
-<<<<<<< HEAD
-=======
   - {fileID: 1910938726}
->>>>>>> kyoon
   m_Father: {fileID: 1288967215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: -137.64001}
-=======
   m_AnchoredPosition: {x: 0, y: -137.64003}
->>>>>>> kyoon
   m_SizeDelta: {x: -1630.56, y: -772.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043134065
@@ -2910,8 +2841,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122510812}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &1185826590
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +2998,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185826590}
   m_CullTransparentMesh: 1
->>>>>>> kyoon
 --- !u!1 &1288967211
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,11 +3350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: -192.25}
-=======
   m_AnchoredPosition: {x: 0, y: -192.25002}
->>>>>>> kyoon
   m_SizeDelta: {x: -1630.56, y: -818.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536581254
@@ -3736,8 +3660,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603065889}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &1645395179
 GameObject:
   m_ObjectHideFlags: 0
@@ -3874,7 +3796,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645395179}
   m_CullTransparentMesh: 1
->>>>>>> kyoon
 --- !u!1 &1696161370
 GameObject:
   m_ObjectHideFlags: 0
@@ -4541,11 +4462,7 @@ RectTransform:
   m_GameObject: {fileID: 1764527389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-  m_LocalScale: {x: 1, y: 1, z: 1}
-=======
   m_LocalScale: {x: 1, y: 0.9, z: 1}
->>>>>>> kyoon
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1477162791}
@@ -4553,11 +4470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: 20}
-=======
   m_AnchoredPosition: {x: 0, y: 35}
->>>>>>> kyoon
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764527391
@@ -4839,12 +4752,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
-<<<<<<< HEAD
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding: {x: -8, y: -5, z: -8, w: -5}
-  m_Softness: {x: 0, y: 0}
-=======
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
@@ -5027,7 +4934,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910938725}
   m_CullTransparentMesh: 1
->>>>>>> kyoon
 --- !u!1 &1955233612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,15 +5009,7 @@ MonoBehaviour:
   LoginView: {fileID: 1536581252}
   inputField_ID: {fileID: 2016255535}
   inputField_PW: {fileID: 1725331708}
-<<<<<<< HEAD
-  registerID: {fileID: 986268512}
-  registerPW: {fileID: 2115832456}
-  registerMail: {fileID: 1764527391}
-  registerName: {fileID: 492726398}
-  registerNick: {fileID: 492726398}
-=======
   Button_Login: {fileID: 0}
->>>>>>> kyoon
 --- !u!1 &1957344359
 GameObject:
   m_ObjectHideFlags: 0
@@ -5744,11 +5642,7 @@ RectTransform:
   m_GameObject: {fileID: 2115832454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-  m_LocalScale: {x: 1, y: 1, z: 1}
-=======
   m_LocalScale: {x: 1, y: 0.9, z: 1}
->>>>>>> kyoon
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 569467249}
@@ -5756,11 +5650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: 55}
-=======
   m_AnchoredPosition: {x: 0, y: 65}
->>>>>>> kyoon
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2115832456
@@ -5909,8 +5799,4 @@ SceneRoots:
   - {fileID: 1895838001}
   - {fileID: 1288967215}
   - {fileID: 306159311}
-<<<<<<< HEAD
   - {fileID: 1955233614}
-=======
-  - {fileID: 1955233614}
->>>>>>> kyoon
