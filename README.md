@@ -14,7 +14,7 @@
 - 장르 : SandBox, RPG, Simulation
 
 ## 게임설명
-|<img src="https://github.com/user-attachments/assets/6403058e-a556-43cf-95b0-f6e0bf9971e3" width="180%" height="100%"/>|<img src="https://github.com/user-attachments/assets/7b6fe332-e0ec-47a1-9752-20bbd595dce9" width="180%" height="100%"/>|
+|<img src="https://github.com/user-attachments/assets/6403058e-a556-43cf-95b0-f6e0bf9971e3" />|<img src="https://github.com/user-attachments/assets/7b6fe332-e0ec-47a1-9752-20bbd595dce9"/>|
 |:---:|:---:|
 |게임 타이틀|게임 플레이 화면|
 
@@ -66,6 +66,6 @@
 | 이름 | 역할 | Git |
 | --- | --- | --- |
 | 이주용 | 조장, 게임개발 | url.url |
-| 고윤 | 기획, 백엔드, 몬스터 알고리즘 | url.url | 
+| 고윤 | 기획, 백엔드, 몬스터 알고리즘 | [고윤](https://k-yoon03.github.io/resume/) | 
 | 안현웅 | 스테이지 맵핑, 게임개발 | url.url |
 | 문석민 | UI, 게임개발 | url.url |
