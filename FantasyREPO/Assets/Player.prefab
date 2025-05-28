@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7364101013286143284}
   - component: {fileID: 3617296752407584086}
   - component: {fileID: 6123671853032862421}
-  - component: {fileID: 4201262710047923998}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -200,49 +199,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 5
---- !u!114 &4201262710047923998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405444304465839231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515263e1415be584c8296f2a9544f810, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quickSlots:
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  bagSlots:
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  emptySprite: {fileID: 0}
-  bagPanel: {fileID: 0}

@@ -21,7 +21,6 @@ public class Inventory : MonoBehaviour
     public class ItemSlot
     {
         public Image icon;
-        public TextMeshProUGUI countLabel;
         [HideInInspector] public int count = 0;
     }
 
@@ -34,8 +33,7 @@ public class Inventory : MonoBehaviour
 
     private ItemSlot[] AllSlots => CombineArrays(quickSlots, bagSlots);
 
-    [Header("빈 슬롯 플레이스홀더")]
-    [SerializeField] private Sprite emptySprite;
+    [Header("빈 슬롯 플레이스홀더")][SerializeField] private Sprite emptySprite;
 
     [Header("Bag UI 패널")][SerializeField] private GameObject bagPanel;
 
@@ -114,7 +112,7 @@ public class Inventory : MonoBehaviour
     /* ────────── 시각 갱신 ────────── */
     private void UpdateSlotVisual(ItemSlot s)
     {
-        s.countLabel.text = s.count > 1 ? $"×{s.count}" : "";
+        s.icon.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = s.count > 1 ? $"×{s.count}" : "";
     }
     private void SetAlpha(Image img, bool selected)
     {

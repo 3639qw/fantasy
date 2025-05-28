@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            player = GameObject.FindWithTag("Player");
         }
     }
     

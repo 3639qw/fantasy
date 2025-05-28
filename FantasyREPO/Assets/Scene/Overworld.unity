@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 755111}
   - component: {fileID: 755112}
   - component: {fileID: 755113}
+  - component: {fileID: 755114}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -309,6 +310,132 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aaa3d26c479a054abf4129eef4d6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &755114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515263e1415be584c8296f2a9544f810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quickSlots:
+  - icon: {fileID: 1595948850}
+    count: 0
+  - icon: {fileID: 226964071}
+    count: 0
+  - icon: {fileID: 530166649}
+    count: 0
+  - icon: {fileID: 631726599}
+    count: 0
+  - icon: {fileID: 961063889}
+    count: 0
+  bagSlots:
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  - icon: {fileID: 1098087681}
+    count: 0
+  emptySprite: {fileID: 0}
+  bagPanel: {fileID: 1589465150}
 --- !u!1 &28458151
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +448,7 @@ GameObject:
   - component: {fileID: 28458154}
   - component: {fileID: 28458153}
   m_Layer: 5
-  m_Name: slot5 (40)
+  m_Name: slot45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,7 +524,7 @@ GameObject:
   - component: {fileID: 77223396}
   - component: {fileID: 77223395}
   m_Layer: 5
-  m_Name: slot5 (2)
+  m_Name: slot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,7 +600,7 @@ GameObject:
   - component: {fileID: 77338609}
   - component: {fileID: 77338608}
   m_Layer: 5
-  m_Name: slot5 (43)
+  m_Name: slot48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,7 +812,7 @@ GameObject:
   - component: {fileID: 122484681}
   - component: {fileID: 122484680}
   m_Layer: 5
-  m_Name: slot5 (20)
+  m_Name: slot25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -897,7 +1024,7 @@ GameObject:
   - component: {fileID: 129075008}
   - component: {fileID: 129075007}
   m_Layer: 5
-  m_Name: slot5 (28)
+  m_Name: slot33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,7 +1100,7 @@ GameObject:
   - component: {fileID: 191416024}
   - component: {fileID: 191416023}
   m_Layer: 5
-  m_Name: slot5 (24)
+  m_Name: slot29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1261,7 +1388,7 @@ GameObject:
   - component: {fileID: 234735258}
   - component: {fileID: 234735257}
   m_Layer: 5
-  m_Name: slot5 (10)
+  m_Name: slot15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1833,12 +1960,12 @@ GameObject:
   - component: {fileID: 284254867}
   - component: {fileID: 284254869}
   m_Layer: 0
-  m_Name: Seed
+  m_Name: Seed 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &284254866
 Transform:
   m_ObjectHideFlags: 0
@@ -1897,7 +2024,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 40
+  m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2141,7 +2268,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -3322,7 +3449,7 @@ GameObject:
   - component: {fileID: 349235910}
   - component: {fileID: 349235909}
   m_Layer: 5
-  m_Name: slot5 (17)
+  m_Name: slot22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3879,7 +4006,7 @@ GameObject:
   - component: {fileID: 441252060}
   - component: {fileID: 441252059}
   m_Layer: 5
-  m_Name: slot5 (26)
+  m_Name: slot31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3955,7 +4082,7 @@ GameObject:
   - component: {fileID: 494064288}
   - component: {fileID: 494064287}
   m_Layer: 5
-  m_Name: slot5 (37)
+  m_Name: slot42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4167,7 +4294,7 @@ GameObject:
   - component: {fileID: 525622845}
   - component: {fileID: 525622844}
   m_Layer: 5
-  m_Name: slot5 (25)
+  m_Name: slot30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4243,7 +4370,7 @@ GameObject:
   - component: {fileID: 528719965}
   - component: {fileID: 528719964}
   m_Layer: 5
-  m_Name: slot5 (19)
+  m_Name: slot24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4395,7 +4522,7 @@ GameObject:
   - component: {fileID: 533195924}
   - component: {fileID: 533195923}
   m_Layer: 5
-  m_Name: slot5 (42)
+  m_Name: slot47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4607,7 +4734,7 @@ GameObject:
   - component: {fileID: 547893286}
   - component: {fileID: 547893285}
   m_Layer: 5
-  m_Name: slot5 (8)
+  m_Name: slot13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5721,7 +5848,7 @@ GameObject:
   - component: {fileID: 640503335}
   - component: {fileID: 640503334}
   m_Layer: 5
-  m_Name: slot5 (32)
+  m_Name: slot37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6905,7 +7032,7 @@ GameObject:
   - component: {fileID: 778984075}
   - component: {fileID: 778984074}
   m_Layer: 5
-  m_Name: slot5 (45)
+  m_Name: slot50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7117,7 +7244,7 @@ GameObject:
   - component: {fileID: 797438468}
   - component: {fileID: 797438467}
   m_Layer: 5
-  m_Name: slot5 (22)
+  m_Name: slot27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7544,7 +7671,7 @@ GameObject:
   - component: {fileID: 807755292}
   - component: {fileID: 807755291}
   m_Layer: 5
-  m_Name: slot5 (30)
+  m_Name: slot35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7620,7 +7747,7 @@ GameObject:
   - component: {fileID: 810756578}
   - component: {fileID: 810756577}
   m_Layer: 5
-  m_Name: slot5 (18)
+  m_Name: slot23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7968,7 +8095,7 @@ GameObject:
   - component: {fileID: 930337675}
   - component: {fileID: 930337674}
   m_Layer: 5
-  m_Name: slot5 (36)
+  m_Name: slot41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8044,7 +8171,7 @@ GameObject:
   - component: {fileID: 931447069}
   - component: {fileID: 931447068}
   m_Layer: 5
-  m_Name: slot5 (31)
+  m_Name: slot36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8659,7 +8786,7 @@ GameObject:
   - component: {fileID: 1021417762}
   - component: {fileID: 1021417761}
   m_Layer: 5
-  m_Name: slot5 (33)
+  m_Name: slot38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9545,7 +9672,7 @@ GameObject:
   - component: {fileID: 1111730165}
   - component: {fileID: 1111730164}
   m_Layer: 5
-  m_Name: slot5 (3)
+  m_Name: slot8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10301,7 +10428,7 @@ GameObject:
   - component: {fileID: 1241693894}
   - component: {fileID: 1241693893}
   m_Layer: 5
-  m_Name: slot5 (29)
+  m_Name: slot34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10649,7 +10776,7 @@ GameObject:
   - component: {fileID: 1272478945}
   - component: {fileID: 1272478944}
   m_Layer: 5
-  m_Name: slot5 (9)
+  m_Name: slot14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10983,7 +11110,7 @@ GameObject:
   - component: {fileID: 1303510629}
   - component: {fileID: 1303510628}
   m_Layer: 5
-  m_Name: slot5 (4)
+  m_Name: slot9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11064,7 +11191,7 @@ GameObject:
   - component: {fileID: 1337632119}
   - component: {fileID: 1337632118}
   m_Layer: 5
-  m_Name: slot5 (13)
+  m_Name: slot18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11487,7 +11614,7 @@ GameObject:
   - component: {fileID: 1360443592}
   - component: {fileID: 1360443591}
   m_Layer: 5
-  m_Name: slot5 (6)
+  m_Name: slot11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11563,7 +11690,7 @@ GameObject:
   - component: {fileID: 1363606671}
   - component: {fileID: 1363606670}
   m_Layer: 5
-  m_Name: slot5 (11)
+  m_Name: slot16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11775,7 +11902,7 @@ GameObject:
   - component: {fileID: 1399615458}
   - component: {fileID: 1399615457}
   m_Layer: 5
-  m_Name: slot5 (21)
+  m_Name: slot26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12198,7 +12325,7 @@ GameObject:
   - component: {fileID: 1501283226}
   - component: {fileID: 1501283225}
   m_Layer: 5
-  m_Name: slot5 (34)
+  m_Name: slot39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13610,7 +13737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1589465151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13731,7 +13858,7 @@ GameObject:
   - component: {fileID: 1595736758}
   - component: {fileID: 1595736757}
   m_Layer: 5
-  m_Name: slot5 (39)
+  m_Name: slot44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13883,7 +14010,7 @@ GameObject:
   - component: {fileID: 1631474026}
   - component: {fileID: 1631474025}
   m_Layer: 5
-  m_Name: slot5 (38)
+  m_Name: slot43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14209,6 +14336,7 @@ GameObject:
   - component: {fileID: 1660090063}
   - component: {fileID: 1660090062}
   - component: {fileID: 1660090061}
+  - component: {fileID: 1660090065}
   m_Layer: 5
   m_Name: PlayerValue_Canvas
   m_TagString: Untagged
@@ -14301,6 +14429,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1660090065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660090060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aaa3d26c479a054abf4129eef4d6f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1661957108
 GameObject:
   m_ObjectHideFlags: 0
@@ -14660,7 +14800,7 @@ GameObject:
   - component: {fileID: 1699445931}
   - component: {fileID: 1699445930}
   m_Layer: 5
-  m_Name: slot5 (16)
+  m_Name: slot21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29320,7 +29460,7 @@ Tilemap:
       - {fileID: 1886288347, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -614111303, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 961836988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 1, y: -14, z: 0}
@@ -29346,7 +29486,7 @@ Tilemap:
       - {fileID: 1886288347, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -614111303, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 961836988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 3, y: -14, z: 0}
@@ -29502,7 +29642,7 @@ Tilemap:
       - {fileID: -1749266499, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -999333216, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1770059732, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -1, y: -12, z: 0}
@@ -29606,7 +29746,7 @@ Tilemap:
       - {fileID: 1886288347, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -614111303, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 961836988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 9, y: -11, z: 0}
@@ -29619,7 +29759,7 @@ Tilemap:
       - {fileID: 1886288347, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -614111303, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 961836988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 10, y: -11, z: 0}
@@ -29684,7 +29824,7 @@ Tilemap:
       - {fileID: 389723244, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -801443496, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 1967441012, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 10, y: -10, z: 0}
@@ -29710,7 +29850,7 @@ Tilemap:
       - {fileID: 771364044, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 1657808225, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 903495460, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 10, y: -9, z: 0}
@@ -29723,7 +29863,7 @@ Tilemap:
       - {fileID: -281200414, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 1384702200, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 1240030243, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 4, y: -8, z: 0}
@@ -29762,7 +29902,7 @@ Tilemap:
       - {fileID: 1886288347, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -614111303, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 961836988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 12, y: -8, z: 0}
@@ -29827,7 +29967,7 @@ Tilemap:
       - {fileID: 1886288347, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -614111303, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 961836988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 17, y: -8, z: 0}
@@ -29983,7 +30123,7 @@ Tilemap:
       - {fileID: -1749266499, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -999333216, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1770059732, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 13, y: -6, z: 0}
@@ -30022,7 +30162,7 @@ Tilemap:
       - {fileID: -1749266499, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -999333216, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1770059732, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 16, y: -6, z: 0}
@@ -30488,7 +30628,7 @@ GameObject:
   - component: {fileID: 1735791457}
   - component: {fileID: 1735791456}
   m_Layer: 5
-  m_Name: slot5 (7)
+  m_Name: slot12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30911,7 +31051,7 @@ GameObject:
   - component: {fileID: 1818235356}
   - component: {fileID: 1818235355}
   m_Layer: 5
-  m_Name: slot5 (5)
+  m_Name: slot10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31075,6 +31215,7 @@ GameObject:
   - component: {fileID: 1842701868}
   - component: {fileID: 1842701867}
   - component: {fileID: 1842701866}
+  - component: {fileID: 1842701870}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -31169,6 +31310,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1842701870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842701865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aaa3d26c479a054abf4129eef4d6f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1871794559
 GameObject:
   m_ObjectHideFlags: 0
@@ -31181,7 +31334,7 @@ GameObject:
   - component: {fileID: 1871794562}
   - component: {fileID: 1871794561}
   m_Layer: 5
-  m_Name: slot5 (23)
+  m_Name: slot28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32073,7 +32226,7 @@ GameObject:
   - component: {fileID: 1967988688}
   - component: {fileID: 1967988687}
   m_Layer: 5
-  m_Name: slot5 (12)
+  m_Name: slot17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32285,7 +32438,7 @@ GameObject:
   - component: {fileID: 1989444736}
   - component: {fileID: 1989444735}
   m_Layer: 5
-  m_Name: slot5 (41)
+  m_Name: slot46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32497,7 +32650,7 @@ GameObject:
   - component: {fileID: 2002633096}
   - component: {fileID: 2002633095}
   m_Layer: 5
-  m_Name: slot5 (14)
+  m_Name: slot19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32706,7 +32859,7 @@ GameObject:
   - component: {fileID: 2018149116}
   - component: {fileID: 2018149115}
   m_Layer: 5
-  m_Name: slot5 (15)
+  m_Name: slot20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32782,7 +32935,7 @@ GameObject:
   - component: {fileID: 2037593877}
   - component: {fileID: 2037593876}
   m_Layer: 5
-  m_Name: slot5 (1)
+  m_Name: slot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32858,7 +33011,7 @@ GameObject:
   - component: {fileID: 2041464140}
   - component: {fileID: 2041464139}
   m_Layer: 5
-  m_Name: slot5 (44)
+  m_Name: slot49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32934,7 +33087,7 @@ GameObject:
   - component: {fileID: 2053303263}
   - component: {fileID: 2053303262}
   m_Layer: 5
-  m_Name: slot5 (27)
+  m_Name: slot32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33146,7 +33299,7 @@ GameObject:
   - component: {fileID: 2092714094}
   - component: {fileID: 2092714093}
   m_Layer: 5
-  m_Name: slot5 (35)
+  m_Name: slot40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33308,19 +33461,199 @@ PrefabInstance:
     - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: bagSlots.Array.data[1].icon
       value: 
-      objectReference: {fileID: 1732280181}
+      objectReference: {fileID: 1098087681}
     - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: bagSlots.Array.data[2].icon
       value: 
-      objectReference: {fileID: 1638909249}
+      objectReference: {fileID: 1098087681}
     - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: bagSlots.Array.data[3].icon
       value: 
-      objectReference: {fileID: 281357809}
+      objectReference: {fileID: 1098087681}
     - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: bagSlots.Array.data[4].icon
       value: 
-      objectReference: {fileID: 365329008}
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[5].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[6].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[7].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[8].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[9].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[10].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[11].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[12].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[13].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[14].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[15].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[16].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[17].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[18].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[19].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[20].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[21].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[22].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[23].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[24].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[25].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[26].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[27].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[28].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[29].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[30].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[31].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[32].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[33].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[34].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[35].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[36].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[37].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[38].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[39].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[40].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[41].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[42].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[43].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[44].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[45].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[46].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[47].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[48].icon
+      value: 
+      objectReference: {fileID: 1098087681}
+    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: bagSlots.Array.data[49].icon
+      value: 
+      objectReference: {fileID: 1098087681}
     - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: quickSlots.Array.data[0].icon
       value: 
@@ -33341,46 +33674,6 @@ PrefabInstance:
       propertyPath: quickSlots.Array.data[4].icon
       value: 
       objectReference: {fileID: 961063889}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: bagSlots.Array.data[0].countLabel
-      value: 
-      objectReference: {fileID: 949851144}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: bagSlots.Array.data[1].countLabel
-      value: 
-      objectReference: {fileID: 546685749}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: bagSlots.Array.data[2].countLabel
-      value: 
-      objectReference: {fileID: 1922582997}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: bagSlots.Array.data[3].countLabel
-      value: 
-      objectReference: {fileID: 101632886}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: bagSlots.Array.data[4].countLabel
-      value: 
-      objectReference: {fileID: 1661957110}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: quickSlots.Array.data[0].countLabel
-      value: 
-      objectReference: {fileID: 1931332748}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: quickSlots.Array.data[1].countLabel
-      value: 
-      objectReference: {fileID: 1572107703}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: quickSlots.Array.data[2].countLabel
-      value: 
-      objectReference: {fileID: 307317567}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: quickSlots.Array.data[3].countLabel
-      value: 
-      objectReference: {fileID: 1344103938}
-    - target: {fileID: 4201262710047923998, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: quickSlots.Array.data[4].countLabel
-      value: 
-      objectReference: {fileID: 289502907}
     - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
