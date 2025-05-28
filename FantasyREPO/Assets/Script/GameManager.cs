@@ -62,8 +62,12 @@ public class GameManager : MonoBehaviour
         // 씬이 로드될 때 실행할 코드 작성
         if (scene.name == "Overworld")
         {
-            if(playerStartPosition.HasValue)
-                GameObject.Find("Player").transform.position = playerStartPosition.Value;   
+            Debug.Log("world!!");
+            if (playerStartPosition.HasValue)
+            {
+                GameObject.Find("Camera").transform.position = new Vector3(playerStartPosition.Value.x, playerStartPosition.Value.y, GameObject.Find("Camera").transform.position.z);
+                GameObject.Find("Player").transform.position = playerStartPosition.Value;
+            }
         }
     }
 

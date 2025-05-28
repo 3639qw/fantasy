@@ -20,8 +20,6 @@ public class SceneLoader : MonoBehaviour
     [TagSelector]
     public string playerTag = "Player";
 
-    public float playerPosX;
-    public float playerPosY;
     
     [Header("반응할 키 선택")]
     public KeyCode triggerKey = KeyCode.Space;  // KeyCode 타입으로 드롭다운 표시됨
@@ -32,12 +30,6 @@ public class SceneLoader : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneName))
         {
-            // 씬 이동 전에 위치 저장
-            if (gm != null)
-            {
-                gm.playerStartPosition = new Vector2(playerPosX, playerPosY);
-            }
-
             SceneManager.LoadScene(sceneName);
         }
         else
@@ -83,7 +75,7 @@ public class SceneLoader : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             isPlayerInContact = false;
-            gm.playerStartPosition = null;
+            // gm.playerStartPosition = null;
         }
     }
     
