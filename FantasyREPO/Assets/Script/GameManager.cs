@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
@@ -42,10 +43,15 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            player = GameObject.FindWithTag("Player");
+            
         }
     }
-    
+
+    private void Start()
+    {
+        this.GetComponent<TilemapSerializer>().LoadAllTiles();
+    }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -60,10 +66,10 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log($"씬이 로드됨: {scene.name}");
+        player = GameObject.FindWithTag("Player");
         // 씬이 로드될 때 실행할 코드 작성
         if (scene.name == "Overworld")
         {
-            Debug.Log("world!!");
             if (playerStartPosition.HasValue)
             {
                 GameObject.Find("Camera").transform.position = new Vector3(playerStartPosition.Value.x, playerStartPosition.Value.y, GameObject.Find("Camera").transform.position.z);
