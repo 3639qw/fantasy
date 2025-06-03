@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     private const string _lastVertical = "LastVertical";
     
     private Vector2 _lastDirection = Vector2.down;
+    public Vector2 LastDirection => _lastDirection;
 
 
     private void Awake()

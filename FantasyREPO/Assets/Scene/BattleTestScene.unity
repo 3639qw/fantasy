@@ -639,6 +639,7 @@ MonoBehaviour:
   attackRange: 2
   attackAngle: 180
   attackRangeSprite: {fileID: 0}
+  coolTime: 0.5
 --- !u!58 &83914692
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10251,9 +10252,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8562582033219712999, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: m_LocalPosition.y

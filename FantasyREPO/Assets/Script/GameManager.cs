@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         RecoverSkill(3,10); // 1초에 10씩 힘을 회복함
+        RecoverSkill(1, 3);
         if (playerStartPosition.HasValue)
         {
             Debug.Log($"x: {playerStartPosition.Value.x}, y: {playerStartPosition.Value.y}");

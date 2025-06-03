@@ -6,67 +6,69 @@ public class MeleeAttackScript : MonoBehaviour
     public float attackAngle = 180f;  // 공격 각도 (기본값 180도)
     public Sprite attackRangeSprite;  // 공격 범위에 해당하는 원 스프라이트
 
-    void Update()
+    public float coolTime = 0.5f;
+    private float curTime;
+    private PlayerMove _playerMove;
+    private Rigidbody2D _rb;
+    private Animator _animator;
+
+    private void Awake()
     {
-        if (Input.GetMouseButtonDown(0))  // 마우스 왼쪽 클릭
-        {
-            PerformAttack();
-        }
+        _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _playerMove = GetComponent<PlayerMove>();
     }
 
-  
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && curTime <= 0)
+        {
+            PerformAttack();
+            var state = _animator.GetCurrentAnimatorStateInfo(0);
+            Debug.Log("Current State: " + state.fullPathHash);
+        }
+
+        if (curTime > 0)
+        {
+            curTime -= Time.deltaTime;
+        }
+
+    }
 
     private void PerformAttack()
     {
-
-        // 1. 플레이어 주변의 오브젝트를 찾기 (범위 내 모든 오브젝트 감지)
         Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(transform.position, attackRange);
 
-        // 디버그 로그: 감지된 오브젝트 출력
-        if (objectsInRange.Length == 0)
-        {
-            Debug.Log("범위 내에 몬스터가 없습니다.");
-        }
-        else
-        {
-            foreach (var obj in objectsInRange)
-            {
-                // 태그가 "Enemy"인 오브젝트만 감지
-                if (obj.CompareTag("Enemy"))
-                {
-                    Debug.Log("감지된 몬스터: " + obj.name);
-                }
-            }
-        }
-
-        // 범위 내에 몬스터가 있다면 공격 각도 계산
         foreach (Collider2D obj in objectsInRange)
         {
-            // 태그가 "Enemy"인 오브젝트만 공격
             if (obj.CompareTag("Enemy"))
             {
-                Debug.Log("공격 감지됨.");
-                // 몬스터의 위치와 플레이어의 위치를 기준으로 방향을 계산
                 Vector2 directionToMonster = (obj.transform.position - transform.position).normalized;
-
-                // 마우스 위치 계산
                 Vector2 directionToMouse = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
-
-                // 각도 계산
                 float angle = Vector2.Angle(directionToMonster, directionToMouse);
 
-                // 각도가 범위 내에 있을 경우 공격
                 if (angle <= attackAngle / 2)
                 {
+                    // 애니메이션에 방향 정보 전달
+                    Vector2 lastDir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;;
+
+                    _animator.SetFloat("AttackX", lastDir.x);
+                    _animator.SetFloat("AttackY", lastDir.y);
+                    _animator.SetTrigger("Attack");
+
                     Debug.Log("몬스터 공격 성공: " + obj.name);
-                    // 공격 처리 로직 추가
-                }
-                else
-                {
-                    Debug.Log("각도 외 공격 실패");
+                    curTime = coolTime;
+
+                    // 여기에 데미지 처리도 추가 가능
                 }
             }
         }
+    }
 
+    void EndAttack()
+    {
+        _animator.SetFloat("AttackX", 0f);
+        _animator.SetFloat("AttackY", 0f);
+        _animator.ResetTrigger("Attack");
     }
 }
