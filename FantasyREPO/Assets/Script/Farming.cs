@@ -192,9 +192,15 @@ public class Farming : MonoBehaviour
     /* ───────── 1×1 개간 & 급수 ───────── */
     private void BuildFarm(float reqST)
     {
-        if (!farmLand || gm.ST < reqST)
+        if (farmLand == null)
         {
-            Debug.Log("힘 부족 또는 farmLand 없음");
+            Debug.LogWarning("BuildFarm 호출 시 farmLand가 할당되지 않았습니다.");
+            return;
+        }
+
+        if (gm.ST < reqST)
+        {
+            Debug.Log("힘 부족");
             return;
         }
 
@@ -213,4 +219,5 @@ public class Farming : MonoBehaviour
             gm.ConsumeSkill(3, reqST);
         }
     }
+
 }

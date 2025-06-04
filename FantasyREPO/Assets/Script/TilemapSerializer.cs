@@ -62,17 +62,35 @@ public class TilemapSerializer : MonoBehaviour
             return;
         }
 
+        Farming farming = this.GetComponent<Farming>();
+        if (farming == null)
+        {
+            Debug.LogError("Farming 컴포넌트를 찾을 수 없습니다.");
+            return;
+        }
+        if (farming.farmLand == null)
+        {
+            Debug.LogError("farmLand가 할당되어 있지 않습니다. 할당 후 시도하세요.");
+            return;
+        }
+
         string json = File.ReadAllText(SavePath);
         TileSaveDataList dataList = JsonUtility.FromJson<TileSaveDataList>(json);
 
-        this.GetComponent<Farming>().farmLand.ClearAllTiles();
+        farming.farmLand.ClearAllTiles();
+
+        if (tileDict == null)
+        {
+            Debug.LogWarning("tileDict가 비어있음. LoadAllTiles() 호출 필요.");
+            LoadAllTiles();
+        }
 
         foreach (var tileData in dataList.tiles)
         {
             Vector3Int pos = new(tileData.x, tileData.y, tileData.z);
             if (tileDict.TryGetValue(tileData.tileName, out TileBase tile))
             {
-                this.GetComponent<Farming>().farmLand.SetTile(pos, tile);
+                farming.farmLand.SetTile(pos, tile);
             }
             else
             {
@@ -82,6 +100,7 @@ public class TilemapSerializer : MonoBehaviour
 
         Debug.Log("Tilemap loaded from JSON.");
     }
+
     
     // 전체 타일을 로딩
     protected internal void LoadAllTiles()
