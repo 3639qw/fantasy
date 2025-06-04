@@ -23,8 +23,8 @@ public class Farming : MonoBehaviour
     [SerializeField] private float harvestDistance = 1.5f;
 
     /* ──────── 농지 타일맵 & 타일 ──────── */
-    [Header("농지 타일맵 & 타일")]
-    [SerializeField] protected internal Tilemap farmLand;
+    // [Header("농지 타일맵 & 타일")]
+    protected internal Tilemap farmLand;
     [SerializeField] private TileBase tilledTile;
     [SerializeField] private TileBase farmTile;
     [SerializeField] private TileBase wetfarmTile;
@@ -41,11 +41,30 @@ public class Farming : MonoBehaviour
     }
     [SerializeField] private CropData[] crops;
 
-    [Header("타일맵 (씨앗·작물 레이어)")]
-    [SerializeField] protected internal Tilemap seedLand;
+    // [Header("타일맵 (씨앗·작물 레이어)")]
+    protected internal Tilemap seedLand;
 
     /* ───────── 초기화 ───────── */
-    private void Awake() { if (instance == null) instance = this; else Destroy(gameObject); }
+    public static Farming Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                return null;
+            }
+
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -56,9 +75,9 @@ public class Farming : MonoBehaviour
     /* ───────── 입력 ───────── */
     private void Update()
     {
+        Debug.Log(farmLand);
+        
         if (!Input.GetKeyDown(KeyCode.Space)) return;
-
-        TryRecoverTilemaps(); // null 복구 시도
 
         if (seedLand == null || farmLand == null)
         {
@@ -75,18 +94,26 @@ public class Farming : MonoBehaviour
         BuildFarm(5f);
     }
 
-    private void TryRecoverTilemaps()
+    protected internal void TryRecoverTilemaps()
     {
         if (seedLand == null)
         {
             GameObject seedObj = GameObject.FindGameObjectWithTag("SeedLand");
-            if (seedObj) seedLand = seedObj.GetComponent<Tilemap>();
+            if (seedObj)
+            {
+                seedLand = seedObj.GetComponent<Tilemap>();
+                Debug.Log("Seed Set!!");
+            }
         }
 
         if (farmLand == null)
         {
             GameObject farmObj = GameObject.FindGameObjectWithTag("Farm");
-            if (farmObj) farmLand = farmObj.GetComponent<Tilemap>();
+            if (farmObj)
+            {
+                farmLand = farmObj.GetComponent<Tilemap>();
+                Debug.Log("Farm Set!!");
+            }
         }
     }
 
