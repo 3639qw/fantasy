@@ -6760,10 +6760,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interpVelocity: 0
-  minDistance: 0
+  minDistance: 10
   followDistance: 0
   target: {fileID: 1317397515}
   offset: {x: 0, y: 0, z: 0}
+  tilemap: {fileID: 1714255220}
 --- !u!1 &688237335
 GameObject:
   m_ObjectHideFlags: 0
@@ -29883,7 +29884,7 @@ Tilemap:
       - {fileID: -1335954890, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 386802988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -588312593, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 5, y: -13, z: 0}
@@ -30377,7 +30378,7 @@ Tilemap:
       - {fileID: -1749266499, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -999333216, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1770059732, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 7, y: -6, z: 0}
@@ -34006,6 +34007,14 @@ PrefabInstance:
       propertyPath: quickSlots.Array.data[4].icon
       value: 
       objectReference: {fileID: 961063889}
+    - target: {fileID: 6123671853032862421, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: tilemap
+      value: 
+      objectReference: {fileID: 1714255220}
+    - target: {fileID: 6123671853032862421, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: _moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
