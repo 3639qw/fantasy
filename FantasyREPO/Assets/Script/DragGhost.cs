@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// 커서에 따라다니는 "유령 아이콘". Overlay / Screen‑Space‑Camera / World 모두 지원.
-/// </summary>
 [RequireComponent(typeof(Image))]
 public class DragGhost : MonoBehaviour
 {
@@ -13,6 +10,10 @@ public class DragGhost : MonoBehaviour
     RectTransform rt;
     Canvas canvas;
 
+    Image srcIcon;
+    Color srcPrevColor;
+
+    /* ───────────── 초기화 ───────────── */
     void Awake()
     {
         if (Instance == null) Instance = this; else { Destroy(gameObject); return; }
@@ -21,44 +22,57 @@ public class DragGhost : MonoBehaviour
         rt = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
 
-        img.raycastTarget = false;   // 드래그 투과
+        img.raycastTarget = false;
+        transform.SetAsLastSibling();
         Hide();
-        transform.SetAsLastSibling(); // Canvas 최상단
     }
 
-    /* --------- API --------- */
-    public void Show(Sprite s)
+    /* ───────────── 드래그 시작 ───────────── */
+    public void Show(Image source)
     {
-        Debug.Log($"Ghost.Show sprite={(s != null ? s.name : "NULL")}");
-        if (s == null) return;
-        img.sprite = s;
-        img.SetNativeSize();          // 0×0 방지
-        img.color = Color.white;    // 알파 1 보장
+        if (!source || !source.sprite) return;
+
+        // 1) 원본 투명화
+        srcIcon = source;
+        srcPrevColor = source.color;
+        srcIcon.color = new Color(srcPrevColor.r, srcPrevColor.g, srcPrevColor.b, 0f);
+
+        // 2) 유령 아이콘 설정
+        img.sprite = source.sprite;
+        img.SetNativeSize();
+        if (rt.rect.width < 10f)       // 0×0 방지 (아이콘이 작을 때)
+            rt.sizeDelta = new Vector2(64, 64);
+
+        img.color = Color.white;
         img.enabled = true;
     }
 
-    public void Hide() => img.enabled = false;
+    /* ───────────── 드래그 종료 ───────────── */
+    public void Hide()
+    {
+        if (srcIcon)
+        {
+            // 이미 emptySprite 로 바뀐 슬롯이라면 계속 투명 유지
+            Sprite empty = Inventory.Instance.EmptySprite;
+            bool isEmptySprite = (srcIcon.sprite == empty);
+            srcIcon.color = isEmptySprite ? new Color(1, 1, 1, 0) : srcPrevColor;
+        }
+        srcIcon = null;
+        img.enabled = false;
+    }
 
-    /* --------- 커서 추적 --------- */
+    /* ───────────── 커서 추적 ───────────── */
     void LateUpdate()
     {
         if (!img.enabled) return;
 
-        // Overlay 모드면 스크린 좌표 = UI 좌표이므로 바로 사용
         if (canvas.renderMode == RenderMode.ScreenSpaceOverlay)
-        {
             rt.position = Input.mousePosition;
-        }
-        else // Screen‑Space‑Camera 또는 World
+        else
         {
             Camera cam = canvas.worldCamera ?? Camera.main;
-            if (cam == null) { rt.position = Input.mousePosition; return; }
-
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvas.transform as RectTransform,
-                Input.mousePosition,
-                cam,
-                out Vector2 pos);
+                canvas.transform as RectTransform, Input.mousePosition, cam, out Vector2 pos);
             rt.anchoredPosition = pos;
         }
     }

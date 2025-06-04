@@ -39,7 +39,7 @@ public class SlotDrag : MonoBehaviour,
 
         startPos = transform.position;
         cg.blocksRaycasts = false;
-        DragGhost.Instance.Show(icon.sprite);
+        DragGhost.Instance.Show(icon);
     }
     public void OnDrag(PointerEventData e) { /* DragGhost가 커서 추적 */ }
     public void OnEndDrag(PointerEventData e)
