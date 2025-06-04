@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        this.GetComponent<TilemapSerializer>().LoadAllTiles();
+        
     }
 
     private void OnEnable()
@@ -70,6 +70,9 @@ public class GameManager : MonoBehaviour
         // 씬이 로드될 때 실행할 코드 작성
         if (scene.name == "Overworld")
         {
+            this.GetComponent<Farming>().TryRecoverTilemaps();
+            this.GetComponent<TilemapSerializer>().LoadTilemapFromJson();
+            
             if (playerStartPosition.HasValue)
             {
                 GameObject.Find("Camera").transform.position = new Vector3(playerStartPosition.Value.x, playerStartPosition.Value.y, GameObject.Find("Camera").transform.position.z);
@@ -83,10 +86,10 @@ public class GameManager : MonoBehaviour
     {
         RecoverSkill(3,10); // 1초에 10씩 힘을 회복함
         RecoverSkill(1, 3);
-        if (playerStartPosition.HasValue)
-        {
-            Debug.Log($"x: {playerStartPosition.Value.x}, y: {playerStartPosition.Value.y}");
-        }
+        // if (playerStartPosition.HasValue)
+        // {
+        //     Debug.Log($"x: {playerStartPosition.Value.x}, y: {playerStartPosition.Value.y}");
+        // }
         
     }
     

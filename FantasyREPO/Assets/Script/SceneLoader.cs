@@ -30,6 +30,11 @@ public class SceneLoader : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneName))
         {
+            if (SceneManager.GetActiveScene().name == "Overworld")
+            {
+                GameObject.FindWithTag("GameController").GetComponent<TilemapSerializer>().SaveTilemapToJson();    
+            }
+            
             SceneManager.LoadScene(sceneName);
         }
         else
