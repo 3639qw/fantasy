@@ -36,6 +36,7 @@ public class Inventory : MonoBehaviour
 
     [Header("빈 슬롯 플레이스홀더")]
     [SerializeField] private Sprite emptySprite;
+    public Sprite EmptySprite => emptySprite;
 
     [Header("Bag UI 패널")][SerializeField] private GameObject bagPanel;
 
@@ -46,8 +47,21 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         if (instance == null) instance = this; else { Destroy(gameObject); return; }
+        AutoAttachDragScripts();
+        NormalizeCounts();
     }
 
+    void NormalizeCounts()
+    {
+        Fix(quickSlots);
+        Fix(bagSlots);
+    }
+    void Fix(ItemSlot[] arr)
+    {
+        foreach (var s in arr)
+            if (s.count == 0 && s.icon && s.icon.sprite != emptySprite)
+                s.count = 1;                    // 아이콘만 있으면 count = 1
+    }
     /* ────────── 입력 처리 ────────── */
     private void Update()
     {
@@ -64,9 +78,22 @@ public class Inventory : MonoBehaviour
     private void SelectQuick(int idx)
     {
         states = idx;
-        // 알파 갱신
+        states = idx;
         for (int i = 0; i < quickSlots.Length; i++)
-            SetAlpha(quickSlots[i].icon, i == idx - 1);
+        {
+            ItemSlot s = quickSlots[i];
+
+            // 아이템이 있는 슬롯만 불투명/반투명 효과 적용
+            if (s.count > 0)
+            {
+                SetAlpha(s.icon, i == idx - 1);   // 선택 = 1f, 비선택 = 0.6f
+            }
+            else
+            {
+                // 빈칸이면 항상 알파 0(투명) 유지
+                s.icon.color = new Color(1, 1, 1, 0);
+            }
+        }
     }
 
     /* ────────── 아이템 추가 / 소비 ────────── */
@@ -105,10 +132,10 @@ public class Inventory : MonoBehaviour
         if (slot.count < amount) return false;
         slot.count -= amount;
         if (slot.count == 0)
-        {
-            slot.icon.sprite = emptySprite; slot.icon.color = new Color(1, 1, 1, 0.3f);
-        }
-        UpdateSlotVisual(slot); return true;
+            slot.icon.sprite = emptySprite;   // 색은 만지지 않는다
+
+        RefreshSlot(slot);                    // << 한 번만 호출
+        return true;
     }
 
     /* ────────── 시각 갱신 ────────── */
@@ -130,5 +157,44 @@ public class Inventory : MonoBehaviour
     {
         ItemSlot[] res = new ItemSlot[a.Length + b.Length];
         a.CopyTo(res, 0); b.CopyTo(res, a.Length); return res;
+    }
+
+    public void RefreshSlot(ItemSlot s)
+    {
+        s.countLabel.text = s.count > 1 ? $"×{s.count}" : "";
+        if (s.count == 0)
+        {
+            s.icon.sprite = emptySprite;
+            s.icon.color = new Color(1, 1, 1, 0);         // 완전 투명
+        }
+        else s.icon.color = Color.white;
+    }
+
+    /* 아이콘 Image → 대응 ItemSlot 자동 검색 */
+    public ItemSlot FindSlotByIcon(Image icon)
+    {
+        foreach (var q in quickSlots) if (q.icon == icon) return q;
+        foreach (var b in bagSlots) if (b.icon == icon) return b;
+        return null;
+    }
+    void AutoAttachDragScripts()
+    {
+        AttachSlots(quickSlots);
+        AttachSlots(bagSlots);
+    }
+    void AttachSlots(ItemSlot[] arr)
+    {
+        foreach (var s in arr)
+        {
+            if (s.icon == null) continue;
+            var go = s.icon.gameObject;                          // 아이콘 자체에 부착
+
+            if (!go.TryGetComponent(out CanvasGroup cg))
+                cg = go.AddComponent<CanvasGroup>();
+            cg.blocksRaycasts = true;
+
+            if (!go.GetComponent<SlotDrag>()) go.AddComponent<SlotDrag>();
+            if (!go.GetComponent<SlotDropTarget>()) go.AddComponent<SlotDropTarget>();
+        }
     }
 }
