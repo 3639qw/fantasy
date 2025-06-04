@@ -31,6 +31,7 @@ public class TilemapSerializer : MonoBehaviour
     protected internal void SaveTilemapToJson()
     {
         var bounds = this.GetComponent<Farming>().farmLand.cellBounds;
+        var seedBounds = this.GetComponent<Farming>().seedLand.cellBounds;
         TileSaveDataList dataList = new();
 
         foreach (var pos in bounds.allPositionsWithin)
@@ -39,6 +40,21 @@ public class TilemapSerializer : MonoBehaviour
             if (tile != null)
             {
                 dataList.tiles.Add(new TileSaveData
+                {
+                    tileName = tile.name,
+                    x = pos.x,
+                    y = pos.y,
+                    z = pos.z
+                });
+            }
+        }
+
+        foreach (var pos in seedBounds.allPositionsWithin)
+        {
+            TileBase tile = this.GetComponent<Farming>().seedLand.GetTile(pos);
+            if (tile != null)
+            {
+                dataList.seed.Add(new TileSaveData
                 {
                     tileName = tile.name,
                     x = pos.x,
@@ -78,6 +94,7 @@ public class TilemapSerializer : MonoBehaviour
         TileSaveDataList dataList = JsonUtility.FromJson<TileSaveDataList>(json);
 
         farming.farmLand.ClearAllTiles();
+        farming.seedLand.ClearAllTiles();
 
         if (tileDict == null)
         {
@@ -96,6 +113,20 @@ public class TilemapSerializer : MonoBehaviour
             {
                 Debug.LogWarning($"❌ Dictionary에서 타일 '{tileData.tileName}' 을(를) 찾을 수 없음.");
             }
+        }
+
+        foreach (var tileData in dataList.seed)
+        {
+            Vector3Int pos = new(tileData.x, tileData.y, tileData.z);
+            if (tileDict.TryGetValue(tileData.tileName, out TileBase tile))
+            {
+                farming.seedLand.SetTile(pos, tile);
+            }
+            else
+            {
+                Debug.LogWarning($"❌ Dictionary에서 타일 '{tileData.tileName}' 을(를) 찾을 수 없음.");
+            }
+            
         }
 
         Debug.Log("Tilemap loaded from JSON.");
@@ -138,5 +169,6 @@ public class TilemapSerializer : MonoBehaviour
     public class TileSaveDataList
     {
         public List<TileSaveData> tiles = new();
+        public List<TileSaveData> seed = new();
     }
 }
