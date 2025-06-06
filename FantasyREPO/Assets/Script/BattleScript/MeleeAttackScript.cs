@@ -38,6 +38,7 @@ public class MeleeAttackScript : MonoBehaviour
     private void PerformAttack()
     {
         Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(transform.position, attackRange);
+        bool attacked = false;
 
         foreach (Collider2D obj in objectsInRange)
         {
@@ -50,7 +51,7 @@ public class MeleeAttackScript : MonoBehaviour
                 if (angle <= attackAngle / 2)
                 {
                     // 애니메이션에 방향 정보 전달
-                    Vector2 lastDir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;;
+                    Vector2 lastDir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized; ;
 
                     _animator.SetFloat("AttackX", lastDir.x);
                     _animator.SetFloat("AttackY", lastDir.y);
@@ -58,6 +59,9 @@ public class MeleeAttackScript : MonoBehaviour
 
                     Debug.Log("몬스터 공격 성공: " + obj.name);
                     curTime = coolTime;
+                    _playerMove.isAttacking = true;
+
+                    attacked = true;
 
                     // 여기에 데미지 처리도 추가 가능
                 }
@@ -70,5 +74,6 @@ public class MeleeAttackScript : MonoBehaviour
         _animator.SetFloat("AttackX", 0f);
         _animator.SetFloat("AttackY", 0f);
         _animator.ResetTrigger("Attack");
+        _playerMove.isAttacking = false;  // 이동 가능 상태 복원
     }
 }

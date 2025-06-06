@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     private Vector2 vector;
     private Rigidbody2D _rb;
     private Animator _animator;
+    public bool isAttacking = false;
 
     private const string _horizontal = "Horizontal";
     private const string _vertical = "Vertical";
@@ -69,13 +70,27 @@ public class PlayerMove : MonoBehaviour
             clampedPosition = nextPos;
         }
 
-        // 이동 적용
+        if (isAttacking)
+        {
+            // 공격 중일 땐 움직이지 않음
+            _rb.linearVelocity = Vector2.zero;
+            _rb.angularVelocity = 0f;
+
+            // 정지 애니메이션 처리 (선택사항)
+            _animator.SetFloat(_horizontal, 0f);
+            _animator.SetFloat(_vertical, 0f);
+            return; // 여기서 함수 종료
+        }
+        
+         // 이동 적용
         Vector2 velocity = (clampedPosition - (Vector2)transform.position) / Time.deltaTime;
         _rb.linearVelocity = velocity;
 
         // 애니메이션
         _animator.SetFloat(_horizontal, vector.x);
         _animator.SetFloat(_vertical, vector.y);
+        
+        
 
         if (vector != Vector2.zero)
         {

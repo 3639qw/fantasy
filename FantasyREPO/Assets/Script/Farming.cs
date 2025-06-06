@@ -75,7 +75,10 @@ public class Farming : MonoBehaviour
     /* ───────── 입력 ───────── */
     private void Update()
     {
-        Debug.Log(farmLand);
+        if (farmLand != null)
+        { 
+            //Debug.Log(farmLand);    
+        }
         
         if (!Input.GetKeyDown(KeyCode.Space)) return;
 
