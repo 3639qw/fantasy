@@ -5,16 +5,20 @@ public enum SlimeState
 {
     Idle,
     Wander,
-    Chase
+    Chase,
+    Attacked,
+    Die
 }
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class SlimeScript : MonoBehaviour
+public class SlimeScript : MonoBehaviour, IDamageable
 {
     public float idleTime = 2f;
     public float wanderRadius = 3f;
     public float chaseRange = 5f;
     public float moveSpeed = 2f;
+    public float damage = 5f;
+    public float MonsterHP = 30f;
 
     private SlimeState currentState;
     private float stateTimer;
@@ -87,6 +91,26 @@ public class SlimeScript : MonoBehaviour
                     }
                 }
                 break;
+            case SlimeState.Attacked:
+                if (stateTimer <= 0f)
+                {
+                    if (distanceToPlayer > chaseRange)
+                    {
+                        ChangeState(SlimeState.Idle);
+                    }
+                    else
+                    {
+                        ChangeState(SlimeState.Chase);
+                    }
+                }
+                break;
+
+            case SlimeState.Die:
+                if (stateTimer <= 0f)
+                {
+                    Destroy(gameObject);
+                }
+                break;
         }
 
         stateTimer -= Time.deltaTime;
@@ -136,6 +160,18 @@ public class SlimeScript : MonoBehaviour
                 SetPathTo(player.position);
                 pathUpdateTimer = pathUpdateInterval;
                 pathIndex = 0;
+                break;
+
+            case SlimeState.Attacked:
+                animator.Play("Slime_attacked");
+                stateTimer = 0.3f;
+                break;
+
+            case SlimeState.Die:
+                animator.Play("Slime_die");
+                stateTimer = 0.5f;
+                path.ClearCorners();
+                rb.linearVelocity = Vector2.zero;
                 break;
         }
     }
@@ -195,15 +231,33 @@ public class SlimeScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerHealthController playerHealth = other.GetComponent<PlayerHealthController>();
             if (GameManager.Instance != null)
             {
                 // 체력 5 감소
-                GameManager.Instance.ConsumeSkill(1, 5f);
+                playerHealth.TakeDamage(damage);
             }
             else
             {
                 Debug.LogWarning("GameManager instance is null!");
             }
+        }
+    }
+
+
+    public void TakeDamage(float amount)
+    {
+        MonsterHP -= amount;
+        Debug.Log($"{gameObject.name} 피격! 현재 체력: {MonsterHP}");
+
+        if (MonsterHP <= 0f)
+        {
+            ChangeState(SlimeState.Die);
+            Debug.Log($"{gameObject.name} 사망!");
+        }
+        else if (currentState != SlimeState.Attacked)
+        {
+            ChangeState(SlimeState.Attacked);
         }
     }
 }

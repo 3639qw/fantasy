@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
         if (type == 1)
         {
             // 체력
-            if (HP > 0 && HP >= amount)
+            if (HP > 0)
                 HP -= amount;
         }else if (type == 2)
         {

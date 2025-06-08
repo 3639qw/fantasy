@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
     public bool isAttacking = false;
+    public bool isDie = false;
 
     private const string _horizontal = "Horizontal";
     private const string _vertical = "Vertical";
@@ -70,7 +71,7 @@ public class PlayerMove : MonoBehaviour
             clampedPosition = nextPos;
         }
 
-        if (isAttacking)
+        if (isAttacking || isDie)
         {
             // 공격 중일 땐 움직이지 않음
             _rb.linearVelocity = Vector2.zero;

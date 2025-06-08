@@ -5,6 +5,7 @@ public class MeleeAttackScript : MonoBehaviour
     public float attackRange = 2f;  // 공격 범위 (원 크기)
     public float attackAngle = 180f;  // 공격 각도 (기본값 180도)
     public Sprite attackRangeSprite;  // 공격 범위에 해당하는 원 스프라이트
+    public float AttackDamage = 5f;
 
     public float coolTime = 0.5f;
     private float curTime;
@@ -64,6 +65,15 @@ public class MeleeAttackScript : MonoBehaviour
                     attacked = true;
 
                     // 여기에 데미지 처리도 추가 가능
+                    IDamageable damageable = obj.GetComponent<IDamageable>();
+                    if (damageable != null)
+                    {
+                        damageable.TakeDamage(AttackDamage);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("공격한 대상에 IDamageable이 없음: " + obj.name);
+                    }
                 }
             }
         }
