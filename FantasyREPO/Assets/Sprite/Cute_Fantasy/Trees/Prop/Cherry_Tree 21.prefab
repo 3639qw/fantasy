@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5195793975218617312}
   - component: {fileID: 5004680888366772156}
   - component: {fileID: 7755607354507660039}
+  - component: {fileID: 5703651451638721024}
   m_Layer: 0
   m_Name: Cherry_Tree 21
   m_TagString: Tree
@@ -163,6 +164,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8125, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &5703651451638721024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38719375556756528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2472708398180510870
 GameObject:
   m_ObjectHideFlags: 0

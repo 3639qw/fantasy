@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1357868261162974602}
   - component: {fileID: 4744040537763355855}
   - component: {fileID: 4545754257500500012}
+  - component: {fileID: 1161629502200363475}
   m_Layer: 0
   m_Name: Big_Oak_Tree 21
   m_TagString: Untagged
@@ -143,3 +144,19 @@ PolygonCollider2D:
       - {x: 0.5, y: 0.375}
       - {x: 0.375, y: 0.4375}
   m_UseDelaunayMesh: 0
+--- !u!114 &1161629502200363475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6936636323604529655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
