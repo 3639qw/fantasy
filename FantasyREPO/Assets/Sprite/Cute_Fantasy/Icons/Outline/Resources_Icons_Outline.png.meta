@@ -109,7 +109,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -123,7 +123,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -147,7 +147,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -177,7 +177,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 80
-        width: 17
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -197,9 +197,9 @@ TextureImporter:
       name: Resources_Icons_Outline_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 17
+        x: 16
+        y: 80
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       name: Resources_Icons_Outline_2
       rect:
         serializedVersion: 2
-        x: 17
+        x: 32
         y: 80
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: Resources_Icons_Outline_3
       rect:
         serializedVersion: 2
-        x: 17
-        y: 64
-        width: 14
-        height: 17
+        x: 48
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,10 +263,10 @@ TextureImporter:
       name: Resources_Icons_Outline_4
       rect:
         serializedVersion: 2
-        x: 31
-        y: 79
-        width: 18
-        height: 17
+        x: 64
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,10 +285,10 @@ TextureImporter:
       name: Resources_Icons_Outline_5
       rect:
         serializedVersion: 2
-        x: 31
-        y: 63
-        width: 18
-        height: 17
+        x: 80
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,9 +307,9 @@ TextureImporter:
       name: Resources_Icons_Outline_6
       rect:
         serializedVersion: 2
-        x: 48
-        y: 80
-        width: 17
+        x: 0
+        y: 64
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -329,9 +329,9 @@ TextureImporter:
       name: Resources_Icons_Outline_7
       rect:
         serializedVersion: 2
-        x: 48
+        x: 16
         y: 64
-        width: 17
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -351,9 +351,9 @@ TextureImporter:
       name: Resources_Icons_Outline_8
       rect:
         serializedVersion: 2
-        x: 65
-        y: 80
-        width: 14
+        x: 32
+        y: 64
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -373,10 +373,10 @@ TextureImporter:
       name: Resources_Icons_Outline_9
       rect:
         serializedVersion: 2
-        x: 65
+        x: 48
         y: 64
-        width: 14
-        height: 17
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,10 +395,10 @@ TextureImporter:
       name: Resources_Icons_Outline_10
       rect:
         serializedVersion: 2
-        x: 79
-        y: 79
-        width: 17
-        height: 17
+        x: 64
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,10 +417,10 @@ TextureImporter:
       name: Resources_Icons_Outline_11
       rect:
         serializedVersion: 2
-        x: 79
-        y: 63
-        width: 17
-        height: 17
+        x: 80
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,7 +441,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 48
-        width: 17
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -461,9 +461,9 @@ TextureImporter:
       name: Resources_Icons_Outline_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 17
+        x: 16
+        y: 48
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: Resources_Icons_Outline_14
       rect:
         serializedVersion: 2
-        x: 17
+        x: 32
         y: 48
-        width: 14
-        height: 17
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +505,10 @@ TextureImporter:
       name: Resources_Icons_Outline_15
       rect:
         serializedVersion: 2
-        x: 17
-        y: 32
-        width: 14
-        height: 17
+        x: 48
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -527,10 +527,10 @@ TextureImporter:
       name: Resources_Icons_Outline_16
       rect:
         serializedVersion: 2
-        x: 31
-        y: 47
-        width: 18
-        height: 17
+        x: 64
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,10 +549,10 @@ TextureImporter:
       name: Resources_Icons_Outline_17
       rect:
         serializedVersion: 2
-        x: 31
-        y: 31
-        width: 18
-        height: 17
+        x: 80
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -571,10 +571,10 @@ TextureImporter:
       name: Resources_Icons_Outline_18
       rect:
         serializedVersion: 2
-        x: 47
-        y: 15
-        width: 49
-        height: 33
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,9 +593,9 @@ TextureImporter:
       name: Resources_Icons_Outline_19
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 17
+        x: 16
+        y: 32
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -615,10 +615,10 @@ TextureImporter:
       name: Resources_Icons_Outline_20
       rect:
         serializedVersion: 2
-        x: 65
-        y: 48
-        width: 14
-        height: 17
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -637,10 +637,10 @@ TextureImporter:
       name: Resources_Icons_Outline_21
       rect:
         serializedVersion: 2
-        x: 65
+        x: 48
         y: 32
-        width: 14
-        height: 17
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -659,10 +659,10 @@ TextureImporter:
       name: Resources_Icons_Outline_22
       rect:
         serializedVersion: 2
-        x: 79
-        y: 47
-        width: 17
-        height: 17
+        x: 64
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -681,10 +681,10 @@ TextureImporter:
       name: Resources_Icons_Outline_23
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 49
-        height: 33
+        x: 80
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -703,10 +703,10 @@ TextureImporter:
       name: Resources_Icons_Outline_24
       rect:
         serializedVersion: 2
-        x: 47
-        y: 0
-        width: 18
-        height: 17
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -721,11 +721,209 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Resources_Icons_Outline_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f35f34e785f73469ff001c2be168c6
+      internalID: -575653870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resources_Icons_Outline_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494e9441b118b594ea66d9d929583b33
+      internalID: 1578869515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resources_Icons_Outline_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0b4abf61978fa469ced85eeb5bf8d2
+      internalID: 1659921041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resources_Icons_Outline_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028aa086152a7314c8771da1587750b7
+      internalID: -539040392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resources_Icons_Outline_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e6179b4977abe4cb12d18f11a2d047
+      internalID: -2129291476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resources_Icons_Outline_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58842ba1ef4b8774bb9dc93303a52e0e
+      internalID: -2063979560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resources_Icons_Outline_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357d8ea24bae37a4aa76ecdc54736c11
+      internalID: 1571595628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resources_Icons_Outline_32
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b132ec37fe0638147a6c5748f6db1442
+      internalID: 76203012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Resources_Icons_Outline_33
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb48a83f5551e494a89fbbb7c857ec00
+      internalID: 1776312245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f93f9824b8f1f1b4582d5836f6eb5f4f
     internalID: 0
     vertices: []
     indices: 
@@ -753,7 +951,16 @@ TextureImporter:
       Resources_Icons_Outline_22: 1884545940917789123
       Resources_Icons_Outline_23: 8626241139425289325
       Resources_Icons_Outline_24: 6122375279105785291
+      Resources_Icons_Outline_25: -575653870
+      Resources_Icons_Outline_26: 1578869515
+      Resources_Icons_Outline_27: 1659921041
+      Resources_Icons_Outline_28: -539040392
+      Resources_Icons_Outline_29: -2129291476
       Resources_Icons_Outline_3: 8164710297206878266
+      Resources_Icons_Outline_30: -2063979560
+      Resources_Icons_Outline_31: 1571595628
+      Resources_Icons_Outline_32: 76203012
+      Resources_Icons_Outline_33: 1776312245
       Resources_Icons_Outline_4: -4158565815550019339
       Resources_Icons_Outline_5: -750626018319325673
       Resources_Icons_Outline_6: -4861707514421231769

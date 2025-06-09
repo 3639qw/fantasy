@@ -214,7 +214,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -228,7 +228,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -252,7 +252,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -280,10 +280,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 144
-        width: 9
-        height: 16
+        x: 4
+        y: 145
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +302,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_1
       rect:
         serializedVersion: 2
-        x: 3
-        y: 128
-        width: 9
-        height: 16
+        x: 20
+        y: 145
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,10 +324,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_2
       rect:
         serializedVersion: 2
-        x: 19
-        y: 144
-        width: 9
-        height: 16
+        x: 35
+        y: 145
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,10 +346,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_3
       rect:
         serializedVersion: 2
-        x: 19
-        y: 128
-        width: 9
-        height: 16
+        x: 51
+        y: 145
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,10 +368,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_4
       rect:
         serializedVersion: 2
-        x: 34
-        y: 144
-        width: 10
-        height: 16
+        x: 67
+        y: 145
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -390,10 +390,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_5
       rect:
         serializedVersion: 2
-        x: 34
-        y: 128
-        width: 10
-        height: 16
+        x: 84
+        y: 145
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +412,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_6
       rect:
         serializedVersion: 2
-        x: 50
-        y: 144
-        width: 10
-        height: 16
+        x: 4
+        y: 129
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,10 +434,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_7
       rect:
         serializedVersion: 2
-        x: 50
-        y: 128
-        width: 10
-        height: 16
+        x: 20
+        y: 129
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,10 +456,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_8
       rect:
         serializedVersion: 2
-        x: 66
-        y: 144
-        width: 10
-        height: 16
+        x: 35
+        y: 129
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,10 +478,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_9
       rect:
         serializedVersion: 2
-        x: 66
-        y: 128
-        width: 10
-        height: 16
+        x: 51
+        y: 129
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -500,10 +500,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_10
       rect:
         serializedVersion: 2
-        x: 83
-        y: 144
-        width: 9
-        height: 16
+        x: 67
+        y: 129
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -522,10 +522,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_11
       rect:
         serializedVersion: 2
-        x: 83
-        y: 128
-        width: 9
-        height: 16
+        x: 84
+        y: 129
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,10 +544,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_12
       rect:
         serializedVersion: 2
-        x: 3
-        y: 112
-        width: 9
-        height: 16
+        x: 4
+        y: 113
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -566,10 +566,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_13
       rect:
         serializedVersion: 2
-        x: 3
-        y: 96
-        width: 9
-        height: 16
+        x: 20
+        y: 113
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,10 +588,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_14
       rect:
         serializedVersion: 2
-        x: 19
-        y: 112
-        width: 9
-        height: 16
+        x: 35
+        y: 113
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,10 +610,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_15
       rect:
         serializedVersion: 2
-        x: 19
-        y: 96
-        width: 9
-        height: 16
+        x: 51
+        y: 113
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -632,10 +632,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_16
       rect:
         serializedVersion: 2
-        x: 34
-        y: 112
-        width: 10
-        height: 16
+        x: 67
+        y: 113
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -654,10 +654,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_17
       rect:
         serializedVersion: 2
-        x: 34
-        y: 96
-        width: 10
-        height: 16
+        x: 84
+        y: 113
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -676,10 +676,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_18
       rect:
         serializedVersion: 2
-        x: 50
-        y: 112
-        width: 10
-        height: 16
+        x: 4
+        y: 97
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -698,10 +698,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_19
       rect:
         serializedVersion: 2
-        x: 50
-        y: 96
-        width: 10
-        height: 16
+        x: 20
+        y: 97
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -720,10 +720,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_20
       rect:
         serializedVersion: 2
-        x: 66
-        y: 112
-        width: 10
-        height: 16
+        x: 35
+        y: 97
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -742,10 +742,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_21
       rect:
         serializedVersion: 2
-        x: 66
-        y: 96
-        width: 10
-        height: 16
+        x: 51
+        y: 97
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -764,10 +764,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_22
       rect:
         serializedVersion: 2
-        x: 83
-        y: 112
-        width: 9
-        height: 16
+        x: 67
+        y: 97
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -786,10 +786,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_23
       rect:
         serializedVersion: 2
-        x: 83
-        y: 96
-        width: 9
-        height: 16
+        x: 84
+        y: 97
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -808,10 +808,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_24
       rect:
         serializedVersion: 2
-        x: 3
-        y: 80
-        width: 9
-        height: 16
+        x: 4
+        y: 81
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -830,10 +830,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_25
       rect:
         serializedVersion: 2
-        x: 3
-        y: 64
-        width: 9
-        height: 16
+        x: 20
+        y: 81
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -852,10 +852,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_26
       rect:
         serializedVersion: 2
-        x: 19
-        y: 80
-        width: 9
-        height: 16
+        x: 35
+        y: 81
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -874,10 +874,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_27
       rect:
         serializedVersion: 2
-        x: 19
-        y: 64
-        width: 9
-        height: 16
+        x: 51
+        y: 81
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -896,10 +896,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_28
       rect:
         serializedVersion: 2
-        x: 34
-        y: 80
-        width: 10
-        height: 16
+        x: 67
+        y: 81
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -918,10 +918,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_29
       rect:
         serializedVersion: 2
-        x: 34
-        y: 64
-        width: 10
-        height: 16
+        x: 84
+        y: 81
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -940,10 +940,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_30
       rect:
         serializedVersion: 2
-        x: 50
-        y: 80
-        width: 10
-        height: 16
+        x: 4
+        y: 65
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -962,10 +962,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_31
       rect:
         serializedVersion: 2
-        x: 50
-        y: 64
-        width: 10
-        height: 16
+        x: 20
+        y: 65
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -984,10 +984,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_32
       rect:
         serializedVersion: 2
-        x: 66
-        y: 80
-        width: 10
-        height: 16
+        x: 35
+        y: 65
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1006,10 +1006,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_33
       rect:
         serializedVersion: 2
-        x: 66
-        y: 64
-        width: 10
-        height: 16
+        x: 51
+        y: 65
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1028,10 +1028,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_34
       rect:
         serializedVersion: 2
-        x: 83
-        y: 80
-        width: 9
-        height: 16
+        x: 67
+        y: 65
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1050,10 +1050,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_35
       rect:
         serializedVersion: 2
-        x: 83
-        y: 64
-        width: 9
-        height: 16
+        x: 84
+        y: 65
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1072,10 +1072,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_36
       rect:
         serializedVersion: 2
-        x: 3
-        y: 48
-        width: 9
-        height: 16
+        x: 4
+        y: 49
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1094,10 +1094,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_37
       rect:
         serializedVersion: 2
-        x: 3
-        y: 32
-        width: 9
-        height: 16
+        x: 20
+        y: 49
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1116,10 +1116,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_38
       rect:
         serializedVersion: 2
-        x: 19
-        y: 48
-        width: 9
-        height: 16
+        x: 35
+        y: 49
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1138,10 +1138,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_39
       rect:
         serializedVersion: 2
-        x: 19
-        y: 32
-        width: 9
-        height: 16
+        x: 51
+        y: 49
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1160,10 +1160,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_40
       rect:
         serializedVersion: 2
-        x: 34
-        y: 48
-        width: 10
-        height: 16
+        x: 67
+        y: 49
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1182,10 +1182,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_41
       rect:
         serializedVersion: 2
-        x: 34
-        y: 32
-        width: 10
-        height: 16
+        x: 84
+        y: 49
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1204,10 +1204,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_42
       rect:
         serializedVersion: 2
-        x: 50
-        y: 48
-        width: 10
-        height: 16
+        x: 4
+        y: 33
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1226,10 +1226,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_43
       rect:
         serializedVersion: 2
-        x: 50
-        y: 32
-        width: 10
-        height: 16
+        x: 20
+        y: 33
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1248,10 +1248,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_44
       rect:
         serializedVersion: 2
-        x: 66
-        y: 48
-        width: 10
-        height: 16
+        x: 35
+        y: 33
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1270,10 +1270,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_45
       rect:
         serializedVersion: 2
-        x: 66
-        y: 32
-        width: 10
-        height: 16
+        x: 51
+        y: 33
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1292,10 +1292,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_46
       rect:
         serializedVersion: 2
-        x: 83
-        y: 48
-        width: 9
-        height: 16
+        x: 67
+        y: 33
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1314,10 +1314,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_47
       rect:
         serializedVersion: 2
-        x: 83
-        y: 32
-        width: 9
-        height: 16
+        x: 84
+        y: 33
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1336,10 +1336,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_48
       rect:
         serializedVersion: 2
-        x: 3
-        y: 16
-        width: 9
-        height: 16
+        x: 4
+        y: 17
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1358,10 +1358,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_49
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 9
-        height: 16
+        x: 20
+        y: 17
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1380,10 +1380,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_50
       rect:
         serializedVersion: 2
-        x: 19
-        y: 16
-        width: 9
-        height: 16
+        x: 35
+        y: 17
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1402,10 +1402,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_51
       rect:
         serializedVersion: 2
-        x: 19
-        y: 0
-        width: 9
-        height: 16
+        x: 51
+        y: 17
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1424,10 +1424,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_52
       rect:
         serializedVersion: 2
-        x: 34
-        y: 16
-        width: 10
-        height: 16
+        x: 67
+        y: 17
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1446,10 +1446,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_53
       rect:
         serializedVersion: 2
-        x: 34
-        y: 0
-        width: 10
-        height: 16
+        x: 84
+        y: 17
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1468,10 +1468,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_54
       rect:
         serializedVersion: 2
-        x: 50
-        y: 16
-        width: 10
-        height: 16
+        x: 4
+        y: 1
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1490,10 +1490,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_55
       rect:
         serializedVersion: 2
-        x: 50
-        y: 0
-        width: 10
-        height: 16
+        x: 20
+        y: 1
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1512,10 +1512,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_56
       rect:
         serializedVersion: 2
-        x: 66
-        y: 16
-        width: 10
-        height: 16
+        x: 35
+        y: 1
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1534,10 +1534,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_57
       rect:
         serializedVersion: 2
-        x: 66
-        y: 0
-        width: 10
-        height: 16
+        x: 51
+        y: 1
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1556,10 +1556,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_58
       rect:
         serializedVersion: 2
-        x: 83
-        y: 16
-        width: 9
-        height: 16
+        x: 67
+        y: 1
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1578,10 +1578,10 @@ TextureImporter:
       name: Flowers_2_Potted_Anim_59
       rect:
         serializedVersion: 2
-        x: 83
-        y: 0
-        width: 9
-        height: 16
+        x: 84
+        y: 1
+        width: 7
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1600,7 +1600,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cb9fc1dea77ea7146aabbbd44d0c8f87
     internalID: 0
     vertices: []
     indices: 

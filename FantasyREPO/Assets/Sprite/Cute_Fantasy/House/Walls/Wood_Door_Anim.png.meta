@@ -84,7 +84,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -117,7 +117,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,9 +137,9 @@ TextureImporter:
       name: Wood_Door_Anim_1
       rect:
         serializedVersion: 2
-        x: 28
+        x: 16
         y: 0
-        width: 14
+        width: 11
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -159,7 +159,7 @@ TextureImporter:
       name: Wood_Door_Anim_2
       rect:
         serializedVersion: 2
-        x: 44
+        x: 29
         y: 0
         width: 12
         height: 16
@@ -181,7 +181,7 @@ TextureImporter:
       name: Wood_Door_Anim_3
       rect:
         serializedVersion: 2
-        x: 60
+        x: 45
         y: 0
         width: 10
         height: 16
@@ -203,9 +203,9 @@ TextureImporter:
       name: Wood_Door_Anim_4
       rect:
         serializedVersion: 2
-        x: 76
+        x: 61
         y: 0
-        width: 20
+        width: 8
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -221,11 +221,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Wood_Door_Anim_5
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf8eb25b5404af4db8c0cbff09aa7b0
+      internalID: -1346471828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 80dc7e6ff58fb154da67f207c05e87e9
     internalID: 0
     vertices: []
     indices: 
@@ -240,6 +262,7 @@ TextureImporter:
       Wood_Door_Anim_2: -3907704526155584059
       Wood_Door_Anim_3: 7467728920725227389
       Wood_Door_Anim_4: 7445590291274180970
+      Wood_Door_Anim_5: -1346471828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
