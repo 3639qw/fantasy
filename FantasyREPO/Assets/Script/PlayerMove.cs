@@ -4,6 +4,7 @@ using UnityEngine.Tilemaps;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _runSpeed = 8f;
     [SerializeField] private Tilemap tilemap; // 이동 경계 타일맵
 
     private Vector2 vector;
@@ -28,6 +29,7 @@ public class PlayerMove : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        tilemap = GameObject.FindWithTag("FullBackground").GetComponent<Tilemap>();
 
         // ✅ 타일맵 경계 캐싱
         if (tilemap != null)
@@ -43,8 +45,13 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         vector.Set(InputManager.Movement.x, InputManager.Movement.y);
+        
+        float currentSpeed = (Input.GetKey(KeyCode.LeftShift) && GameManager.Instance.ST > 0)
+            ? _runSpeed
+            : _moveSpeed;
 
-        Vector2 nextPos = (Vector2)transform.position + (vector * _moveSpeed * Time.deltaTime);
+
+        Vector2 nextPos = (Vector2)transform.position + (vector * (currentSpeed * Time.deltaTime));
 
         Vector2 clampedPosition;
 

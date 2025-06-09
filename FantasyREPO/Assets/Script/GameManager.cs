@@ -86,11 +86,27 @@ public class GameManager : MonoBehaviour
     {
         RecoverSkill(3,10); // 1초에 10씩 힘을 회복함
         RecoverSkill(1, 3);
+        if (Input.GetKey(KeyCode.LeftShift) && PlayerIsMoving())
+        {
+            ConsumeSkill(3, 20 * Time.deltaTime); // ST 소모
+        }
+
+        
         // if (playerStartPosition.HasValue)
         // {
         //     Debug.Log($"x: {playerStartPosition.Value.x}, y: {playerStartPosition.Value.y}");
         // }
         
+    }
+    
+    private bool PlayerIsMoving()
+    {
+        if (player == null) return false;
+
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        if (rb == null) return false;
+
+        return rb.linearVelocity.sqrMagnitude > 0.01f;
     }
     
     /// <summary>
