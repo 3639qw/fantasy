@@ -76,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,10 +142,10 @@ TextureImporter:
       name: Planters_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 80
-        width: 33
-        height: 14
+        x: 9
+        y: 81
+        width: 31
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,10 +164,10 @@ TextureImporter:
       name: Planters_1
       rect:
         serializedVersion: 2
-        x: 52
-        y: 80
-        width: 25
-        height: 14
+        x: 53
+        y: 81
+        width: 23
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,10 +186,10 @@ TextureImporter:
       name: Planters_2
       rect:
         serializedVersion: 2
-        x: 87
-        y: 64
-        width: 35
-        height: 21
+        x: 9
+        y: 65
+        width: 31
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,10 +208,10 @@ TextureImporter:
       name: Planters_3
       rect:
         serializedVersion: 2
-        x: 132
-        y: 64
-        width: 26
-        height: 21
+        x: 53
+        y: 65
+        width: 23
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,10 +230,10 @@ TextureImporter:
       name: Planters_4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 64
-        width: 33
-        height: 14
+        x: 9
+        y: 49
+        width: 31
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: Planters_5
       rect:
         serializedVersion: 2
-        x: 52
-        y: 64
-        width: 25
-        height: 14
+        x: 53
+        y: 49
+        width: 23
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: Planters_6
       rect:
         serializedVersion: 2
-        x: 8
-        y: 48
-        width: 33
-        height: 14
+        x: 9
+        y: 32
+        width: 31
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: Planters_7
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 33
-        height: 49
+        x: 53
+        y: 32
+        width: 23
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: Planters_8
       rect:
         serializedVersion: 2
-        x: 52
-        y: 48
-        width: 25
-        height: 14
+        x: 9
+        y: 16
+        width: 31
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,10 +340,10 @@ TextureImporter:
       name: Planters_9
       rect:
         serializedVersion: 2
-        x: 52
-        y: 0
-        width: 25
-        height: 49
+        x: 53
+        y: 16
+        width: 23
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,10 +362,10 @@ TextureImporter:
       name: Planters_10
       rect:
         serializedVersion: 2
-        x: 87
-        y: 32
-        width: 35
-        height: 21
+        x: 9
+        y: 0
+        width: 31
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +384,10 @@ TextureImporter:
       name: Planters_11
       rect:
         serializedVersion: 2
-        x: 132
-        y: 32
-        width: 26
-        height: 21
+        x: 53
+        y: 0
+        width: 23
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,10 +406,10 @@ TextureImporter:
       name: Planters_12
       rect:
         serializedVersion: 2
-        x: 87
-        y: 0
-        width: 35
-        height: 21
+        x: 88
+        y: 65
+        width: 33
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,10 +428,10 @@ TextureImporter:
       name: Planters_13
       rect:
         serializedVersion: 2
-        x: 132
-        y: 0
-        width: 26
-        height: 21
+        x: 133
+        y: 65
+        width: 24
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,11 +446,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Planters_14
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 33
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cab5a09800837244a256da0db83c0f8
+      internalID: -941437559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planters_15
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 33
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d6ea33f34096c47bbc3d28b49ab614
+      internalID: 1941981315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planters_16
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcb7dc26379ff642944fc21591963ec
+      internalID: 1243397254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planters_17
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87dfebeac636e0641989017459c8c852
+      internalID: -1109886748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -466,6 +554,10 @@ TextureImporter:
       Planters_11: -4115128690151326338
       Planters_12: 232982311940788864
       Planters_13: 678680723415225549
+      Planters_14: -941437559
+      Planters_15: 1941981315
+      Planters_16: 1243397254
+      Planters_17: -1109886748
       Planters_2: -6873406329573126339
       Planters_3: -5301238191455848420
       Planters_4: -4277069876772677916

@@ -3,17 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
+  - Farm
+  - SeedLand
+  - FullBackground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Obstacle
+  - monster
   - Water
   - UI
   - 
   - 
-  - Background
+  - 
   - 
   - 
   - 
@@ -43,9 +47,6 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: UI
-    uniqueID: 4022385683
     locked: 0
   m_RenderingLayers:
   - Default

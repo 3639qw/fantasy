@@ -1,40 +1,41 @@
 using System;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance = null;
-
+    static public GameManager instance = null;
+    
     [Header("플레이어 오브젝트")]
     [SerializeField] protected internal GameObject player;
-
+    
+    
     [Header("사용자 수치 설정")]
-    [SerializeField] protected internal float maxHP = 100f;
-    [SerializeField] protected internal float maxMP = 50f;
-    [SerializeField] protected internal float maxST = 100f;
-    [SerializeField] protected internal float recoverHP = 10f;
-    [SerializeField] protected internal float recoverMP = 10f;
-    [SerializeField] protected internal float recoverST = 10f;
-    [SerializeField] protected internal float HP = 100f;
-    [SerializeField] protected internal float MP = 50f;
-    [SerializeField] protected internal float ST = 100f;
+    [SerializeField] protected internal float maxHP = 100f; // 체력 최대치
+    [SerializeField] protected internal float maxMP = 50f; // 마법능력 최대치
+    [SerializeField] protected internal float maxST = 100f; // 힘 최대치
+    [SerializeField] protected internal float recoverHP = 10f; // 체력 회복량
+    [SerializeField] protected internal float recoverMP = 10f; // 마법능력 회복량
+    [SerializeField] protected internal float recoverST = 10f; // 힘 회복량
+    [SerializeField] protected internal float HP = 100f; // 현재 체력
+    [SerializeField] protected internal float MP = 50f; // 현재 마법능력
+    [SerializeField] protected internal float ST = 100f; // 현재 힘
 
-    public static GameManager Instance => instance;
-
-    [Header("시간 및 낮밤 설정")]
-    public TMP_Text TimeText;
-    public Light2D globalLight;
-    public Light2D moonLight;
-    public Color dayColor = Color.white;
-    public Color nightColor = new Color(0.05f, 0.1f, 0.2f);
-    public float transitionDuration = 1.0f;
-
-    private float realTime = 1f;
-    private float time;
-    private int gameTime = 1080; // 오전 6시 시작
-    public static bool isNight = false;
+    // 플레이어 위치 저장
+    protected internal Vector2? playerStartPosition = null;
+    
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                return null;
+            }
+            return instance;
+        }
+    }
 
     private void Awake()
     {
@@ -42,139 +43,137 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
+            
         }
     }
 
     private void Start()
     {
-        if (PlayerPositionManager.NextPlayerPosition != null)
+        
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // 씬이 로드 될 때마다 실행
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"씬이 로드됨: {scene.name}");
+        player = GameObject.FindWithTag("Player");
+        // 씬이 로드될 때 실행할 코드 작성
+        if (scene.name == "Overworld")
         {
-            transform.position = (Vector2)PlayerPositionManager.NextPlayerPosition;
-            PlayerPositionManager.NextPlayerPosition = null;
+            this.GetComponent<Farming>().TryRecoverTilemaps();
+            this.GetComponent<TilemapSerializer>().LoadTilemapFromJson();
+            
+            if (playerStartPosition.HasValue)
+            {
+                GameObject.Find("Camera").transform.position = new Vector3(playerStartPosition.Value.x, playerStartPosition.Value.y, GameObject.Find("Camera").transform.position.z);
+                GameObject.Find("Player").transform.position = playerStartPosition.Value;
+            }
         }
     }
 
+    // Update is called once per frame
     void Update()
     {
-        RecoverSkill(3, 10);
-
+        RecoverSkill(3,10); // 1초에 10씩 힘을 회복함
+        RecoverSkill(1, 3);
         if (Input.GetKey(KeyCode.LeftShift) && PlayerIsMoving())
         {
-            ConsumeSkill(3, 20 * Time.deltaTime);
+            ConsumeSkill(3, 20 * Time.deltaTime); // ST 소모
         }
 
-        if (isNight)
-        {
-            time = 0;
-            gameTime = 360;
-            isNight = false;
-            TimeCheck();
-        }
-        else
-        {
-            TimeCheck();
-        }
-
-        UpdateLightingTransition();
-
-        Debug.Log($"ST: {ST}");
+        
+        // if (playerStartPosition.HasValue)
+        // {
+        //     Debug.Log($"x: {playerStartPosition.Value.x}, y: {playerStartPosition.Value.y}");
+        // }
+        
     }
-
+    
     private bool PlayerIsMoving()
     {
         if (player == null) return false;
 
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        return rb != null && rb.linearVelocity.sqrMagnitude > 0.01f;
-    }
+        if (rb == null) return false;
 
+        return rb.linearVelocity.sqrMagnitude > 0.01f;
+    }
+    
+    /// <summary>
+    /// 수치유형별로 입력받아 1초당 입력된만큼 수치를 증가시킴
+    /// </summary>
+    /// <param name="type">증가할 수치(1: 체력, 2: 마법능력, 3: 힘)</param>
+    /// <param name="amount">1초당 증가할 양</param>
+    /// <returns></returns>
     protected internal void RecoverSkill(int type, float amount)
     {
-        float delta = amount * Time.deltaTime;
-
-        switch (type)
+        if (type == 1)
         {
-            case 1: HP = Mathf.Min(HP + delta, maxHP); break;
-            case 2: MP = Mathf.Min(MP + delta, maxMP); break;
-            case 3: ST = Mathf.Min(ST + delta, maxST); break;
+            // 체력
+            if (HP < maxHP)
+            {
+                HP += amount * Time.deltaTime;
+                if (HP > maxHP)
+                    HP = maxHP;
+            }
+        }
+        else if (type == 2)
+        {
+            // 마법능력
+            if (MP < maxMP)
+            {
+                MP += amount * Time.deltaTime;
+                if (MP > maxMP)
+                    MP = maxMP;
+            }
+        }
+        else if (type == 3)
+        {
+            // 힘
+            if (ST < maxST)
+            {
+                ST += amount * Time.deltaTime;
+                if (ST > maxST)
+                    ST = maxST;
+            }
         }
     }
 
+
+    /// <summary>
+    /// 수치유형별로 입력된만큼 정률적으로 감소시킴
+    /// </summary>
+    /// <param name="type">감소할 수치(1: 체력, 2: 마법능력, 3: 힘)</param>
+    /// <param name="amount">감소할 양</param>
     protected internal void ConsumeSkill(int type, float amount)
     {
-        switch (type)
+        if (type == 1)
         {
-            case 1: if (HP >= amount) HP -= amount; break;
-            case 2: if (MP >= amount) MP -= amount; break;
-            case 3: if (ST >= amount) ST -= amount; break;
+            // 체력
+            if (HP > 0)
+                HP -= amount;
+        }else if (type == 2)
+        {
+            // 마법능력
+            if (MP > 0 && MP >= amount)
+                MP -= amount;
+        }else if (type == 3)
+        {
+            // 힘
+            if (ST > 0 && ST >= amount)
+                ST -= amount;
         }
     }
-
-    public void TimeCheck()
-    {
-        time += Time.deltaTime;
-
-        if (time >= realTime)
-        {
-            gameTime += 10;
-            if (gameTime >= 1440) gameTime = 0;
-            time = 0;
-            TimeTextChange();
-        }
-    }
-
-    public void TimeTextChange(bool isDay = false)
-    {
-        string prefix = (gameTime >= 720 && gameTime < 1440) ? "오후  " : "오전  ";
-
-        int hour24 = gameTime / 60;
-        int hour12 = hour24 % 12 == 0 ? 12 : hour24 % 12;
-        string hour = hour12.ToString("D2");
-        string minute = (gameTime % 60).ToString("D2");
-
-        if (isDay)
-            TimeText.text = "오전  06 : 00";
-        else
-            TimeText.text = prefix + hour + " : " + minute;
-    }
-
-    private void UpdateLightingTransition()
-    {
-        float currentHour = gameTime / 60.0f;
-        float lerpFactor;
-
-        if (currentHour >= 6f && currentHour < 7f)
-        {
-            lerpFactor = Mathf.Clamp01((currentHour - 6f) / transitionDuration);
-            globalLight.color = Color.Lerp(nightColor, dayColor, lerpFactor);
-            globalLight.intensity = Mathf.Lerp(0.4f, 1.0f, lerpFactor);
-            if (moonLight != null) moonLight.intensity = Mathf.Lerp(0.6f, 0.0f, lerpFactor);
-        }
-        else if (currentHour >= 17f && currentHour < 18f)
-        {
-            lerpFactor = Mathf.Clamp01((currentHour - 17f) / transitionDuration);
-            globalLight.color = Color.Lerp(dayColor, nightColor, lerpFactor);
-            globalLight.intensity = Mathf.Lerp(1.0f, 0.4f, lerpFactor);
-            if (moonLight != null) moonLight.intensity = Mathf.Lerp(0.0f, 0.6f, lerpFactor);
-        }
-        else if (currentHour >= 7f && currentHour < 17f)
-        {
-            globalLight.color = dayColor;
-            globalLight.intensity = 1.0f;
-            if (moonLight != null) moonLight.intensity = 0.0f;
-        }
-        else
-        {
-            globalLight.color = nightColor;
-            globalLight.intensity = 0.4f;
-            if (moonLight != null) moonLight.intensity = 0.6f;
-        }
-    }
-
-    public bool IsMorning() => gameTime >= 420 && gameTime < 430;
-    public bool IsNight() => gameTime >= 1080 || gameTime < 360;
+    
+    
 }
