@@ -3,6 +3,9 @@ using UnityEngine.Tilemaps;
 
 public class PlayerMove : MonoBehaviour
 {
+    [Header("달리기 발동되는 키")] [SerializeField]
+    private KeyCode runKey;
+    
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private float _runSpeed = 8f;
     [SerializeField] private Tilemap tilemap; // 이동 경계 타일맵
@@ -29,7 +32,7 @@ public class PlayerMove : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        tilemap = GameObject.FindWithTag("FullBackground").GetComponent<Tilemap>();
+        // tilemap = GameObject.FindWithTag("FullBackground").GetComponent<Tilemap>();
 
         // ✅ 타일맵 경계 캐싱
         if (tilemap != null)
@@ -46,7 +49,7 @@ public class PlayerMove : MonoBehaviour
     {
         vector.Set(InputManager.Movement.x, InputManager.Movement.y);
         
-        float currentSpeed = (Input.GetKey(KeyCode.LeftShift) && GameManager.Instance.ST > 0)
+        float currentSpeed = (Input.GetKey(runKey) && GameManager.Instance.ST > 0)
             ? _runSpeed
             : _moveSpeed;
 
