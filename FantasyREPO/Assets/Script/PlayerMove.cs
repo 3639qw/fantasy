@@ -74,6 +74,7 @@ public class PlayerMove : MonoBehaviour
             );
 
             clampedPosition = new Vector2(clampedX, clampedY);
+            
         }
         else
         {

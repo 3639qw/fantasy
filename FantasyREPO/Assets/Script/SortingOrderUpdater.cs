@@ -24,7 +24,7 @@ public class SortingOrderUpdater : MonoBehaviour
                 float playerY = transform.position.y;
                 float treeY = collision.transform.position.y;
                 
-                Debug.Log(playerY + ", " + treeY);
+                // Debug.Log(playerY + ", " + treeY);
 
                 int treeOrder = treeRenderer.sortingOrder;
 

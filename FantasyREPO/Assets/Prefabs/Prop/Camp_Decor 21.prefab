@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 820769321610051290}
   - component: {fileID: 1380839652029825750}
   - component: {fileID: 7196444694636934877}
+  - component: {fileID: 8248615772242444695}
   m_Layer: 0
   m_Name: Camp_Decor 21
   m_TagString: Untagged
@@ -134,3 +135,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6875, y: 0.63486767}
   m_EdgeRadius: 0
+--- !u!114 &8248615772242444695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291832078560562335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
