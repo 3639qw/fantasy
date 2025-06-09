@@ -1,10 +1,10 @@
-using UnityEngine;  // UnityEngine ³×ÀÓ½ºÆäÀÌ½º Ãß°¡
+using UnityEngine;  // UnityEngine ë„¤ì„ìŠ¤í˜ì´ìŠ¤ ì¶”ê°€
 
 public class MeleeAttackScript : MonoBehaviour
 {
-    public float attackRange = 2f;  // °ø°İ ¹üÀ§ (¿ø Å©±â)
-    public float attackAngle = 180f;  // °ø°İ °¢µµ (±âº»°ª 180µµ)
-    public Sprite attackRangeSprite;  // °ø°İ ¹üÀ§¿¡ ÇØ´çÇÏ´Â ¿ø ½ºÇÁ¶óÀÌÆ®
+    public float attackRange = 2f;  // ê³µê²© ë²”ìœ„ (ì› í¬ê¸°)
+    public float attackAngle = 180f;  // ê³µê²© ê°ë„ (ê¸°ë³¸ê°’ 180ë„)
+    public Sprite attackRangeSprite;  // ê³µê²© ë²”ìœ„ì— í•´ë‹¹í•˜ëŠ” ì› ìŠ¤í”„ë¼ì´íŠ¸
     public float AttackDamage = 5f;
 
     public float coolTime = 0.5f;
@@ -51,20 +51,20 @@ public class MeleeAttackScript : MonoBehaviour
 
                 if (angle <= attackAngle / 2)
                 {
-                    // ¾Ö´Ï¸ŞÀÌ¼Ç¿¡ ¹æÇâ Á¤º¸ Àü´Ş
+                    // ì• ë‹ˆë©”ì´ì…˜ì— ë°©í–¥ ì •ë³´ ì „ë‹¬
                     Vector2 lastDir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized; ;
 
                     _animator.SetFloat("AttackX", lastDir.x);
                     _animator.SetFloat("AttackY", lastDir.y);
                     _animator.SetTrigger("Attack");
 
-                    Debug.Log("¸ó½ºÅÍ °ø°İ ¼º°ø: " + obj.name);
+                    Debug.Log("ëª¬ìŠ¤í„° ê³µê²© ì„±ê³µ: " + obj.name);
                     curTime = coolTime;
                     _playerMove.isAttacking = true;
 
                     attacked = true;
 
-                    // ¿©±â¿¡ µ¥¹ÌÁö Ã³¸®µµ Ãß°¡ °¡´É
+                    // ì—¬ê¸°ì— ë°ë¯¸ì§€ ì²˜ë¦¬ë„ ì¶”ê°€ ê°€ëŠ¥
                     IDamageable damageable = obj.GetComponent<IDamageable>();
                     if (damageable != null)
                     {
@@ -72,7 +72,7 @@ public class MeleeAttackScript : MonoBehaviour
                     }
                     else
                     {
-                        Debug.LogWarning("°ø°İÇÑ ´ë»ó¿¡ IDamageableÀÌ ¾øÀ½: " + obj.name);
+                        Debug.LogWarning("ê³µê²©í•œ ëŒ€ìƒì— IDamageableì´ ì—†ìŒ: " + obj.name);
                     }
                 }
             }
@@ -84,6 +84,6 @@ public class MeleeAttackScript : MonoBehaviour
         _animator.SetFloat("AttackX", 0f);
         _animator.SetFloat("AttackY", 0f);
         _animator.ResetTrigger("Attack");
-        _playerMove.isAttacking = false;  // ÀÌµ¿ °¡´É »óÅÂ º¹¿ø
+        _playerMove.isAttacking = false;  // ì´ë™ ê°€ëŠ¥ ìƒíƒœ ë³µì›
     }
 }
