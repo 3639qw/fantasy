@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,9 +118,9 @@ TextureImporter:
       name: Flowers_3_Potted_Anim_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 4
         y: 0
-        width: 9
+        width: 7
         height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,9 +140,9 @@ TextureImporter:
       name: Flowers_3_Potted_Anim_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 20
         y: 0
-        width: 9
+        width: 7
         height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -162,9 +162,9 @@ TextureImporter:
       name: Flowers_3_Potted_Anim_2
       rect:
         serializedVersion: 2
-        x: 34
+        x: 35
         y: 0
-        width: 10
+        width: 8
         height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,9 +184,9 @@ TextureImporter:
       name: Flowers_3_Potted_Anim_3
       rect:
         serializedVersion: 2
-        x: 50
+        x: 51
         y: 0
-        width: 10
+        width: 8
         height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -206,9 +206,9 @@ TextureImporter:
       name: Flowers_3_Potted_Anim_4
       rect:
         serializedVersion: 2
-        x: 66
+        x: 67
         y: 0
-        width: 10
+        width: 8
         height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -228,9 +228,9 @@ TextureImporter:
       name: Flowers_3_Potted_Anim_5
       rect:
         serializedVersion: 2
-        x: 83
+        x: 84
         y: 0
-        width: 9
+        width: 7
         height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -250,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 131e57bbb48d2194fb4e57641426ac78
     internalID: 0
     vertices: []
     indices: 
