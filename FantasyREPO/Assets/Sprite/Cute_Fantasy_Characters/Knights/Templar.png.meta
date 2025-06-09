@@ -229,7 +229,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -243,7 +243,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -267,7 +267,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -295,10 +295,10 @@ TextureImporter:
       name: Templar_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 582
-        width: 18
-        height: 24
+        x: 14
+        y: 583
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,10 +317,10 @@ TextureImporter:
       name: Templar_1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 581
-        width: 18
-        height: 24
+        x: 62
+        y: 582
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,10 +339,10 @@ TextureImporter:
       name: Templar_2
       rect:
         serializedVersion: 2
-        x: 108
-        y: 581
-        width: 19
-        height: 24
+        x: 109
+        y: 582
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +361,10 @@ TextureImporter:
       name: Templar_3
       rect:
         serializedVersion: 2
-        x: 156
-        y: 581
-        width: 19
-        height: 24
+        x: 157
+        y: 582
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +383,10 @@ TextureImporter:
       name: Templar_4
       rect:
         serializedVersion: 2
-        x: 205
-        y: 581
-        width: 18
-        height: 24
+        x: 206
+        y: 582
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,10 +405,10 @@ TextureImporter:
       name: Templar_5
       rect:
         serializedVersion: 2
-        x: 253
-        y: 582
-        width: 18
-        height: 24
+        x: 254
+        y: 583
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,10 +427,10 @@ TextureImporter:
       name: Templar_6
       rect:
         serializedVersion: 2
-        x: 15
-        y: 534
-        width: 16
-        height: 24
+        x: 16
+        y: 535
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +449,10 @@ TextureImporter:
       name: Templar_7
       rect:
         serializedVersion: 2
-        x: 63
-        y: 533
-        width: 16
-        height: 24
+        x: 64
+        y: 534
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,10 +471,10 @@ TextureImporter:
       name: Templar_8
       rect:
         serializedVersion: 2
-        x: 110
-        y: 533
-        width: 17
-        height: 24
+        x: 111
+        y: 534
+        width: 15
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,10 +493,10 @@ TextureImporter:
       name: Templar_9
       rect:
         serializedVersion: 2
-        x: 158
-        y: 533
-        width: 17
-        height: 24
+        x: 159
+        y: 534
+        width: 15
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,10 +515,10 @@ TextureImporter:
       name: Templar_10
       rect:
         serializedVersion: 2
-        x: 207
-        y: 533
-        width: 16
-        height: 24
+        x: 208
+        y: 534
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,10 +537,10 @@ TextureImporter:
       name: Templar_11
       rect:
         serializedVersion: 2
-        x: 255
-        y: 534
-        width: 16
-        height: 24
+        x: 256
+        y: 535
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +559,10 @@ TextureImporter:
       name: Templar_12
       rect:
         serializedVersion: 2
-        x: 16
-        y: 486
-        width: 18
-        height: 24
+        x: 17
+        y: 487
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -581,10 +581,10 @@ TextureImporter:
       name: Templar_13
       rect:
         serializedVersion: 2
-        x: 64
-        y: 485
-        width: 18
-        height: 24
+        x: 65
+        y: 486
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -603,10 +603,10 @@ TextureImporter:
       name: Templar_14
       rect:
         serializedVersion: 2
-        x: 112
-        y: 485
-        width: 19
-        height: 24
+        x: 113
+        y: 486
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -625,10 +625,10 @@ TextureImporter:
       name: Templar_15
       rect:
         serializedVersion: 2
-        x: 160
-        y: 485
-        width: 19
-        height: 24
+        x: 161
+        y: 486
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -647,10 +647,10 @@ TextureImporter:
       name: Templar_16
       rect:
         serializedVersion: 2
-        x: 208
-        y: 485
-        width: 18
-        height: 24
+        x: 209
+        y: 486
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -669,10 +669,10 @@ TextureImporter:
       name: Templar_17
       rect:
         serializedVersion: 2
-        x: 256
-        y: 486
-        width: 18
-        height: 24
+        x: 257
+        y: 487
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -691,10 +691,10 @@ TextureImporter:
       name: Templar_18
       rect:
         serializedVersion: 2
-        x: 13
-        y: 438
-        width: 18
-        height: 26
+        x: 14
+        y: 439
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -713,10 +713,10 @@ TextureImporter:
       name: Templar_19
       rect:
         serializedVersion: 2
-        x: 61
-        y: 438
-        width: 18
-        height: 25
+        x: 62
+        y: 439
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: Templar_20
       rect:
         serializedVersion: 2
-        x: 109
-        y: 438
-        width: 18
-        height: 24
+        x: 110
+        y: 439
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -757,10 +757,10 @@ TextureImporter:
       name: Templar_21
       rect:
         serializedVersion: 2
-        x: 157
-        y: 438
-        width: 18
-        height: 26
+        x: 158
+        y: 439
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -779,10 +779,10 @@ TextureImporter:
       name: Templar_22
       rect:
         serializedVersion: 2
-        x: 205
-        y: 438
-        width: 18
-        height: 25
+        x: 206
+        y: 439
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -801,10 +801,10 @@ TextureImporter:
       name: Templar_23
       rect:
         serializedVersion: 2
-        x: 253
-        y: 438
-        width: 18
-        height: 24
+        x: 254
+        y: 439
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -823,10 +823,10 @@ TextureImporter:
       name: Templar_24
       rect:
         serializedVersion: 2
-        x: 15
-        y: 390
-        width: 16
-        height: 26
+        x: 16
+        y: 391
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -845,10 +845,10 @@ TextureImporter:
       name: Templar_25
       rect:
         serializedVersion: 2
-        x: 63
-        y: 390
-        width: 16
-        height: 25
+        x: 64
+        y: 391
+        width: 14
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -867,10 +867,10 @@ TextureImporter:
       name: Templar_26
       rect:
         serializedVersion: 2
-        x: 111
-        y: 390
-        width: 16
-        height: 24
+        x: 112
+        y: 391
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -889,10 +889,10 @@ TextureImporter:
       name: Templar_27
       rect:
         serializedVersion: 2
-        x: 159
-        y: 390
-        width: 16
-        height: 26
+        x: 160
+        y: 391
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -911,10 +911,10 @@ TextureImporter:
       name: Templar_28
       rect:
         serializedVersion: 2
-        x: 207
-        y: 390
-        width: 16
-        height: 25
+        x: 208
+        y: 391
+        width: 14
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -933,10 +933,10 @@ TextureImporter:
       name: Templar_29
       rect:
         serializedVersion: 2
-        x: 255
-        y: 390
-        width: 16
-        height: 24
+        x: 256
+        y: 391
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -955,10 +955,10 @@ TextureImporter:
       name: Templar_30
       rect:
         serializedVersion: 2
-        x: 16
-        y: 342
-        width: 18
-        height: 26
+        x: 17
+        y: 343
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -977,10 +977,10 @@ TextureImporter:
       name: Templar_31
       rect:
         serializedVersion: 2
-        x: 64
-        y: 342
-        width: 18
-        height: 25
+        x: 65
+        y: 343
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -999,10 +999,10 @@ TextureImporter:
       name: Templar_32
       rect:
         serializedVersion: 2
-        x: 112
-        y: 342
-        width: 18
-        height: 24
+        x: 113
+        y: 343
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1021,10 +1021,10 @@ TextureImporter:
       name: Templar_33
       rect:
         serializedVersion: 2
-        x: 160
-        y: 342
-        width: 18
-        height: 26
+        x: 161
+        y: 343
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1043,10 +1043,10 @@ TextureImporter:
       name: Templar_34
       rect:
         serializedVersion: 2
-        x: 208
-        y: 342
-        width: 18
-        height: 25
+        x: 209
+        y: 343
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1065,10 +1065,10 @@ TextureImporter:
       name: Templar_35
       rect:
         serializedVersion: 2
-        x: 256
-        y: 342
-        width: 18
-        height: 24
+        x: 257
+        y: 343
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1087,10 +1087,10 @@ TextureImporter:
       name: Templar_36
       rect:
         serializedVersion: 2
-        x: 13
-        y: 294
-        width: 18
-        height: 24
+        x: 14
+        y: 295
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1109,10 +1109,10 @@ TextureImporter:
       name: Templar_37
       rect:
         serializedVersion: 2
-        x: 59
-        y: 293
-        width: 20
-        height: 24
+        x: 60
+        y: 294
+        width: 18
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1131,10 +1131,10 @@ TextureImporter:
       name: Templar_38
       rect:
         serializedVersion: 2
-        x: 107
-        y: 283
-        width: 20
-        height: 32
+        x: 108
+        y: 284
+        width: 18
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1153,10 +1153,10 @@ TextureImporter:
       name: Templar_39
       rect:
         serializedVersion: 2
-        x: 155
-        y: 283
-        width: 20
-        height: 32
+        x: 156
+        y: 284
+        width: 18
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1175,10 +1175,10 @@ TextureImporter:
       name: Templar_40
       rect:
         serializedVersion: 2
-        x: 203
-        y: 285
-        width: 20
-        height: 30
+        x: 204
+        y: 286
+        width: 18
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1197,10 +1197,10 @@ TextureImporter:
       name: Templar_41
       rect:
         serializedVersion: 2
-        x: 253
-        y: 294
-        width: 18
-        height: 24
+        x: 254
+        y: 295
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1219,10 +1219,10 @@ TextureImporter:
       name: Templar_42
       rect:
         serializedVersion: 2
-        x: 15
-        y: 246
-        width: 16
-        height: 24
+        x: 16
+        y: 247
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1241,10 +1241,10 @@ TextureImporter:
       name: Templar_43
       rect:
         serializedVersion: 2
-        x: 61
-        y: 246
-        width: 18
-        height: 21
+        x: 62
+        y: 247
+        width: 16
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1263,10 +1263,10 @@ TextureImporter:
       name: Templar_44
       rect:
         serializedVersion: 2
-        x: 113
-        y: 246
-        width: 31
-        height: 21
+        x: 114
+        y: 247
+        width: 29
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1285,10 +1285,10 @@ TextureImporter:
       name: Templar_45
       rect:
         serializedVersion: 2
-        x: 161
-        y: 246
-        width: 32
-        height: 21
+        x: 162
+        y: 247
+        width: 30
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1307,10 +1307,10 @@ TextureImporter:
       name: Templar_46
       rect:
         serializedVersion: 2
-        x: 205
-        y: 246
-        width: 20
-        height: 21
+        x: 206
+        y: 247
+        width: 32
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1326,35 +1326,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Templar_47
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 247
-        width: 16
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e74a641bfa5324490800000000000000
-      internalID: -7763583778923568002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Templar_48
       rect:
         serializedVersion: 2
-        x: 255
-        y: 246
-        width: 16
-        height: 24
+        x: 256
+        y: 247
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1373,10 +1351,10 @@ TextureImporter:
       name: Templar_49
       rect:
         serializedVersion: 2
-        x: 16
-        y: 198
-        width: 18
-        height: 24
+        x: 17
+        y: 199
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1395,10 +1373,10 @@ TextureImporter:
       name: Templar_50
       rect:
         serializedVersion: 2
-        x: 64
-        y: 197
-        width: 19
-        height: 24
+        x: 65
+        y: 198
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1417,10 +1395,10 @@ TextureImporter:
       name: Templar_51
       rect:
         serializedVersion: 2
-        x: 112
-        y: 198
-        width: 19
-        height: 32
+        x: 113
+        y: 199
+        width: 17
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1439,10 +1417,10 @@ TextureImporter:
       name: Templar_52
       rect:
         serializedVersion: 2
-        x: 160
-        y: 198
-        width: 19
-        height: 32
+        x: 161
+        y: 199
+        width: 17
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1461,10 +1439,10 @@ TextureImporter:
       name: Templar_53
       rect:
         serializedVersion: 2
-        x: 208
-        y: 197
-        width: 19
-        height: 31
+        x: 209
+        y: 198
+        width: 17
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1483,10 +1461,10 @@ TextureImporter:
       name: Templar_54
       rect:
         serializedVersion: 2
-        x: 256
-        y: 198
-        width: 18
-        height: 24
+        x: 257
+        y: 199
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1505,10 +1483,10 @@ TextureImporter:
       name: Templar_55
       rect:
         serializedVersion: 2
-        x: 17
-        y: 150
-        width: 14
-        height: 22
+        x: 18
+        y: 151
+        width: 12
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1527,10 +1505,10 @@ TextureImporter:
       name: Templar_56
       rect:
         serializedVersion: 2
-        x: 65
-        y: 150
-        width: 16
-        height: 20
+        x: 66
+        y: 151
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1549,10 +1527,10 @@ TextureImporter:
       name: Templar_57
       rect:
         serializedVersion: 2
-        x: 113
-        y: 150
-        width: 18
-        height: 18
+        x: 114
+        y: 151
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1571,10 +1549,10 @@ TextureImporter:
       name: Templar_58
       rect:
         serializedVersion: 2
-        x: 161
-        y: 150
-        width: 18
-        height: 16
+        x: 162
+        y: 151
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1593,10 +1571,10 @@ TextureImporter:
       name: Templar_59
       rect:
         serializedVersion: 2
-        x: 13
-        y: 102
-        width: 18
-        height: 24
+        x: 14
+        y: 103
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1615,10 +1593,10 @@ TextureImporter:
       name: Templar_60
       rect:
         serializedVersion: 2
-        x: 61
-        y: 102
-        width: 18
-        height: 24
+        x: 62
+        y: 103
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1637,10 +1615,10 @@ TextureImporter:
       name: Templar_61
       rect:
         serializedVersion: 2
-        x: 15
-        y: 54
-        width: 16
-        height: 24
+        x: 16
+        y: 55
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1659,10 +1637,10 @@ TextureImporter:
       name: Templar_62
       rect:
         serializedVersion: 2
-        x: 63
-        y: 54
-        width: 16
-        height: 24
+        x: 64
+        y: 55
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1681,10 +1659,10 @@ TextureImporter:
       name: Templar_63
       rect:
         serializedVersion: 2
-        x: 16
-        y: 6
-        width: 18
-        height: 24
+        x: 17
+        y: 7
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1703,10 +1681,10 @@ TextureImporter:
       name: Templar_64
       rect:
         serializedVersion: 2
-        x: 64
-        y: 6
-        width: 18
-        height: 24
+        x: 65
+        y: 7
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1725,7 +1703,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 53da73635fdb6fd4fad4102027d9bf3a
     internalID: 0
     vertices: []
     indices: 
