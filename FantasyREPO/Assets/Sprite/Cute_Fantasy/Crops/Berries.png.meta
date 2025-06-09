@@ -125,11 +125,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 31
-        width: 17
-        height: 33
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -157,7 +157,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,11 +175,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 31
-        width: 17
-        height: 33
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,7 +201,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,11 +219,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 32
         width: 16
-        height: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,12 +240,12 @@ TextureImporter:
       name: Berries_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 14
+        x: 32
+        y: 32
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,12 +269,12 @@ TextureImporter:
       name: Berries_6
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 16
         width: 16
-        height: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -291,12 +291,12 @@ TextureImporter:
       name: Berries_7
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 14
+        x: 32
+        y: 16
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -305,6 +305,50 @@ TextureImporter:
       bones: []
       spriteID: 40661465d691d4cf0800000000000000
       internalID: -266528845555735036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Berries_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669d1ed44e112e948999d37922d84b31
+      internalID: -921474768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Berries_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b336f136542ce324fb79c627ca9f0cb6
+      internalID: 1198978245
       vertices: []
       indices: 
       edges: []
@@ -331,6 +375,8 @@ TextureImporter:
       Berries_5: -2769791561412607538
       Berries_6: -1096514727103312570
       Berries_7: -266528845555735036
+      Berries_8: -921474768
+      Berries_9: 1198978245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

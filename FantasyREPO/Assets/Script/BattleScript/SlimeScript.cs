@@ -135,7 +135,7 @@ public class SlimeScript : MonoBehaviour, IDamageable
         stateTimer = idleTime;
         pathIndex = 0;
 
-        Debug.Log($"[FSM] 상태 전환 → {newState}");
+        // Debug.Log($"[FSM] 상태 전환 → {newState}");
 
         switch (newState)
         {

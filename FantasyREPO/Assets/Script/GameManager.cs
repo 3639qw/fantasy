@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         // 씬이 로드될 때 실행할 코드 작성
         if (scene.name == "Overworld")
-        {
+        {   
             this.GetComponent<Farming>().TryRecoverTilemaps();
             this.GetComponent<TilemapSerializer>().LoadTilemapFromJson();
             

@@ -26,7 +26,7 @@ public class MeleeAttackScript : MonoBehaviour
         {
             PerformAttack();
             var state = _animator.GetCurrentAnimatorStateInfo(0);
-            Debug.Log("Current State: " + state.fullPathHash);
+            // Debug.Log("Current State: " + state.fullPathHash);
         }
 
         if (curTime > 0)
