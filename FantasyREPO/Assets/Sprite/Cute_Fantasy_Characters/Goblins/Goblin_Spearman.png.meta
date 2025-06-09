@@ -208,7 +208,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -222,7 +222,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -246,7 +246,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -274,10 +274,10 @@ TextureImporter:
       name: Goblin_Spearman_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 581
-        width: 16
-        height: 23
+        x: 17
+        y: 582
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: Goblin_Spearman_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 580
-        width: 16
-        height: 23
+        x: 65
+        y: 581
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: Goblin_Spearman_2
       rect:
         serializedVersion: 2
-        x: 112
-        y: 580
-        width: 16
-        height: 23
+        x: 113
+        y: 581
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,10 +340,10 @@ TextureImporter:
       name: Goblin_Spearman_3
       rect:
         serializedVersion: 2
-        x: 160
-        y: 581
-        width: 16
-        height: 23
+        x: 161
+        y: 582
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,10 +362,10 @@ TextureImporter:
       name: Goblin_Spearman_4
       rect:
         serializedVersion: 2
-        x: 17
-        y: 533
-        width: 15
-        height: 23
+        x: 18
+        y: 534
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +384,10 @@ TextureImporter:
       name: Goblin_Spearman_5
       rect:
         serializedVersion: 2
-        x: 65
-        y: 532
-        width: 15
-        height: 23
+        x: 66
+        y: 533
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,10 +406,10 @@ TextureImporter:
       name: Goblin_Spearman_6
       rect:
         serializedVersion: 2
-        x: 113
-        y: 532
-        width: 15
-        height: 23
+        x: 114
+        y: 533
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,10 +428,10 @@ TextureImporter:
       name: Goblin_Spearman_7
       rect:
         serializedVersion: 2
-        x: 161
-        y: 533
-        width: 15
-        height: 23
+        x: 162
+        y: 534
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,10 +450,10 @@ TextureImporter:
       name: Goblin_Spearman_8
       rect:
         serializedVersion: 2
-        x: 16
-        y: 485
-        width: 16
-        height: 23
+        x: 17
+        y: 486
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,10 +472,10 @@ TextureImporter:
       name: Goblin_Spearman_9
       rect:
         serializedVersion: 2
-        x: 64
-        y: 484
-        width: 16
-        height: 23
+        x: 65
+        y: 485
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,10 +494,10 @@ TextureImporter:
       name: Goblin_Spearman_10
       rect:
         serializedVersion: 2
-        x: 112
-        y: 484
-        width: 16
-        height: 23
+        x: 113
+        y: 485
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,10 +516,10 @@ TextureImporter:
       name: Goblin_Spearman_11
       rect:
         serializedVersion: 2
-        x: 160
-        y: 485
-        width: 16
-        height: 23
+        x: 161
+        y: 486
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +538,10 @@ TextureImporter:
       name: Goblin_Spearman_12
       rect:
         serializedVersion: 2
-        x: 16
-        y: 439
-        width: 16
-        height: 23
+        x: 17
+        y: 440
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -560,10 +560,10 @@ TextureImporter:
       name: Goblin_Spearman_13
       rect:
         serializedVersion: 2
-        x: 64
-        y: 438
-        width: 16
-        height: 23
+        x: 65
+        y: 439
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,10 +582,10 @@ TextureImporter:
       name: Goblin_Spearman_14
       rect:
         serializedVersion: 2
-        x: 112
-        y: 436
-        width: 16
-        height: 23
+        x: 113
+        y: 437
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,10 +604,10 @@ TextureImporter:
       name: Goblin_Spearman_15
       rect:
         serializedVersion: 2
-        x: 160
-        y: 439
-        width: 16
-        height: 23
+        x: 161
+        y: 440
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -626,10 +626,10 @@ TextureImporter:
       name: Goblin_Spearman_16
       rect:
         serializedVersion: 2
-        x: 208
-        y: 438
-        width: 16
-        height: 23
+        x: 209
+        y: 439
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -648,10 +648,10 @@ TextureImporter:
       name: Goblin_Spearman_17
       rect:
         serializedVersion: 2
-        x: 256
-        y: 436
-        width: 16
-        height: 23
+        x: 257
+        y: 437
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -670,10 +670,10 @@ TextureImporter:
       name: Goblin_Spearman_18
       rect:
         serializedVersion: 2
-        x: 17
-        y: 391
-        width: 15
-        height: 24
+        x: 18
+        y: 392
+        width: 13
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -692,10 +692,10 @@ TextureImporter:
       name: Goblin_Spearman_19
       rect:
         serializedVersion: 2
-        x: 65
-        y: 391
-        width: 15
-        height: 23
+        x: 66
+        y: 392
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: Goblin_Spearman_20
       rect:
         serializedVersion: 2
-        x: 113
-        y: 389
-        width: 15
-        height: 23
+        x: 114
+        y: 390
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -736,10 +736,10 @@ TextureImporter:
       name: Goblin_Spearman_21
       rect:
         serializedVersion: 2
-        x: 161
-        y: 391
-        width: 15
-        height: 24
+        x: 162
+        y: 392
+        width: 13
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -758,10 +758,10 @@ TextureImporter:
       name: Goblin_Spearman_22
       rect:
         serializedVersion: 2
-        x: 209
-        y: 391
-        width: 15
-        height: 23
+        x: 210
+        y: 392
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -780,10 +780,10 @@ TextureImporter:
       name: Goblin_Spearman_23
       rect:
         serializedVersion: 2
-        x: 257
-        y: 389
-        width: 15
-        height: 23
+        x: 258
+        y: 390
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -802,10 +802,10 @@ TextureImporter:
       name: Goblin_Spearman_24
       rect:
         serializedVersion: 2
-        x: 16
-        y: 343
-        width: 16
-        height: 24
+        x: 17
+        y: 344
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -824,10 +824,10 @@ TextureImporter:
       name: Goblin_Spearman_25
       rect:
         serializedVersion: 2
-        x: 64
-        y: 342
-        width: 16
-        height: 23
+        x: 65
+        y: 343
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,10 +846,10 @@ TextureImporter:
       name: Goblin_Spearman_26
       rect:
         serializedVersion: 2
-        x: 112
-        y: 341
-        width: 16
-        height: 23
+        x: 113
+        y: 342
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -868,10 +868,10 @@ TextureImporter:
       name: Goblin_Spearman_27
       rect:
         serializedVersion: 2
-        x: 160
-        y: 343
-        width: 16
-        height: 24
+        x: 161
+        y: 344
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -890,10 +890,10 @@ TextureImporter:
       name: Goblin_Spearman_28
       rect:
         serializedVersion: 2
-        x: 208
-        y: 342
-        width: 16
-        height: 23
+        x: 209
+        y: 343
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -912,10 +912,10 @@ TextureImporter:
       name: Goblin_Spearman_29
       rect:
         serializedVersion: 2
-        x: 256
-        y: 341
-        width: 16
-        height: 23
+        x: 257
+        y: 342
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -934,10 +934,10 @@ TextureImporter:
       name: Goblin_Spearman_30
       rect:
         serializedVersion: 2
-        x: 16
-        y: 293
-        width: 16
-        height: 23
+        x: 17
+        y: 294
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -956,10 +956,10 @@ TextureImporter:
       name: Goblin_Spearman_31
       rect:
         serializedVersion: 2
-        x: 63
-        y: 290
-        width: 17
-        height: 23
+        x: 64
+        y: 291
+        width: 15
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -978,10 +978,10 @@ TextureImporter:
       name: Goblin_Spearman_32
       rect:
         serializedVersion: 2
-        x: 112
-        y: 282
-        width: 16
-        height: 31
+        x: 113
+        y: 283
+        width: 14
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1000,10 +1000,10 @@ TextureImporter:
       name: Goblin_Spearman_33
       rect:
         serializedVersion: 2
-        x: 160
-        y: 283
-        width: 16
-        height: 31
+        x: 161
+        y: 284
+        width: 14
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1022,10 +1022,10 @@ TextureImporter:
       name: Goblin_Spearman_34
       rect:
         serializedVersion: 2
-        x: 208
-        y: 283
-        width: 16
-        height: 31
+        x: 209
+        y: 284
+        width: 14
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1044,10 +1044,10 @@ TextureImporter:
       name: Goblin_Spearman_35
       rect:
         serializedVersion: 2
-        x: 256
-        y: 293
-        width: 16
-        height: 23
+        x: 257
+        y: 294
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1066,10 +1066,10 @@ TextureImporter:
       name: Goblin_Spearman_36
       rect:
         serializedVersion: 2
-        x: 17
-        y: 245
-        width: 15
-        height: 23
+        x: 18
+        y: 246
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1088,10 +1088,10 @@ TextureImporter:
       name: Goblin_Spearman_37
       rect:
         serializedVersion: 2
-        x: 65
-        y: 245
-        width: 15
-        height: 23
+        x: 66
+        y: 246
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1110,10 +1110,10 @@ TextureImporter:
       name: Goblin_Spearman_38
       rect:
         serializedVersion: 2
-        x: 109
-        y: 247
-        width: 31
-        height: 18
+        x: 110
+        y: 248
+        width: 29
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1132,10 +1132,10 @@ TextureImporter:
       name: Goblin_Spearman_39
       rect:
         serializedVersion: 2
-        x: 156
-        y: 247
-        width: 31
-        height: 18
+        x: 157
+        y: 248
+        width: 29
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1154,10 +1154,10 @@ TextureImporter:
       name: Goblin_Spearman_40
       rect:
         serializedVersion: 2
-        x: 204
-        y: 247
-        width: 30
-        height: 18
+        x: 205
+        y: 248
+        width: 28
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1176,10 +1176,10 @@ TextureImporter:
       name: Goblin_Spearman_41
       rect:
         serializedVersion: 2
-        x: 257
-        y: 245
-        width: 15
-        height: 23
+        x: 258
+        y: 246
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1198,10 +1198,10 @@ TextureImporter:
       name: Goblin_Spearman_42
       rect:
         serializedVersion: 2
-        x: 16
-        y: 197
-        width: 16
-        height: 23
+        x: 17
+        y: 198
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1220,10 +1220,10 @@ TextureImporter:
       name: Goblin_Spearman_43
       rect:
         serializedVersion: 2
-        x: 64
-        y: 195
-        width: 16
-        height: 23
+        x: 65
+        y: 196
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1242,10 +1242,10 @@ TextureImporter:
       name: Goblin_Spearman_44
       rect:
         serializedVersion: 2
-        x: 112
-        y: 198
-        width: 16
-        height: 31
+        x: 113
+        y: 199
+        width: 14
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1264,10 +1264,10 @@ TextureImporter:
       name: Goblin_Spearman_45
       rect:
         serializedVersion: 2
-        x: 160
-        y: 197
-        width: 16
-        height: 31
+        x: 161
+        y: 198
+        width: 14
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1286,10 +1286,10 @@ TextureImporter:
       name: Goblin_Spearman_46
       rect:
         serializedVersion: 2
-        x: 208
-        y: 197
-        width: 16
-        height: 30
+        x: 209
+        y: 198
+        width: 14
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1308,10 +1308,10 @@ TextureImporter:
       name: Goblin_Spearman_47
       rect:
         serializedVersion: 2
-        x: 256
-        y: 197
-        width: 16
-        height: 23
+        x: 257
+        y: 198
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1330,10 +1330,10 @@ TextureImporter:
       name: Goblin_Spearman_48
       rect:
         serializedVersion: 2
-        x: 17
-        y: 151
-        width: 15
-        height: 18
+        x: 18
+        y: 152
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1352,10 +1352,10 @@ TextureImporter:
       name: Goblin_Spearman_49
       rect:
         serializedVersion: 2
-        x: 65
-        y: 151
-        width: 17
-        height: 18
+        x: 66
+        y: 152
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1374,10 +1374,10 @@ TextureImporter:
       name: Goblin_Spearman_50
       rect:
         serializedVersion: 2
-        x: 113
-        y: 151
-        width: 19
-        height: 16
+        x: 114
+        y: 152
+        width: 17
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1396,10 +1396,10 @@ TextureImporter:
       name: Goblin_Spearman_51
       rect:
         serializedVersion: 2
-        x: 161
-        y: 151
-        width: 22
-        height: 12
+        x: 162
+        y: 152
+        width: 20
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1418,10 +1418,10 @@ TextureImporter:
       name: Goblin_Spearman_52
       rect:
         serializedVersion: 2
-        x: 16
-        y: 101
-        width: 16
-        height: 23
+        x: 17
+        y: 102
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1440,10 +1440,10 @@ TextureImporter:
       name: Goblin_Spearman_53
       rect:
         serializedVersion: 2
-        x: 64
-        y: 101
-        width: 16
-        height: 23
+        x: 65
+        y: 102
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1462,10 +1462,10 @@ TextureImporter:
       name: Goblin_Spearman_54
       rect:
         serializedVersion: 2
-        x: 17
-        y: 53
-        width: 15
-        height: 23
+        x: 18
+        y: 54
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1484,10 +1484,10 @@ TextureImporter:
       name: Goblin_Spearman_55
       rect:
         serializedVersion: 2
-        x: 65
-        y: 53
-        width: 15
-        height: 23
+        x: 66
+        y: 54
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1506,10 +1506,10 @@ TextureImporter:
       name: Goblin_Spearman_56
       rect:
         serializedVersion: 2
-        x: 16
-        y: 5
-        width: 16
-        height: 23
+        x: 17
+        y: 6
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1528,10 +1528,10 @@ TextureImporter:
       name: Goblin_Spearman_57
       rect:
         serializedVersion: 2
-        x: 64
-        y: 5
-        width: 16
-        height: 23
+        x: 65
+        y: 6
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1550,7 +1550,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7ed6ddfff258ba34bac8c14436a43002
     internalID: 0
     vertices: []
     indices: 

@@ -229,7 +229,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -243,7 +243,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -267,7 +267,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -295,10 +295,10 @@ TextureImporter:
       name: Goblin_Maceman_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 391
-        width: 18
-        height: 19
+        x: 7
+        y: 392
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,10 +317,10 @@ TextureImporter:
       name: Goblin_Maceman_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 390
-        width: 18
-        height: 19
+        x: 39
+        y: 391
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,10 +339,10 @@ TextureImporter:
       name: Goblin_Maceman_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 390
-        width: 18
-        height: 19
+        x: 71
+        y: 391
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +361,10 @@ TextureImporter:
       name: Goblin_Maceman_3
       rect:
         serializedVersion: 2
-        x: 102
-        y: 391
-        width: 18
-        height: 19
+        x: 103
+        y: 392
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +383,10 @@ TextureImporter:
       name: Goblin_Maceman_4
       rect:
         serializedVersion: 2
-        x: 7
-        y: 359
-        width: 17
-        height: 18
+        x: 8
+        y: 360
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,10 +405,10 @@ TextureImporter:
       name: Goblin_Maceman_5
       rect:
         serializedVersion: 2
-        x: 39
-        y: 358
-        width: 17
-        height: 18
+        x: 40
+        y: 359
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,10 +427,10 @@ TextureImporter:
       name: Goblin_Maceman_6
       rect:
         serializedVersion: 2
-        x: 71
-        y: 358
-        width: 17
-        height: 18
+        x: 72
+        y: 359
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +449,10 @@ TextureImporter:
       name: Goblin_Maceman_7
       rect:
         serializedVersion: 2
-        x: 103
-        y: 359
-        width: 17
-        height: 18
+        x: 104
+        y: 360
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,10 +471,10 @@ TextureImporter:
       name: Goblin_Maceman_8
       rect:
         serializedVersion: 2
-        x: 8
-        y: 327
-        width: 18
-        height: 18
+        x: 9
+        y: 328
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,10 +493,10 @@ TextureImporter:
       name: Goblin_Maceman_9
       rect:
         serializedVersion: 2
-        x: 40
-        y: 326
-        width: 18
-        height: 18
+        x: 41
+        y: 327
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,10 +515,10 @@ TextureImporter:
       name: Goblin_Maceman_10
       rect:
         serializedVersion: 2
-        x: 72
-        y: 326
-        width: 18
-        height: 18
+        x: 73
+        y: 327
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,10 +537,10 @@ TextureImporter:
       name: Goblin_Maceman_11
       rect:
         serializedVersion: 2
-        x: 104
-        y: 327
-        width: 18
-        height: 18
+        x: 105
+        y: 328
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +559,10 @@ TextureImporter:
       name: Goblin_Maceman_12
       rect:
         serializedVersion: 2
-        x: 6
-        y: 295
-        width: 18
-        height: 21
+        x: 7
+        y: 296
+        width: 16
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -581,10 +581,10 @@ TextureImporter:
       name: Goblin_Maceman_13
       rect:
         serializedVersion: 2
-        x: 38
-        y: 295
-        width: 18
-        height: 20
+        x: 39
+        y: 296
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -603,10 +603,10 @@ TextureImporter:
       name: Goblin_Maceman_14
       rect:
         serializedVersion: 2
-        x: 70
-        y: 294
-        width: 18
-        height: 20
+        x: 71
+        y: 295
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -625,10 +625,10 @@ TextureImporter:
       name: Goblin_Maceman_15
       rect:
         serializedVersion: 2
-        x: 102
-        y: 295
-        width: 18
-        height: 21
+        x: 103
+        y: 296
+        width: 16
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -647,10 +647,10 @@ TextureImporter:
       name: Goblin_Maceman_16
       rect:
         serializedVersion: 2
-        x: 134
-        y: 295
-        width: 18
-        height: 20
+        x: 135
+        y: 296
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -669,10 +669,10 @@ TextureImporter:
       name: Goblin_Maceman_17
       rect:
         serializedVersion: 2
-        x: 166
-        y: 294
-        width: 18
-        height: 20
+        x: 167
+        y: 295
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -691,10 +691,10 @@ TextureImporter:
       name: Goblin_Maceman_18
       rect:
         serializedVersion: 2
-        x: 7
-        y: 263
-        width: 17
-        height: 20
+        x: 8
+        y: 264
+        width: 15
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -713,10 +713,10 @@ TextureImporter:
       name: Goblin_Maceman_19
       rect:
         serializedVersion: 2
-        x: 39
-        y: 263
-        width: 17
-        height: 19
+        x: 40
+        y: 264
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: Goblin_Maceman_20
       rect:
         serializedVersion: 2
-        x: 71
-        y: 263
-        width: 17
-        height: 18
+        x: 72
+        y: 264
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -757,10 +757,10 @@ TextureImporter:
       name: Goblin_Maceman_21
       rect:
         serializedVersion: 2
-        x: 103
-        y: 263
-        width: 17
-        height: 20
+        x: 104
+        y: 264
+        width: 15
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -779,10 +779,10 @@ TextureImporter:
       name: Goblin_Maceman_22
       rect:
         serializedVersion: 2
-        x: 135
-        y: 263
-        width: 17
-        height: 19
+        x: 136
+        y: 264
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -801,10 +801,10 @@ TextureImporter:
       name: Goblin_Maceman_23
       rect:
         serializedVersion: 2
-        x: 167
-        y: 263
-        width: 17
-        height: 18
+        x: 168
+        y: 264
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -823,10 +823,10 @@ TextureImporter:
       name: Goblin_Maceman_24
       rect:
         serializedVersion: 2
-        x: 8
-        y: 231
-        width: 18
-        height: 20
+        x: 9
+        y: 232
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -845,10 +845,10 @@ TextureImporter:
       name: Goblin_Maceman_25
       rect:
         serializedVersion: 2
-        x: 40
-        y: 231
-        width: 18
-        height: 19
+        x: 41
+        y: 232
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -867,10 +867,10 @@ TextureImporter:
       name: Goblin_Maceman_26
       rect:
         serializedVersion: 2
-        x: 72
-        y: 231
-        width: 18
-        height: 18
+        x: 73
+        y: 232
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -889,10 +889,10 @@ TextureImporter:
       name: Goblin_Maceman_27
       rect:
         serializedVersion: 2
-        x: 104
-        y: 231
-        width: 18
-        height: 20
+        x: 105
+        y: 232
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -911,10 +911,10 @@ TextureImporter:
       name: Goblin_Maceman_28
       rect:
         serializedVersion: 2
-        x: 136
-        y: 231
-        width: 18
-        height: 19
+        x: 137
+        y: 232
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -933,10 +933,10 @@ TextureImporter:
       name: Goblin_Maceman_29
       rect:
         serializedVersion: 2
-        x: 168
-        y: 231
-        width: 18
-        height: 18
+        x: 169
+        y: 232
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -955,10 +955,10 @@ TextureImporter:
       name: Goblin_Maceman_30
       rect:
         serializedVersion: 2
-        x: 6
-        y: 199
-        width: 18
-        height: 21
+        x: 7
+        y: 200
+        width: 16
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -977,10 +977,10 @@ TextureImporter:
       name: Goblin_Maceman_31
       rect:
         serializedVersion: 2
-        x: 34
-        y: 199
-        width: 22
-        height: 19
+        x: 35
+        y: 200
+        width: 20
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -999,10 +999,10 @@ TextureImporter:
       name: Goblin_Maceman_32
       rect:
         serializedVersion: 2
-        x: 65
-        y: 191
-        width: 31
-        height: 26
+        x: 66
+        y: 192
+        width: 29
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1021,10 +1021,10 @@ TextureImporter:
       name: Goblin_Maceman_33
       rect:
         serializedVersion: 2
-        x: 104
-        y: 199
-        width: 23
-        height: 19
+        x: 105
+        y: 194
+        width: 21
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1040,35 +1040,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Maceman_34
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 193
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b5e7027495ef0d020800000000000000
-      internalID: 2364669463768366683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Goblin_Maceman_35
       rect:
         serializedVersion: 2
-        x: 136
-        y: 199
-        width: 16
-        height: 20
+        x: 137
+        y: 200
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1087,10 +1065,10 @@ TextureImporter:
       name: Goblin_Maceman_36
       rect:
         serializedVersion: 2
-        x: 166
-        y: 199
-        width: 18
-        height: 19
+        x: 167
+        y: 200
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1109,10 +1087,10 @@ TextureImporter:
       name: Goblin_Maceman_37
       rect:
         serializedVersion: 2
-        x: 9
-        y: 167
-        width: 17
-        height: 18
+        x: 10
+        y: 168
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1131,10 +1109,10 @@ TextureImporter:
       name: Goblin_Maceman_38
       rect:
         serializedVersion: 2
-        x: 41
-        y: 167
-        width: 24
-        height: 17
+        x: 42
+        y: 168
+        width: 22
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1153,10 +1131,10 @@ TextureImporter:
       name: Goblin_Maceman_39
       rect:
         serializedVersion: 2
-        x: 66
-        y: 163
-        width: 54
-        height: 22
+        x: 67
+        y: 164
+        width: 29
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1175,10 +1153,10 @@ TextureImporter:
       name: Goblin_Maceman_40
       rect:
         serializedVersion: 2
-        x: 104
-        y: 163
-        width: 21
-        height: 8
+        x: 96
+        y: 164
+        width: 28
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1197,10 +1175,10 @@ TextureImporter:
       name: Goblin_Maceman_41
       rect:
         serializedVersion: 2
-        x: 133
-        y: 167
-        width: 19
-        height: 19
+        x: 134
+        y: 168
+        width: 17
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1219,10 +1197,10 @@ TextureImporter:
       name: Goblin_Maceman_42
       rect:
         serializedVersion: 2
-        x: 167
-        y: 167
-        width: 17
-        height: 18
+        x: 168
+        y: 168
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1241,10 +1219,10 @@ TextureImporter:
       name: Goblin_Maceman_43
       rect:
         serializedVersion: 2
-        x: 8
-        y: 135
-        width: 16
-        height: 18
+        x: 9
+        y: 136
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1263,10 +1241,10 @@ TextureImporter:
       name: Goblin_Maceman_44
       rect:
         serializedVersion: 2
-        x: 40
-        y: 135
-        width: 25
-        height: 19
+        x: 41
+        y: 136
+        width: 23
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1285,10 +1263,10 @@ TextureImporter:
       name: Goblin_Maceman_45
       rect:
         serializedVersion: 2
-        x: 64
-        y: 135
-        width: 31
-        height: 20
+        x: 65
+        y: 136
+        width: 29
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1307,10 +1285,10 @@ TextureImporter:
       name: Goblin_Maceman_46
       rect:
         serializedVersion: 2
-        x: 96
-        y: 129
-        width: 24
-        height: 24
+        x: 97
+        y: 130
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1329,10 +1307,10 @@ TextureImporter:
       name: Goblin_Maceman_47
       rect:
         serializedVersion: 2
-        x: 136
-        y: 135
-        width: 16
-        height: 20
+        x: 137
+        y: 136
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1351,10 +1329,10 @@ TextureImporter:
       name: Goblin_Maceman_48
       rect:
         serializedVersion: 2
-        x: 168
-        y: 135
-        width: 18
-        height: 18
+        x: 169
+        y: 136
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1373,10 +1351,10 @@ TextureImporter:
       name: Goblin_Maceman_49
       rect:
         serializedVersion: 2
-        x: 9
-        y: 103
-        width: 15
-        height: 18
+        x: 10
+        y: 104
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1395,10 +1373,10 @@ TextureImporter:
       name: Goblin_Maceman_50
       rect:
         serializedVersion: 2
-        x: 41
-        y: 103
-        width: 17
-        height: 18
+        x: 42
+        y: 104
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1417,10 +1395,10 @@ TextureImporter:
       name: Goblin_Maceman_51
       rect:
         serializedVersion: 2
-        x: 73
-        y: 103
-        width: 19
-        height: 16
+        x: 74
+        y: 104
+        width: 17
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1439,10 +1417,10 @@ TextureImporter:
       name: Goblin_Maceman_52
       rect:
         serializedVersion: 2
-        x: 105
-        y: 103
-        width: 22
-        height: 12
+        x: 106
+        y: 104
+        width: 20
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1461,10 +1439,10 @@ TextureImporter:
       name: Goblin_Maceman_53
       rect:
         serializedVersion: 2
-        x: 6
-        y: 71
-        width: 18
-        height: 19
+        x: 7
+        y: 72
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1483,10 +1461,10 @@ TextureImporter:
       name: Goblin_Maceman_54
       rect:
         serializedVersion: 2
-        x: 38
-        y: 71
-        width: 18
-        height: 19
+        x: 39
+        y: 72
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1505,10 +1483,10 @@ TextureImporter:
       name: Goblin_Maceman_55
       rect:
         serializedVersion: 2
-        x: 70
-        y: 71
-        width: 18
-        height: 19
+        x: 71
+        y: 72
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1527,10 +1505,10 @@ TextureImporter:
       name: Goblin_Maceman_56
       rect:
         serializedVersion: 2
-        x: 102
-        y: 71
-        width: 18
-        height: 19
+        x: 103
+        y: 72
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1549,10 +1527,10 @@ TextureImporter:
       name: Goblin_Maceman_57
       rect:
         serializedVersion: 2
-        x: 7
-        y: 39
-        width: 17
-        height: 18
+        x: 8
+        y: 40
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1571,10 +1549,10 @@ TextureImporter:
       name: Goblin_Maceman_58
       rect:
         serializedVersion: 2
-        x: 39
-        y: 39
-        width: 17
-        height: 18
+        x: 40
+        y: 40
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1593,10 +1571,10 @@ TextureImporter:
       name: Goblin_Maceman_59
       rect:
         serializedVersion: 2
-        x: 71
-        y: 39
-        width: 17
-        height: 18
+        x: 72
+        y: 40
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1615,10 +1593,10 @@ TextureImporter:
       name: Goblin_Maceman_60
       rect:
         serializedVersion: 2
-        x: 103
-        y: 39
-        width: 17
-        height: 18
+        x: 104
+        y: 40
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1637,10 +1615,10 @@ TextureImporter:
       name: Goblin_Maceman_61
       rect:
         serializedVersion: 2
-        x: 8
-        y: 7
-        width: 18
-        height: 18
+        x: 9
+        y: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1659,10 +1637,10 @@ TextureImporter:
       name: Goblin_Maceman_62
       rect:
         serializedVersion: 2
-        x: 40
-        y: 7
-        width: 18
-        height: 18
+        x: 41
+        y: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1681,10 +1659,10 @@ TextureImporter:
       name: Goblin_Maceman_63
       rect:
         serializedVersion: 2
-        x: 72
-        y: 7
-        width: 18
-        height: 18
+        x: 73
+        y: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1703,10 +1681,10 @@ TextureImporter:
       name: Goblin_Maceman_64
       rect:
         serializedVersion: 2
-        x: 104
-        y: 7
-        width: 18
-        height: 18
+        x: 105
+        y: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1725,7 +1703,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d663d99a77b5c0c418bef4f070051d27
     internalID: 0
     vertices: []
     indices: 

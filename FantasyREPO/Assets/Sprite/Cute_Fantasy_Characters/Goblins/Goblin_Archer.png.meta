@@ -208,7 +208,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -222,7 +222,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -246,7 +246,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -274,10 +274,10 @@ TextureImporter:
       name: Goblin_Archer_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 583
-        width: 18
-        height: 18
+        x: 15
+        y: 584
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: Goblin_Archer_1
       rect:
         serializedVersion: 2
-        x: 62
-        y: 582
-        width: 18
-        height: 18
+        x: 63
+        y: 583
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: Goblin_Archer_2
       rect:
         serializedVersion: 2
-        x: 110
-        y: 582
-        width: 18
-        height: 18
+        x: 111
+        y: 583
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,10 +340,10 @@ TextureImporter:
       name: Goblin_Archer_3
       rect:
         serializedVersion: 2
-        x: 158
-        y: 583
-        width: 18
-        height: 18
+        x: 159
+        y: 584
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,10 +362,10 @@ TextureImporter:
       name: Goblin_Archer_4
       rect:
         serializedVersion: 2
-        x: 16
-        y: 535
-        width: 16
-        height: 18
+        x: 17
+        y: 536
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +384,10 @@ TextureImporter:
       name: Goblin_Archer_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 534
-        width: 16
-        height: 18
+        x: 65
+        y: 535
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,10 +406,10 @@ TextureImporter:
       name: Goblin_Archer_6
       rect:
         serializedVersion: 2
-        x: 112
-        y: 534
-        width: 16
-        height: 18
+        x: 113
+        y: 535
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,10 +428,10 @@ TextureImporter:
       name: Goblin_Archer_7
       rect:
         serializedVersion: 2
-        x: 160
-        y: 535
-        width: 16
-        height: 18
+        x: 161
+        y: 536
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,10 +450,10 @@ TextureImporter:
       name: Goblin_Archer_8
       rect:
         serializedVersion: 2
-        x: 16
-        y: 487
-        width: 18
-        height: 20
+        x: 17
+        y: 488
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,10 +472,10 @@ TextureImporter:
       name: Goblin_Archer_9
       rect:
         serializedVersion: 2
-        x: 64
-        y: 487
-        width: 18
-        height: 19
+        x: 65
+        y: 488
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,10 +494,10 @@ TextureImporter:
       name: Goblin_Archer_10
       rect:
         serializedVersion: 2
-        x: 112
-        y: 487
-        width: 18
-        height: 19
+        x: 113
+        y: 488
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,10 +516,10 @@ TextureImporter:
       name: Goblin_Archer_11
       rect:
         serializedVersion: 2
-        x: 160
-        y: 487
-        width: 18
-        height: 20
+        x: 161
+        y: 488
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +538,10 @@ TextureImporter:
       name: Goblin_Archer_12
       rect:
         serializedVersion: 2
-        x: 14
-        y: 439
-        width: 18
-        height: 20
+        x: 15
+        y: 440
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -560,10 +560,10 @@ TextureImporter:
       name: Goblin_Archer_13
       rect:
         serializedVersion: 2
-        x: 62
-        y: 439
-        width: 18
-        height: 19
+        x: 63
+        y: 440
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,10 +582,10 @@ TextureImporter:
       name: Goblin_Archer_14
       rect:
         serializedVersion: 2
-        x: 110
-        y: 439
-        width: 18
-        height: 18
+        x: 111
+        y: 440
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,10 +604,10 @@ TextureImporter:
       name: Goblin_Archer_15
       rect:
         serializedVersion: 2
-        x: 158
-        y: 439
-        width: 18
-        height: 20
+        x: 159
+        y: 440
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -626,10 +626,10 @@ TextureImporter:
       name: Goblin_Archer_16
       rect:
         serializedVersion: 2
-        x: 206
-        y: 439
-        width: 18
-        height: 19
+        x: 207
+        y: 440
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -648,10 +648,10 @@ TextureImporter:
       name: Goblin_Archer_17
       rect:
         serializedVersion: 2
-        x: 254
-        y: 439
-        width: 18
-        height: 18
+        x: 255
+        y: 440
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -670,10 +670,10 @@ TextureImporter:
       name: Goblin_Archer_18
       rect:
         serializedVersion: 2
-        x: 16
-        y: 391
-        width: 16
-        height: 20
+        x: 17
+        y: 392
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -692,10 +692,10 @@ TextureImporter:
       name: Goblin_Archer_19
       rect:
         serializedVersion: 2
-        x: 64
-        y: 391
-        width: 16
-        height: 19
+        x: 65
+        y: 392
+        width: 14
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: Goblin_Archer_20
       rect:
         serializedVersion: 2
-        x: 112
-        y: 391
-        width: 16
-        height: 18
+        x: 113
+        y: 392
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -736,10 +736,10 @@ TextureImporter:
       name: Goblin_Archer_21
       rect:
         serializedVersion: 2
-        x: 160
-        y: 391
-        width: 16
-        height: 20
+        x: 161
+        y: 392
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -758,10 +758,10 @@ TextureImporter:
       name: Goblin_Archer_22
       rect:
         serializedVersion: 2
-        x: 208
-        y: 391
-        width: 16
-        height: 19
+        x: 209
+        y: 392
+        width: 14
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -780,10 +780,10 @@ TextureImporter:
       name: Goblin_Archer_23
       rect:
         serializedVersion: 2
-        x: 256
-        y: 391
-        width: 16
-        height: 18
+        x: 257
+        y: 392
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -802,10 +802,10 @@ TextureImporter:
       name: Goblin_Archer_24
       rect:
         serializedVersion: 2
-        x: 16
-        y: 343
-        width: 18
-        height: 21
+        x: 17
+        y: 344
+        width: 16
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -824,10 +824,10 @@ TextureImporter:
       name: Goblin_Archer_25
       rect:
         serializedVersion: 2
-        x: 64
-        y: 343
-        width: 18
-        height: 20
+        x: 65
+        y: 344
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,10 +846,10 @@ TextureImporter:
       name: Goblin_Archer_26
       rect:
         serializedVersion: 2
-        x: 112
-        y: 343
-        width: 18
-        height: 19
+        x: 113
+        y: 344
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -868,10 +868,10 @@ TextureImporter:
       name: Goblin_Archer_27
       rect:
         serializedVersion: 2
-        x: 160
-        y: 343
-        width: 18
-        height: 21
+        x: 161
+        y: 344
+        width: 16
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -890,10 +890,10 @@ TextureImporter:
       name: Goblin_Archer_28
       rect:
         serializedVersion: 2
-        x: 208
-        y: 343
-        width: 18
-        height: 20
+        x: 209
+        y: 344
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -912,10 +912,10 @@ TextureImporter:
       name: Goblin_Archer_29
       rect:
         serializedVersion: 2
-        x: 256
-        y: 343
-        width: 18
-        height: 19
+        x: 257
+        y: 344
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -934,10 +934,10 @@ TextureImporter:
       name: Goblin_Archer_30
       rect:
         serializedVersion: 2
-        x: 15
-        y: 287
-        width: 18
-        height: 26
+        x: 16
+        y: 288
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -956,19 +956,19 @@ TextureImporter:
       name: Goblin_Archer_31
       rect:
         serializedVersion: 2
-        x: 64
-        y: 292
-        width: 16
-        height: 20
+        x: 65
+        y: 293
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 85b497bad5f886fe0800000000000000
+      spriteID: 20c2dcf9803831844b76495220b1ea71
       internalID: -1195548068595283112
       vertices: []
       indices: 
@@ -978,19 +978,19 @@ TextureImporter:
       name: Goblin_Archer_32
       rect:
         serializedVersion: 2
-        x: 112
-        y: 293
-        width: 16
-        height: 19
+        x: 113
+        y: 294
+        width: 14
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 15a0917a7f67df1e0800000000000000
+      spriteID: 53f6734c6162f5a4abf538b8a93515e6
       internalID: -2162441440035534255
       vertices: []
       indices: 
@@ -1000,19 +1000,19 @@ TextureImporter:
       name: Goblin_Archer_33
       rect:
         serializedVersion: 2
-        x: 159
-        y: 293
-        width: 18
-        height: 19
+        x: 160
+        y: 294
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 18b6fb707b84d1490800000000000000
+      spriteID: a32c8624093b3b040ac74a84aaa74e78
       internalID: -7773977430825407615
       vertices: []
       indices: 
@@ -1022,19 +1022,19 @@ TextureImporter:
       name: Goblin_Archer_34
       rect:
         serializedVersion: 2
-        x: 207
-        y: 293
-        width: 18
-        height: 19
+        x: 208
+        y: 294
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 84394fabffd9be510800000000000000
+      spriteID: b46af34ef7d3de64397440a66978cafa
       internalID: 1579529816002302792
       vertices: []
       indices: 
@@ -1044,19 +1044,19 @@ TextureImporter:
       name: Goblin_Archer_35
       rect:
         serializedVersion: 2
-        x: 255
-        y: 293
-        width: 18
-        height: 20
+        x: 256
+        y: 294
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 965602823305897e0800000000000000
+      spriteID: 2312c26bd9713884c80b8dd65063a590
       internalID: -1758567473841412759
       vertices: []
       indices: 
@@ -1066,19 +1066,19 @@ TextureImporter:
       name: Goblin_Archer_36
       rect:
         serializedVersion: 2
-        x: 17
-        y: 247
-        width: 24
-        height: 18
+        x: 18
+        y: 248
+        width: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22a2f65010b276c00800000000000000
+      spriteID: fd74236e74f423d4dbdf1406be95f9ac
       internalID: 893730334442465826
       vertices: []
       indices: 
@@ -1088,19 +1088,19 @@ TextureImporter:
       name: Goblin_Archer_37
       rect:
         serializedVersion: 2
-        x: 65
-        y: 247
-        width: 21
-        height: 18
+        x: 66
+        y: 248
+        width: 19
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4a8abbc48f0b54370800000000000000
+      spriteID: d198bce88679d344c81b7d269148dc44
       internalID: 8306239668240492708
       vertices: []
       indices: 
@@ -1110,19 +1110,19 @@ TextureImporter:
       name: Goblin_Archer_38
       rect:
         serializedVersion: 2
-        x: 112
-        y: 247
-        width: 21
-        height: 17
+        x: 113
+        y: 248
+        width: 19
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 990745acfa3c59810800000000000000
+      spriteID: e54308f519282a04d8e6ea211dd908a4
       internalID: 1771537188221382809
       vertices: []
       indices: 
@@ -1132,19 +1132,19 @@ TextureImporter:
       name: Goblin_Archer_39
       rect:
         serializedVersion: 2
-        x: 160
-        y: 247
-        width: 21
-        height: 18
+        x: 161
+        y: 248
+        width: 19
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 26bdeb4df8da43280800000000000000
+      spriteID: 2802c423996579645b0527acc8a05e55
       internalID: -9064429316728759454
       vertices: []
       indices: 
@@ -1154,19 +1154,19 @@ TextureImporter:
       name: Goblin_Archer_40
       rect:
         serializedVersion: 2
-        x: 209
-        y: 247
-        width: 20
-        height: 18
+        x: 210
+        y: 248
+        width: 18
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a6bf732de4a59da90800000000000000
+      spriteID: c2255f7f990eca74b98c678fd2add93a
       internalID: -7288695227341603990
       vertices: []
       indices: 
@@ -1176,19 +1176,19 @@ TextureImporter:
       name: Goblin_Archer_41
       rect:
         serializedVersion: 2
-        x: 257
-        y: 247
-        width: 20
-        height: 18
+        x: 258
+        y: 248
+        width: 18
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2cba3288075ee5dc0800000000000000
+      spriteID: 09df727e5d9c4544fb50a8a2761144c8
       internalID: -3648226376640386110
       vertices: []
       indices: 
@@ -1198,19 +1198,19 @@ TextureImporter:
       name: Goblin_Archer_42
       rect:
         serializedVersion: 2
-        x: 15
-        y: 199
-        width: 18
-        height: 26
+        x: 16
+        y: 200
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d99bcbaed22c791b0800000000000000
+      spriteID: 398d252bbf3e9f84f98f82c2d0f5058d
       internalID: -5649833705045444195
       vertices: []
       indices: 
@@ -1220,19 +1220,19 @@ TextureImporter:
       name: Goblin_Archer_43
       rect:
         serializedVersion: 2
-        x: 64
-        y: 199
-        width: 16
-        height: 21
+        x: 65
+        y: 200
+        width: 14
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f62d9b4ce79bf01c0800000000000000
+      spriteID: 266850ab2f5c8f0469a038f7a35abf47
       internalID: -4535202345621269905
       vertices: []
       indices: 
@@ -1242,19 +1242,19 @@ TextureImporter:
       name: Goblin_Archer_44
       rect:
         serializedVersion: 2
-        x: 112
-        y: 199
-        width: 16
-        height: 20
+        x: 113
+        y: 200
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c4d22ed3698646c30800000000000000
+      spriteID: 955848a7c91f3664599eb32ab8802b13
       internalID: 4351718134439357772
       vertices: []
       indices: 
@@ -1264,19 +1264,19 @@ TextureImporter:
       name: Goblin_Archer_45
       rect:
         serializedVersion: 2
-        x: 159
-        y: 199
-        width: 18
-        height: 20
+        x: 160
+        y: 200
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fc36a2463070da030800000000000000
+      spriteID: 7fa6896475073d64c8a3d2600672a800
       internalID: 3507467395938280399
       vertices: []
       indices: 
@@ -1286,19 +1286,19 @@ TextureImporter:
       name: Goblin_Archer_46
       rect:
         serializedVersion: 2
-        x: 207
-        y: 199
-        width: 18
-        height: 20
+        x: 208
+        y: 200
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 295cd944290bd1cf0800000000000000
+      spriteID: 8b27fd79a950cb24bbde718947635715
       internalID: -279873459564198510
       vertices: []
       indices: 
@@ -1308,19 +1308,19 @@ TextureImporter:
       name: Goblin_Archer_47
       rect:
         serializedVersion: 2
-        x: 255
-        y: 199
-        width: 18
-        height: 20
+        x: 256
+        y: 200
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d60a814d6c6c3e210800000000000000
+      spriteID: 09d59695cc77e6f408850e330bf63504
       internalID: 1361150069660229741
       vertices: []
       indices: 
@@ -1330,19 +1330,19 @@ TextureImporter:
       name: Goblin_Archer_48
       rect:
         serializedVersion: 2
-        x: 17
-        y: 151
-        width: 15
-        height: 18
+        x: 18
+        y: 152
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bb1ceb0d6d9607440800000000000000
+      spriteID: c33bcc4cfa1f5da41b4a8667346a6bce
       internalID: 4931557963316773307
       vertices: []
       indices: 
@@ -1352,19 +1352,19 @@ TextureImporter:
       name: Goblin_Archer_49
       rect:
         serializedVersion: 2
-        x: 65
-        y: 151
-        width: 17
-        height: 18
+        x: 66
+        y: 152
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 436921f9e70dd9740800000000000000
+      spriteID: 8a06994abf947ef479396a25da34a649
       internalID: 5160509990289708596
       vertices: []
       indices: 
@@ -1374,19 +1374,19 @@ TextureImporter:
       name: Goblin_Archer_50
       rect:
         serializedVersion: 2
-        x: 113
-        y: 151
-        width: 19
-        height: 16
+        x: 114
+        y: 152
+        width: 17
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 59353bedf5b28df50800000000000000
+      spriteID: 054a5b9b50e13e44fb3cdd414cef0ef4
       internalID: 6906317719330837397
       vertices: []
       indices: 
@@ -1396,19 +1396,19 @@ TextureImporter:
       name: Goblin_Archer_51
       rect:
         serializedVersion: 2
-        x: 161
-        y: 151
-        width: 22
-        height: 12
+        x: 162
+        y: 152
+        width: 20
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 39217171cb2c4f070800000000000000
+      spriteID: dde7086a57e7bb64baabac19f178be3e
       internalID: 8139344539662357139
       vertices: []
       indices: 
@@ -1418,19 +1418,19 @@ TextureImporter:
       name: Goblin_Archer_52
       rect:
         serializedVersion: 2
-        x: 14
-        y: 103
-        width: 18
-        height: 18
+        x: 15
+        y: 104
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4f3bed2453f0edfd0800000000000000
+      spriteID: 0f3a32c849df48c4eb956eb9f40ed658
       internalID: -2315396436992281612
       vertices: []
       indices: 
@@ -1440,19 +1440,19 @@ TextureImporter:
       name: Goblin_Archer_53
       rect:
         serializedVersion: 2
-        x: 62
-        y: 103
-        width: 18
-        height: 18
+        x: 63
+        y: 104
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d2df581dd1c9840c0800000000000000
+      spriteID: d1631605d494a9344a8a9a05e03b82f7
       internalID: -4591248168221016787
       vertices: []
       indices: 
@@ -1462,19 +1462,19 @@ TextureImporter:
       name: Goblin_Archer_54
       rect:
         serializedVersion: 2
-        x: 16
-        y: 55
-        width: 16
-        height: 18
+        x: 17
+        y: 56
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f3d0e307866c6a5a0800000000000000
+      spriteID: 66c17ecd420092c4fbf7dc9d906bf213
       internalID: -6510298059455460033
       vertices: []
       indices: 
@@ -1484,19 +1484,19 @@ TextureImporter:
       name: Goblin_Archer_55
       rect:
         serializedVersion: 2
-        x: 64
-        y: 55
-        width: 16
-        height: 18
+        x: 65
+        y: 56
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 147501066b61d23f0800000000000000
+      spriteID: b57f3b2710563a44c83203c32b670f54
       internalID: -924057375989541055
       vertices: []
       indices: 
@@ -1506,19 +1506,19 @@ TextureImporter:
       name: Goblin_Archer_56
       rect:
         serializedVersion: 2
-        x: 16
-        y: 7
-        width: 18
-        height: 20
+        x: 17
+        y: 8
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3ae8549fcd3b966d0800000000000000
+      spriteID: bfa638f31996e564db2acf299c2ae88b
       internalID: -2996666315382092125
       vertices: []
       indices: 
@@ -1528,19 +1528,19 @@ TextureImporter:
       name: Goblin_Archer_57
       rect:
         serializedVersion: 2
-        x: 64
-        y: 7
-        width: 18
-        height: 20
+        x: 65
+        y: 8
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 33e50dd7cf6a5c020800000000000000
+      spriteID: a02849dac2bb80b4ab261c2a4c887319
       internalID: 2361477182998470195
       vertices: []
       indices: 
@@ -1550,7 +1550,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e75d15bd94407f04e9455ad8cb457a16
     internalID: 0
     vertices: []
     indices: 
