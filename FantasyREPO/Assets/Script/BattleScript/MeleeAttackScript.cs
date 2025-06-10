@@ -1,4 +1,6 @@
 using UnityEngine;  // UnityEngine 네임스페이스 추가
+using System.Collections.Generic;
+
 
 public class MeleeAttackScript : MonoBehaviour
 {
@@ -22,10 +24,9 @@ public class MeleeAttackScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && curTime <= 0)
+        if (Input.GetMouseButtonDown(0) && curTime <= 0 && !_playerMove.isAttacking)
         {
             PerformAttack();
-            var state = _animator.GetCurrentAnimatorStateInfo(0);
             // Debug.Log("Current State: " + state.fullPathHash);
         }
 
@@ -40,39 +41,44 @@ public class MeleeAttackScript : MonoBehaviour
     {
         Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(transform.position, attackRange);
         bool attacked = false;
+        HashSet<GameObject> damagedObjects = new HashSet<GameObject>();
 
         foreach (Collider2D obj in objectsInRange)
         {
             if (obj.CompareTag("Enemy"))
             {
+                GameObject rootObj = obj.transform.root.gameObject;
+                if (damagedObjects.Contains(rootObj))
+                    continue; // 이미 데미지 준 몹이면 무시
+
                 Vector2 directionToMonster = (obj.transform.position - transform.position).normalized;
                 Vector2 directionToMouse = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
                 float angle = Vector2.Angle(directionToMonster, directionToMouse);
 
                 if (angle <= attackAngle / 2)
                 {
-                    // 애니메이션에 방향 정보 전달
-                    Vector2 lastDir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized; ;
+                    if (!attacked)
+                    {
+                        Vector2 lastDir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized; ;
 
-                    _animator.SetFloat("AttackX", lastDir.x);
-                    _animator.SetFloat("AttackY", lastDir.y);
-                    _animator.SetTrigger("Attack");
+                        _animator.SetFloat("AttackX", lastDir.x);
+                        _animator.SetFloat("AttackY", lastDir.y);
+                        _animator.SetTrigger("Attack");
 
-                    Debug.Log("몬스터 공격 성공: " + obj.name);
-                    curTime = coolTime;
-                    _playerMove.isAttacking = true;
+                        Debug.Log("몬스터 공격 성공: " + obj.name);
+                        curTime = coolTime;
+                        _playerMove.isAttacking = true;
 
-                    attacked = true;
+                        attacked = true;
+                    }
+
 
                     // 여기에 데미지 처리도 추가 가능
                     IDamageable damageable = obj.GetComponent<IDamageable>();
                     if (damageable != null)
                     {
                         damageable.TakeDamage(AttackDamage);
-                    }
-                    else
-                    {
-                        Debug.LogWarning("공격한 대상에 IDamageable이 없음: " + obj.name);
+                        damagedObjects.Add(rootObj);
                     }
                 }
             }
