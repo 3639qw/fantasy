@@ -114,7 +114,7 @@ TextureImporter:
         serializedVersion: 2
         x: 108
         y: 107
-        width: 121
+        width: 25
         height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -134,10 +134,10 @@ TextureImporter:
       name: UI_Premade_1
       rect:
         serializedVersion: 2
-        x: 107
-        y: 73
-        width: 122
-        height: 30
+        x: 108
+        y: 74
+        width: 25
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,6 +196,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_Premade_0
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 107
+        width: 22
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8265ea9df3c45a4bfa408bdf48adc9
+      internalID: -718426830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Premade_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 108
+        width: 25
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3499d742f74c94e6395423622cc2e9d0
+      internalID: -1707316115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Premade_5
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 74
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d72e3759707465ca5b74bf0c1e557f
+      internalID: -556924216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Premade_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 74
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0939cb79b10a496390da2e3ef397a86
+      internalID: 762923522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -211,9 +299,13 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       UI_Inventory2: 17200235583249166
+      UI_Premade_0: -718426830
       UI_Premade_1: 708687847921299629
       UI_Premade_2: 1309728386883983249
       UI_Premade_3: 6389735076937285183
+      UI_Premade_4: -1707316115
+      UI_Premade_5: -556924216
+      UI_Premade_6: 762923522
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
