@@ -15,6 +15,7 @@ public class PlayerMove : MonoBehaviour
     private Animator _animator;
     public bool isAttacking = false;
     public bool isDie = false;
+    public bool isDamaged = false;
 
     private const string _horizontal = "Horizontal";
     private const string _vertical = "Vertical";
@@ -82,7 +83,7 @@ public class PlayerMove : MonoBehaviour
             clampedPosition = nextPos;
         }
 
-        if (isAttacking || isDie)
+        if (isAttacking || isDie || isDamaged)
         {
             // 공격 중일 땐 움직이지 않음
             _rb.linearVelocity = Vector2.zero;

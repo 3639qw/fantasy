@@ -53,7 +53,7 @@ public class LoginManager : MonoBehaviour
             if (www.result == UnityWebRequest.Result.Success)
             {
                 Debug.Log("로그인 성공: " + www.downloadHandler.text);
-                SceneManager.LoadScene("Overworld");
+                SceneManager.LoadScene("Main1");
             }
             else
             {

@@ -38,6 +38,7 @@ public class SlimeScript : MonoBehaviour, IDamageable
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0; // 중력 영향 제거
         player = GameObject.FindGameObjectWithTag("Player").transform;
         _playerHP = FindObjectOfType<GameManager>();
         path = new NavMeshPath();
@@ -91,17 +92,11 @@ public class SlimeScript : MonoBehaviour, IDamageable
                     }
                 }
                 break;
+
             case SlimeState.Attacked:
                 if (stateTimer <= 0f)
                 {
-                    if (distanceToPlayer > chaseRange)
-                    {
-                        ChangeState(SlimeState.Idle);
-                    }
-                    else
-                    {
-                        ChangeState(SlimeState.Chase);
-                    }
+                    ChangeState(distanceToPlayer > chaseRange ? SlimeState.Idle : SlimeState.Chase);
                 }
                 break;
 
@@ -114,9 +109,12 @@ public class SlimeScript : MonoBehaviour, IDamageable
         }
 
         stateTimer -= Time.deltaTime;
+        FixZ();
+    }
 
-        FollowPath();  // 매 프레임 경로 이동
-        FixZ();        // Z값 고정
+    private void FixedUpdate()
+    {
+        FollowPath(); // 물리 이동은 FixedUpdate에서 실행
     }
 
     private void LateUpdate()
@@ -135,8 +133,6 @@ public class SlimeScript : MonoBehaviour, IDamageable
         stateTimer = idleTime;
         pathIndex = 0;
 
-        // Debug.Log($"[FSM] 상태 전환 → {newState}");
-
         switch (newState)
         {
             case SlimeState.Idle:
@@ -147,11 +143,9 @@ public class SlimeScript : MonoBehaviour, IDamageable
             case SlimeState.Wander:
                 animator.Play("Slime_Move");
                 Vector2 wanderTarget = (Vector2)transform.position + Random.insideUnitCircle * wanderRadius;
-
                 if (NavMesh.SamplePosition(wanderTarget, out NavMeshHit hit, 1f, NavMesh.AllAreas))
                 {
                     SetPathTo(hit.position);
-                    pathIndex = 0;
                 }
                 break;
 
@@ -159,7 +153,6 @@ public class SlimeScript : MonoBehaviour, IDamageable
                 animator.Play("Slime_Move");
                 SetPathTo(player.position);
                 pathUpdateTimer = pathUpdateInterval;
-                pathIndex = 0;
                 break;
 
             case SlimeState.Attacked:
@@ -178,42 +171,44 @@ public class SlimeScript : MonoBehaviour, IDamageable
 
     private void SetPathTo(Vector3 target)
     {
-        if (NavMesh.CalculatePath(transform.position, target, NavMesh.AllAreas, path))
+        if (NavMesh.CalculatePath(transform.position, target, NavMesh.AllAreas, path) &&
+            path.status == NavMeshPathStatus.PathComplete)
         {
-            if (path.status == NavMeshPathStatus.PathComplete)
-            {
-                pathIndex = 0;
-            }
-            else
-            {
-                // 경로가 유효하지 않을 경우 멈춤 처리
-                path.ClearCorners();
-            }
+            pathIndex = 0;
+        }
+        else
+        {
+            path.ClearCorners();
         }
     }
 
     private void FollowPath()
     {
         if (path == null || path.corners.Length == 0 || pathIndex >= path.corners.Length)
+        {
+            rb.linearVelocity = Vector2.zero;  // 경로 없으면 멈춤
             return;
+        }
 
         Vector3 targetCorner = path.corners[pathIndex];
         targetCorner.z = transform.position.z;
 
-        Vector3 direction = (targetCorner - transform.position).normalized;
-        float distance = Vector3.Distance(transform.position, targetCorner);
-        float step = moveSpeed * Time.deltaTime;
+        Vector2 direction = ((Vector2)targetCorner - rb.position).normalized;
+        rb.linearVelocity = direction * moveSpeed;
 
-        if (distance > step)
+        float distance = Vector2.Distance(rb.position, targetCorner);
+
+        if (distance < 0.1f)
         {
-            transform.position += direction * step;
+            pathIndex++;
+            rb.linearVelocity = Vector2.zero;
         }
         else
         {
-            transform.position = targetCorner;
-            pathIndex++;
+            rb.linearVelocity = direction * moveSpeed;
         }
     }
+
 
     private bool ReachedDestination()
     {
@@ -234,7 +229,6 @@ public class SlimeScript : MonoBehaviour, IDamageable
             PlayerHealthController playerHealth = other.GetComponent<PlayerHealthController>();
             if (GameManager.Instance != null)
             {
-                // 체력 5 감소
                 playerHealth.TakeDamage(damage);
             }
             else
@@ -243,7 +237,6 @@ public class SlimeScript : MonoBehaviour, IDamageable
             }
         }
     }
-
 
     public void TakeDamage(float amount)
     {
