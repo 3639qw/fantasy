@@ -180,7 +180,7 @@ TextureImporter:
         serializedVersion: 2
         x: 42
         y: 0
-        width: 22
+        width: 6
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,6 +192,72 @@ TextureImporter:
       bones: []
       spriteID: c3a41e3a1c9667cd0800000000000000
       internalID: -2560743057714492868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bow_Stages_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 13
+        width: 13
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab9046ecacf073418712fc0c1ca6089
+      internalID: -1997375020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bow_Stages_5
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 3
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e47343057af24438011b4732712d5f
+      internalID: 712888611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bow_Stages_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0b957a77e0fae4e8fed36d3a46dda4
+      internalID: 941853755
       vertices: []
       indices: 
       edges: []
@@ -214,6 +280,9 @@ TextureImporter:
       Bow_Stages_1: -8530258503782808283
       Bow_Stages_2: -8037461968726066685
       Bow_Stages_3: -2560743057714492868
+      Bow_Stages_4: -1997375020
+      Bow_Stages_5: 712888611
+      Bow_Stages_6: 941853755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
