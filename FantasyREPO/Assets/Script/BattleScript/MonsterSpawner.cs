@@ -37,6 +37,10 @@ public class MonsterSpawner : MonoBehaviour
 
     void SpawnMonster()
     {
+        // 밤 시간대 이외 스폰 불가 판정
+        if (!GameManager.Instance.isNightTime())
+            return;
+        
         Rect area = spawnArea.GetRect();
         Rect cameraView = GetCameraViewRect();
 

@@ -25,6 +25,14 @@ public class GameManager : MonoBehaviour
     // 플레이어 위치 저장
     protected internal Vector2? playerStartPosition = null;
     
+    // 시간
+    protected internal float currentTime;
+    protected internal float timeSpeed = 1f;
+
+    protected internal float nightStart = 22f;
+    protected internal float nightEnd = 6f;
+    
+    
     public static GameManager Instance
     {
         get
@@ -90,13 +98,24 @@ public class GameManager : MonoBehaviour
         {
             ConsumeSkill(3, 20 * Time.deltaTime); // ST 소모
         }
-
         
+        // 시간
+        currentTime += Time.deltaTime * timeSpeed;
+        if (currentTime >= 24f)
+            currentTime -= 24f;
+        
+
         // if (playerStartPosition.HasValue)
         // {
         //     Debug.Log($"x: {playerStartPosition.Value.x}, y: {playerStartPosition.Value.y}");
         // }
-        
+
+    }
+
+    public bool isNightTime()
+    {
+        // 0시 이전 시작하고 24시 이전 종료를 감안
+        return currentTime >= nightStart || currentTime < nightEnd;
     }
     
     private bool PlayerIsMoving()
