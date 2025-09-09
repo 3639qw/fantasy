@@ -158,12 +158,6 @@ public class SkeletonAI : MonoBehaviour, IDamageable
         }
     }
 
-    void FixedUpdate()
-    {
-        // 물리 기반 움직임은 FixedUpdate에서 처리
-        // 현재 상태에 따라 rb.linearVelocity가 Update에서 이미 설정되므로 여기서는 추가 로직 없음
-    }
-
     void LateUpdate()
     {
         FixZ(); // Z축 고정
