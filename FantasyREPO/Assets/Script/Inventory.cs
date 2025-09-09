@@ -2,20 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/// <summary>
-/// 인벤토리 시스템
-///  • 퀵슬롯 5 + 가방 슬롯 50 (총 55) 스택 & 수량 표시
-///  • 퀵슬롯이 가득 차면 가방으로 자동 이동
-///  • E : Bag 패널 토글, 숫자 1‑5 : 퀵슬롯 선택
-///  • AddItem(icon, amount) → 먼저 퀵슬롯, 없으면 가방 슬롯
-///  • ConsumeSelectedItem() : 퀵슬롯 아이템 사용 및 0이면 아이콘 제거
-/// </summary>
 public class Inventory : MonoBehaviour
 {
-    /* ────────── 싱글톤 ────────── */
     public static Inventory Instance { get; private set; }
 
-    /* ────────── 슬롯 구조 ────────── */
     [System.Serializable]
     public class ItemSlot
     {
@@ -24,7 +14,6 @@ public class Inventory : MonoBehaviour
         [HideInInspector] public int count;
     }
 
-    /* ────────── Quick (1~10) & Bag (50) ────────── */
     [Header("퀵 슬롯 10 (UI 순서대로 1~0)")]
     public ItemSlot[] quickSlots = new ItemSlot[10];
 
@@ -38,24 +27,26 @@ public class Inventory : MonoBehaviour
     [Header("Bag UI 패널")]
     [SerializeField] private GameObject bagPanel;
 
-    /* 현재 선택 퀵슬롯 번호 (1~10) */
     [SerializeField, Range(1, 10)] private int current = 1;
     public int states => current;
 
-    /* ────────── 초기화 ────────── */
     void Awake()
     {
-        if (Instance == null) Instance = this; else { Destroy(gameObject); return; }
+        if (Instance == null) Instance = this;
+        else { Destroy(gameObject); return; }
 
-        AutoAttachDragScripts();   // 드래그/드롭 스크립트 부착
-        NormalizeCounts();         // 슬롯 카운트 정리
-        InitSlotVisuals();         // 슬롯 시각화 초기화
+        AutoAttachDragScripts();
+        NormalizeCounts();
+        InitSlotVisuals();
     }
 
+    /* ---------- 초기 시각화 ---------- */
     void InitSlotVisuals()
     {
         foreach (var s in quickSlots) RefreshSlot(s);
         foreach (var s in bagSlots) RefreshSlot(s);
+        // 첫 선택 상태 반영
+        SelectQuick(Mathf.Clamp(current, 1, Mathf.Max(1, quickSlots.Length)));
     }
 
     void NormalizeCounts()
@@ -66,18 +57,21 @@ public class Inventory : MonoBehaviour
 
     void FixArray(ItemSlot[] arr)
     {
+        if (arr == null) return;
         foreach (var s in arr)
-            if (s.count == 0 && s.icon && s.icon.sprite && s.icon.sprite != emptySprite)
-                s.count = 1;
+        {
+            if (s == null || s.icon == null) continue;
+            if (s.count == 0 && s.icon.sprite != null && s.icon.sprite != emptySprite)
+                s.count = 1; // 아이콘이 있는데 count가 0이면 1로 보정
+        }
     }
 
-    /* ────────── 입력 처리 ────────── */
+    /* ---------- 입력 ---------- */
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && bagPanel)
+        if (Input.GetKeyDown(KeyCode.E) && bagPanel != null)
             bagPanel.SetActive(!bagPanel.activeSelf);
 
-        /* 1~9, 0 → 퀵슬롯 1~10 */
         if (Input.GetKeyDown(KeyCode.Alpha1)) SelectQuick(1);
         else if (Input.GetKeyDown(KeyCode.Alpha2)) SelectQuick(2);
         else if (Input.GetKeyDown(KeyCode.Alpha3)) SelectQuick(3);
@@ -92,71 +86,104 @@ public class Inventory : MonoBehaviour
 
     private void SelectQuick(int idx)
     {
+        if (quickSlots == null || quickSlots.Length == 0) return;
+
         current = Mathf.Clamp(idx, 1, quickSlots.Length);
+
         for (int i = 0; i < quickSlots.Length; i++)
         {
-            ItemSlot s = quickSlots[i];
+            var s = quickSlots[i];
+            if (s == null || s.icon == null) continue;
+
             if (s.count > 0)
-                SetAlpha(s.icon, i == current - 1);   // 선택된 슬롯은 1f, 나머지는 0.6f
+                SetAlpha(s.icon, i == current - 1);  // 선택된 슬롯만 1f
             else
-                s.icon.color = new Color(1, 1, 1, 0); // 비어있으면 투명
+                s.icon.color = new Color(1f, 1f, 1f, 0f); // 빈 슬롯은 투명
         }
     }
 
-    /* ────────── 아이템 추가 / 소비 ────────── */
+    /* ---------- 아이템 추가/소비 ---------- */
     public void AddItem(Sprite icon, int amount = 1)
     {
+        if (icon == null || amount <= 0) return;
+
         if (TryStackOrFill(quickSlots, icon, amount)) return;
         if (TryStackOrFill(bagSlots, icon, amount)) return;
+
         Debug.LogWarning("인벤토리(퀵+가방) 모두 가득 찼습니다");
     }
 
     private bool TryStackOrFill(ItemSlot[] arr, Sprite icon, int amount)
     {
+        if (arr == null) return false;
+
         // 같은 아이콘 스택
         foreach (var s in arr)
+        {
+            if (s == null || s.icon == null) continue;
             if (s.count > 0 && s.icon.sprite == icon)
             { s.count += amount; RefreshSlot(s); return true; }
+        }
 
-        // 빈 슬롯 찾기
+        // 빈 슬롯 채우기
         foreach (var s in arr)
+        {
+            if (s == null || s.icon == null) continue;
             if (s.count == 0)
-            { s.icon.sprite = icon; s.count = amount; RefreshSlot(s); return true; }
-
+            {
+                s.icon.sprite = icon;
+                s.count = amount;
+                RefreshSlot(s);
+                return true;
+            }
+        }
         return false;
     }
 
     public bool ConsumeSelectedItem(int amount = 1)
     {
-        ItemSlot slot = quickSlots[current - 1];
-        if (slot.count < amount) return false;
+        if (quickSlots == null || quickSlots.Length == 0) return false;
+        var slot = quickSlots[Mathf.Clamp(current - 1, 0, quickSlots.Length - 1)];
+        if (slot == null || slot.count < amount) return false;
+
         slot.count -= amount;
         RefreshSlot(slot);
         return true;
     }
 
-    /* ────────── 시각 갱신 ────────── */
+    /* ---------- 시각 갱신 ---------- */
     public void RefreshSlot(ItemSlot s)
     {
+        if (s == null || s.icon == null) return;
+
         if (s.countLabel != null)
-        s.countLabel.text = s.count > 1 ? $"×{s.count}" : "";
-        if (s.count == 0)
+            s.countLabel.text = s.count > 1 ? $"×{s.count}" : string.Empty;
+
+        if (s.count <= 0)
         {
-            s.icon.sprite = emptySprite;
-            s.icon.color = new Color(1, 1, 1, 0);
+            // 빈 슬롯 처리
+            if (emptySprite != null) s.icon.sprite = emptySprite;
+            s.icon.color = new Color(1f, 1f, 1f, 0f);
+            s.count = 0; // 음수 방지
         }
-        else s.icon.color = Color.white;
+        else
+        {
+            // 정상 슬롯 표시
+            if (s.icon.sprite == null && emptySprite != null)
+                s.icon.sprite = emptySprite;
+            s.icon.color = Color.white;
+        }
     }
 
     private void SetAlpha(Image img, bool selected)
     {
-        if (!img) return;
-        Color c = img.color;
+        if (img == null) return;
+        var c = img.color;
         c.a = selected ? 1f : 0.6f;
         img.color = c;
     }
 
-    /* ────────── 드래그&드롭 자동 부착 ────────── */
+    /* ---------- 드래그&드롭 보조 ---------- */
     private void AutoAttachDragScripts()
     {
         Attach(quickSlots);
@@ -165,9 +192,10 @@ public class Inventory : MonoBehaviour
 
     private void Attach(ItemSlot[] arr)
     {
+        if (arr == null) return;
         foreach (var s in arr)
         {
-            if (!s.icon) continue;
+            if (s == null || s.icon == null) continue;
             GameObject go = s.icon.gameObject;
             if (!go.TryGetComponent(out CanvasGroup cg)) cg = go.AddComponent<CanvasGroup>();
             cg.blocksRaycasts = true;
@@ -176,44 +204,65 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    /* ────────── 유틸 ────────── */
-    public Sprite GetSelectedSprite() => quickSlots[current - 1].icon.sprite;
-    public bool IsSelectedEmpty() => quickSlots[current - 1].count == 0;
+    /* ---------- 유틸 ---------- */
+    public Sprite GetSelectedSprite()
+    {
+        if (quickSlots == null || quickSlots.Length == 0) return null;
+        var s = quickSlots[Mathf.Clamp(current - 1, 0, quickSlots.Length - 1)];
+        return (s != null && s.icon != null) ? s.icon.sprite : null;
+    }
 
-    /// <summary>특정 아이콘이 need 개 이상 있는가?</summary>
+    public bool IsSelectedEmpty()
+    {
+        if (quickSlots == null || quickSlots.Length == 0) return true;
+        var s = quickSlots[Mathf.Clamp(current - 1, 0, quickSlots.Length - 1)];
+        return (s == null) || s.count == 0;
+    }
+
     public bool HasItem(Sprite icon, int need)
     {
+        if (need <= 0 || icon == null) return true;
         int sum = 0;
-        foreach (var s in quickSlots) if (s.icon.sprite == icon) sum += s.count;
-        foreach (var s in bagSlots) if (s.icon.sprite == icon) sum += s.count;
+
+        if (quickSlots != null)
+            foreach (var s in quickSlots)
+                if (s != null && s.icon != null && s.icon.sprite == icon) sum += s.count;
+
+        if (bagSlots != null)
+            foreach (var s in bagSlots)
+                if (s != null && s.icon != null && s.icon.sprite == icon) sum += s.count;
+
         return sum >= need;
     }
 
-    /// <summary>아이콘을 amount 만큼 제거. 부족하면 false</summary>
     public void RemoveItem(Sprite icon, int count)
     {
-        CountDown(quickSlots);
-        CountDown(bagSlots);
+        if (icon == null || count <= 0) return;
 
         void CountDown(ItemSlot[] arr)
         {
+            if (arr == null) return;
             foreach (var s in arr)
             {
-                if (s.icon.sprite != icon) continue;
+                if (count == 0) return;
+                if (s == null || s.icon == null || s.icon.sprite != icon) continue;
+
                 int take = Mathf.Min(s.count, count);
                 s.count -= take;
                 count -= take;
                 RefreshSlot(s);
-                if (count == 0) return;
             }
         }
+
+        CountDown(quickSlots);
+        CountDown(bagSlots);
     }
 
-    /// <summary>icon으로 ItemSlot 찾기</summary>
     public ItemSlot FindSlotByIcon(Image icon)
     {
-        foreach (var q in quickSlots) if (q.icon == icon) return q;
-        foreach (var b in bagSlots) if (b.icon == icon) return b;
+        if (icon == null) return null;
+        if (quickSlots != null) foreach (var q in quickSlots) if (q != null && q.icon == icon) return q;
+        if (bagSlots != null) foreach (var b in bagSlots) if (b != null && b.icon == icon) return b;
         return null;
     }
 }
