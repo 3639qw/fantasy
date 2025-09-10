@@ -287,9 +287,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7d480b0153e5ea745905a0eb47ba1fa5, type: 2}
     - {fileID: 11400000, guid: 096b4e96174693a489bbf8745366d4c4, type: 2}
   seedLand: {fileID: 284254868}
-  wateringCanSprite: {fileID: 4136355292219290567, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
-  hoeSprite: {fileID: -8420260034705677426, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
-  debugToolGate: 1
 --- !u!114 &755112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7788,7 +7785,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe006728480d8a46ae5c1e41937b5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   sceneName: SlimeBossStage
+=======
+  sceneName: Forest Dungeon
+>>>>>>> aafb234 (석민님 오버월드 +  AHN 오버월드 병합)
 --- !u!114 &634506149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10293,6 +10294,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6342395641531700827, guid: 8fe0fa46819635e42904876d120a2db8, type: 3}
   m_PrefabInstance: {fileID: 815430107}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &816615081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000893026489123886, guid: 9672910672f477d44bebeb7e077bca99, type: 3}
@@ -10440,6 +10442,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+>>>>>>> aafb234 (석민님 오버월드 +  AHN 오버월드 병합)
 --- !u!1 &831299903
 GameObject:
   m_ObjectHideFlags: 0
@@ -10457,7 +10461,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> aafb234 (석민님 오버월드 +  AHN 오버월드 병합)
 --- !u!224 &831299904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14226,6 +14234,7 @@ GameObject:
   m_PrefabInstance: {fileID: 3880874233475004946}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &1114628763
 =======
 --- !u!212 &1114628755 stripped
@@ -14233,6 +14242,8 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1515889665071631402, guid: 09b151ff35798e2419a2002f74ce5b32, type: 3}
   m_PrefabInstance: {fileID: 3880874233475004946}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> aafb234 (석민님 오버월드 +  AHN 오버월드 병합)
 --- !u!114 &1114628757
 >>>>>>> 12cf4c8 (Overworld_MSM 갱신)
 MonoBehaviour:
@@ -14256,12 +14267,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d9c9db52936040b41ea71ed5fb8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   targetRenderer: {fileID: 1114628755}
   intactSprite: {fileID: -6043950617988251759, guid: 36897368fcba270428cc2463d1db56e2, type: 3}
   stumpSprite: {fileID: -5456246704479660826, guid: 36897368fcba270428cc2463d1db56e2, type: 3}
   hitsRequired: 3
   showDebug: 1
 >>>>>>> 12cf4c8 (Overworld_MSM 갱신)
+=======
+>>>>>>> aafb234 (석민님 오버월드 +  AHN 오버월드 병합)
 --- !u!1 &1139272112
 GameObject:
   m_ObjectHideFlags: 0
@@ -15793,6 +15807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3cb00556b9b0cb4f8b9fb4ecbd0f7de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   interactKey: 32
   interactRadius: 2
   hitInterval: 0.25
@@ -15800,6 +15815,8 @@ MonoBehaviour:
   requireAxe: 1
   axeSprite: {fileID: -6305548594305476506, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
 >>>>>>> 12cf4c8 (Overworld_MSM 갱신)
+=======
+>>>>>>> aafb234 (석민님 오버월드 +  AHN 오버월드 병합)
 --- !u!1 &1325629681
 GameObject:
   m_ObjectHideFlags: 0
@@ -39101,7 +39118,7 @@ Tilemap:
       - {fileID: 771364044, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 1657808225, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 903495460, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -7, y: -21, z: 0}
@@ -39205,7 +39222,7 @@ Tilemap:
       - {fileID: 1674074281, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1442967804, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 16314383, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -10, y: -18, z: 0}
@@ -39335,7 +39352,7 @@ Tilemap:
       - {fileID: 1886288347, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -614111303, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 961836988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 8, y: -17, z: 0}
@@ -39387,7 +39404,7 @@ Tilemap:
       - {fileID: -1335954890, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 386802988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -588312593, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -2, y: -16, z: 0}
@@ -39478,7 +39495,7 @@ Tilemap:
       - {fileID: 771364044, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 1657808225, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 903495460, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -2, y: -15, z: 0}
@@ -39647,7 +39664,7 @@ Tilemap:
       - {fileID: 1930738866, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1917895528, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 86672164, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: -13, z: 0}
@@ -39673,7 +39690,7 @@ Tilemap:
       - {fileID: -1335954890, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 386802988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -588312593, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 11, y: -13, z: 0}
@@ -39803,7 +39820,7 @@ Tilemap:
       - {fileID: 1930738866, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1917895528, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 86672164, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 1, y: -11, z: 0}
@@ -40128,7 +40145,7 @@ Tilemap:
       - {fileID: -1749266499, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -999333216, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1770059732, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 7, y: -6, z: 0}
@@ -40245,7 +40262,7 @@ Tilemap:
       - {fileID: -1749266499, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -999333216, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1770059732, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 16, y: -6, z: 0}
@@ -42433,6 +42450,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1637117374}
   soundSettingsPanel: {fileID: 609978114}
   dimPanel: {fileID: 1694132618}
+<<<<<<< HEAD
 --- !u!1001 &1843308585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42520,6 +42538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab2958aa5362fd47928c569b1d4ccae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> aafb234 (석민님 오버월드 +  AHN 오버월드 병합)
 --- !u!1 &1846393248
 GameObject:
   m_ObjectHideFlags: 0
