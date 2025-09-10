@@ -63,12 +63,36 @@ public class SortingOrderUpdater : MonoBehaviour
                     _renderer.sortingOrder = treeOrder + 1;
                 }
             }
+        }else if (collision.CompareTag("House"))
+        {
+            SpriteRenderer objRenderer = collision.GetComponent<SpriteRenderer>();
+
+            if (objRenderer != null)
+            {
+                float playerY = transform.position.y;
+                float treeY = collision.transform.position.y;
+                
+                Debug.Log(playerY + ", " + treeY);
+
+                int treeOrder = objRenderer.sortingOrder;
+
+                if (playerY > treeY)
+                {
+                    // 플레이어가 나무보다 위 → 나무보다 뒤 (낮은 값)
+                    _renderer.sortingOrder = treeOrder - 1;
+                }
+                else
+                {
+                    // 플레이어가 나무보다 아래 또는 같음 → 나무보다 앞 (높은 값)
+                    _renderer.sortingOrder = treeOrder + 1;
+                }
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Tree") || collision.CompareTag("Bench"))
+        if (collision.CompareTag("Tree") || collision.CompareTag("Bench") || collision.CompareTag("Signs") || collision.CompareTag("House"))
         {
             // 기본값으로 복구
             _renderer.sortingOrder = _defaultOrder;
