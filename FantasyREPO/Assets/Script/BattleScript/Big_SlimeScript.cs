@@ -224,9 +224,9 @@ public class Big_SlimeScript : MonoBehaviour, IDamageable
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("PlayerCollider"))
         {
-            PlayerHealthController playerHealth = other.GetComponent<PlayerHealthController>();
+            PlayerHealthController playerHealth = other.GetComponentInParent<PlayerHealthController>();
             if (GameManager.Instance != null)
             {
                 playerHealth.TakeDamage(damage);

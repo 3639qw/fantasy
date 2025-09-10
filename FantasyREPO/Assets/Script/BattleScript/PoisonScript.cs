@@ -22,9 +22,9 @@ public class PoisonScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("PlayerCollider"))
         {
-            PlayerHealthController playerHealth = other.GetComponent<PlayerHealthController>();
+            PlayerHealthController playerHealth = other.GetComponentInParent<PlayerHealthController>();
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damageAmount);

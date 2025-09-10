@@ -37,9 +37,9 @@ public class ArrowScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // 충돌한 오브젝트의 태그가 "Player"인지 확인합니다.
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("PlayerCollier"))
         {
-            PlayerHealthController playerHealth = other.GetComponent<PlayerHealthController>();
+            PlayerHealthController playerHealth = other.GetComponentInParent<PlayerHealthController>();
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damageAmount); // 플레이어에게 데미지 적용
