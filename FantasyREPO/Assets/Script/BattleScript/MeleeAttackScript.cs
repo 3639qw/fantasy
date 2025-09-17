@@ -15,6 +15,9 @@ public class MeleeAttackScript : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
 
+    [Header("Weapon Gate (Selected Sprite)")]
+    [SerializeField] private Sprite swordSprite;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -24,7 +27,7 @@ public class MeleeAttackScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && curTime <= 0 && !_playerMove.isAttacking)
+        if (Input.GetMouseButtonDown(0) && curTime <= 0 && !_playerMove.isAttacking && IsSwordSelected())
         {
             PerformAttack();
             // Debug.Log("Current State: " + state.fullPathHash);
@@ -91,5 +94,13 @@ public class MeleeAttackScript : MonoBehaviour
         _animator.SetFloat("AttackY", 0f);
         _animator.ResetTrigger("Attack");
         _playerMove.isAttacking = false;  // 이동 가능 상태 복원
+    }
+    private bool IsSwordSelected()
+    {
+        var inv = Inventory.Instance;
+        if (inv == null || inv.IsSelectedEmpty()) return false;
+
+        var sel = inv.GetSelectedSprite(); // 현재 선택 슬롯 아이콘
+        return sel != null && sel == swordSprite;
     }
 }

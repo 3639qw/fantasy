@@ -924,11 +924,122 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74478901}
   m_CullTransparentMesh: 1
+--- !u!1001 &79565071
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3405444304465839231, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3405444304465839231, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617296752407584086, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617296752407584086, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831742172557757943, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: tilemap
+      value: 
+      objectReference: {fileID: 1893977897}
+    - target: {fileID: 6967041369523788731, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: swordSprite
+      value: 
+      objectReference: {fileID: 2601603839896418933, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
+    - target: {fileID: 6967041369523788731, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: AttackDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3405444304465839231, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 79565082}
+  m_SourcePrefab: {fileID: 100100000, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
 --- !u!1 &79565072 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 787891973092636005, guid: 9672910672f477d44bebeb7e077bca99, type: 3}
   m_PrefabInstance: {fileID: 2989417201107270580}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &79565082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79565072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199f1acf97fdbdb44be793719e649383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactKey: 32
+  interactRange: 2
+  treeTag: Tree
+  cooldown: 0.4
+  motionNameTokens:
+  - idle
+  - Walk
+  axeLeft: {fileID: 7400000, guid: a742a400a58c94847a12ce1e0572545a, type: 2}
+  axeRight: {fileID: 7400000, guid: 58b70efc1c5ee0441bde5915561e6119, type: 2}
+  axeUp: {fileID: 7400000, guid: 848a597953fc2814c9ff4d9aac6c3610, type: 2}
+  axeDown: {fileID: 7400000, guid: 7bbf102380692fb44be1e328bcc79650, type: 2}
+  hitNormalizedTime: 0.35
+  disableWhileSwinging: []
+  requireAxeSelected: 1
+  axeSprite: {fileID: 0}
 --- !u!1 &81119066
 GameObject:
   m_ObjectHideFlags: 0
@@ -10962,171 +11073,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quickSlots:
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 114426117}
+    countLabel: {fileID: 360414387}
     count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 798586761}
+    countLabel: {fileID: 750196519}
     count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 386958682}
+    countLabel: {fileID: 1487691397}
     count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 1928214638}
+    countLabel: {fileID: 1539052565}
     count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 229137279}
+    countLabel: {fileID: 1651052596}
+    count: 0
+  - icon: {fileID: 1721367638}
+    countLabel: {fileID: 1407231049}
+    count: 0
+  - icon: {fileID: 1721836029}
+    countLabel: {fileID: 143756467}
+    count: 0
+  - icon: {fileID: 1300170339}
+    countLabel: {fileID: 1398592791}
+    count: 0
+  - icon: {fileID: 323990076}
+    countLabel: {fileID: 229179465}
+    count: 0
+  - icon: {fileID: 1801370749}
+    countLabel: {fileID: 1709483746}
     count: 0
   bagSlots:
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 922831165}
+    countLabel: {fileID: 1810103897}
     count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 1104159144}
+    countLabel: {fileID: 1559388153}
     count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 219817110}
+    countLabel: {fileID: 1160640151}
     count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 1655693831}
+    countLabel: {fileID: 1600248581}
     count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
-    count: 0
-  - icon: {fileID: 0}
-    countLabel: {fileID: 0}
+  - icon: {fileID: 1427357075}
+    countLabel: {fileID: 1355738474}
     count: 0
   emptySprite: {fileID: 0}
   bagPanel: {fileID: 417387267}
@@ -11220,6 +11211,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7d480b0153e5ea745905a0eb47ba1fa5, type: 2}
     - {fileID: 11400000, guid: 096b4e96174693a489bbf8745366d4c4, type: 2}
   seedLand: {fileID: 0}
+  wateringCanSprite: {fileID: 0}
+  hoeSprite: {fileID: 0}
+  debugToolGate: 0
 --- !u!114 &1200516170
 MonoBehaviour:
   m_ObjectHideFlags: 0

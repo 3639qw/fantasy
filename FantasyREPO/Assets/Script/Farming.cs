@@ -55,6 +55,11 @@ public class Farming : MonoBehaviour
     [Header("Seed/Crop Tilemap")]
     [SerializeField] protected internal Tilemap seedLand;  // 외부(Serializer) 접근 허용
 
+    [Header("Farming Tool Gate (Selected Sprite)")]
+    [SerializeField] private Sprite wateringCanSprite;   // 인벤토리 '물뿌리개' 아이콘과 동일한 스프라이트
+    [SerializeField] private Sprite hoeSprite; // 인벤토리 '괭이' 아이콘과 동일한 스프라이트
+    [SerializeField] private bool debugToolGate = false;
+
     /* ───────── init ───────── */
     void Awake()
     {
@@ -88,7 +93,7 @@ public class Farming : MonoBehaviour
         if (!seedLand || !farmLand) { Debug.LogWarning("Tilemap reference missing"); return; }
 
         if (TryHarvestCrop()) return;                                        // 1
-        if (inv.states != 1 && inv.states != 2 && TryHarvestSeedForward()) return; // 2
+        if (!(IsWateringCanSelected() || IsHoeSelected()) && TryHarvestSeedForward()) return; // 2
 
         CropData cd = FindCropBySeed(inv.GetSelectedSprite());               // 3
         if (cd != null && TryPlantSeed(cd)) return;
@@ -217,17 +222,30 @@ public class Farming : MonoBehaviour
         if (gm.ST < reqST) { Debug.Log("힘 부족"); return; }
 
         Vector3Int pos = farmLand.WorldToCell(gm.player.transform.position);
-        TileBase cur = farmLand.GetTile(pos);        // 잔디 → 흙 단계는 제거 (grassTile → tilledTile 생략)
-        if (cur == tilledTile && inv.states == 2)
+        TileBase cur = farmLand.GetTile(pos);
+
+        // 개간: '괭이' 선택 시에만 (tilled → farm)
+        if (cur == tilledTile)
         {
-            farmLand.SetTile(pos, farmTile);
-            gm.ConsumeSkill(2, reqST);
+            if (IsHoeSelected())
+            {
+                farmLand.SetTile(pos, farmTile);
+                gm.ConsumeSkill(2, reqST);
+            }
+            else if (debugToolGate) Debug.Log("[ToolGate] 개간 실패: 괭이가 선택되어 있지 않음");
             return;
         }
-        if (cur == farmTile && inv.states == 1)
+
+        // 급수: '물뿌리개' 선택 시에만 (farm → wetfarm)
+        if (cur == farmTile)
         {
-            farmLand.SetTile(pos, wetfarmTile);
-            gm.ConsumeSkill(2, reqST);
+            if (IsWateringCanSelected())
+            {
+                farmLand.SetTile(pos, wetfarmTile);
+                gm.ConsumeSkill(2, reqST);
+            }
+            else if (debugToolGate) Debug.Log("[ToolGate] 급수 실패: 물뿌리개가 선택되어 있지 않음");
+            return;
         }
     }
 
@@ -263,4 +281,17 @@ public class Farming : MonoBehaviour
         foreach (var c in crops) if (c.seedIcon == icon) return c;
         return null;
     }
+    private bool IsToolSelected(Sprite tool)
+    {
+        var inv = Inventory.Instance;
+        if (inv == null || inv.IsSelectedEmpty()) return false;
+
+        var sel = inv.GetSelectedSprite();   // 현재 선택된 퀵슬롯 아이콘
+        bool ok = (sel != null && sel == tool);
+        if (debugToolGate)
+            Debug.Log($"[ToolGate] selNull={(sel == null)}, equalsTool={ok}, sel={sel?.name}, tool={tool?.name}");
+        return ok;
+    }
+    private bool IsWateringCanSelected() => IsToolSelected(wateringCanSprite);
+    private bool IsHoeSelected() => IsToolSelected(hoeSprite);
 }

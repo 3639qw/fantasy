@@ -62,4 +62,6 @@ public class PlayerController : MonoBehaviour
     {
         SwitchState(moveState); // 또는 상태 전환 로직
     }
+
+
 }
