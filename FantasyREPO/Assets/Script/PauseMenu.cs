@@ -6,23 +6,25 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     [Header("UI 오브젝트")]
-    [SerializeField] private GameObject pausePanel;   // “정지 UI” 루트 패널
-    [SerializeField] private Image dimPanel;     // 화면 흐림용 Image (검정색, 알파 0.6)
+    [SerializeField] private GameObject pausePanel;        // "정지 UI" 루트 패널
+    [SerializeField] private GameObject soundSettingsPanel; // 사운드 설정 패널 (BGM/SFX 슬라이더)
+    [SerializeField] private Image dimPanel;               // 어둡게 처리용 패널 (검정색, 알파 0.5 ~ 0.7)
 
     private bool isPaused = false;
 
     private void Start()
     {
-        // 최초엔 숨김
-        if (pausePanel != null) pausePanel.SetActive(false);
-        if (dimPanel != null) dimPanel.gameObject.SetActive(false);
+        // 시작 시 모두 숨김
+        if (pausePanel) pausePanel.SetActive(false);
+        if (soundSettingsPanel) soundSettingsPanel.SetActive(false);
+        if (dimPanel) dimPanel.gameObject.SetActive(false);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // ���� ������ ���� ������ �� ���� �ݰ� ����� ����
+            // 사운드 설정이 열러 있으면 -> 설정 닫고 퍼즈로 복귀
             if (soundSettingsPanel && soundSettingsPanel.activeSelf)
             {
                 CloseSettingsToPause();
@@ -34,45 +36,58 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    /* ---------- 버튼에서 호출할 public 메서드 ---------- */
+    /* ---------- 버튼에서 호출 ---------- */
     public void OnClickContinue() => TogglePause();
 
     public void OnClickQuit()
     {
-        Time.timeScale = 1;          // 씬 이동 전 시간 복구
+        Time.timeScale = 1f; // 씬 이동 전 시간 정상화
         SceneManager.LoadScene("Main1");
     }
 
-    // ���� ��ư: ��� ����� ���� ������ ǥ��
+    // 설정 버튼: 퍼즈를 숨기고 사운드 설정을 표시
     public void OnClickSettings()
     {
-        // TODO: 설정 UI 구현
-        Debug.Log("Settings: TBD");
+        if (!soundSettingsPanel) { Debug.LogWarning("[PauseMenu] soundSettingsPanel 미지정"); return; }
+
+        // 일시정지 상태 유지
+        EnsurePaused(true);
+
+        // UI 전환
+        if (pausePanel) pausePanel.SetActive(false);
+        soundSettingsPanel.SetActive(true);
+
+        // 최상단으로(다른 UI에 가리지 않도록)
+        soundSettingsPanel.transform.SetAsLastSibling();
+
+        Debug.Log("[PauseMenu] Open Sound Settings");
     }
 
-    /* ---------- 핵심 토글 ---------- */
-    void TogglePause()
+    // 사운드 설정에서 뒤로가기 버튼
+    public void OnClickBackFromSound()
     {
         CloseSettingsToPause();
     }
 
-    /* ---------- ���� ���� ---------- */
+    /* ---------- 내부 로직 ---------- */
     private void TogglePause()
     {
         isPaused = !isPaused;
         EnsurePaused(isPaused);
 
-        // UI 토글
-        pausePanel?.SetActive(isPaused);
-        dimPanel?.gameObject.SetActive(isPaused);
+        // 퍼즈 패널만 토글(설정 패널은 항상 꺼두기)
+        if (pausePanel) pausePanel.SetActive(isPaused);
+        if (soundSettingsPanel) soundSettingsPanel.SetActive(false);
+    }
 
-        // 시간 정지 / 재개
-        Time.timeScale = isPaused ? 0f : 1f;
+    // 일시정지 상태 처리 + 공통 UI 토글
+    private void EnsurePaused(bool paused)
+    {
+        isPaused = paused;
 
-        // 마우스 커서 (필요 시)
-        Cursor.visible = isPaused;
-        Cursor.lockState = isPaused ? CursorLockMode.None
-                                    : CursorLockMode.Locked;
+        Time.timeScale = paused ? 0f : 1f;
+
+        if (dimPanel) dimPanel.gameObject.SetActive(paused);
     }
 
     private void CloseSettingsToPause()
@@ -80,7 +95,7 @@ public class PauseMenu : MonoBehaviour
         if (soundSettingsPanel) soundSettingsPanel.SetActive(false);
         if (pausePanel) pausePanel.SetActive(true);
 
-        // ������ �Ͻ����� ���� ����
+        // 여전히 일시정지 상태 유지
         EnsurePaused(true);
         Debug.Log("[PauseMenu] Back to Pause from Settings");
     }
