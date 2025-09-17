@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class DungeonSelectButton : MonoBehaviour
 {
-    // ÀÎ½ºÆåÅÍ¿¡¼­ ¾À ÀÌ¸§ ÀÔ·Â
+    // ï¿½Î½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½Ô·ï¿½
     public string sceneName;
 
     public void OnClickEnterDungeon()
     {
-        Time.timeScale = 1f; // ½Ã°£ ´Ù½Ã Á¤»óÀ¸·Î
+        Time.timeScale = 1f; // ï¿½Ã°ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         SceneManager.LoadScene(sceneName);
     }
 }

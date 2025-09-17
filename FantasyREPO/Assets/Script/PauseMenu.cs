@@ -5,29 +5,26 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [Header("UI ¿ÀºêÁ§Æ®")]
-    [SerializeField] private GameObject pausePanel;        // ÆÛÁî(°è¼Ó/¼³Á¤/³ª°¡±â) ÆÐ³Î
-    [SerializeField] private GameObject soundSettingsPanel; // »ç¿îµå ¼³Á¤ ÆÐ³Î (BGM/SFX ½½¶óÀÌ´õ)
-    [SerializeField] private Image dimPanel;               // ¾îµÓ°Ô Ã³¸®¿ë ÆÐ³Î (°ËÁ¤»ö, ¾ËÆÄ 0.5~0.7)
+    [Header("UI ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®")]
+    [SerializeField] private GameObject pausePanel;        // ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½Ð³ï¿½
+    [SerializeField] private GameObject soundSettingsPanel; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ (BGM/SFX ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½)
+    [SerializeField] private Image dimPanel;               // ï¿½ï¿½Ó°ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ 0.5~0.7)
 
     private bool isPaused = false;
 
     private void Start()
     {
-        // ½ÃÀÛ ½Ã ¸ðµÎ ¼û±è
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (pausePanel) pausePanel.SetActive(false);
         if (soundSettingsPanel) soundSettingsPanel.SetActive(false);
         if (dimPanel) dimPanel.gameObject.SetActive(false);
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // »ç¿îµå ¼³Á¤ÀÌ ¿­·Á ÀÖÀ¸¸é ¡æ ¼³Á¤ ´Ý°í ÆÛÁî·Î º¹±Í
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             if (soundSettingsPanel && soundSettingsPanel.activeSelf)
             {
                 CloseSettingsToPause();
@@ -39,51 +36,51 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    /* ---------- ¹öÆ°¿¡¼­ È£Ãâ ---------- */
+    /* ---------- ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ ---------- */
     public void OnClickContinue() => TogglePause();
 
     public void OnClickQuit()
     {
-        Time.timeScale = 1f; // ¾À ÀÌµ¿ Àü ½Ã°£ Á¤»óÈ­
+        Time.timeScale = 1f; // ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½È­
         SceneManager.LoadScene("Main1");
     }
 
-    // ¼³Á¤ ¹öÆ°: ÆÛÁî¸¦ ¼û±â°í »ç¿îµå ¼³Á¤À» Ç¥½Ã
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°: ï¿½ï¿½ï¿½î¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
     public void OnClickSettings()
     {
-        if (!soundSettingsPanel) { Debug.LogWarning("[PauseMenu] soundSettingsPanel ¹ÌÁöÁ¤"); return; }
+        if (!soundSettingsPanel) { Debug.LogWarning("[PauseMenu] soundSettingsPanel ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"); return; }
 
-        // ÀÏ½ÃÁ¤Áö »óÅÂ À¯Áö
+        // ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         EnsurePaused(true);
 
-        // UI ÀüÈ¯
+        // UI ï¿½ï¿½È¯
         if (pausePanel) pausePanel.SetActive(false);
         soundSettingsPanel.SetActive(true);
 
-        // ÃÖ»ó´ÜÀ¸·Î(´Ù¸¥ UI¿¡ °¡¸®Áö ¾Êµµ·Ï)
+        // ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½Ù¸ï¿½ UIï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½)
         soundSettingsPanel.transform.SetAsLastSibling();
 
         Debug.Log("[PauseMenu] Open Sound Settings");
     }
 
-    // »ç¿îµå ¼³Á¤¿¡¼­ µÚ·Î°¡±â ¹öÆ°
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·Î°ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°
     public void OnClickBackFromSound()
     {
         CloseSettingsToPause();
     }
 
-    /* ---------- ³»ºÎ ·ÎÁ÷ ---------- */
+    /* ---------- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ---------- */
     private void TogglePause()
     {
         isPaused = !isPaused;
         EnsurePaused(isPaused);
 
-        // ÆÛÁî ÆÐ³Î¸¸ Åä±Û(¼³Á¤ ÆÐ³ÎÀº Ç×»ó ²¨µÎ±â)
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³Î¸ï¿½ ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½×»ï¿½ ï¿½ï¿½ï¿½Î±ï¿½)
         if (pausePanel) pausePanel.SetActive(isPaused);
         if (soundSettingsPanel) soundSettingsPanel.SetActive(false);
     }
 
-    // ÀÏ½ÃÁ¤Áö »óÅÂ Ã³¸® + °øÅë UI Åä±Û
+    // ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½ UI ï¿½ï¿½ï¿½
     private void EnsurePaused(bool paused)
     {
         isPaused = paused;
@@ -91,9 +88,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = paused ? 0f : 1f;
 
         if (dimPanel) dimPanel.gameObject.SetActive(paused);
-
-        Cursor.visible = paused;
-        Cursor.lockState = paused ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
     private void CloseSettingsToPause()
@@ -101,7 +95,7 @@ public class PauseMenu : MonoBehaviour
         if (soundSettingsPanel) soundSettingsPanel.SetActive(false);
         if (pausePanel) pausePanel.SetActive(true);
 
-        // ¿©ÀüÈ÷ ÀÏ½ÃÁ¤Áö »óÅÂ À¯Áö
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         EnsurePaused(true);
         Debug.Log("[PauseMenu] Back to Pause from Settings");
     }
