@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -7,55 +7,55 @@ using System.Collections;
 public class SoundSaveButton : MonoBehaviour
 {
     [Header("UI References")]
-    public GameObject saveMessageUI; // ¸Ş½ÃÁö ¶ç¿ï Text UI
-    public GameObject pausePanel;    // Pause ÆĞ³Î
+    public GameObject saveMessageUI; // ë©”ì‹œì§€ ë„ìš¸ Text UI
+    public GameObject pausePanel;    // Pause íŒ¨ë„
 
     [Header("Settings")]
-    public float messageDuration = 1.5f; // ¸Ş½ÃÁö Ç¥½Ã ½Ã°£ (ÃÊ)
-    public string nextSceneName;         // ÇÊ¿ä½Ã ¾À ÀüÈ¯¿ë (ÇöÀç »ç¿ë ¾ÈÇÔ)
+    public float messageDuration = 1.5f; // ë©”ì‹œì§€ í‘œì‹œ ì‹œê°„ (ì´ˆ)
+    public string nextSceneName;         // í•„ìš”ì‹œ ì”¬ ì „í™˜ìš© (í˜„ì¬ ì‚¬ìš© ì•ˆí•¨)
 
     public void OnClickSave()
     {
-        Debug.Log("[SoundSaveButton] Save ¹öÆ° Å¬¸¯µÊ");
+        Debug.Log("[SoundSaveButton] Save ë²„íŠ¼ í´ë¦­ë¨");
         StartCoroutine(SaveAndMove());
     }
 
     private IEnumerator SaveAndMove()
     {
-        Debug.Log("[SoundSaveButton] ÄÚ·çÆ¾ ½ÃÀÛ");
+        Debug.Log("[SoundSaveButton] ì½”ë£¨í‹´ ì‹œì‘");
 
         if (saveMessageUI != null)
         {
             saveMessageUI.SetActive(true);
-            Debug.Log("[SoundSaveButton] Save ¸Ş½ÃÁö È°¼ºÈ­");
+            Debug.Log("[SoundSaveButton] Save ë©”ì‹œì§€ í™œì„±í™”");
         }
         else
         {
-            Debug.LogWarning("[SoundSaveButton] saveMessageUI°¡ ÇÒ´çµÇ¾î ÀÖÁö ¾ÊÀ½");
+            Debug.LogWarning("[SoundSaveButton] saveMessageUIê°€ í• ë‹¹ë˜ì–´ ìˆì§€ ì•ŠìŒ");
         }
 
         PlayerPrefs.Save();
-        Debug.Log("[SoundSaveButton] PlayerPrefs ÀúÀå ¿Ï·á");
+        Debug.Log("[SoundSaveButton] PlayerPrefs ì €ì¥ ì™„ë£Œ");
 
-        // ½Ã°£ Á¤Áö ¿µÇâÀ» ¹ŞÁö ¾Êµµ·Ï ¼öÁ¤
+        // ì‹œê°„ ì •ì§€ ì˜í–¥ì„ ë°›ì§€ ì•Šë„ë¡ ìˆ˜ì •
         yield return new WaitForSecondsRealtime(messageDuration);
 
         if (saveMessageUI != null)
         {
             saveMessageUI.SetActive(false);
-            Debug.Log("[SoundSaveButton] Save ¸Ş½ÃÁö ºñÈ°¼ºÈ­ ¿Ï·á");
+            Debug.Log("[SoundSaveButton] Save ë©”ì‹œì§€ ë¹„í™œì„±í™” ì™„ë£Œ");
         }
 
         if (pausePanel != null)
         {
             pausePanel.SetActive(true);
-            Debug.Log("[SoundSaveButton] pausePanel È°¼ºÈ­");
+            Debug.Log("[SoundSaveButton] pausePanel í™œì„±í™”");
         }
         else
         {
-            Debug.LogWarning("[SoundSaveButton] pausePanelÀÌ ÇÒ´çµÇ¾î ÀÖÁö ¾ÊÀ½");
+            Debug.LogWarning("[SoundSaveButton] pausePanelì´ í• ë‹¹ë˜ì–´ ìˆì§€ ì•ŠìŒ");
         }
 
-        Debug.Log("[SoundSaveButton] ÄÚ·çÆ¾ Á¾·á");
+        Debug.Log("[SoundSaveButton] ì½”ë£¨í‹´ ì¢…ë£Œ");
     }
 }

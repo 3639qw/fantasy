@@ -1,4 +1,4 @@
-// Assets/Scripts/PauseMenu.cs
+﻿// Assets/Scripts/PauseMenu.cs
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     [Header("UI 오브젝트")]
-    [SerializeField] private GameObject pausePanel;        // "정지 UI" 루트 패널
+    [SerializeField] private GameObject pausePanel;         // 퍼즈(계속/설정/나가기) 패널
     [SerializeField] private GameObject soundSettingsPanel; // 사운드 설정 패널 (BGM/SFX 슬라이더)
-    [SerializeField] private Image dimPanel;               // 어둡게 처리용 패널 (검정색, 알파 0.5 ~ 0.7)
+    [SerializeField] private Image dimPanel;                // 어둡게 처리용 패널 (알파 0.5~0.7)
 
     private bool isPaused = false;
 
@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // 사운드 설정이 열러 있으면 -> 설정 닫고 퍼즈로 복귀
+            // 사운드 설정이 열려 있으면 → 설정 닫고 퍼즈로 복귀
             if (soundSettingsPanel && soundSettingsPanel.activeSelf)
             {
                 CloseSettingsToPause();
@@ -84,9 +84,7 @@ public class PauseMenu : MonoBehaviour
     private void EnsurePaused(bool paused)
     {
         isPaused = paused;
-
         Time.timeScale = paused ? 0f : 1f;
-
         if (dimPanel) dimPanel.gameObject.SetActive(paused);
     }
 

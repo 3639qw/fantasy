@@ -1,14 +1,14 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DungeonSelectButton2 : MonoBehaviour
 {
-    // ÀÎ½ºÆåÅÍ¿¡¼­ ¾À ÀÌ¸§ ÀÔ·Â
+    // ì¸ìŠ¤í™í„°ì—ì„œ ì”¬ ì´ë¦„ ì…ë ¥
     public string sceneName;
 
     public void OnClickEnterDungeon()
     {
-        Time.timeScale = 1f; // ½Ã°£ ´Ù½Ã Á¤»óÀ¸·Î
+        Time.timeScale = 1f; // ì‹œê°„ ë‹¤ì‹œ ì •ìƒìœ¼ë¡œ
         SceneManager.LoadScene("Forest Dungeon2");
     }
 }

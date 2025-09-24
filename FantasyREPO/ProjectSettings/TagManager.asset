@@ -4,12 +4,13 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Enemy
   - Farm
   - SeedLand
   - FullBackground
-  - Tree
+  - Anvil
   - Bench
+  - Tree
+  - Enemy
   - Signs
   - Arrow
   - House
@@ -19,7 +20,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - player
+  - 
   - Water
   - UI
   - monster
@@ -49,9 +50,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 1229262181
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
