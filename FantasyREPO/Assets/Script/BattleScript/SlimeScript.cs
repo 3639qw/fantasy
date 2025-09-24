@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public enum SlimeState
@@ -209,7 +209,6 @@ public class SlimeScript : MonoBehaviour, IDamageable
         }
     }
 
-
     private bool ReachedDestination()
     {
         return pathIndex >= path.corners.Length;
@@ -224,16 +223,17 @@ public class SlimeScript : MonoBehaviour, IDamageable
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("PlayerCollider"))
+        // 기존 "PlayerCollider" → "Player"로 변경
+        if (other.CompareTag("Player"))
         {
             PlayerHealthController playerHealth = other.GetComponentInParent<PlayerHealthController>();
-            if (GameManager.Instance != null)
+            if (GameManager.Instance != null && playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);
             }
             else
             {
-                Debug.LogWarning("GameManager instance is null!");
+                Debug.LogWarning("GameManager instance or PlayerHealthController is null!");
             }
         }
     }

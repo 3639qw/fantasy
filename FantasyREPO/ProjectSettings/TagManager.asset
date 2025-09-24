@@ -4,25 +4,20 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Enemy
   - Farm
   - SeedLand
   - FullBackground
-  - Tree
+  - Anvil
   - Bench
+  - Tree
+  - Enemy
   - Signs
   - Arrow
-<<<<<<< HEAD
-  - House
-  - PlayerCollider
-=======
-  - Anvil
->>>>>>> 0962492 (아이템 조합 기능 완성)
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - player
+  - 
   - Water
   - UI
   - monster
@@ -52,9 +47,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 1229262181
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

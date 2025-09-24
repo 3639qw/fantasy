@@ -6,15 +6,9 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     [Header("UI 오브젝트")]
-<<<<<<< HEAD
-    [SerializeField] private GameObject pausePanel;        // "정지 UI" 루트 패널
+    [SerializeField] private GameObject pausePanel;         // 퍼즈(계속/설정/나가기) 패널
     [SerializeField] private GameObject soundSettingsPanel; // 사운드 설정 패널 (BGM/SFX 슬라이더)
-    [SerializeField] private Image dimPanel;               // 어둡게 처리용 패널 (검정색, 알파 0.5 ~ 0.7)
-=======
-    [SerializeField] private GameObject pausePanel;        // 퍼즈(계속/설정/나가기) 패널
-    [SerializeField] private GameObject soundSettingsPanel; // 사운드 설정 패널 (BGM/SFX 슬라이더)
-    [SerializeField] private Image dimPanel;               // 어둡게 처리용 패널 (검정색, 알파 0.5~0.7)
->>>>>>> 0962492 (아이템 조합 기능 완성)
+    [SerializeField] private Image dimPanel;                // 어둡게 처리용 패널 (알파 0.5~0.7)
 
     private bool isPaused = false;
 
@@ -30,11 +24,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-<<<<<<< HEAD
-            // 사운드 설정이 열러 있으면 -> 설정 닫고 퍼즈로 복귀
-=======
             // 사운드 설정이 열려 있으면 → 설정 닫고 퍼즈로 복귀
->>>>>>> 0962492 (아이템 조합 기능 완성)
             if (soundSettingsPanel && soundSettingsPanel.activeSelf)
             {
                 CloseSettingsToPause();

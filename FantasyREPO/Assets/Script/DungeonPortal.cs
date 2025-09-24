@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class DungeonPortal : MonoBehaviour
 {
@@ -8,8 +8,8 @@ public class DungeonPortal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            dungeonSelectUI.SetActive(true); // UI ¿­±â
-            Time.timeScale = 0f;              // °ÔÀÓ ÀÏ½ÃÁ¤Áö
+            dungeonSelectUI.SetActive(true); // UI ì—´ê¸°
+            Time.timeScale = 0f;              // ê²Œì„ ì¼ì‹œì •ì§€
         }
     }
 }
