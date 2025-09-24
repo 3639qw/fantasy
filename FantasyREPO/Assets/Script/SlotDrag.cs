@@ -17,6 +17,8 @@ public class SlotDrag : MonoBehaviour,
     private Vector3 startPos;
     private Sprite empty;         // Inventory.EmptySprite
 
+
+    public Sprite IconSprite => icon != null ? icon.sprite : null;
     /* ===== 프로퍼티 – 외부(SlotDropTarget)가 접근 ===== */
     private Inventory.ItemSlot mySlot;
     public Inventory.ItemSlot Slot => mySlot;
