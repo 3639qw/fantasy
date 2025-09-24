@@ -12393,6 +12393,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992019105}
   m_CullTransparentMesh: 1
+--- !u!1 &994711183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 777031490761381427, guid: 45855a1a86f10fd429baf4e5e512f172, type: 3}
+  m_PrefabInstance: {fileID: 5767117034216690193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &994711184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994711183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d36f18ec7c9f4f4db0b0d4f516d7cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oreIcon: {fileID: -7445766072284716174, guid: d9531d7f85a4fe94e8dfd6cd86896ab6, type: 3}
+  oreAmount: 1
+  destroyInstead: 0
 --- !u!1 &1000438520
 GameObject:
   m_ObjectHideFlags: 0
@@ -16472,7 +16492,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3405444304465839231, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
   m_PrefabInstance: {fileID: 4373799761191741455}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1317397525
+--- !u!114 &1317397516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16481,14 +16501,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1317397515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3cb00556b9b0cb4f8b9fb4ecbd0f7de, type: 3}
+  m_Script: {fileID: 11500000, guid: 199f1acf97fdbdb44be793719e649383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stumpSprite: {fileID: 0}
-  stumpPrefab: {fileID: 0}
-  destroyTreeObject: 0
-  logIcon: {fileID: 0}
-  logAmount: 1
+  interactKey: 32
+  interactRange: 1
+  treeTag: Tree
+  cooldown: 0.4
+  requireAxeSelected: 1
+  axeSprite: {fileID: -6305548594305476506, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
+--- !u!114 &1317397521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317397515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6726954c30d1a40bb4b9bbe816d544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactKey: 32
+  interactRange: 2
+  rockTag: Rock
+  cooldown: 0.35
+  requirePickaxeSelected: 1
+  pickaxeSprite: {fileID: 6744079922437306869, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
 --- !u!1 &1325629681
 GameObject:
   m_ObjectHideFlags: 0
@@ -18337,14 +18376,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.72156864, g: 0.43529415, b: 0.3137255, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 6744079922437306869, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -39709,7 +39748,7 @@ Tilemap:
       - {fileID: 1147736870, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1477856959, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 688161964, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -9, y: -22, z: 0}
@@ -39865,7 +39904,7 @@ Tilemap:
       - {fileID: 1674074281, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1442967804, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 16314383, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -10, y: -18, z: 0}
@@ -39969,7 +40008,7 @@ Tilemap:
       - {fileID: 1147736870, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1477856959, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 688161964, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 6, y: -17, z: 0}
@@ -40229,7 +40268,7 @@ Tilemap:
       - {fileID: 1886288347, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -614111303, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 961836988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 1, y: -14, z: 0}
@@ -40359,7 +40398,7 @@ Tilemap:
       - {fileID: 1930738866, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -1917895528, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 86672164, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -5, y: -12, z: 0}
@@ -40567,7 +40606,7 @@ Tilemap:
       - {fileID: 1886288347, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: -614111303, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
       - {fileID: 961836988, guid: 45ac6be2e589fe24a89aefb5a5cab52a, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 13, y: -10, z: 0}
@@ -46514,6 +46553,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1714255220}
     - target: {fileID: 6967041369523788731, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      propertyPath: axeSprite
+      value: 
+      objectReference: {fileID: -6305548594305476506, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
+    - target: {fileID: 6967041369523788731, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       propertyPath: swordSprite
       value: 
       objectReference: {fileID: 2601603839896418933, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
@@ -46567,7 +46610,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3405444304465839231, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1317397525}
+      addedObject: {fileID: 1317397516}
+    - targetCorrespondingSourceObject: {fileID: 3405444304465839231, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1317397521}
   m_SourcePrefab: {fileID: 100100000, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
 --- !u!1001 &4564810644970085983
 PrefabInstance:
@@ -46870,6 +46916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_4 21
       objectReference: {fileID: 0}
+    - target: {fileID: 777031490761381427, guid: 45855a1a86f10fd429baf4e5e512f172, type: 3}
+      propertyPath: m_TagString
+      value: Rock
+      objectReference: {fileID: 0}
     - target: {fileID: 3878579910787657936, guid: 45855a1a86f10fd429baf4e5e512f172, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.79
@@ -46913,7 +46963,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 777031490761381427, guid: 45855a1a86f10fd429baf4e5e512f172, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 994711184}
   m_SourcePrefab: {fileID: 100100000, guid: 45855a1a86f10fd429baf4e5e512f172, type: 3}
 --- !u!1001 &6345617720828347808
 PrefabInstance:
