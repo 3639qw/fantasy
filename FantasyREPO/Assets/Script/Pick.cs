@@ -1,19 +1,16 @@
-ï»¿using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Animations;
-using System.Collections;
+using UnityEngine;
 
-public class AxeByLastMotion : MonoBehaviour
+public class Pick : MonoBehaviour
 {
     [Header("Interact")]
     public KeyCode interactKey = KeyCode.Space;
     public float interactRange = 2f;
-    public string treeTag = "Tree";
+    public string rockTag = "Rock";
     public float cooldown = 0.35f;
 
     [Header("Inventory Gate (optional)")]
-    public bool requireAxeSelected = false;
-    public Sprite axeSprite;
+    public bool requirePickaxeSelected = false;
+    public Sprite pickaxeSprite;
 
     float _cool;
 
@@ -21,39 +18,39 @@ public class AxeByLastMotion : MonoBehaviour
     {
         if (_cool > 0f) _cool -= Time.deltaTime;
         if (_cool <= 0f && Input.GetKeyDown(interactKey))
-            TryChopNearestTree();
+            TryMineNearestRock();
     }
 
-    void TryChopNearestTree()
+    void TryMineNearestRock()
     {
-        if (requireAxeSelected && !IsAxeSelected()) return;
+        if (requirePickaxeSelected && !IsPickaxeSelected()) return;
 
-        // ê·¼ì²˜ ë‚˜ë¬´ ì°¾ê¸° (ê°€ì¥ ê°€ê¹Œìš´ ê²ƒ í•˜ë‚˜)
+        // ±ÙÃ³ ¹ÙÀ§ Ã£±â (°¡Àå °¡±î¿î °Í ÇÏ³ª)
         var cols = Physics2D.OverlapCircleAll(transform.position, interactRange);
         Collider2D nearest = null; float best = float.MaxValue;
 
         foreach (var c in cols)
         {
-            if (!c || (treeTag.Length > 0 && !c.CompareTag(treeTag))) continue;
+            if (!c || (rockTag.Length > 0 && !c.CompareTag(rockTag))) continue;
             float sq = (c.transform.position - transform.position).sqrMagnitude;
             if (sq < best) { best = sq; nearest = c; }
         }
         if (!nearest) return;
 
-        var tree = nearest.GetComponentInParent<ChoppableTree>();
-        if (!tree) return;
+        var rock = nearest.GetComponentInParent<MineableRock>();
+        if (!rock) return;
 
-        // ë°”ë¡œ 1íšŒ ë² ê¸° (ì• ë‹ˆ ì—†ìŒ)
-        tree.ChopOnce();
+        // ¹Ù·Î 1È¸ Ã¤±¼ (¾Ö´Ï ¾øÀ½)
+        rock.MineOnce();
         _cool = cooldown;
     }
 
-    bool IsAxeSelected()
+    bool IsPickaxeSelected()
     {
         var inv = Inventory.Instance;
-        if (inv == null) return true; // ì¸ë²¤í† ë¦¬ ì‹œìŠ¤í…œ ì—†ìœ¼ë©´ ê·¸ëƒ¥ í—ˆìš©
+        if (inv == null) return true; // ÀÎº¥Åä¸® ½Ã½ºÅÛ ¾øÀ¸¸é ±×³É Çã¿ë
         var sel = inv.GetSelectedSprite();
-        if (axeSprite && sel) return sel == axeSprite;
+        if (pickaxeSprite && sel) return sel == pickaxeSprite;
         return !inv.IsSelectedEmpty();
     }
 }
