@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.IO;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -79,19 +80,21 @@ public class Inventory : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            // DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // 씬이 전환되어도 이 오브젝트를 파괴하지 않음
+
+            savePath = Path.Combine(Application.persistentDataPath, "inventory.json");
+            LoadAllItemSpritesToCache(); // 아이템 이미지 캐시
+        
+            // 게임 시작 시 한 번만 저장된 데이터를 로드
+            LoadInventory(); 
         }
-        else
+        else if (Instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        savePath = Path.Combine(Application.persistentDataPath, "inventory.json");
-        
-        // 게임 시작 시 Resources/Items 폴더의 모든 스프라이트를 미리 로드하여 캐시에 저장
-        LoadAllItemSpritesToCache();
-
+        // 아래는 기존 초기화 코드 (새로운 씬에서 중복 실행되지 않음)
         AutoAttachDragScripts();
         NormalizeCounts();
         InitSlotVisuals();
