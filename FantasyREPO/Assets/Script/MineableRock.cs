@@ -2,12 +2,13 @@
 
 public class MineableRock : MonoBehaviour
 {
+    // <<-- 변경: Sprite 대신 ItemData를 사용하여 어떤 아이템을 줄지 결정합니다.
     [Header("Loot (optional)")]
-    public Sprite oreIcon;            // 인벤토리 아이콘 (없으면 지급 생략)
+    public ItemData oreItemData;
     [Min(1)] public int oreAmount = 1;
 
     [Header("Deactivate Options")]
-    public bool destroyInstead = false;   // true면 Destroy, false면 SetActive(false)
+    public bool destroyInstead = false;
 
     bool _mined, _lootGiven;
     Collider2D _col;
@@ -25,16 +26,12 @@ public class MineableRock : MonoBehaviour
         if (_mined) return;
         _mined = true;
 
-        // 더 못 건드리게 즉시 상호작용 차단
         if (_col) _col.enabled = false;
-        // (원하면 시각도 즉시 숨기기)
         if (_sr) _sr.enabled = false;
-        // 태그는 깔끔하게 지워둠(선택)
         gameObject.tag = "Untagged";
 
         GiveLootOnce();
 
-        // 파괴 or 비활성화
         if (destroyInstead) Destroy(gameObject);
         else gameObject.SetActive(false);
     }
@@ -44,9 +41,12 @@ public class MineableRock : MonoBehaviour
         if (_lootGiven) return;
         _lootGiven = true;
 
-        if (!oreIcon || oreAmount <= 0) return;
+        // <<-- 변경: oreIcon 대신 oreItemData를 확인합니다.
+        if (oreItemData == null || oreAmount <= 0) return;
 
         var inv = Inventory.Instance ?? FindObjectOfType<Inventory>(true);
-        if (inv) inv.AddItem(oreIcon, oreAmount);
+        
+        // <<-- 변경: AddItem 메서드에 oreItemData(ItemData)를 전달합니다.
+        if (inv) inv.AddItem(oreItemData, oreAmount);
     }
 }

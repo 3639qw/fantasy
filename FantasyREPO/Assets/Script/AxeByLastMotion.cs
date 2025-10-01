@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.Animations;
-using System.Collections;
 
 public class AxeByLastMotion : MonoBehaviour
 {
@@ -11,9 +8,10 @@ public class AxeByLastMotion : MonoBehaviour
     public string treeTag = "Tree";
     public float cooldown = 0.35f;
 
+    // <<-- 변경: Sprite 대신 ItemData로 도끼를 식별합니다.
     [Header("Inventory Gate (optional)")]
     public bool requireAxeSelected = false;
-    public Sprite axeSprite;
+    public ItemData axeItemData;
 
     float _cool;
 
@@ -42,18 +40,27 @@ public class AxeByLastMotion : MonoBehaviour
 
         var tree = nearest.GetComponentInParent<ChoppableTree>();
         if (!tree) return;
-
-        // 바로 1회 베기 (애니 없음)
+        
         tree.ChopOnce();
         _cool = cooldown;
     }
 
+    // <<-- 변경: ItemData를 가져와서 비교하도록 로직을 수정합니다.
     bool IsAxeSelected()
     {
         var inv = Inventory.Instance;
         if (inv == null) return true; // 인벤토리 시스템 없으면 그냥 허용
-        var sel = inv.GetSelectedSprite();
-        if (axeSprite && sel) return sel == axeSprite;
+        
+        // 인벤토리에서 현재 선택된 '아이템 데이터'를 가져옵니다.
+        var selectedItem = inv.GetSelectedItemData();
+        
+        // 지정된 도끼 데이터가 있고, 선택된 아이템이 그것과 일치하는지 확인합니다.
+        if (axeItemData != null)
+        {
+            return selectedItem == axeItemData;
+        }
+        
+        // 만약 axeItemData가 지정되지 않았다면, 그냥 빈 슬롯이 아닌지만 확인합니다.
         return !inv.IsSelectedEmpty();
     }
 }

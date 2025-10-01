@@ -1,44 +1,31 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class CraftingSlotDropTarget : MonoBehaviour, IDropHandler
 {
-    [SerializeField] private Image icon;          // 이 슬롯의 이미지
-    [SerializeField] private Sprite emptySprite;  // 빈 슬롯 스프라이트
+    [Tooltip("이 슬롯이 몇 번째 재료 슬롯인지 설정 (0부터 시작)")]
+    public int slotIndex;
 
-    public Sprite CurrentSprite => icon ? icon.sprite : null;
+    // CraftingUI를 쉽게 찾기 위한 참조
+    private CraftingUI craftingUI;
 
-    private void Reset()
+    private void Awake()
     {
-        icon = GetComponent<Image>();
+        // 부모 오브젝트에서 CraftingUI 컴포넌트를 찾아 저장해 둡니다.
+        craftingUI = GetComponentInParent<CraftingUI>();
     }
 
+    // 아이템이 이 슬롯에 드롭되었을 때 호출됩니다.
     public void OnDrop(PointerEventData eventData)
     {
-        var drag = eventData.pointerDrag?.GetComponent<SlotDrag>();
-        if (drag == null) return;
+        // 드래그된 오브젝트에서 SlotDrag 컴포넌트를 가져옵니다.
+        SlotDrag sourceSlotDrag = eventData.pointerDrag.GetComponent<SlotDrag>();
 
-        // 드랍된 아이템 아이콘을 이 슬롯에 표시
-        if (icon != null && drag.IconSprite != null)
+        // CraftingUI가 있고, 드래그된 슬롯이 유효하다면 CraftingUI에게 알립니다.
+        if (craftingUI != null && sourceSlotDrag != null)
         {
-            icon.sprite = drag.IconSprite;
-            icon.color = Color.white;
-            Debug.Log($"[CraftingSlot] {gameObject.name} ← {drag.IconSprite.name}");
+            // "CraftingUI야, 내(slotIndex) 위에 sourceSlotDrag가 드롭됐어!"
+            craftingUI.OnItemDroppedToCraftingSlot(sourceSlotDrag, slotIndex);
         }
-    }
-
-    public void Clear()
-    {
-        if (icon != null && emptySprite != null)
-        {
-            icon.sprite = emptySprite;
-            icon.color = new Color(1, 1, 1, 0.3f);
-        }
-    }
-
-    public bool IsEmpty()
-    {
-        return icon == null || icon.sprite == null || icon.sprite == emptySprite;
     }
 }
