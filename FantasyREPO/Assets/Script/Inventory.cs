@@ -1,23 +1,45 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
+using System.Collections.Generic;
 
+// ─────────────────────────────────────────────────────────────────────────────
+// 저장을 위한 데이터 구조
+// ─────────────────────────────────────────────────────────────────────────────
+[System.Serializable]
+public class SerializableSlotData
+{
+    public string spriteName;
+    public int count;
+
+    public SerializableSlotData(string name, int num)
+    {
+        spriteName = name;
+        count = num;
+    }
+}
+
+[System.Serializable]
+public class InventoryData
+{
+    public List<SerializableSlotData> quickSlotsData = new List<SerializableSlotData>();
+    public List<SerializableSlotData> bagSlotsData = new List<SerializableSlotData>();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 인벤토리 메인 클래스
+// ─────────────────────────────────────────────────────────────────────────────
 public class Inventory : MonoBehaviour
 {
-    // ─────────────────────────────────────────────────────────────────────────────
-    // 싱글턴 인벤토리
-    //  - 어디서든 Inventory.Instance 로 접근
-    //  - 같은 오브젝트가 중복 생성되면 자신을 파괴 (씬 중복 방지)
-    //  - 씬 전환 후에도 유지하려면 DontDestroyOnLoad(gameObject) 추가 검토
-    // ─────────────────────────────────────────────────────────────────────────────
-    public static Inventory Instance { get; private set; }
-
     // ─────────────────────────────────────────────────────────────────────────────
     // 슬롯 단위 데이터 구조
     //  - icon      : 슬롯에 표시될 이미지(UI Image)
     //  - countLabel: 수량 텍스트(TMP_Text)
     //  - count     : 보유 개수(0 이하면 빈 슬롯으로 간주)
     // ─────────────────────────────────────────────────────────────────────────────
+    public static Inventory Instance { get; private set; }
+
     [System.Serializable]
     public class ItemSlot
     {
@@ -39,8 +61,11 @@ public class Inventory : MonoBehaviour
     [Header("Bag UI 패널")]
     [SerializeField] private GameObject bagPanel;    // E키로 열고 닫는 가방 UI
 
-    [SerializeField, Range(1, 10)] private int current = 1;  // 현재 선택된 퀵슬롯(1~10)
-    public int states => current;                               // 외부용 읽기 프로퍼티
+    [SerializeField, Range(1, 10)] private int current = 1;
+    public int states => current;
+
+    private string savePath;
+    private Dictionary<string, Sprite> _itemSpriteCache = new Dictionary<string, Sprite>();
 
     // ─────────────────────────────────────────────────────────────────────────────
     // 라이프사이클: 초기화
@@ -54,8 +79,7 @@ public class Inventory : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -63,44 +87,33 @@ public class Inventory : MonoBehaviour
             return;
         }
 
+        savePath = Path.Combine(Application.persistentDataPath, "inventory.json");
+        
+        // 게임 시작 시 Resources/Items 폴더의 모든 스프라이트를 미리 로드하여 캐시에 저장
+        LoadAllItemSpritesToCache();
+
         AutoAttachDragScripts();
         NormalizeCounts();
         InitSlotVisuals();
     }
 
-    // ─────────────────────────────────────────────────────────────────────────────
-    // 초기 시각화: 모든 슬롯을 Refresh 후, 현재 선택 슬롯 하이라이트 반영
-    // ─────────────────────────────────────────────────────────────────────────────
-    void InitSlotVisuals()
+    // Resources/Items 폴더의 모든 스프라이트를 딕셔너리에 캐시하는 메서드
+    private void LoadAllItemSpritesToCache()
     {
-        foreach (var s in quickSlots) RefreshSlot(s);
-        foreach (var s in bagSlots) RefreshSlot(s);
-
-        // 첫 선택 상태 반영 (current가 범위 밖이면 보정)
-        SelectQuick(Mathf.Clamp(current, 1, Mathf.Max(1, quickSlots.Length)));
-    }
-
-    // ─────────────────────────────────────────────────────────────────────────────
-    // 데이터 정규화: 아이콘이 있는데 count==0 이면 1로 보정(초기 세팅 오류 방지)
-    // ─────────────────────────────────────────────────────────────────────────────
-    void NormalizeCounts()
-    {
-        FixArray(quickSlots);
-        FixArray(bagSlots);
-    }
-
-    void FixArray(ItemSlot[] arr)
-    {
-        if (arr == null) return;
-
-        foreach (var s in arr)
+        _itemSpriteCache.Clear();
+        Sprite[] allSprites = Resources.LoadAll<Sprite>("Item");
+        foreach (Sprite s in allSprites)
         {
-            if (s == null || s.icon == null) continue;
-
-            // 아이콘이 '있고'(null 아님), 그 아이콘이 emptySprite가 아니며, count == 0 이면 1로
-            if (s.count == 0 && s.icon.sprite != null && s.icon.sprite != emptySprite)
-                s.count = 1; // 아이콘이 실아이템인데 count만 0인 초기 실수를 보정
+            if (!_itemSpriteCache.ContainsKey(s.name))
+            {
+                _itemSpriteCache.Add(s.name, s);
+            }
+            else
+            {
+                Debug.LogWarning($"중복된 스프라이트 이름이 발견되었습니다: {s.name}. 첫 번째 스프라이트만 사용됩니다.");
+            }
         }
+        Debug.Log($"<color=green>{_itemSpriteCache.Count}개의 아이템 스프라이트를 캐시에 로드했습니다.</color>");
     }
 
     // ─────────────────────────────────────────────────────────────────────────────
@@ -124,6 +137,18 @@ public class Inventory : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha8)) SelectQuick(8);
         else if (Input.GetKeyDown(KeyCode.Alpha9)) SelectQuick(9);
         else if (Input.GetKeyDown(KeyCode.Alpha0)) SelectQuick(10);
+
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            SaveInventory();
+            Debug.Log("<color=cyan>인벤토리 저장 완료!</color>");
+        }
+
+        if (Input.GetKeyDown(KeyCode.F7))
+        {
+            LoadInventory();
+            Debug.Log("<color=yellow>인벤토리 불러오기 시도...</color>");
+        }
     }
 
     // ─────────────────────────────────────────────────────────────────────────────
@@ -132,21 +157,146 @@ public class Inventory : MonoBehaviour
     //  - 비선택 슬롯: 알파 0.6
     //  - 빈 슬롯: 알파 0.0(완전 투명)
     // ─────────────────────────────────────────────────────────────────────────────
+    public void SaveInventory()
+    {
+        InventoryData data = new InventoryData();
+
+        foreach (var slot in quickSlots)
+        {
+            if (slot.count > 0 && slot.icon.sprite != null && slot.icon.sprite != emptySprite)
+                data.quickSlotsData.Add(new SerializableSlotData(slot.icon.sprite.name, slot.count));
+            else
+                data.quickSlotsData.Add(new SerializableSlotData("", 0));
+        }
+
+        foreach (var slot in bagSlots)
+        {
+            if (slot.count > 0 && slot.icon.sprite != null && slot.icon.sprite != emptySprite)
+                data.bagSlotsData.Add(new SerializableSlotData(slot.icon.sprite.name, slot.count));
+            else
+                data.bagSlotsData.Add(new SerializableSlotData("", 0));
+        }
+
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(savePath, json);
+    }
+
+    public void LoadInventory()
+    {
+        if (!File.Exists(savePath))
+        {
+            Debug.LogWarning("저장된 인벤토리 파일이 없습니다.");
+            return;
+        }
+
+        string json = File.ReadAllText(savePath);
+        InventoryData data = JsonUtility.FromJson<InventoryData>(json);
+
+        // 미리 로드된 캐시에서 스프라이트를 이름으로 찾아오는 헬퍼 함수
+        Sprite GetSpriteFromCache(string spriteName)
+        {
+            if (string.IsNullOrEmpty(spriteName)) return null;
+            _itemSpriteCache.TryGetValue(spriteName, out Sprite sprite);
+            return sprite;
+        }
+
+        // 퀵슬롯 데이터 복원
+        for (int i = 0; i < quickSlots.Length; i++)
+        {
+            var slotData = (i < data.quickSlotsData.Count) ? data.quickSlotsData[i] : null;
+            var targetSlot = quickSlots[i];
+
+            if (slotData != null && slotData.count > 0)
+            {
+                Sprite loadedSprite = GetSpriteFromCache(slotData.spriteName);
+                if (loadedSprite != null)
+                {
+                    targetSlot.icon.sprite = loadedSprite;
+                    targetSlot.count = slotData.count;
+                }
+                else
+                {
+                    Debug.LogWarning($"[Resources/Items] 캐시에서 '{slotData.spriteName}' 스프라이트를 찾을 수 없습니다.");
+                    targetSlot.icon.sprite = emptySprite;
+                    targetSlot.count = 0;
+                }
+            }
+            else
+            {
+                targetSlot.count = 0;
+            }
+        }
+        
+        // 가방 데이터 복원
+        for (int i = 0; i < bagSlots.Length; i++)
+        {
+            var slotData = (i < data.bagSlotsData.Count) ? data.bagSlotsData[i] : null;
+            var targetSlot = bagSlots[i];
+
+            if (slotData != null && slotData.count > 0)
+            {
+                Sprite loadedSprite = GetSpriteFromCache(slotData.spriteName);
+                if (loadedSprite != null)
+                {
+                    targetSlot.icon.sprite = loadedSprite;
+                    targetSlot.count = slotData.count;
+                }
+                else
+                {
+                    Debug.LogWarning($"[Resources/Items] 캐시에서 '{slotData.spriteName}' 스프라이트를 찾을 수 없습니다.");
+                    targetSlot.icon.sprite = emptySprite;
+                    targetSlot.count = 0;
+                }
+            }
+            else
+            {
+                targetSlot.count = 0;
+            }
+        }
+        
+        InitSlotVisuals(); // UI 전체 갱신
+    }
+    
+    // ─────────────────────────────────────────────────────────────────────────────
+    // 이하 기존 인벤토리 관리 메서드 (변경 없음)
+    // ─────────────────────────────────────────────────────────────────────────────
+    
+    void InitSlotVisuals()
+    {
+        foreach (var s in quickSlots) RefreshSlot(s);
+        foreach (var s in bagSlots) RefreshSlot(s);
+        SelectQuick(Mathf.Clamp(current, 1, Mathf.Max(1, quickSlots.Length)));
+    }
+
+    void NormalizeCounts()
+    {
+        FixArray(quickSlots);
+        FixArray(bagSlots);
+    }
+
+    void FixArray(ItemSlot[] arr)
+    {
+        if (arr == null) return;
+        foreach (var s in arr)
+        {
+            if (s == null || s.icon == null) continue;
+            if (s.count == 0 && s.icon.sprite != null && s.icon.sprite != emptySprite)
+                s.count = 1;
+        }
+    }
+
     private void SelectQuick(int idx)
     {
         if (quickSlots == null || quickSlots.Length == 0) return;
-
         current = Mathf.Clamp(idx, 1, quickSlots.Length);
-
         for (int i = 0; i < quickSlots.Length; i++)
         {
             var s = quickSlots[i];
             if (s == null || s.icon == null) continue;
-
             if (s.count > 0)
-                SetAlpha(s.icon, i == current - 1);   // 선택된 슬롯만 1f
+                SetAlpha(s.icon, i == current - 1);
             else
-                s.icon.color = new Color(1f, 1f, 1f, 0f); // 빈 슬롯은 투명
+                s.icon.color = new Color(1f, 1f, 1f, 0f);
         }
     }
 
@@ -159,10 +309,8 @@ public class Inventory : MonoBehaviour
     public void AddItem(Sprite icon, int amount = 1)
     {
         if (icon == null || amount <= 0) return;
-
         if (TryStackOrFill(quickSlots, icon, amount)) return;
         if (TryStackOrFill(bagSlots, icon, amount)) return;
-
         Debug.LogWarning("인벤토리(퀵+가방) 모두 가득 찼습니다");
     }
 
@@ -174,8 +322,7 @@ public class Inventory : MonoBehaviour
         // 1) 같은 아이콘(동일 Sprite 레퍼런스) 스택
         foreach (var s in arr)
         {
-            if (s == null || s.icon == null) continue;
-            if (s.count > 0 && s.icon.sprite == icon)
+            if (s != null && s.icon != null && s.count > 0 && s.icon.sprite == icon)
             {
                 s.count += amount;
                 RefreshSlot(s);
@@ -186,8 +333,7 @@ public class Inventory : MonoBehaviour
         // 2) 빈 슬롯 채우기
         foreach (var s in arr)
         {
-            if (s == null || s.icon == null) continue;
-            if (s.count == 0)
+            if (s != null && s.icon != null && s.count == 0)
             {
                 s.icon.sprite = icon;
                 s.count = amount;
@@ -206,10 +352,8 @@ public class Inventory : MonoBehaviour
     public bool ConsumeSelectedItem(int amount = 1)
     {
         if (quickSlots == null || quickSlots.Length == 0) return false;
-
         var slot = quickSlots[Mathf.Clamp(current - 1, 0, quickSlots.Length - 1)];
         if (slot == null || slot.count < amount) return false;
-
         slot.count -= amount;
         RefreshSlot(slot);
         return true;
@@ -228,7 +372,6 @@ public class Inventory : MonoBehaviour
         // 수량 표시 업데이트
         if (s.countLabel != null)
             s.countLabel.text = s.count > 1 ? $"×{s.count}" : string.Empty;
-
         if (s.count <= 0)
         {
             // 빈 슬롯 처리
@@ -269,11 +412,9 @@ public class Inventory : MonoBehaviour
     private void Attach(ItemSlot[] arr)
     {
         if (arr == null) return;
-
         foreach (var s in arr)
         {
             if (s == null || s.icon == null) continue;
-
             GameObject go = s.icon.gameObject;
 
             // 드래그/드롭용 레이캐스트 제어를 위한 CanvasGroup 보장
@@ -295,7 +436,6 @@ public class Inventory : MonoBehaviour
     public Sprite GetSelectedSprite()
     {
         if (quickSlots == null || quickSlots.Length == 0) return null;
-
         var s = quickSlots[Mathf.Clamp(current - 1, 0, quickSlots.Length - 1)];
         return (s != null && s.icon != null) ? s.icon.sprite : null;
     }
@@ -304,7 +444,6 @@ public class Inventory : MonoBehaviour
     public bool IsSelectedEmpty()
     {
         if (quickSlots == null || quickSlots.Length == 0) return true;
-
         var s = quickSlots[Mathf.Clamp(current - 1, 0, quickSlots.Length - 1)];
         return (s == null) || s.count == 0;
     }
@@ -313,23 +452,19 @@ public class Inventory : MonoBehaviour
     public bool HasItem(Sprite icon, int need)
     {
         if (need <= 0 || icon == null) return true;
-
         int sum = 0;
-
         if (quickSlots != null)
         {
             foreach (var s in quickSlots)
                 if (s != null && s.icon != null && s.icon.sprite == icon)
                     sum += s.count;
         }
-
         if (bagSlots != null)
         {
             foreach (var s in bagSlots)
                 if (s != null && s.icon != null && s.icon.sprite == icon)
                     sum += s.count;
         }
-
         return sum >= need;
     }
 
@@ -337,24 +472,19 @@ public class Inventory : MonoBehaviour
     public void RemoveItem(Sprite icon, int count)
     {
         if (icon == null || count <= 0) return;
-
         void CountDown(ItemSlot[] arr)
         {
             if (arr == null) return;
-
             foreach (var s in arr)
             {
                 if (count == 0) return;
                 if (s == null || s.icon == null || s.icon.sprite != icon) continue;
-
                 int take = Mathf.Min(s.count, count);
                 s.count -= take;
                 count -= take;
-
                 RefreshSlot(s);
             }
         }
-
         CountDown(quickSlots);
         CountDown(bagSlots);
     }
@@ -363,15 +493,12 @@ public class Inventory : MonoBehaviour
     public ItemSlot FindSlotByIcon(Image icon)
     {
         if (icon == null) return null;
-
         if (quickSlots != null)
             foreach (var q in quickSlots)
                 if (q != null && q.icon == icon) return q;
-
         if (bagSlots != null)
             foreach (var b in bagSlots)
                 if (b != null && b.icon == icon) return b;
-
         return null;
     }
 }
