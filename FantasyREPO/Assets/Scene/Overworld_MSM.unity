@@ -6050,6 +6050,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471202761}
   m_CullTransparentMesh: 1
+--- !u!1 &473276859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2666736741532451295, guid: 11cf5dd5d65b1b64792a696dff44d471, type: 3}
+  m_PrefabInstance: {fileID: 6816155972091422615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &473357833
 GameObject:
   m_ObjectHideFlags: 0
@@ -7662,6 +7667,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2034551539334719447, guid: 11cf5dd5d65b1b64792a696dff44d471, type: 3}
   m_PrefabInstance: {fileID: 6816155972091422615}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &591397939
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473276859}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c08f43de62b274b0791e426b3a7c3029, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &593007303
 GameObject:
   m_ObjectHideFlags: 0
@@ -44167,7 +44194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2000690956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47138,10 +47165,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fountain 21
       objectReference: {fileID: 0}
+    - target: {fileID: 5135302105304824704, guid: 11cf5dd5d65b1b64792a696dff44d471, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6907602534830001849, guid: cfcbe05405561d042b1077037686475e, type: 3}
+    - target: {fileID: 8407610916078370632, guid: 11cf5dd5d65b1b64792a696dff44d471, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2666736741532451295, guid: 11cf5dd5d65b1b64792a696dff44d471, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 591397939}
   m_SourcePrefab: {fileID: 100100000, guid: 11cf5dd5d65b1b64792a696dff44d471, type: 3}
 --- !u!1001 &6849085525970977731
 PrefabInstance:
