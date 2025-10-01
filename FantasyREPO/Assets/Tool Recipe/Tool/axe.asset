@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b36ff5921ccb541ad773d59e931afa, type: 3}
+  m_Name: axe
+  m_EditorClassIdentifier: 
+  inputA: {fileID: 8577729842800225348, guid: d9531d7f85a4fe94e8dfd6cd86896ab6, type: 3}
+  countA: 2
+  inputB: {fileID: -8719625918756696468, guid: d9531d7f85a4fe94e8dfd6cd86896ab6, type: 3}
+  countB: 1
+  orderMatters: 0
+  output: {fileID: -6305548594305476506, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
+  outputCount: 1
