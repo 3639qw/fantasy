@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1748026799294669330}
   - component: {fileID: 3131123109601179273}
   - component: {fileID: 9144593888989945996}
+  - component: {fileID: 3095856657497550860}
   m_Layer: 0
   m_Name: Cave_Rock_3 21
   m_TagString: Untagged
@@ -148,3 +149,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3095856657497550860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336543023899472271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d36f18ec7c9f4f4db0b0d4f516d7cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oreIcon: {fileID: -2892574862153022195, guid: d9531d7f85a4fe94e8dfd6cd86896ab6, type: 3}
+  oreAmount: 1
+  destroyInstead: 0

@@ -54,8 +54,8 @@ public class Inventory : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            // 필요 시 주석 해제: 씬 전환 후에도 인벤토리 유지
-            // DontDestroyOnLoad(gameObject);
+
+            DontDestroyOnLoad(gameObject);
         }
         else
         {

@@ -207,6 +207,7 @@ MonoBehaviour:
   tilemap: {fileID: 0}
   isAttacking: 0
   isDie: 0
+  isDamaged: 0
 --- !u!114 &6967041369523788731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +225,7 @@ MonoBehaviour:
   attackRangeSprite: {fileID: 0}
   AttackDamage: 5
   coolTime: 0.5
+  swordSprite: {fileID: 2601603839896418933, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
 --- !u!114 &3509332734662417299
 MonoBehaviour:
   m_ObjectHideFlags: 0
