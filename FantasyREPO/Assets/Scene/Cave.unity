@@ -5824,7 +5824,7 @@ MonoBehaviour:
   interactRange: 1.8
   rockTag: Rock
   coolTime: 0.5
-  pickSprite: {fileID: 6744079922437306869, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
+  pickItemData: {fileID: 11400000, guid: 5e68ca2d1290077468823153a930737b, type: 2}
 --- !u!1 &121164283
 GameObject:
   m_ObjectHideFlags: 0
@@ -6495,14 +6495,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.72156864, g: 0.43529415, b: 0.3137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4949817133002510964, guid: e264fe819d6c05945b53a9da5d718eae, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7123,6 +7123,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095856657497550860, guid: 6dc69cbc88e491346883d655ff3e0b96, type: 3}
+      propertyPath: oreItemData
+      value: 
+      objectReference: {fileID: 11400000, guid: acd42ba1e1a3df84586de2f25dfb969d, type: 2}
     - target: {fileID: 8336543023899472271, guid: 6dc69cbc88e491346883d655ff3e0b96, type: 3}
       propertyPath: m_Name
       value: Cave_Rock_3 21
@@ -7803,6 +7807,8 @@ GameObject:
   - component: {fileID: 347488292}
   - component: {fileID: 347488291}
   - component: {fileID: 347488290}
+  - component: {fileID: 347488300}
+  - component: {fileID: 347488301}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -7823,50 +7829,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quickSlots:
-  - icon: {fileID: 213415337}
+  - itemData: {fileID: 0}
+    icon: {fileID: 213415337}
     countLabel: {fileID: 1852833551}
     count: 0
-  - icon: {fileID: 1382536415}
+  - itemData: {fileID: 0}
+    icon: {fileID: 1382536415}
     countLabel: {fileID: 1803182252}
     count: 0
-  - icon: {fileID: 2120452808}
+  - itemData: {fileID: 0}
+    icon: {fileID: 2120452808}
     countLabel: {fileID: 1516035340}
     count: 0
-  - icon: {fileID: 2080941450}
+  - itemData: {fileID: 0}
+    icon: {fileID: 2080941450}
     countLabel: {fileID: 176604}
     count: 0
-  - icon: {fileID: 715245379}
+  - itemData: {fileID: 0}
+    icon: {fileID: 715245379}
     countLabel: {fileID: 1960465677}
     count: 0
-  - icon: {fileID: 1617138351}
+  - itemData: {fileID: 0}
+    icon: {fileID: 1617138351}
     countLabel: {fileID: 1813565994}
     count: 0
-  - icon: {fileID: 762210683}
+  - itemData: {fileID: 0}
+    icon: {fileID: 762210683}
     countLabel: {fileID: 1209767647}
     count: 0
-  - icon: {fileID: 1034304037}
+  - itemData: {fileID: 0}
+    icon: {fileID: 1034304037}
     countLabel: {fileID: 121164286}
     count: 0
-  - icon: {fileID: 1382481620}
+  - itemData: {fileID: 0}
+    icon: {fileID: 1382481620}
     countLabel: {fileID: 1477815212}
     count: 0
-  - icon: {fileID: 1151321972}
+  - itemData: {fileID: 0}
+    icon: {fileID: 1151321972}
     countLabel: {fileID: 1048411867}
     count: 0
   bagSlots:
-  - icon: {fileID: 82373442}
+  - itemData: {fileID: 0}
+    icon: {fileID: 82373442}
     countLabel: {fileID: 1242091548}
     count: 0
-  - icon: {fileID: 1264898298}
+  - itemData: {fileID: 0}
+    icon: {fileID: 1264898298}
     countLabel: {fileID: 1085192070}
     count: 0
-  - icon: {fileID: 76104958}
+  - itemData: {fileID: 0}
+    icon: {fileID: 76104958}
     countLabel: {fileID: 1405768937}
     count: 0
-  - icon: {fileID: 897046226}
+  - itemData: {fileID: 0}
+    icon: {fileID: 897046226}
     countLabel: {fileID: 1184913532}
     count: 0
-  - icon: {fileID: 1843879533}
+  - itemData: {fileID: 0}
+    icon: {fileID: 1843879533}
     countLabel: {fileID: 1780584267}
     count: 0
   emptySprite: {fileID: 0}
@@ -7934,8 +7955,8 @@ MonoBehaviour:
   wetfarmTile: {fileID: 11400000, guid: a8df53157b3ec4f42931deb6a151d508, type: 2}
   crops:
   - name: "\uBC00"
-    seedIcon: {fileID: -2503804001478919284, guid: 3cb47b26487caa14c95d10da84685e8f, type: 3}
-    cropIcon: {fileID: 7860516806514409981, guid: 3cb47b26487caa14c95d10da84685e8f, type: 3}
+    seedItemData: {fileID: 0}
+    cropItemData: {fileID: 0}
     seedRemnant: {fileID: 11400000, guid: 5236611c072fc8841b28ad00f770eca2, type: 2}
     stages:
     - {fileID: 11400000, guid: 6b65ae663cbbea349b84b0dbce33703e, type: 2}
@@ -7943,8 +7964,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 5501fc1a41984714b9f79b38e769abf9, type: 2}
     - {fileID: 11400000, guid: fbd11f778754f2a46948ee3fd9dfed75, type: 2}
   - name: "\uD1A0\uB9C8\uD1A0"
-    seedIcon: {fileID: 14814732487599125, guid: 3cb47b26487caa14c95d10da84685e8f, type: 3}
-    cropIcon: {fileID: -637808969065192156, guid: 3cb47b26487caa14c95d10da84685e8f, type: 3}
+    seedItemData: {fileID: 0}
+    cropItemData: {fileID: 0}
     seedRemnant: {fileID: 11400000, guid: a4ecfd703237467479d75d09a592fbd8, type: 2}
     stages:
     - {fileID: 11400000, guid: fad5baae4fbb75a42a17da0778970b39, type: 2}
@@ -7952,8 +7973,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a4ecfd703237467479d75d09a592fbd8, type: 2}
     - {fileID: 11400000, guid: 597332fa0b143ae41b3c756ff60ebda7, type: 2}
   - name: "\uB538\uAE30"
-    seedIcon: {fileID: 5475952618168356632, guid: 3cb47b26487caa14c95d10da84685e8f, type: 3}
-    cropIcon: {fileID: 6337598514820839959, guid: 3cb47b26487caa14c95d10da84685e8f, type: 3}
+    seedItemData: {fileID: 0}
+    cropItemData: {fileID: 0}
     seedRemnant: {fileID: 11400000, guid: a89cee9bd3f0df749bf7b629f7a90f23, type: 2}
     stages:
     - {fileID: 11400000, guid: 00f833f38122a534cb2d766596b65bab, type: 2}
@@ -7961,8 +7982,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7d480b0153e5ea745905a0eb47ba1fa5, type: 2}
     - {fileID: 11400000, guid: 096b4e96174693a489bbf8745366d4c4, type: 2}
   seedLand: {fileID: 0}
-  wateringCanSprite: {fileID: 0}
-  hoeSprite: {fileID: 0}
+  wateringCanItemData: {fileID: 0}
+  hoeItemData: {fileID: 0}
   debugToolGate: 0
 --- !u!114 &347488295
 MonoBehaviour:
@@ -8058,6 +8079,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &347488300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347488289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95dbaeb86376be640a592f8291cf596b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &347488301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347488289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9078dccce5e63c4fb8b968a5ab38c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &366798788
 GameObject:
   m_ObjectHideFlags: 0
@@ -10050,14 +10095,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.72156864, g: 0.43529415, b: 0.3137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6744079922437306869, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11393,7 +11438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d36f18ec7c9f4f4db0b0d4f516d7cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oreIcon: {fileID: -6088899771608959091, guid: d9531d7f85a4fe94e8dfd6cd86896ab6, type: 3}
+  oreItemData: {fileID: 0}
   oreAmount: 1
   destroyInstead: 0
 --- !u!70 &894284956
@@ -14697,6 +14742,156 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251532594}
   m_CullTransparentMesh: 1
+--- !u!1 &1253303618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1253303622}
+  - component: {fileID: 1253303621}
+  - component: {fileID: 1253303620}
+  - component: {fileID: 1253303619}
+  m_Layer: 0
+  m_Name: GoOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1253303619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253303618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d82b61bd9632524dbf5fe3ffaf80011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Overworld_MSM
+  playerTag: Player
+  triggerKey: 32
+--- !u!61 &1253303620
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253303618}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &1253303621
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253303618}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1253303622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253303618}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.96, y: 2.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1257307915
 GameObject:
   m_ObjectHideFlags: 0
@@ -14996,7 +15191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d36f18ec7c9f4f4db0b0d4f516d7cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oreIcon: {fileID: -6088899771608959091, guid: d9531d7f85a4fe94e8dfd6cd86896ab6, type: 3}
+  oreItemData: {fileID: 0}
   oreAmount: 1
   destroyInstead: 0
 --- !u!70 &1273370498
@@ -15886,14 +16081,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.72156864, g: 0.43529415, b: 0.3137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8420260034705677426, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42868,7 +43063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d36f18ec7c9f4f4db0b0d4f516d7cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oreIcon: {fileID: -6088899771608959091, guid: d9531d7f85a4fe94e8dfd6cd86896ab6, type: 3}
+  oreItemData: {fileID: 0}
   oreAmount: 1
   destroyInstead: 0
 --- !u!70 &1931830093
@@ -44254,14 +44449,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.72156864, g: 0.43529415, b: 0.3137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6305548594305476506, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -44779,14 +44974,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.72156864, g: 0.43529415, b: 0.3137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2601603839896418933, guid: 43e6f8e8f0230d240817d79cf57f8b6b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -44951,3 +45146,4 @@ SceneRoots:
   - {fileID: 773410983}
   - {fileID: 615796613}
   - {fileID: 268649615}
+  - {fileID: 1253303622}
