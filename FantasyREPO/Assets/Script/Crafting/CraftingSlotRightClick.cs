@@ -35,7 +35,9 @@ public class CraftingSlotRightClick : MonoBehaviour, IPointerClickHandler
         var spr = slot.CurrentSprite;
         if (spr != null)
         {
-            inventory.AddItem(spr, 1);   // 인벤토리에 1개 지급 (프로젝트 규칙에 맞게 조정)
+            var data = ItemData.FindBySprite(spr);
+            if (data != null) inventory.AddItem(data, 1);
+            else Debug.LogWarning("[Crafting] 이 아이콘에 매칭되는 ItemData가 없습니다.");   // 인벤토리에 1개 지급 (프로젝트 규칙에 맞게 조정)
         }
 
         slot.Clear(); // 슬롯 비우기

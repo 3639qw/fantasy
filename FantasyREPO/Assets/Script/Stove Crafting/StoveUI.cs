@@ -187,7 +187,18 @@ public class StoveUI : MonoBehaviour
         cooking = false;
 
         if (inventory && match && match.output)
-            inventory.AddItem(match.output, Mathf.Max(1, match.outputCount));
+        {
+            // result sprite → ItemData 매핑 (ItemData.FindBySprite 구현되어 있어야 함)
+            var outData = ItemData.FindBySprite(match.output);
+            if (outData != null)
+            {
+                inventory.AddItem(outData, Mathf.Max(1, match.outputCount));   // ✅ ItemData 전달
+            }
+            else
+            {
+                Debug.LogWarning("[StoveUI] 결과 아이콘과 매칭되는 ItemData가 없습니다. Resources에 ItemData를 배치했는지 확인하세요.");
+            }
+        }
 
         Debug.Log($"[Stove] 요리 완료: {match.output?.name} x{match.outputCount}");
 
