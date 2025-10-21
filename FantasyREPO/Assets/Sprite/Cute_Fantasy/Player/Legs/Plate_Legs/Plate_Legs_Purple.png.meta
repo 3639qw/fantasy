@@ -1,0 +1,6895 @@
+fileFormatVersion: 2
+guid: 0ea96e77de7689f4d96131391645fc13
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5818354837860876519
+    second: Plate_Legs_Purple_0
+  - first:
+      213: 7353919132303157299
+    second: Plate_Legs_Purple_1
+  - first:
+      213: -2593455095064240158
+    second: Plate_Legs_Purple_2
+  - first:
+      213: 14609536299105137
+    second: Plate_Legs_Purple_3
+  - first:
+      213: -485206742489881481
+    second: Plate_Legs_Purple_4
+  - first:
+      213: 3311916039160348265
+    second: Plate_Legs_Purple_5
+  - first:
+      213: -7297951560303683459
+    second: Plate_Legs_Purple_6
+  - first:
+      213: -7412326183809131444
+    second: Plate_Legs_Purple_7
+  - first:
+      213: -409822422879529319
+    second: Plate_Legs_Purple_8
+  - first:
+      213: 170433423012596127
+    second: Plate_Legs_Purple_9
+  - first:
+      213: 3238733453906016971
+    second: Plate_Legs_Purple_10
+  - first:
+      213: 1496654843349278226
+    second: Plate_Legs_Purple_11
+  - first:
+      213: -8886654241216237247
+    second: Plate_Legs_Purple_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3545
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f70281a1d014fa0800000000000000
+      internalID: -5818354837860876519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3545
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338e0e3fc7e5e0660800000000000000
+      internalID: 7353919132303157299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 3545
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efd4cde452320cd0800000000000000
+      internalID: -2593455095064240158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3545
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bf07dbb47e33000800000000000000
+      internalID: 14609536299105137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 3545
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7742447d9033449f0800000000000000
+      internalID: -485206742489881481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_5
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3545
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e3210271a46fd20800000000000000
+      internalID: 3311916039160348265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 3481
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78571cd8b778ba90800000000000000
+      internalID: -7297951560303683459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_7
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3481
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4cdab6ab90222990800000000000000
+      internalID: -7412326183809131444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_8
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 3481
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996964f7da4005af0800000000000000
+      internalID: -409822422879529319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_9
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3481
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9905849b408d5200800000000000000
+      internalID: 170433423012596127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_10
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 3481
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcafd32baea42fc20800000000000000
+      internalID: 3238733453906016971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_11
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3481
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e933186af25c410800000000000000
+      internalID: 1496654843349278226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_12
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3416
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14176961d034ca480800000000000000
+      internalID: -8886654241216237247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_13
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3416
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04ba04f54e858e449ffe47d865cdb79
+      internalID: 1925627957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_14
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 3416
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345b7b9326aa9d2498696e4251c9ecd1
+      internalID: -217599939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_15
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3416
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a216470507bae4428897ff59956d2c7
+      internalID: 1590426139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_16
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 3416
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452529172ae4f0041bb25bdb5cd166bc
+      internalID: -1716372266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_17
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3416
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166ed09a396de7448ac2ac6c8d79235c
+      internalID: -1188818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_18
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3353
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f24ecaa41a1e34dac20b9febc75360
+      internalID: -395332261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_19
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3353
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711bac8f7df482545949d4a255d8afbe
+      internalID: 1831917264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_20
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 3353
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de70a183745187c4a9dee12ad579f330
+      internalID: -1601308767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_21
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 3353
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a86004cb3bcdd41bcd5cace09be385
+      internalID: 189022616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_22
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 3353
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394d32bb5f23b05458a33aee063264dd
+      internalID: 204435443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_23
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3353
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab5d545ba6e3fa43998c5a10d13eb0b
+      internalID: -84335618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_24
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 3288
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63a1fa5ddbbf9249a8196962496e20f
+      internalID: -1288808074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_25
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3288
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b249fde9c1a0db4c90c73ce12f236da
+      internalID: 899640606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_26
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 3288
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732d1c8ea59197f4cb00c2abcb66018f
+      internalID: -1833246127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_27
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3290
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed2506b9c8a5d64eaf9ce4a1ff3e97f
+      internalID: -1241573252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_28
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 3290
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347873bd81e038443bf3f0027d75d34f
+      internalID: 1797158423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_29
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3288
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b028ef5ce45b164aa6da53c7dc52354
+      internalID: 732144966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_30
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3225
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7821557319455ea47b7592f38a3bbc16
+      internalID: 1072216409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_31
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3225
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0549a40602c4094f97388eee68527d8
+      internalID: 2120046529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_32
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 3225
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a27c5abdd6b1624fa22628f4c338bd0
+      internalID: -224106231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_33
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3225
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c4bc8f58fd57e4fbee1f4476fc5f24
+      internalID: -121312426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_34
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 3225
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ee7832a84cf5f4bad7a6327d10a709
+      internalID: 1891162668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_35
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3225
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9f4eea3a2d15747bcdb79acce96cec
+      internalID: 1240318173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_36
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3160
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7241a27f2e9f2d544bb31b92ca93c3ab
+      internalID: 1633284881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_37
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 3160
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9da76bc177f5b47a7d4a38f2fae38c
+      internalID: -1562178758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_38
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 3160
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6d3edccc3950847ab62b1a78742a6a
+      internalID: 871666322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_39
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3160
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608f68197782a98429c65e09c8e0c945
+      internalID: 692593287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_40
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3097
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4211d7741064e64b8d8f9b2e5ed7c24
+      internalID: 1239995866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_41
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3097
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d6ca9d60b641742925a3023cd83795
+      internalID: -504253581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_42
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 3097
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a11c4921b482e94b905123fd7c9a941
+      internalID: -1360385549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_43
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3097
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afa1d7f80c2542409df56c4e2535c81
+      internalID: -253491205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_44
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3033
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c65eddbe0af8f148a82e8d3c4b9ad6e
+      internalID: -418773820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_45
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3033
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b849995ff38184193ff519a9206aeb
+      internalID: 958570585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_46
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 3033
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8193670b7b28b994db992f2bd1cf8122
+      internalID: -695135365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_47
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3033
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d664d4aacecafdb45b9137bbec6b2e31
+      internalID: 478622282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_48
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2968
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13760be124243b546a1ff5e624808952
+      internalID: -2111309741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_49
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2968
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab0f05d8a61cf442bb8ec29bbe4da1d
+      internalID: -1140156451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_50
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2968
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4414fd2a6422cde44973564fb3b0a2cb
+      internalID: 458643389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_51
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2968
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f4d5c0f2616fa4c928b61fb21068c1
+      internalID: -553418585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_52
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 2905
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3798df6ffebac469d0e568d5ba7700
+      internalID: -252478001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_53
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2905
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77fd796a9dac7494288ccb8445af604e
+      internalID: -1728953636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_54
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2840
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f452359048dd8724cb13ac99846926ae
+      internalID: -96410893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_55
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 2840
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25da33b1178cf9149bd5824e198d921c
+      internalID: -104969729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_56
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2840
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec320a5e2d168748b4b073783ee27b7
+      internalID: -322112033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_57
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2840
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70732012ca7eeb44fa559e11a14437dc
+      internalID: -359586098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_58
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2777
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f4d294fed859d4289b227c428c27bc
+      internalID: -1840891393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_59
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2777
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0218cbb3d35bc4d48876feb9db0e2daa
+      internalID: 755332608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_60
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2777
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165dedca737a6a348962b075ea764515
+      internalID: 851836716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_61
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2777
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae30f801344f8340847eb62be5fa00a
+      internalID: 79280978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_62
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2712
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8908042b74d34e549a1cb417d7c8ceec
+      internalID: 1470223983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_63
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 2712
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95be8bffb3d1da4db196695263ee732
+      internalID: -368727840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_64
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2712
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65d89ce8d2cb6c4bbdd81307a90c014
+      internalID: -365003758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_65
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2712
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83142aa2167fc642bebb05347f18a38
+      internalID: -94522181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_66
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2649
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41df2029d8d57f4bbd32562fac03c99
+      internalID: 1462906269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_67
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2649
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1e122520229234e837ddbb880c1767
+      internalID: 322951727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_68
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2649
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb26985b9ed12e94082972f12a3c81b8
+      internalID: 1191292068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_69
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2649
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e92d04af99b5f4a9f0230a4c7a7517
+      internalID: -677425292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_70
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 2585
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14be4436f6101a24e9a69368d0b1c0f4
+      internalID: 1315445337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_71
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2583
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f443aabec6b44f549aa11ef6e94862ae
+      internalID: -609120228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_72
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2583
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d114d6234724f4ca9faa93e7dffc20
+      internalID: 300896087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_73
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2583
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d3b296f9a098f469a7aa2d1201970b
+      internalID: -1764608976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_74
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2457
+        width: 11
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de8d44d921f37e4fa4820c07edf21e6
+      internalID: 1100402867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_75
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2520
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fd0e5a10908dd44b528b53496ca120
+      internalID: -68516707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_76
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2520
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5446864d800b4468c0b71c3ef0404e
+      internalID: -112689316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_77
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2520
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f789231f82a984ca668d18323de12f
+      internalID: 1317759051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_78
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 2520
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a5011de447c2643ad928a56e2d17d3
+      internalID: 1748475850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_79
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 2520
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa94abcecd1a5f048b8fb18c52eb15ec
+      internalID: 1484057258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_80
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 2464
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3571e43c87a919f4786e932039b72b5b
+      internalID: -530956505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_81
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 2464
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6750bedc6f0b34b8dfb4c7d59ae118
+      internalID: -355503980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_82
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 2457
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d82219494c8f0642b9d07f3acfa37f0
+      internalID: 1134645192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_83
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 2457
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c20044db9cab164ca1078a20eec7629
+      internalID: -755796577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_84
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2394
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3926e917f201a1d4d828c0919a193587
+      internalID: 1776285656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_85
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2394
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a8ca6a00e4a5148a024d64bfbadc98
+      internalID: -1043779716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_86
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2397
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862160e7abe642943bbe392e2d1c01a3
+      internalID: 7870711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_87
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 2399
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324468b5dfb59b14a968f2c04af044cf
+      internalID: 49383788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_88
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2394
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbadc8a9d98b88a4f9948c1d3975be03
+      internalID: 2023811122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_89
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 2392
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa334068a9417e4a8499a150763fc98
+      internalID: 479897462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_90
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 2392
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e2af4a9e4b41648b4990e74a469fbb
+      internalID: 767578553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_91
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 2392
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9abf6aa4aa1ed6468c4d968cc6d2cdb
+      internalID: -1255994048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_92
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2331
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53aaa3551ce41574ab1426ce13f83f7f
+      internalID: -1289658829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_93
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 2333
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bc6e63413efb740b5edda27ca3e427
+      internalID: -352491252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_94
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 2336
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec95ede6b96f6074087d98998bc795c3
+      internalID: -44327091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_95
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2329
+        width: 74
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6c27b4c4fa18e4ab7b3658fc2a042a
+      internalID: -1490601986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_96
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 2329
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d90bb3df5768c409cbaaf492003bad
+      internalID: -1054036690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_97
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2264
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f3e701c7697c64892e7f2c6ccadbb4
+      internalID: 897151114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_98
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 2201
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e8298aba58d51479dcf49120555c69
+      internalID: 1082919061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_99
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2137
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9758c1d637b97df46bce153ea3c62bb1
+      internalID: -1768362126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_100
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2072
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c9d0093188f04498670f337fc37692
+      internalID: -2112962923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_101
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2072
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a915c887175ca324381eadba20e88953
+      internalID: 161246838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_102
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2072
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad505dab20fdc9478b1b6bf40044fef
+      internalID: -225096246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_103
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2072
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41c2f4179814a64099d60952e47d318
+      internalID: -964078917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_104
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 2072
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e464a76c961bc4286877ae58ae9271
+      internalID: -2009252297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_105
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2009
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c249190fb63604c81e8389e458bbee
+      internalID: 1723642504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_106
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 2009
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81afd7fd84fab743a22490f3c1deea4
+      internalID: 552437539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_107
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2009
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2491f7ffac905b4998497225f1ba093
+      internalID: 1429849221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_108
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2009
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621463d6321fdd5428b33f1102d1d1b0
+      internalID: -1611712305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_109
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 2009
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3314d14c7dc35d947acfcde11bde4e9f
+      internalID: 1135557898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_110
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1944
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdbfc65d2535a24cb47e1be85426cca
+      internalID: 1301735982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_111
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1944
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b5f721e401ede40a71719fcaec319b
+      internalID: -252908246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_112
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1944
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db47abb47c05e5341a94a38e3850bec9
+      internalID: 306802616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_113
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1944
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df42a7a6a524ab747a8a47e5a89907d3
+      internalID: -426302582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_114
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1944
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c202f0cc5a1f3224392384cb8d65724f
+      internalID: -1244892922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_115
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1888
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd51f27061310e439c0040697d329dd
+      internalID: 1982557377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_116
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1886
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d921ae1db8dd77a42927999de1eeacfe
+      internalID: 1768350182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_117
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1885
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dde1412a6ee89a45a15b3b19f295814
+      internalID: 1536137143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_118
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1883
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9fd0435dfb02d46b426ed914148d8b
+      internalID: -2092911209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_119
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1881
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f32f8c07306484cbe4bafc69ca50b3
+      internalID: 422767567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_120
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1881
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a50b4148fc866d439a4d5f9f8badf02
+      internalID: -2071225236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_121
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1823
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96296876cba339c4db98412458ab73c0
+      internalID: -1618195251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_122
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1823
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccabf1b1527d474aae0dd64c5e5a878
+      internalID: 237267517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_123
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1820
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514e7e39cd183974da98205cd8f7d0fd
+      internalID: 1884431225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_124
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1818
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2278a5acc66524898f20d3fbc97554
+      internalID: -292632003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_125
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1816
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd078d7978c96f4fa7b4bb9bab42187
+      internalID: -179061849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_126
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1816
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910d9202243328844bf2879b6c79de80
+      internalID: 146119781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_127
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1760
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd2d95902d786f4c850b6a4f86ccd4a
+      internalID: 1278187036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_128
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1759
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3dfe567d0909634fb7eb6432376e10a
+      internalID: -817713075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_129
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1757
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081a1c958a78e084b96ec02cb8cfdd75
+      internalID: 434940796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_130
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1753
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcec8c157c94e924eb84e567035d7559
+      internalID: -483623182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_131
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1752
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7e7f218f993e84db7639dfea5b5ebb
+      internalID: -284340774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_132
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1755
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ad22ce404e71f4089212dc8486c78a
+      internalID: -1423608181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_133
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1689
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: addc77296faac104f9816d9736dd9beb
+      internalID: 2061574764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_134
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1689
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf09977e04f53874786ffa0077cb99d4
+      internalID: -1046219736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_135
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1689
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49e82f3fb0bb0a46b70b56361c81af6
+      internalID: 1038452580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_136
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1689
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87f276c1d428894aaaeb619078815ac
+      internalID: 1164453129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_137
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1689
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca4c970d5566fe42aa727daaa845236
+      internalID: 606552629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_138
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1689
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cb6ff0d7b996a4bb5ba4c67b422a8f
+      internalID: -1371706253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_139
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1624
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0075362898019414faa725a08d100f25
+      internalID: 1893476042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_140
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1624
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f0cb16d0a78124fa6d0329e8a26ccc
+      internalID: 132962704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_141
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1624
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9ae9d5da59c0d4c8781f2ed0000f54
+      internalID: -750685928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_142
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1624
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074331e861442114db1c9fcb8291c354
+      internalID: -50338017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_143
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1624
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3e7eb7d12874748817bbbd1897f592
+      internalID: 1248042297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_144
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1624
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a426f4deeb672824b966f9347f7132a9
+      internalID: -732879204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_145
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1561
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12fa55fbf6ac6040a047ec83573387b
+      internalID: 797126114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_146
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1561
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb73f942927a60469fa095f9da460d7
+      internalID: -769746471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_147
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1561
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ae3ed029466ed4d948aa7992a35e99
+      internalID: 274018633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_148
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1561
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81abb82a4f4063a4691c28aff6aa3c74
+      internalID: -1245501139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_149
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1561
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb46c4bb446e4294ead88ec3bcf07862
+      internalID: 93919749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_150
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1561
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d4ea8a455a5464ca332cc79e04e40e
+      internalID: 545178087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_151
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1496
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec1d66916b21874fab039f606f7151c
+      internalID: 682022255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_152
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1496
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8995991d824111f4bb5b770365b155b8
+      internalID: 911368505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_153
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1496
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6139710ce24898848a77f00683e1c3a5
+      internalID: -1305318208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_154
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1496
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d346d9b1374144a8a2bebe9a37735d
+      internalID: 287755647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_155
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1496
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e64b8c8dc1b09b4f9b9d0c407995a57
+      internalID: 1977261384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_156
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1496
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e111152c5a70d845afb631679d3d720
+      internalID: -1291356443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_157
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1433
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8297b5fe86c2a2247b680452a898497a
+      internalID: 964913761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_158
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1433
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3d27c25d2f8c2429f89e6af3c1c277
+      internalID: -1167398191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_159
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1433
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53d5fcbf0ca9aa43aca1fbe2c8e6e34
+      internalID: 1487451612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_160
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1433
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116fb44a13dd20a41bfd34a74840ee23
+      internalID: 1428016237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_161
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1433
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec67ac885fa902b4fa070d132488b711
+      internalID: -135817046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_162
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1433
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740c8f07939863246bfc6b9cb57a0b89
+      internalID: -1127688761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_163
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1368
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03785f8bbf3a9eb46952652f3667fe69
+      internalID: 2068598950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_164
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1368
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a0739e546da3a4da99e49fe612e57e
+      internalID: 1751639754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_165
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1368
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0650fa8b25a4248986252eac3f2a43
+      internalID: -1480241193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_166
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1368
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915cf4522d06009448886c65229c5262
+      internalID: -830484543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_167
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1368
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c0a2708763c114f835a4b04bb57937
+      internalID: 1653451233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_168
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1368
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dee3a1a02e228c449999d322decef04
+      internalID: -1067444829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_169
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1305
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b222d103a427a2741b61c0318f35cee3
+      internalID: -252776024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_170
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1304
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1244d24bc527143a32e4f67eb1d173
+      internalID: -581788883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_171
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1305
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651208aae5326fd44a338edbb030a097
+      internalID: 896341855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_172
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1305
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69571d8cca9111a4c808f502bd95208e
+      internalID: -15963243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_173
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1305
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8727f84768f1ef4dae3edf2af61d6d3
+      internalID: 1461885200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_174
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1305
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d1d6138d30691408e42918422ae9b7
+      internalID: 649078683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_175
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1241
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a4269edfe703b40a6ff5fc237b90e5
+      internalID: 948518882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_176
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1241
+        width: 74
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89edbc25951017a4eb80f458b9b6d15c
+      internalID: -581034196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_177
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1241
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646e5e318f90d8245bad148b71544d86
+      internalID: -701547944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_178
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1241
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a1dcdd91c90bd468c3e181b7e219c2
+      internalID: 986398276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_179
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1241
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be538ee0f785e2449bf60174add3fb2
+      internalID: -245766841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_180
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1176
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bbfccc5afa262429d5b7a76e787cf4
+      internalID: 2143219749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_181
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1176
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f014b19a13bc59148b15252cb3f3be88
+      internalID: -294275599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_182
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1176
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adbf73fa81a77442be7fac3c955e822
+      internalID: -1951213492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_183
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1176
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897c870a926adbd4db9900b1bcc81cb5
+      internalID: -689908437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_184
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1176
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a197d8709c70c7041815d189f5ecde43
+      internalID: -1940909799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_185
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1176
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31681d93be2e48c4d823da0bd6fe049e
+      internalID: -1178028800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_186
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1113
+        width: 74
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66cf15e63ad34246a7b693a7bdf1d7d
+      internalID: -1863113690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_187
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1113
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fc450719afbce47b300eb1770d9588
+      internalID: 894585486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_188
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1113
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672cf718f510a2b409085680f8efea5a
+      internalID: 1820148246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_189
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1113
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1861e0ffaa9447048ae1b557a308b566
+      internalID: 514965389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_190
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1113
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6745c071226bb2b429ac369bf356747f
+      internalID: 420610201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_191
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1048
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd4ad4c8dc5c5f40a8734478c44306c
+      internalID: -2002815507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_192
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1048
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72d02400f472184db41612ee42a0730
+      internalID: 1467379270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_193
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1048
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecea5efef08564a4292161f9d8fdb2d0
+      internalID: -987771706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_194
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1048
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3142a1f2341160e4eaabdad1f80564b4
+      internalID: 635486477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_195
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1048
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4511c614d0fdd41994d4a2b8edd6b5
+      internalID: -935437410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_196
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1048
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261f53cd1020a684e9b7889cc475c6e8
+      internalID: 692840161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_197
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 985
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fdbfc90dc89964fa808c1e5e0364a5
+      internalID: 588377380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_198
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 985
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67dc4758b92ab74192aa7154784e23d
+      internalID: 1882569286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_199
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 985
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b9c0c1bb657894f9d5f25590403f58
+      internalID: 295518190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_200
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 985
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ff0fce22a6b3c40b2481b0744748e6
+      internalID: -278545100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_201
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 985
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451f7357c91637445b6a0766108e0f6c
+      internalID: 1869441384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_202
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 985
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfce147c18b75e24d9054daafd6c07b8
+      internalID: -1575829634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_203
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 920
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4618bd6da8f076a4482338806700a561
+      internalID: 855090156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_204
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 920
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15caa3878ee1bfb4799819cc7132d9cc
+      internalID: -1343264071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_205
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 920
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a90a7c848c849479e49a767e597a63
+      internalID: -472945240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_206
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 920
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b1fe1e9ffae754ebc5f0118d1aa1f7
+      internalID: 766497518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_207
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 920
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff11acee7cd70a549a72b24197263442
+      internalID: -1824948272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_208
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 920
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c8a4648348dcc47898e39bc833a188
+      internalID: 1971564073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_209
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 857
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3af540e5739204aa1fe292019eeeb6
+      internalID: 1157900108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_210
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 856
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff9ccde4c7a1214a914de466856e7f9
+      internalID: -973782513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_211
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 856
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61b433fceb003140b5ae009ebf96427
+      internalID: -760123024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_212
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 857
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f243d4ad12418a641bdb30fde6abd412
+      internalID: -2059865983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_213
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 857
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834790176273e8d4b9eb35f3b5fbf824
+      internalID: -1644830078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_214
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 857
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f2266dab06ee8468f5ade50d60fd5f
+      internalID: -594540177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_215
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 793
+        width: 74
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65c9afe1903ccd4d8c87fb592ae5156
+      internalID: -717894537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_216
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 793
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca88fc68551c1c408ce8c1e179557ec
+      internalID: 842331867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_217
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 793
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed1ad98c28710140bc108458608b51b
+      internalID: 1613969714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_218
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 793
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee810697542e42439a17b4551bb700a
+      internalID: -1921723001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_219
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 793
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e0270c705cbce499673451dea95658
+      internalID: 38812473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_220
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 728
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a9e9088070c3744b7d074bb87d6e0e
+      internalID: 15708031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_221
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 728
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa45f1e1036a0f4bbe38f51ff6c7833
+      internalID: -1679413880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_222
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 728
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7199cb02b8e4ad14087a687429046d80
+      internalID: 2047330610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_223
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 728
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9567634a73277ed48a7cbaff8c141fb2
+      internalID: -2146153102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_224
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 728
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27007c28e0c6a14c99bc8470fecec91
+      internalID: 821361293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_225
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 728
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175a030bfc3c6e04490163ac2ba9c1f9
+      internalID: -2090605324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_226
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 728
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2735f897af313394b8dddb86e50cbe10
+      internalID: -1006658463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_227
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 728
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec79d429db1147c429f8116583cf3ad8
+      internalID: -1307676159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_228
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 728
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cab17e74ab20824a90dfefc2506f7c9
+      internalID: -155766329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_229
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 665
+        width: 137
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98638b1249ae787419e3441a19c51159
+      internalID: -1512513827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_230
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 665
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb353cb4b8aae6547b71cb14eef13f47
+      internalID: -992722552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_231
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 600
+        width: 266
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42aa92bc5ad0e8442aafde2aa68cb2e2
+      internalID: -516905991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_232
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 600
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1b01b194af2ee4986889d18a48380c
+      internalID: -2116213888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_233
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 600
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4cc1a4218acb849bfd33f0f5318754
+      internalID: 1439168261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_234
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 600
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be09d11de376084189b5b2934863638
+      internalID: 329693652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_235
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 600
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b353d1840b50b84aba12e18e5933c55
+      internalID: -837986379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_236
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 600
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337f5f5f7b0204844a198ee5af067819
+      internalID: 2125966158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_237
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 600
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cd4fd3488c3ed4cb7bc4465f689e56
+      internalID: 187137132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_238
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 600
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5844b9e90d39a74ca8d3a9c0cb911f2
+      internalID: -757094966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_239
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 600
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35af468a6708e1d4589de73be5d184b8
+      internalID: -1717555338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_240
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 537
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7130a10d3345144abdfcd8de41afe8e
+      internalID: -662409621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_241
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 537
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca4257438fad304c9f7a988553fa7dd
+      internalID: 729475349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_242
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 537
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bede527f97ac814fab7a03c2f88b7c0
+      internalID: 1277504852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_243
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 537
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1127b4a134d514944a12d24f94b35c00
+      internalID: -288324109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_244
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 537
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c753675daad8e834881a720beccfa139
+      internalID: -90150112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_245
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 537
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5836f6339acd404d8a4eeeea5553a63
+      internalID: 1911758460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_246
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 537
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94c3680660b36d478b54c83ed8f920b
+      internalID: -1629093468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_247
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 537
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1c64c3c9295804aae4567983950d75
+      internalID: 1605216576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_248
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 472
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46df56a6f8629d54ca24168648d8fed0
+      internalID: -1491796653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_249
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 472
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1b11c70b016534f891aa3b93d8d9e8
+      internalID: -877444204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_250
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 472
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6b5a8cac349a249ada086c13845646
+      internalID: 426788192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_251
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 472
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be233cbf9545e04e98d25c7c710deba
+      internalID: -1099430464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_252
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 472
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeda62020d98dae46acbe5003f23eeee
+      internalID: -308848177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_253
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 472
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3335d356fe78640ae64c6e6846fee7
+      internalID: 1988002773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_254
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 472
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ef139305bac274081aed9bfa92e562
+      internalID: 1125532634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_255
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 472
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ce406efd1e5504f9accbb16e9e4c6c
+      internalID: 717519093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_256
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 409
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bef2a837e534444583ba727b4e62725
+      internalID: -569277067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_257
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 408
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa508f1f2fcaf14e864fa1cde68161e
+      internalID: 474307697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_258
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 408
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d262d46339a92247ba7fe643a2476af
+      internalID: 1377087931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_259
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 409
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7bec03fdfc69e4b8a866d527c575c6
+      internalID: 365342854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_260
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 409
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cdd0c7c6c3202f4bb47d5de56aeaecd
+      internalID: -1708717755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_261
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 409
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6395c078e15e3a946b6c00c9695c69f3
+      internalID: 1084200456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_262
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 409
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e1373be34d0cc4f979fd6f7a7b21b1
+      internalID: 162476291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_263
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 409
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9a97019c13f3b4ba19c5dfddfa3df1
+      internalID: 593876941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_264
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 353
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981c5aae930a74347a1c209af664c09c
+      internalID: 207414224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_265
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 353
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9a548634823b34ca176baa1434be97
+      internalID: -547874367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_266
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 352
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83950b42deabdf74092ec814e2542ed0
+      internalID: -1223035005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_267
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 289
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa448b7b3291fbd48afdf34a1cf9dfff
+      internalID: -1411487968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_268
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 287
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffdf1a52dd1e4e4a92d65e084b9cc98
+      internalID: 1327238428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_269
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 224
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd11500734adb14ca6f63e2a9fc4961
+      internalID: 1769161325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_270
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 224
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2e033349a10164fb45cc11aca9bdd5
+      internalID: 1063566120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_271
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 161
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4974cf83d7632c44488026410f55f057
+      internalID: -475532195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_272
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 161
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627b87e47c6200c42a2e7dc8b8c6d015
+      internalID: 617153984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_273
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 159
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b2b9127f75990499311762a397861d
+      internalID: -310382128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_274
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 159
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57287c108592b147bb8a14da05623e4
+      internalID: -1705004155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_275
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 161
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5bf1bc8fd62fb47a434e01761f5917
+      internalID: 20577380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_276
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 161
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ec40ad711246643954f29d9621af2b
+      internalID: -1352636995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_277
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 161
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b5d0235b02f4e4fb62920805ce3b98
+      internalID: -117990566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_278
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 161
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45b905593f98b74ebfe7d4bd24cdb10
+      internalID: 1393781280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_279
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 161
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cd46183c6cf3f4baf9c1c6500948e9
+      internalID: -1392910228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_280
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 161
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67002a808e7716a49bcece499b9649d0
+      internalID: -1062322110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_281
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 98
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61fa8637583e7947ab0e495feaedb47
+      internalID: -204525299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_282
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 96
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7dd1b4bfe62ab049bc4c35bf85b191c
+      internalID: -1313499249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_283
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 96
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ba7d1973ed4cd4daab63827d289c7d
+      internalID: -971063120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_284
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 98
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75224b75c02bda4b916de3592ae1bb6
+      internalID: -292275847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_285
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 98
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2fb2755ceb89249abc35b0d34799cc
+      internalID: 571216393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_286
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 98
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54e750763c6b774a83fad7a689dc624
+      internalID: -1916671234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_287
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 33
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f597aca41df06348b9c9297d32c870a
+      internalID: 917418300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_288
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 31
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1542d1907134fe4aafcbe9668a3dbe1
+      internalID: -725787085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_289
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 31
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2cd6a7fd381ff48a15ab077af724e5
+      internalID: 1375310126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_290
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 33
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aaeb211135ad4e4182d8ee31d24378d
+      internalID: -837198213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_291
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 33
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f5de5bfa9080c4295a5712fbedd395
+      internalID: -1135823996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Legs_Purple_292
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 33
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5c382193718074daba8fb9e065940e
+      internalID: -1467208789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c775b7a181ab6c249b5c342cbcab24ae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Plate_Legs_Purple_0: -5818354837860876519
+      Plate_Legs_Purple_1: 7353919132303157299
+      Plate_Legs_Purple_10: 3238733453906016971
+      Plate_Legs_Purple_100: -2112962923
+      Plate_Legs_Purple_101: 161246838
+      Plate_Legs_Purple_102: -225096246
+      Plate_Legs_Purple_103: -964078917
+      Plate_Legs_Purple_104: -2009252297
+      Plate_Legs_Purple_105: 1723642504
+      Plate_Legs_Purple_106: 552437539
+      Plate_Legs_Purple_107: 1429849221
+      Plate_Legs_Purple_108: -1611712305
+      Plate_Legs_Purple_109: 1135557898
+      Plate_Legs_Purple_11: 1496654843349278226
+      Plate_Legs_Purple_110: 1301735982
+      Plate_Legs_Purple_111: -252908246
+      Plate_Legs_Purple_112: 306802616
+      Plate_Legs_Purple_113: -426302582
+      Plate_Legs_Purple_114: -1244892922
+      Plate_Legs_Purple_115: 1982557377
+      Plate_Legs_Purple_116: 1768350182
+      Plate_Legs_Purple_117: 1536137143
+      Plate_Legs_Purple_118: -2092911209
+      Plate_Legs_Purple_119: 422767567
+      Plate_Legs_Purple_12: -8886654241216237247
+      Plate_Legs_Purple_120: -2071225236
+      Plate_Legs_Purple_121: -1618195251
+      Plate_Legs_Purple_122: 237267517
+      Plate_Legs_Purple_123: 1884431225
+      Plate_Legs_Purple_124: -292632003
+      Plate_Legs_Purple_125: -179061849
+      Plate_Legs_Purple_126: 146119781
+      Plate_Legs_Purple_127: 1278187036
+      Plate_Legs_Purple_128: -817713075
+      Plate_Legs_Purple_129: 434940796
+      Plate_Legs_Purple_13: 1925627957
+      Plate_Legs_Purple_130: -483623182
+      Plate_Legs_Purple_131: -284340774
+      Plate_Legs_Purple_132: -1423608181
+      Plate_Legs_Purple_133: 2061574764
+      Plate_Legs_Purple_134: -1046219736
+      Plate_Legs_Purple_135: 1038452580
+      Plate_Legs_Purple_136: 1164453129
+      Plate_Legs_Purple_137: 606552629
+      Plate_Legs_Purple_138: -1371706253
+      Plate_Legs_Purple_139: 1893476042
+      Plate_Legs_Purple_14: -217599939
+      Plate_Legs_Purple_140: 132962704
+      Plate_Legs_Purple_141: -750685928
+      Plate_Legs_Purple_142: -50338017
+      Plate_Legs_Purple_143: 1248042297
+      Plate_Legs_Purple_144: -732879204
+      Plate_Legs_Purple_145: 797126114
+      Plate_Legs_Purple_146: -769746471
+      Plate_Legs_Purple_147: 274018633
+      Plate_Legs_Purple_148: -1245501139
+      Plate_Legs_Purple_149: 93919749
+      Plate_Legs_Purple_15: 1590426139
+      Plate_Legs_Purple_150: 545178087
+      Plate_Legs_Purple_151: 682022255
+      Plate_Legs_Purple_152: 911368505
+      Plate_Legs_Purple_153: -1305318208
+      Plate_Legs_Purple_154: 287755647
+      Plate_Legs_Purple_155: 1977261384
+      Plate_Legs_Purple_156: -1291356443
+      Plate_Legs_Purple_157: 964913761
+      Plate_Legs_Purple_158: -1167398191
+      Plate_Legs_Purple_159: 1487451612
+      Plate_Legs_Purple_16: -1716372266
+      Plate_Legs_Purple_160: 1428016237
+      Plate_Legs_Purple_161: -135817046
+      Plate_Legs_Purple_162: -1127688761
+      Plate_Legs_Purple_163: 2068598950
+      Plate_Legs_Purple_164: 1751639754
+      Plate_Legs_Purple_165: -1480241193
+      Plate_Legs_Purple_166: -830484543
+      Plate_Legs_Purple_167: 1653451233
+      Plate_Legs_Purple_168: -1067444829
+      Plate_Legs_Purple_169: -252776024
+      Plate_Legs_Purple_17: -1188818
+      Plate_Legs_Purple_170: -581788883
+      Plate_Legs_Purple_171: 896341855
+      Plate_Legs_Purple_172: -15963243
+      Plate_Legs_Purple_173: 1461885200
+      Plate_Legs_Purple_174: 649078683
+      Plate_Legs_Purple_175: 948518882
+      Plate_Legs_Purple_176: -581034196
+      Plate_Legs_Purple_177: -701547944
+      Plate_Legs_Purple_178: 986398276
+      Plate_Legs_Purple_179: -245766841
+      Plate_Legs_Purple_18: -395332261
+      Plate_Legs_Purple_180: 2143219749
+      Plate_Legs_Purple_181: -294275599
+      Plate_Legs_Purple_182: -1951213492
+      Plate_Legs_Purple_183: -689908437
+      Plate_Legs_Purple_184: -1940909799
+      Plate_Legs_Purple_185: -1178028800
+      Plate_Legs_Purple_186: -1863113690
+      Plate_Legs_Purple_187: 894585486
+      Plate_Legs_Purple_188: 1820148246
+      Plate_Legs_Purple_189: 514965389
+      Plate_Legs_Purple_19: 1831917264
+      Plate_Legs_Purple_190: 420610201
+      Plate_Legs_Purple_191: -2002815507
+      Plate_Legs_Purple_192: 1467379270
+      Plate_Legs_Purple_193: -987771706
+      Plate_Legs_Purple_194: 635486477
+      Plate_Legs_Purple_195: -935437410
+      Plate_Legs_Purple_196: 692840161
+      Plate_Legs_Purple_197: 588377380
+      Plate_Legs_Purple_198: 1882569286
+      Plate_Legs_Purple_199: 295518190
+      Plate_Legs_Purple_2: -2593455095064240158
+      Plate_Legs_Purple_20: -1601308767
+      Plate_Legs_Purple_200: -278545100
+      Plate_Legs_Purple_201: 1869441384
+      Plate_Legs_Purple_202: -1575829634
+      Plate_Legs_Purple_203: 855090156
+      Plate_Legs_Purple_204: -1343264071
+      Plate_Legs_Purple_205: -472945240
+      Plate_Legs_Purple_206: 766497518
+      Plate_Legs_Purple_207: -1824948272
+      Plate_Legs_Purple_208: 1971564073
+      Plate_Legs_Purple_209: 1157900108
+      Plate_Legs_Purple_21: 189022616
+      Plate_Legs_Purple_210: -973782513
+      Plate_Legs_Purple_211: -760123024
+      Plate_Legs_Purple_212: -2059865983
+      Plate_Legs_Purple_213: -1644830078
+      Plate_Legs_Purple_214: -594540177
+      Plate_Legs_Purple_215: -717894537
+      Plate_Legs_Purple_216: 842331867
+      Plate_Legs_Purple_217: 1613969714
+      Plate_Legs_Purple_218: -1921723001
+      Plate_Legs_Purple_219: 38812473
+      Plate_Legs_Purple_22: 204435443
+      Plate_Legs_Purple_220: 15708031
+      Plate_Legs_Purple_221: -1679413880
+      Plate_Legs_Purple_222: 2047330610
+      Plate_Legs_Purple_223: -2146153102
+      Plate_Legs_Purple_224: 821361293
+      Plate_Legs_Purple_225: -2090605324
+      Plate_Legs_Purple_226: -1006658463
+      Plate_Legs_Purple_227: -1307676159
+      Plate_Legs_Purple_228: -155766329
+      Plate_Legs_Purple_229: -1512513827
+      Plate_Legs_Purple_23: -84335618
+      Plate_Legs_Purple_230: -992722552
+      Plate_Legs_Purple_231: -516905991
+      Plate_Legs_Purple_232: -2116213888
+      Plate_Legs_Purple_233: 1439168261
+      Plate_Legs_Purple_234: 329693652
+      Plate_Legs_Purple_235: -837986379
+      Plate_Legs_Purple_236: 2125966158
+      Plate_Legs_Purple_237: 187137132
+      Plate_Legs_Purple_238: -757094966
+      Plate_Legs_Purple_239: -1717555338
+      Plate_Legs_Purple_24: -1288808074
+      Plate_Legs_Purple_240: -662409621
+      Plate_Legs_Purple_241: 729475349
+      Plate_Legs_Purple_242: 1277504852
+      Plate_Legs_Purple_243: -288324109
+      Plate_Legs_Purple_244: -90150112
+      Plate_Legs_Purple_245: 1911758460
+      Plate_Legs_Purple_246: -1629093468
+      Plate_Legs_Purple_247: 1605216576
+      Plate_Legs_Purple_248: -1491796653
+      Plate_Legs_Purple_249: -877444204
+      Plate_Legs_Purple_25: 899640606
+      Plate_Legs_Purple_250: 426788192
+      Plate_Legs_Purple_251: -1099430464
+      Plate_Legs_Purple_252: -308848177
+      Plate_Legs_Purple_253: 1988002773
+      Plate_Legs_Purple_254: 1125532634
+      Plate_Legs_Purple_255: 717519093
+      Plate_Legs_Purple_256: -569277067
+      Plate_Legs_Purple_257: 474307697
+      Plate_Legs_Purple_258: 1377087931
+      Plate_Legs_Purple_259: 365342854
+      Plate_Legs_Purple_26: -1833246127
+      Plate_Legs_Purple_260: -1708717755
+      Plate_Legs_Purple_261: 1084200456
+      Plate_Legs_Purple_262: 162476291
+      Plate_Legs_Purple_263: 593876941
+      Plate_Legs_Purple_264: 207414224
+      Plate_Legs_Purple_265: -547874367
+      Plate_Legs_Purple_266: -1223035005
+      Plate_Legs_Purple_267: -1411487968
+      Plate_Legs_Purple_268: 1327238428
+      Plate_Legs_Purple_269: 1769161325
+      Plate_Legs_Purple_27: -1241573252
+      Plate_Legs_Purple_270: 1063566120
+      Plate_Legs_Purple_271: -475532195
+      Plate_Legs_Purple_272: 617153984
+      Plate_Legs_Purple_273: -310382128
+      Plate_Legs_Purple_274: -1705004155
+      Plate_Legs_Purple_275: 20577380
+      Plate_Legs_Purple_276: -1352636995
+      Plate_Legs_Purple_277: -117990566
+      Plate_Legs_Purple_278: 1393781280
+      Plate_Legs_Purple_279: -1392910228
+      Plate_Legs_Purple_28: 1797158423
+      Plate_Legs_Purple_280: -1062322110
+      Plate_Legs_Purple_281: -204525299
+      Plate_Legs_Purple_282: -1313499249
+      Plate_Legs_Purple_283: -971063120
+      Plate_Legs_Purple_284: -292275847
+      Plate_Legs_Purple_285: 571216393
+      Plate_Legs_Purple_286: -1916671234
+      Plate_Legs_Purple_287: 917418300
+      Plate_Legs_Purple_288: -725787085
+      Plate_Legs_Purple_289: 1375310126
+      Plate_Legs_Purple_29: 732144966
+      Plate_Legs_Purple_290: -837198213
+      Plate_Legs_Purple_291: -1135823996
+      Plate_Legs_Purple_292: -1467208789
+      Plate_Legs_Purple_3: 14609536299105137
+      Plate_Legs_Purple_30: 1072216409
+      Plate_Legs_Purple_31: 2120046529
+      Plate_Legs_Purple_32: -224106231
+      Plate_Legs_Purple_33: -121312426
+      Plate_Legs_Purple_34: 1891162668
+      Plate_Legs_Purple_35: 1240318173
+      Plate_Legs_Purple_36: 1633284881
+      Plate_Legs_Purple_37: -1562178758
+      Plate_Legs_Purple_38: 871666322
+      Plate_Legs_Purple_39: 692593287
+      Plate_Legs_Purple_4: -485206742489881481
+      Plate_Legs_Purple_40: 1239995866
+      Plate_Legs_Purple_41: -504253581
+      Plate_Legs_Purple_42: -1360385549
+      Plate_Legs_Purple_43: -253491205
+      Plate_Legs_Purple_44: -418773820
+      Plate_Legs_Purple_45: 958570585
+      Plate_Legs_Purple_46: -695135365
+      Plate_Legs_Purple_47: 478622282
+      Plate_Legs_Purple_48: -2111309741
+      Plate_Legs_Purple_49: -1140156451
+      Plate_Legs_Purple_5: 3311916039160348265
+      Plate_Legs_Purple_50: 458643389
+      Plate_Legs_Purple_51: -553418585
+      Plate_Legs_Purple_52: -252478001
+      Plate_Legs_Purple_53: -1728953636
+      Plate_Legs_Purple_54: -96410893
+      Plate_Legs_Purple_55: -104969729
+      Plate_Legs_Purple_56: -322112033
+      Plate_Legs_Purple_57: -359586098
+      Plate_Legs_Purple_58: -1840891393
+      Plate_Legs_Purple_59: 755332608
+      Plate_Legs_Purple_6: -7297951560303683459
+      Plate_Legs_Purple_60: 851836716
+      Plate_Legs_Purple_61: 79280978
+      Plate_Legs_Purple_62: 1470223983
+      Plate_Legs_Purple_63: -368727840
+      Plate_Legs_Purple_64: -365003758
+      Plate_Legs_Purple_65: -94522181
+      Plate_Legs_Purple_66: 1462906269
+      Plate_Legs_Purple_67: 322951727
+      Plate_Legs_Purple_68: 1191292068
+      Plate_Legs_Purple_69: -677425292
+      Plate_Legs_Purple_7: -7412326183809131444
+      Plate_Legs_Purple_70: 1315445337
+      Plate_Legs_Purple_71: -609120228
+      Plate_Legs_Purple_72: 300896087
+      Plate_Legs_Purple_73: -1764608976
+      Plate_Legs_Purple_74: 1100402867
+      Plate_Legs_Purple_75: -68516707
+      Plate_Legs_Purple_76: -112689316
+      Plate_Legs_Purple_77: 1317759051
+      Plate_Legs_Purple_78: 1748475850
+      Plate_Legs_Purple_79: 1484057258
+      Plate_Legs_Purple_8: -409822422879529319
+      Plate_Legs_Purple_80: -530956505
+      Plate_Legs_Purple_81: -355503980
+      Plate_Legs_Purple_82: 1134645192
+      Plate_Legs_Purple_83: -755796577
+      Plate_Legs_Purple_84: 1776285656
+      Plate_Legs_Purple_85: -1043779716
+      Plate_Legs_Purple_86: 7870711
+      Plate_Legs_Purple_87: 49383788
+      Plate_Legs_Purple_88: 2023811122
+      Plate_Legs_Purple_89: 479897462
+      Plate_Legs_Purple_9: 170433423012596127
+      Plate_Legs_Purple_90: 767578553
+      Plate_Legs_Purple_91: -1255994048
+      Plate_Legs_Purple_92: -1289658829
+      Plate_Legs_Purple_93: -352491252
+      Plate_Legs_Purple_94: -44327091
+      Plate_Legs_Purple_95: -1490601986
+      Plate_Legs_Purple_96: -1054036690
+      Plate_Legs_Purple_97: 897151114
+      Plate_Legs_Purple_98: 1082919061
+      Plate_Legs_Purple_99: -1768362126
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
