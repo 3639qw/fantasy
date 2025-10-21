@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1515889665071631402}
   - component: {fileID: 4991643272634896862}
   - component: {fileID: 6314962493531156652}
+  - component: {fileID: -74443403650194625}
   m_Layer: 0
   m_Name: Big_Oak_Tree 21 1
   m_TagString: Tree
@@ -163,6 +164,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5625, y: 3.9375}
   m_EdgeRadius: 0
+--- !u!114 &-74443403650194625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678692929619180904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cb00556b9b0cb4f8b9fb4ecbd0f7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stumpSprite: {fileID: -5456246704479660826, guid: 36897368fcba270428cc2463d1db56e2, type: 3}
+  stumpPrefab: {fileID: 0}
+  destroyTreeObject: 0
+  logItemData: {fileID: 11400000, guid: 4af892ad1e6129b4185913af466ecbe5, type: 2}
+  logAmount: 1
 --- !u!1 &7958348909826675162
 GameObject:
   m_ObjectHideFlags: 0

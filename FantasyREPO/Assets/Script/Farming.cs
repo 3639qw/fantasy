@@ -8,7 +8,7 @@ public class Farming : MonoBehaviour
 {
     public static Farming instance;
 
-    GameManager gm; 
+    GameManager gm;
     Inventory inv;
 
     [Header("채집 진행바 (없어도 동작)")]
@@ -27,13 +27,12 @@ public class Farming : MonoBehaviour
     [SerializeField] protected internal Tilemap farmLand;
     [SerializeField] TileBase grassTile, tilledTile, farmTile, wetfarmTile;
 
-    // <<-- 변경: CropData가 이제 Sprite 대신 ItemData를 가집니다.
     [System.Serializable]
     public class CropData
     {
         public string name;
-        public ItemData seedItemData;  // 씨앗 아이템의 정보
-        public ItemData cropItemData;  // 수확물 아이템의 정보
+        public ItemData seedItemData;
+        public ItemData cropItemData;
         public TileBase seedRemnant;
         public TileBase[] stages = new TileBase[4];
     }
@@ -42,11 +41,23 @@ public class Farming : MonoBehaviour
     [Header("Seed/Crop Tilemap")]
     [SerializeField] protected internal Tilemap seedLand;
 
-    // <<-- 변경: 농기구도 Sprite 대신 ItemData로 구분합니다.
     [Header("Farming Tool Gate (Selected ItemData)")]
     [SerializeField] private ItemData wateringCanItemData;
     [SerializeField] private ItemData hoeItemData;
     [SerializeField] private bool debugToolGate = false;
+
+    // ================================
+    // Pick.cs 구조 적용 (개간/급수 전용)
+    // ================================
+    [Header("개간/급수 애니메이션 & 쿨타임")]
+    [SerializeField] private string hoeTriggerName = "Hoe";           // 개간 트리거
+    [SerializeField] private string wateringTriggerName = "Watering"; // 급수 트리거
+    [SerializeField] private float farmCoolTime = 0.5f;               // 좌클릭 쿨타임
+    private float farmCurTime;
+
+    private Animator _anim;
+    private PlayerMove _playerMove;
+    // ================================
 
     void Awake()
     {
@@ -57,6 +68,18 @@ public class Farming : MonoBehaviour
     {
         gm = GameManager.Instance;
         inv = Inventory.Instance;
+
+        // 애니메이터/플레이어 상태 참조
+        if (gm && gm.player)
+        {
+            _anim = gm.player.GetComponent<Animator>();
+            _playerMove = gm.player.GetComponent<PlayerMove>();
+        }
+        else
+        {
+            _anim = GetComponent<Animator>();
+            _playerMove = GetComponent<PlayerMove>();
+        }
 
         if (harvestBar)
         {
@@ -69,22 +92,118 @@ public class Farming : MonoBehaviour
             harvestBar.value = 0f;
             barRoot.gameObject.SetActive(false);
         }
+        else
+        {
+            cam = Camera.main;
+        }
     }
 
     void Update()
     {
+        // 개간/급수 쿨타임 감소
+        if (farmCurTime > 0f) farmCurTime -= Time.deltaTime;
+
+        // 좌클릭: 개간/급수만 처리 (Pick.cs 구조)
+        if (Input.GetMouseButtonDown(0) &&
+            farmCurTime <= 0f &&
+            _playerMove != null && !_playerMove.isAttacking &&
+            (IsHoeSelected() || IsWateringCanSelected()))
+        {
+            if (TryFarmAction(5f))   // 필요 ST는 기존 BuildFarm과 동일하게 5f 사용
+                return;
+        }
+
+        // Space: 기존 수확/심기/앞수확/BuildFarm 유지
         if (!Input.GetKeyDown(KeyCode.Space)) return;
         if (!seedLand || !farmLand) { Debug.LogWarning("Tilemap reference missing"); return; }
 
         if (TryHarvestCrop()) return;
         if (!(IsWateringCanSelected() || IsHoeSelected()) && TryHarvestSeedForward()) return;
-        
-        // <<-- 변경: 현재 선택된 '아이템 데이터'로 심을 작물을 찾습니다.
+
         CropData cd = FindCropBySeedData(inv.GetSelectedItemData());
         if (cd != null && TryPlantSeed(cd)) return;
 
+        // 스페이스로 하는 기존 개간/급수 로직도 유지
         BuildFarm(5f);
     }
+
+    // Pick.cs 스타일 개간/급수 실행부
+    private bool TryFarmAction(float reqST)
+    {
+        if (!farmLand || gm == null || gm.player == null) return false;
+        if (gm.ST < reqST) return false;
+
+        Vector3Int pos = farmLand.WorldToCell(gm.player.transform.position);
+        TileBase cur = farmLand.GetTile(pos);
+
+        // 개간: tilled -> farm (호미 선택 + "Hoe" 트리거)
+        if (cur == tilledTile && IsHoeSelected())
+        {
+            TriggerFarmAnimTowardMouse(hoeTriggerName);
+            farmLand.SetTile(pos, farmTile);
+            gm.ConsumeSkill(2, reqST);
+
+            farmCurTime = farmCoolTime;
+            _playerMove.isAttacking = true;
+            return true;
+        }
+
+        // 급수: farm -> wetfarm (물뿌리개 선택 + "Watering" 트리거)
+        if (cur == farmTile && IsWateringCanSelected())
+        {
+            TriggerFarmAnimTowardMouse(wateringTriggerName);
+            farmLand.SetTile(pos, wetfarmTile);
+            gm.ConsumeSkill(2, reqST);
+
+            farmCurTime = farmCoolTime;
+            _playerMove.isAttacking = true;
+            return true;
+        }
+
+        return false;
+    }
+
+    private void TriggerFarmAnimTowardMouse(string triggerName)
+    {
+        if (_anim == null) return;
+
+        Vector2 dir = GetMouseWorldDir();
+        _anim.SetFloat("AttackX", dir.x);
+        _anim.SetFloat("AttackY", dir.y);
+        _anim.SetTrigger(triggerName);
+    }
+
+    // 애니메이션 이벤트(EndAttack)에서 호출될 함수
+    public void EndFarm()
+    {
+        if (_anim)
+        {
+            // 두 트리거 모두 리셋 (안전)
+            _anim.ResetTrigger(hoeTriggerName);
+            _anim.ResetTrigger(wateringTriggerName);
+            _anim.SetFloat("AttackX", 0f);
+            _anim.SetFloat("AttackY", 0f);
+        }
+        if (_playerMove) _playerMove.isAttacking = false;
+    }
+
+    // Pick.cs와 동일하게 애니메이션 이벤트명이 EndAttack이라면 이것도 잡아줌
+    public void EndAttack() => EndFarm();
+
+    private Vector2 GetMouseWorldDir()
+    {
+        var cameraToUse = cam != null ? cam : Camera.main;
+        if (cameraToUse == null || gm == null || gm.player == null) return Vector2.right;
+
+        Vector3 mouse = Input.mousePosition;
+        mouse.z = Mathf.Abs(cameraToUse.transform.position.z - gm.player.transform.position.z);
+        Vector3 world = cameraToUse.ScreenToWorldPoint(mouse);
+        Vector2 v = (Vector2)world - (Vector2)gm.player.transform.position;
+        if (v.sqrMagnitude < 0.0001f) v = Vector2.right;
+        return v.normalized;
+    }
+
+    // ====== 아래부터는 기존 로직 그대로 ======
 
     bool TryHarvestCrop()
     {
@@ -137,8 +256,6 @@ public class Farming : MonoBehaviour
         if (!success) yield break;
 
         seedLand.SetTile(pos, null);
-        
-        // <<-- 변경: 인벤토리에 Sprite가 아닌 ItemData를 추가합니다.
         inv.AddItem(isCrop ? cd.cropItemData : cd.seedItemData, 1);
     }
 
@@ -196,7 +313,7 @@ public class Farming : MonoBehaviour
         yield return new WaitForSeconds(5f); if (seedLand) seedLand.SetTile(cell, cd.stages[2]);
         yield return new WaitForSeconds(5f); if (seedLand) seedLand.SetTile(cell, cd.stages[3]);
     }
-    
+
     void BuildFarm(float reqST)
     {
         if (!farmLand) { Debug.LogWarning("farmLand null"); return; }
@@ -239,14 +356,13 @@ public class Farming : MonoBehaviour
             if (go) farmLand = go.GetComponent<Tilemap>();
         }
     }
-    
+
     Vector3 GetFacingDir()
     {
         float sign = Mathf.Sign(gm.player.transform.localScale.x);
         return new Vector3(sign, 0f, 0f);
     }
 
-    // <<-- 변경: Sprite 대신 ItemData를 받아 해당 씨앗 정보를 찾습니다.
     CropData FindCropBySeedData(ItemData data)
     {
         if (data == null) return null;
@@ -257,17 +373,16 @@ public class Farming : MonoBehaviour
         return null;
     }
 
-    // <<-- 변경: Sprite 대신 ItemData를 받아 현재 선택된 도구와 비교합니다.
     private bool IsToolSelected(ItemData toolData)
     {
         if (inv == null || inv.IsSelectedEmpty()) return false;
 
-        var selectedItem = inv.GetSelectedItemData(); // 현재 선택된 '아이템 데이터'
+        var selectedItem = inv.GetSelectedItemData();
         bool ok = (selectedItem != null && selectedItem == toolData);
 
         if (debugToolGate)
             Debug.Log($"[ToolGate] selectedItem={(selectedItem?.name)}, tool={(toolData?.name)}, match={ok}");
-        
+
         return ok;
     }
 
