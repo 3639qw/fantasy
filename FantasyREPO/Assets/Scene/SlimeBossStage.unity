@@ -30640,6 +30640,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1115705369917960771, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}
+      propertyPath: arrowSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1115705369917960771, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}
+      propertyPath: arrowSpawnPoint
+      value: 
+      objectReference: {fileID: 1960369069}
     - target: {fileID: 4301410833529298318, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}
       propertyPath: swordItemData
       value: 
@@ -30695,6 +30703,14 @@ PrefabInstance:
     - target: {fileID: 5569323289389502377, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}
       propertyPath: m_Name
       value: Player(AnimationFixed)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877652973335675474, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}
+      propertyPath: m_Size.x
+      value: 1.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877652973335675474, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31264,6 +31280,11 @@ MonoBehaviour:
   cooldown: 0.4
   requireAxeSelected: 1
   axeItemData: {fileID: 11400000, guid: 1cfa0f3597704494f836ddb270ad0e10, type: 2}
+--- !u!4 &1960369069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5476940493618277405, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}
+  m_PrefabInstance: {fileID: 1896131351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1988712530
 GameObject:
   m_ObjectHideFlags: 0
@@ -32857,11 +32878,11 @@ PrefabInstance:
       objectReference: {fileID: 7088923531469233229, guid: 4f327c567d535cf4f935c889f666d0d6, type: 3}
     - target: {fileID: 8255652755544553175, guid: 8a0617cfa22206545bdc23e42977fc15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8255652755544553175, guid: 8a0617cfa22206545bdc23e42977fc15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8255652755544553175, guid: 8a0617cfa22206545bdc23e42977fc15, type: 3}
       propertyPath: m_LocalPosition.z

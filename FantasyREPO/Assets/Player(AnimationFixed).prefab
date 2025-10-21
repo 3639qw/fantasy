@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 4301410833529298318}
   - component: {fileID: 8068333873629394959}
   - component: {fileID: 3754864373725869536}
+  - component: {fileID: -1115705369917960771}
   m_Layer: 3
   m_Name: Player(AnimationFixed)
   m_TagString: Player
@@ -294,9 +295,20 @@ MonoBehaviour:
   _moveSpeed: 5
   _runSpeed: 8
   tilemap: {fileID: 0}
+  _dashSpeed: 15
+  _dashTime: 0.2
+  _dashCooldown: 1
+  _doubleTapTimeWindow: 0.3
+  _useDashST: 5
+  jumpKey: 99
+  _useJumpST: 10
+  _playerGhostPrefab: {fileID: 0}
+  _ghostSpawnInterval: 0.05
+  _ghostMaterial: {fileID: 0}
   isAttacking: 0
   isDie: 0
   isDamaged: 0
+  isJump: 0
 --- !u!114 &4301410833529298318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,10 +323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 2
   attackAngle: 180
-  attackRangeSprite: {fileID: 0}
-  AttackDamage: 5
   coolTime: 0.5
-  swordSprite: {fileID: 0}
+  swordItemData: {fileID: 0}
 --- !u!114 &8068333873629394959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +349,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d20484e4efce9a42b180d8382237d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1115705369917960771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569323289389502377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4488a933468db24db3a76d97731031d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  bowItemData: {fileID: 11400000, guid: 4033e78f2200aff4abcf4a574ce8651f, type: 2}
+  arrowItemData: {fileID: 11400000, guid: bc9d8786f499351458bc839e3222199d, type: 2}
+  arrowPrefab: {fileID: 5181542210344588901, guid: 254535f323a7baa4eabf1332c94f3444, type: 3}
+  arrowSpawnPoint: {fileID: 0}
+  attackCooldown: 1
+  arrowSpeed: 3
 --- !u!1 &6606840910316503988
 GameObject:
   m_ObjectHideFlags: 0

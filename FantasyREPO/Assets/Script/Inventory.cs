@@ -91,6 +91,12 @@ public class Inventory : MonoBehaviour
         AddItemByID("IronSword_001");
         AddItemByID("IronAxe_001");
         AddItemByID("IronPick_001");
+
+        for (int i = 0; i < 30; i++)
+        {
+            AddItemByID("Arrow_001");
+        }
+        AddItemByID("WoodenBow_001");
     }
 
     private void LoadAllItemDataToDatabase()
@@ -357,6 +363,41 @@ private void Attach(ItemSlot[] arr)
         foreach (var s in quickSlots) if (s.itemData == itemData) sum += s.count;
         foreach (var s in bagSlots) if (s.itemData == itemData) sum += s.count;
         return sum >= need;
+    }
+
+    /// <param name="itemData">수량을 확인할 ItemData</param>
+    /// <returns>총 아이템 개수</returns>
+    public int GetItemQuantity(ItemData itemData)
+    {
+        if (itemData == null) return 0;
+
+        int totalCount = 0;
+
+        // 퀵슬롯에서 개수 확인
+        if (quickSlots != null)
+        {
+            foreach (var s in quickSlots)
+            {
+                if (s.itemData == itemData)
+                {
+                    totalCount += s.count;
+                }
+            }
+        }
+
+        // 가방 슬롯에서 개수 확인
+        if (bagSlots != null)
+        {
+            foreach (var s in bagSlots)
+            {
+                if (s.itemData == itemData)
+                {
+                    totalCount += s.count;
+                }
+            }
+        }
+
+        return totalCount;
     }
     
     public void RemoveItem(ItemData itemData, int count)
