@@ -132,8 +132,29 @@ public class NPCQuestGiver : MonoBehaviour
     }
 
     /* ---------- Trigger ---------- */
-    void OnTriggerEnter2D(Collider2D other) { if (IsPlayer(other)) playerInRange = true; }
-    void OnTriggerExit2D(Collider2D other) { if (IsPlayer(other)) playerInRange = false; }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (IsPlayer(other))
+            playerInRange = true;
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (!IsPlayer(other)) return;
+
+        playerInRange = false;
+
+        // 플레이어가 NPC의 trigger에서 나가면 대화를 종료함
+        if (dialogueUI && dialogueUI.IsOpen)
+        {
+            dialogueUI.Close(); // 대화창 닫기
+        }
+
+        // 팝업도 끈다
+        SafeHidePopups();
+
+        // 아이콘 상태 갱신
+        UpdateIconState();
+    }
 
     bool IsPlayer(Collider2D c)
     {
@@ -188,7 +209,7 @@ public class NPCQuestGiver : MonoBehaviour
         canvas.renderMode = RenderMode.WorldSpace;
         canvas.overrideSorting = true;
         canvas.sortingLayerName = "Default";
-        canvas.sortingOrder = 5000;
+        // canvas.sortingOrder = 5000; // 이걸 설정하면 플레이어의 인벤토리가 퀘스트 말풍선에 가려짐
 
         var rt = canvas.GetComponent<RectTransform>();
         if (rt)

@@ -29,7 +29,7 @@ public class HeadIconsController : MonoBehaviour
         canvas.renderMode = RenderMode.WorldSpace;
         canvas.overrideSorting = true;
         if (string.IsNullOrEmpty(canvas.sortingLayerName)) canvas.sortingLayerName = "UI";
-        canvas.sortingOrder = 200;
+        // canvas.sortingOrder = 200; // 이걸 설정하면 플레이어 인벤토리가 가려짐
         var rt = canvas.GetComponent<RectTransform>();
         rt.localScale = Vector3.one * 0.01f;
         if (rt.sizeDelta == Vector2.zero) rt.sizeDelta = new Vector2(96, 96);
