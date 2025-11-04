@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// Assets/Scripts/Quest/NPCTalkTarget.cs
+using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class NPCTalkTarget : MonoBehaviour
@@ -6,58 +7,60 @@ public class NPCTalkTarget : MonoBehaviour
     [Header("이 NPC의 Talk Key (Quest.goal.targetKey와 일치)")]
     public string talkKey = "VillageChief";
 
-    bool playerInRange;
+    [Header("대화 대상(촌장 상호작용 스크립트)")]
+    public VillageChiefInteraction chief;   // 인스펙터에서 드래그(없으면 자동 탐색)
 
-    // ✅ Player / PlayerCollider 둘 다 허용
-    bool IsPlayerTag(Collider2D col)
+    private bool playerInRange;
+
+    private void Reset()
     {
-        if (col == null) return false;
-
-        // 자기 자신 태그
-        if (col.CompareTag("Player") || col.CompareTag("PlayerCollider"))
-            return true;
-
-        // Rigidbody2D 붙은 부모 오브젝트 검사
-        var rb = col.attachedRigidbody ? col.attachedRigidbody.gameObject : null;
-        if (rb != null && (rb.CompareTag("Player") || rb.CompareTag("PlayerCollider")))
-            return true;
-
-        // 루트(최상위) 검사
-        if (col.transform.root.CompareTag("Player") || col.transform.root.CompareTag("PlayerCollider"))
-            return true;
-
-        return false;
+        var col = GetComponent<Collider2D>();
+        if (col) col.isTrigger = true;
+        if (!chief) chief = GetComponent<VillageChiefInteraction>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void Awake()
     {
-        if (IsPlayerTag(other))
-        {
-            playerInRange = true;
-            Debug.Log($"[TalkTarget] ENTER by {other.name} (tag={other.tag})");
-        }
+        var col = GetComponent<Collider2D>();
+        if (col) col.isTrigger = true;
+        if (!chief) chief = GetComponent<VillageChiefInteraction>();
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (IsPlayerTag(other))
-        {
-            playerInRange = false;
-            Debug.Log($"[TalkTarget] EXIT by {other.name} (tag={other.tag})");
-        }
+        if (IsPlayer(other)) playerInRange = true;
+        Debug.Log("[TalkTarget] ENTER by " + other.tag);
     }
 
-    void Update()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.F))
+        if (IsPlayer(other)) playerInRange = false;
+        Debug.Log("[TalkTarget] EXIT by " + other.tag);
+    }
+
+    private bool IsPlayer(Collider2D c)
+    {
+        if (!c) return false;
+        if (c.CompareTag("Player") || c.CompareTag("PlayerCollider")) return true;
+        var root = c.attachedRigidbody ? c.attachedRigidbody.gameObject : c.transform.root?.gameObject;
+        return root && (root.CompareTag("Player") || root.CompareTag("PlayerCollider"));
+    }
+
+    private void Update()
+    {
+        // ⛔ 대화창 열려 있으면 F 입력을 이 스크립트가 절대 처리하지 않게 함
+        if (chief && chief.dialogueUI && chief.dialogueUI.IsOpen) return;
+
+        // (거리 체크 쓰는 중이라면)
+        var player = GameObject.FindWithTag("Player");
+        if (!player) return;
+        float dist = Vector2.Distance(player.transform.position, transform.position);
+        bool canInteract = dist < 1.2f;
+
+        if (canInteract && Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log($"[TalkTarget] F pressed, talkKey={talkKey}");
-            if (QuestManager.Instance == null)
-            {
-                Debug.LogWarning("[TalkTarget] QuestManager 없음");
-                return;
-            }
-            QuestManager.Instance.UpdateGoal(talkKey);
+            Debug.Log($"[TalkTarget] F pressed, dist={dist:F2}, talkKey={talkKey}");
+            chief?.Interact();
         }
     }
 }

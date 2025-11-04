@@ -1,4 +1,4 @@
-﻿// Assets/Scripts/Quest/NPCQuestGiver.cs
+// Assets/Scripts/Quest/NPCQuestGiver.cs
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,16 +22,25 @@ public class NPCQuestGiver : MonoBehaviour
     [TextArea] public string[] completeLines = { "수고했어! 보상은 바로 지급할게." };
     [TextArea] public string[] greetLines = { "안녕! 오늘도 좋은 하루야." };
 
-    // 🔵 Popup 옵션
     [Header("Popup (Speech)")]
     public bool usePopup = true;
-    [Tooltip("수락 제안 직전에 한번 띄움")]
     public string offerPopup = "마을에 온 걸 환영해!";
     public string acceptedPopup = "고마워, 큰 도움이 돼!";
     public string progressPopup = "촌장에게 다녀와줘!";
     public string completePopup = "오! 벌써 다녀왔구나!";
     public float popupDuration = 1.4f;
     public Vector2 popupOffset = new Vector2(0f, 1.6f);
+
+    [Header("Starter Tools (ItemData)")]
+    public ItemData axeItem;
+    public ItemData pickaxeItem;
+    public ItemData shovelItem;
+
+    [Header("After Tutorial")]
+    public string nextMainQuestId = "Q101_MainStart";
+
+    // ⚠ Inventory는 정적이 아니라 인스턴스 참조로 사용
+    [SerializeField] private Inventory inventory;
 
     bool playerInRange;
 
@@ -40,10 +49,14 @@ public class NPCQuestGiver : MonoBehaviour
         if (!iconSpeech) iconSpeech = transform.Find("HeadCanvas/Icon1")?.GetComponent<Image>();
         if (!iconCheck) iconCheck = transform.Find("HeadCanvas/Icon2")?.GetComponent<Image>();
         if (!dialogueUI) dialogueUI = FindObjectOfType<DialogueUI>(true);
+        if (!inventory) inventory = FindObjectOfType<Inventory>(true);
 
         SetupCanvas(iconSpeech);
         SetupCanvas(iconCheck);
         SetupHeadIconsLayout();
+
+        var col = GetComponent<Collider2D>();
+        if (col) col.isTrigger = true;
     }
 
     void OnEnable()
@@ -54,8 +67,7 @@ public class NPCQuestGiver : MonoBehaviour
         if (QuestManager.Instance != null)
             QuestManager.Instance.OnQuestCompleted += OnQuestCompleted;
 
-        // QuestManager 초기화/로드가 끝난 뒤 아이콘 반영 (하단 한 번 딜레이)
-        Invoke(nameof(UpdateIconState), 0.1f);
+        Invoke(nameof(UpdateIconState), 0.05f);
     }
 
     void OnDisable()
@@ -63,41 +75,43 @@ public class NPCQuestGiver : MonoBehaviour
         if (QuestManager.Instance != null)
             QuestManager.Instance.OnQuestCompleted -= OnQuestCompleted;
 
-        CancelInvoke();                 // 남은 Invoke 정리
-        SafeHidePopups();               // 혹시 남아있을 팝업 정리
+        CancelInvoke();
+        SafeHidePopups();
     }
 
     void Update()
     {
-        // 대화창이 열려 있을 땐 입력은 DialogueUI가 처리
         if (dialogueUI && dialogueUI.IsOpen) return;
-
         if (!playerInRange || !Input.GetKeyDown(KeyCode.F)) return;
 
         if (!dialogueUI) dialogueUI = FindObjectOfType<DialogueUI>(true);
+        if (!inventory) inventory = FindObjectOfType<Inventory>(true);
+
         var qm = QuestManager.Instance;
         if (qm == null || quest == null || dialogueUI == null) return;
 
-        // 대화 시작 직전: 떠 있는 팝업은 전부 정리 (하얀 화면/겹침 방지)
         SafeHidePopups();
 
-        // 1) 아직 수락 전 → 안내문 → 수락/거절
+        // 1) 수락 전
         if (!qm.HasQuest(quest) && !qm.IsCompleted(quest))
         {
-            Popup(offerPopup); // ✅ 제안 직전 한 번
+            Popup(offerPopup);
             dialogueUI.ShowQuestChoice(
                 offerLines,
                 accept: () =>
                 {
                     qm.AddQuest(quest);
-                    SafeHidePopups();             // 수락 시 팝업 정리
-                    Popup(acceptedPopup);         // ✅ 수락 직후
+                    SafeHidePopups();
+                    Popup(acceptedPopup);
                     dialogueUI.ShowLines(acceptedLines);
                     UpdateIconState();
+                    Debug.Log($"[Angel] AddQuest: {quest.questId} ({quest.title})");
+
+
                 },
                 decline: () =>
                 {
-                    SafeHidePopups();             // 거절 시 팝업 정리
+                    SafeHidePopups();
                     if (declineLines != null && declineLines.Length > 0)
                         dialogueUI.ShowLines(declineLines);
                     UpdateIconState();
@@ -106,28 +120,29 @@ public class NPCQuestGiver : MonoBehaviour
             return;
         }
 
-        // 2) 완료되어 체크아이콘 보여줄 상태 → 완료 대사 후 확인 처리
+        // 2) 완료 후 확인 대기(V) 상태
         if (qm.ShouldShowCompleteIcon(quest))
         {
-            Popup(completePopup); // ✅ 완료로 돌아왔을 때
+            Popup(completePopup);
             dialogueUI.ShowLines(completeLines, () =>
             {
-                qm.AcknowledgeCompletion(quest);   // 체크 끄기/보상 마무리 등
+                qm.AcknowledgeCompletion(quest);
                 SafeHidePopups();
                 UpdateIconState();
+                OnComplete_StartMainQuest();
             });
             return;
         }
 
-        // 3) 진행 중(아직 조건 미달)
+        // 3) 진행 중
         if (qm.HasQuest(quest) && !qm.IsCompleted(quest))
         {
-            Popup(progressPopup); // ✅ 진행 안내
+            Popup(progressPopup);
             dialogueUI.ShowLines(inProgressLines);
             return;
         }
 
-        // 4) 이미 영구 완료 상태 or 그 외
+        // 4) 그 외
         dialogueUI.ShowLines(greetLines);
     }
 
@@ -164,14 +179,15 @@ public class NPCQuestGiver : MonoBehaviour
         return root && (root.CompareTag("Player") || root.CompareTag("PlayerCollider"));
     }
 
-    /* ---------- Quest Event ---------- */
     void OnQuestCompleted(Quest completedQuest)
     {
         if (quest == null || completedQuest != quest) return;
-        UpdateIconState(); // 완료 직후 체크가 켜지도록
+        UpdateIconState();
     }
 
-    /* ---------- UI State ---------- */
+    // QuestManager가 호출
+    public void RefreshIcons() => UpdateIconState();
+
     void UpdateIconState()
     {
         var qm = QuestManager.Instance;
@@ -194,7 +210,7 @@ public class NPCQuestGiver : MonoBehaviour
     {
         if (!img) return;
         img.raycastTarget = false;
-        img.color = new Color(1, 1, 1, 1);
+        img.color = Color.white;
         img.enabled = on;
         img.gameObject.SetActive(on);
     }
@@ -239,15 +255,38 @@ public class NPCQuestGiver : MonoBehaviour
         }
     }
 
-    // 🔵 팝업 유틸
+    // 팝업 유틸
     void Popup(string msg)
     {
         if (!usePopup || string.IsNullOrWhiteSpace(msg)) return;
         SpeechPopupService.I?.Show(transform, msg, popupDuration, popupOffset);
     }
 
-    void SafeHidePopups()
+    void SafeHidePopups() => SpeechPopupService.I?.HideAllActive();
+
+    /* ===== 튜토리얼 훅 ===== */
+    public void OnAccepted_GiveStarterTools()
     {
-        SpeechPopupService.I?.HideAllActive();
+        if (inventory)
+        {
+            if (axeItem) inventory.AddItem(axeItem, 1);
+            if (pickaxeItem) inventory.AddItem(pickaxeItem, 1);
+            if (shovelItem) inventory.AddItem(shovelItem, 1);
+        }
+        else
+        {
+            Debug.LogWarning("[NPCQuestGiver] Inventory 참조 없음: 도구 지급 생략");
+        }
+
+        // DialogueUI.Hint가 없으므로 TutorialUI 이용
+        TutorialUI.Instance?.Show("도구 지급 완료! 스페이스바로 채집/채광/수집");
+    }
+
+    public void OnComplete_StartMainQuest()
+    {
+        if (!string.IsNullOrEmpty(nextMainQuestId))
+            QuestManager.Instance?.StartQuest(nextMainQuestId);
+
+        TutorialUI.Instance?.Show("튜토리얼 완료! 메인 퀘스트가 시작됩니다.");
     }
 }

@@ -1,3 +1,4 @@
+﻿// Assets/Scripts/PlayerFSM/PlayerMove.cs
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections;
@@ -23,16 +24,13 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private KeyCode jumpKey = KeyCode.C;
     [SerializeField] private float _useJumpST = 10f;
 
-    // --- 잔상 효과 추가 ---
     [Header("잔상 효과")]
-    [SerializeField] private GameObject _playerGhostPrefab; // 잔상 프리팹
-    [SerializeField] private float _ghostSpawnInterval = 0.05f; // 잔상 생성 간격
-    [SerializeField] private Material _ghostMaterial; // 잔상에 적용할 Material (없으면 SpriteRenderer에 설정된 기본 Material 사용)
+    [SerializeField] private GameObject _playerGhostPrefab;
+    [SerializeField] private float _ghostSpawnInterval = 0.05f;
+    [SerializeField] private Material _ghostMaterial;
 
-    private SpriteRenderer _playerSpriteRenderer; // 플레이어의 SpriteRenderer
-    
-    private Coroutine _ghostRoutine; // 잔상 생성 코루틴 참조
-    // --- 잔상 효과 추가 끝 ---
+    private SpriteRenderer _playerSpriteRenderer;
+    private Coroutine _ghostRoutine;
 
     private bool _isDashing = false;
     private float _dashTimer = 0f;
@@ -65,11 +63,14 @@ public class PlayerMove : MonoBehaviour
 
     private GameManager _playerST;
 
+    // ★ T001_Move 진행 신호를 한 번만 쏘기 위한 플래그
+    private bool _sentMoveGoal = false;
+
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _playerSpriteRenderer = GetComponent<SpriteRenderer>(); // SpriteRenderer 참조 추가
+        _playerSpriteRenderer = GetComponent<SpriteRenderer>();
         _playerST = FindObjectOfType<GameManager>();
 
         if (tilemap != null)
@@ -87,25 +88,23 @@ public class PlayerMove : MonoBehaviour
     {
         if (_dashCooldownTimer > 0) _dashCooldownTimer -= Time.deltaTime;
 
-        // 대쉬 중일 때
+        // 대쉬 중
         if (_isDashing)
         {
             _dashTimer -= Time.deltaTime;
             if (_dashTimer <= 0)
             {
                 _isDashing = false;
-                if (_ghostRoutine != null) // 대쉬 종료 시 잔상 생성 코루틴 중지
+                if (_ghostRoutine != null)
                 {
                     StopCoroutine(_ghostRoutine);
                     _ghostRoutine = null;
                 }
             }
             return;
-
         }
 
-        // 1. 점프 입력 감지
-        // 점프, 공격, 사망, 피격 중이 아닐 때만 점프 가능
+        // 점프 입력
         if (Input.GetKeyDown(jumpKey) && !isJump && !isAttacking && !isDie && !isDamaged)
         {
             if (_playerST.ST > _useJumpST)
@@ -114,23 +113,31 @@ public class PlayerMove : MonoBehaviour
                 _playerST.ST -= _useJumpST;
                 Debug.Log("점프 스태미나 소모됨.");
             }
-            
         }
 
-        // 2. 점프 중일 때의 처리
+        // 점프 중에는 이동/대쉬 입력 받지 않음
         if (isJump)
         {
-            // 점프 중에는 이동 및 대쉬 입력을 받지 않음
             _input = Vector2.zero;
             _animator.SetFloat(_horizontal, 0);
             _animator.SetFloat(_vertical, 0);
-            return; // Update의 나머지 부분(이동/대쉬 입력)을 건너뜀
+            return;
         }
 
-        // 일반 이동 입력 (기존 로직)
+        // ─────────────────────────────────────────────
+        // 이동 입력
         _input.Set(InputManager.Movement.x, InputManager.Movement.y);
         _animator.SetFloat(_horizontal, _input.x);
         _animator.SetFloat(_vertical, _input.y);
+
+        // ★ 첫 이동 순간에만 퀘스트 진행(Goal Key = "PlayerMove")
+        if (!_sentMoveGoal && _input.sqrMagnitude > 0.0001f)
+        {
+            _sentMoveGoal = true;
+            QuestManager.Instance?.UpdateGoal("PlayerMove");
+            // TutorialUI.Instance?.Show("마을장에게 말을 걸어보자 (F)"); // 필요 시 다음 힌트
+        }
+        // ─────────────────────────────────────────────
 
         if (_input != Vector2.zero)
         {
@@ -139,32 +146,29 @@ public class PlayerMove : MonoBehaviour
             _lastDirection = _input.normalized;
         }
 
-        // 더블 탭 대쉬 입력 감지
-        
+        // 더블 탭 대쉬
         if (_dashCooldownTimer <= 0 && !isAttacking && !isDie && !isDamaged)
         {
             if (_playerST.ST > _useDashST)
             {
-                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && _playerST.ST > _useDashST)
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
                 {
                     HandleDoubleTap(KeyCode.W, Vector2.up);
-                    
                 }
-                else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow) && _playerST.ST > _useDashST)
+                else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
                 {
                     HandleDoubleTap(KeyCode.S, Vector2.down);
                 }
-                else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow) && _playerST.ST > _useDashST)
+                else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     HandleDoubleTap(KeyCode.A, Vector2.left);
                 }
-                else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) && _playerST.ST > _useDashST)
+                else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     HandleDoubleTap(KeyCode.D, Vector2.right);
-                }    
+                }
             }
         }
-        
     }
 
     private void HandleDoubleTap(KeyCode key, Vector2 direction)
@@ -194,35 +198,28 @@ public class PlayerMove : MonoBehaviour
         _playerST.ST -= _useDashST;
         Debug.Log("대시 스테미나 소모됨.");
 
-        // 잔상 생성 코루틴 시작
         if (_playerGhostPrefab != null && _ghostRoutine == null)
-        {
             _ghostRoutine = StartCoroutine(SpawnGhostsRoutine());
-        }
     }
+
     private void StartJump()
     {
         isJump = true;
-        _animator.SetTrigger("Jump"); // 요청하신 "Jump" 트리거 발동
-
-        // 점프 시 속도를 0으로 만듭니다 (FixedUpdate에서도 처리하지만, 즉각적인 반응을 위해 여기서도 호출)
+        _animator.SetTrigger("Jump");
         SetVelocity(Vector2.zero);
     }
-    public void OnJumpAnimationEnd()
-    {
-        isJump = false;
-    }
-    // 잔상 생성 코루틴
+
+    public void OnJumpAnimationEnd() => isJump = false;
+
     private IEnumerator SpawnGhostsRoutine()
     {
-        while (_isDashing) // 대쉬 중일 때만 반복
+        while (_isDashing)
         {
             SpawnGhost();
             yield return new WaitForSeconds(_ghostSpawnInterval);
         }
     }
 
-    // 잔상 생성 함수
     private void SpawnGhost()
     {
         if (_playerGhostPrefab == null || _playerSpriteRenderer == null)
@@ -236,7 +233,6 @@ public class PlayerMove : MonoBehaviour
 
         if (ghost != null)
         {
-            // 현재 플레이어의 시각적 정보를 잔상에 복사
             ghost.SetupGhost(
                 _playerSpriteRenderer.sprite,
                 transform.position,
@@ -244,7 +240,7 @@ public class PlayerMove : MonoBehaviour
                 transform.localScale,
                 _playerSpriteRenderer.sortingOrder,
                 _ghostMaterial,
-                _playerSpriteRenderer.flipX // --- 변경: flipX 값 추가 ---
+                _playerSpriteRenderer.flipX
             );
         }
         else
@@ -262,14 +258,12 @@ public class PlayerMove : MonoBehaviour
             return;
         }
 
-        // --- 변경 ---
-        // 점프, 전투, 피격, 사망 중에는 이동 정지
+        // 점프/전투/피격/사망 시 이동 정지
         if (isAttacking || isDie || isDamaged || isJump)
         {
             SetVelocity(Vector2.zero);
             return;
         }
-        // --- 변경 끝 ---
 
         float speed = (Input.GetKey(runKey) && GameManager.Instance.ST > 0f) ? _runSpeed : _moveSpeed;
 

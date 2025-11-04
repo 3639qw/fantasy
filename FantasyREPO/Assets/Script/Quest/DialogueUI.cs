@@ -59,7 +59,17 @@ public class DialogueUI : MonoBehaviour
                 index++;
                 if (index >= (lines?.Length ?? 0))
                 {
-                    onFinished?.Invoke();
+                    // 기존: onFinished?.Invoke(); if (!waitingChoice) Close();
+                    // 수정본:
+                    var cb = onFinished;
+                    onFinished = null;   // 중복 호출 방지
+                    cb?.Invoke();
+
+                    // 콜백에서 ShowLines로 새 대사를 띄웠다면
+                    // (panel은 여전히 켜져 있고, index가 현재 lines 범위 안)
+                    if (IsOpen && index < (lines?.Length ?? 0))
+                        return;
+
                     if (!waitingChoice) Close();
                 }
                 else
@@ -67,6 +77,7 @@ public class DialogueUI : MonoBehaviour
                     Render();
                 }
             }
+
             if (Input.GetKeyDown(KeyCode.Escape)) Close();
         }
         else
