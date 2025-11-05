@@ -1,17 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using GameServer.Models;
 using GameServer.Data;
+using BCrypt.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// DbContext ���
+// DbContext 등록
 builder.Services.AddDbContext<GameDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(8, 0, 42)) // ���� MySQL ����
+        new MySqlServerVersion(new Version(8, 0, 42))
     ));
 
-// OpenAPI ���� (���� ȯ�濡����)
 builder.Services.AddOpenApi();
 
 builder.Services.AddCors(options =>
@@ -26,16 +26,15 @@ var app = builder.Build();
 
 app.UseCors("AllowAll");
 
-// OpenAPI ����
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
-// HTTPS ����
 app.UseHttpsRedirection();
 
-// �α��� API
+
+// 로그인
 app.MapPost("/api/login", async (GameDbContext db, LoginRequest req) =>
 {
     var user = await db.UserAccount
@@ -43,7 +42,13 @@ app.MapPost("/api/login", async (GameDbContext db, LoginRequest req) =>
 
     if (user == null)
     {
-        return Results.Unauthorized(); // 401 Unauthorized
+        return Results.Unauthorized();
+    }
+
+    bool isPasswordValid = BCrypt.Net.BCrypt.Verify(req.Password, user.Password);
+    if (!isPasswordValid)
+    {
+        return Results.Unauthorized();
     }
 
     var response = new LoginResponse
@@ -52,9 +57,11 @@ app.MapPost("/api/login", async (GameDbContext db, LoginRequest req) =>
         Nickname = user.Nickname,
     };
 
-    return Results.Ok(response); // 200 OK + JSON
+    return Results.Ok(response);
 });
 
+
+// 회원가입
 app.MapPost("/api/register", async (GameDbContext db, RegisterRequest req) =>
 {
     var existingUser = await db.UserAccount.FirstOrDefaultAsync(u => u.ID == req.ID);
@@ -63,10 +70,13 @@ app.MapPost("/api/register", async (GameDbContext db, RegisterRequest req) =>
         return Results.Conflict(new { message = "This ID is already in use" });
     }
 
+    // brypt hash
+    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(req.Password);
+
     var newUser = new UserAccount
     {
         ID = req.ID,
-        Password = req.Password,
+        Password = hashedPassword, // <= 비크립트 해시 변경점
         Email = req.Email,
         Name = req.Name,
         Nickname = req.Nickname

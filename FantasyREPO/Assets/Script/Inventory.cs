@@ -4,6 +4,8 @@ using TMPro;
 using System.IO;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 저장을 위한 데이터 구조 (ItemID를 저장하도록 변경)
@@ -27,13 +29,13 @@ public class InventoryData
     public List<SerializableSlotData> quickSlotsData = new List<SerializableSlotData>();
     public List<SerializableSlotData> bagSlotsData = new List<SerializableSlotData>();
 }
-
 // ─────────────────────────────────────────────────────────────────────────────
 // 인벤토리 메인 클래스
 // ─────────────────────────────────────────────────────────────────────────────
 public class Inventory : MonoBehaviour
 {
     public static Inventory Instance { get; private set; }
+    private Dictionary<string, List<Transform>> _uiNameIndex;
 
     [System.Serializable]
     public class ItemSlot
@@ -56,6 +58,11 @@ public class Inventory : MonoBehaviour
     [SerializeField, Range(1, 10)] private int current = 1;
     public int states => current;
 
+    [Header("Auto-Bind Override (Optional)")]
+    [SerializeField] private Transform quickRootOverride; // 비워두면 Canvas 전체에서 검색
+    [SerializeField] private Transform bagRootOverride;   // 비워두면 Canvas 전체에서 검색
+    [SerializeField] private string bagPanelAutoName = "bag";
+
     private string savePath;
     // 아이템 ID를 키로 사용하는 아이템 데이터베이스
     private Dictionary<string, ItemData> _itemDatabase = new Dictionary<string, ItemData>();
@@ -77,6 +84,8 @@ public class Inventory : MonoBehaviour
         // 게임 시작 시 모든 ItemData를 불러와 데이터베이스를 구축
         LoadAllItemDataToDatabase();
 
+        TryAutoBindUIFromScene();
+        BindBagPanelByName(null); 
         AutoAttachDragScripts();
         InitSlotVisuals();
     }
@@ -291,22 +300,25 @@ public class Inventory : MonoBehaviour
     public void RefreshSlot(ItemSlot s)
     {
         if (s == null || s.icon == null) return;
-        if (s.count <= 0) s.itemData = null; // 수량이 0 이하면 데이터도 비움
+        if (s.count <= 0) s.itemData = null;
 
-        if (s.itemData != null) // 데이터가 있는 슬롯
+        if (s.itemData != null)
         {
             s.icon.sprite = s.itemData.itemIcon;
             s.icon.color = Color.white;
-            s.countLabel.text = s.count > 1 ? $"×{s.count}" : string.Empty;
+            if (s.countLabel != null)
+                s.countLabel.text = s.count > 1 ? $"×{s.count}" : string.Empty;
         }
-        else // 빈 슬롯
+        else
         {
             s.icon.sprite = emptySprite;
             s.icon.color = new Color(1, 1, 1, (emptySprite == null ? 0 : 1));
-            s.countLabel.text = string.Empty;
+            if (s.countLabel != null)
+                s.countLabel.text = string.Empty;
             s.count = 0;
         }
     }
+
 
     private void SetAlpha(Image img, bool selected)
     {
@@ -418,5 +430,279 @@ private void Attach(ItemSlot[] arr)
         }
         CountDown(quickSlots);
         CountDown(bagSlots);
+    }
+
+    void OnEnable()  { SceneManager.sceneLoaded += _OnSceneLoaded; }
+    void OnDisable() { SceneManager.sceneLoaded -= _OnSceneLoaded; }
+    private void _OnSceneLoaded(Scene s, LoadSceneMode m)
+    {
+        TryAutoBindUIFromScene();
+        BindBagPanelByName(null);
+        AutoAttachDragScripts();
+        InitSlotVisuals();
+    }
+
+    private bool _rebindDeferred = false;
+
+    private void TryAutoBindUIFromScene()
+    {
+        EnsureSlotsAllocated(quickSlots);
+        EnsureSlotsAllocated(bagSlots);
+
+        // 전역 UI 인덱스 새로 구성 (씬 로드시 UI가 바뀔 수 있으니 매번 빌드 권장)
+        BuildUINameIndex();
+
+        int qIconBound = 0, qCountBound = 0;
+        int bIconBound = 0, bCountBound = 0;
+
+        // (옵션) 인스펙터 오버라이드 루트
+        Transform quickRoot = quickRootOverride ? quickRootOverride : null;
+        Transform bagRoot   = bagRootOverride   ? bagRootOverride   : null;
+
+        // ── Quick: Item1..Item10 + ItemCount1..ItemCount10 ──
+        for (int i = 0; i < quickSlots.Length; i++)
+        {
+            string iconName  = $"Item{i + 1}";
+            string countName = $"ItemCount{i + 1}";
+
+            var iconTr  = FindByNameFromIndex(iconName,  quickRoot);
+            var countTr = FindByNameFromIndex(countName, quickRoot);
+
+            var img = iconTr  ? (iconTr.GetComponent<Image>() ?? iconTr.GetComponentInChildren<Image>(true)) : null;
+            var txt = countTr ? (countTr.GetComponent<TMP_Text>() ?? countTr.GetComponentInChildren<TMP_Text>(true)) : null;
+            if (txt == null && iconTr) txt = iconTr.GetComponentInChildren<TMP_Text>(true);
+
+            if (quickSlots[i] == null) quickSlots[i] = new ItemSlot();
+            quickSlots[i].icon = img;        if (img) qIconBound++;
+            quickSlots[i].countLabel = txt;  if (txt) qCountBound++;
+        }
+
+        // ── Bag: slot1..slot50 + slotCount1..slotCount50 ──
+        for (int i = 0; i < bagSlots.Length; i++)
+        {
+            string iconName  = $"slot{i + 1}";
+            string countName = $"slotCount{i + 1}";
+
+            var iconTr  = FindByNameFromIndex(iconName,  bagRoot);
+            var countTr = FindByNameFromIndex(countName, bagRoot);
+
+            var img = iconTr  ? (iconTr.GetComponent<Image>() ?? iconTr.GetComponentInChildren<Image>(true)) : null;
+            var txt = countTr ? (countTr.GetComponent<TMP_Text>() ?? countTr.GetComponentInChildren<TMP_Text>(true)) : null;
+            if (txt == null && iconTr) txt = iconTr.GetComponentInChildren<TMP_Text>(true);
+
+            if (bagSlots[i] == null) bagSlots[i] = new ItemSlot();
+            bagSlots[i].icon = img;          if (img) bIconBound++;
+            bagSlots[i].countLabel = txt;    if (txt) bCountBound++;
+        }
+        BindBagPanelByName(bagRoot);
+        
+        Debug.Log($"[Inventory][AutoBindByName-GLOBAL] Quick icons {qIconBound}/10, counts {qCountBound}/10 | " +
+                $"Bag icons {bIconBound}/50, counts {bCountBound}/50");
+
+        // UI가 런타임에 늦게 생성될 경우 한 프레임 뒤 재시도
+        if ((qIconBound + bIconBound) == 0 && !_rebindDeferred)
+        {
+            _rebindDeferred = true;
+            StartCoroutine(_RebindNextFrame());
+        }
+    }
+    private System.Collections.IEnumerator _RebindNextFrame()
+    {
+        yield return null; // 한 프레임 대기
+        TryAutoBindUIFromScene();
+        AutoAttachDragScripts();
+        InitSlotVisuals();
+    }
+
+    // 이름(대소문자 무시)으로 전체 하위에서 1개 찾기
+    // 이름(대소문자 무시)으로 한 루트 하위 재귀 탐색 (보조용)
+    private Transform DeepFindByName(Transform root, string targetName)
+    {
+        if (!root || string.IsNullOrEmpty(targetName)) return null;
+        string tn = targetName.ToLowerInvariant();
+
+        foreach (Transform c in root)
+            if (c && c.name.ToLowerInvariant() == tn)
+                return c;
+
+        foreach (Transform c in root)
+        {
+            var hit = DeepFindByName(c, targetName);
+            if (hit) return hit;
+        }
+        return null;
+    }
+
+    private Transform DeepFindByNameAnyRoot(string targetName, Transform preferredRoot = null)
+    {
+        if (preferredRoot)
+        {
+            var hit = DeepFindByName(preferredRoot, targetName);
+            if (hit) return hit;
+        }
+
+        var scene = SceneManager.GetActiveScene();
+        var roots = scene.GetRootGameObjects();
+        foreach (var go in roots)
+        {
+            var hit = DeepFindByName(go.transform, targetName);
+            if (hit) return hit;
+        }
+        return null;
+    }
+
+    private Transform FindByNameFromIndex(string name, Transform preferRoot = null)
+    {
+        if (_uiNameIndex == null) BuildUINameIndex();
+
+        var key = name.ToLowerInvariant();
+
+        // 우선: 오버라이드 루트가 있으면 그 안에서 먼저 시도
+        if (preferRoot != null)
+        {
+            var tr = DeepFindByName(preferRoot, name);
+            if (tr) return tr;
+        }
+
+        // 전역 인덱스에서 첫 번째 항목 리턴
+        if (_uiNameIndex.TryGetValue(key, out var list) && list != null && list.Count > 0)
+            return list[0];
+
+        return null;
+    }
+
+    private void BuildUINameIndex()
+    {
+        _uiNameIndex = new Dictionary<string, List<Transform>>(256);
+        // 비활성 포함 + DontDestroyOnLoad 포함
+        var canvases = Resources.FindObjectsOfTypeAll<Canvas>();
+        foreach (var cv in canvases)
+        {
+            if (cv == null) continue;
+            var go = cv.gameObject;
+            if (!IsSceneObject(go)) continue; // 에셋 제외
+
+            // 캔버스 하위 전체 수집(비활성 포함)
+            var transforms = cv.GetComponentsInChildren<Transform>(true);
+            foreach (var t in transforms)
+            {
+                if (t == null) continue;
+                var key = t.name.ToLowerInvariant();
+                if (!_uiNameIndex.TryGetValue(key, out var list))
+                {
+                    list = new List<Transform>(2);
+                    _uiNameIndex[key] = list;
+                }
+                list.Add(t);
+            }
+        }
+    }
+
+    private bool IsSceneObject(GameObject go)
+    {
+        // Prefab Asset 같은 에셋 제외, 씬 객체 또는 DontDestroyOnLoad만 포함
+        return go != null && go.scene.IsValid();
+    }
+
+    private void EnsureSlotsAllocated(ItemSlot[] arr)
+    {
+        for (int i = 0; i < arr.Length; i++)
+            if (arr[i] == null) arr[i] = new ItemSlot();
+    }
+
+    private Canvas FindActiveCanvas()
+    {
+    #if UNITY_2023_1_OR_NEWER
+        var canvases = FindObjectsByType<Canvas>(FindObjectsSortMode.None);
+    #else
+        var canvases = GameObject.FindObjectsOfType<Canvas>();
+    #endif
+        return canvases.FirstOrDefault(c => c.isActiveAndEnabled);
+    }
+
+    private Transform DeepFind(Transform root, string path)
+    {
+        // "A/B/C" 경로 지원 + 계층 전체 재귀 탐색
+        if (root == null) return null;
+        var parts = path.Split('/');
+        Transform cur = root;
+        foreach (var p in parts)
+        {
+            cur = cur.GetComponentsInChildren<Transform>(true)
+                    .FirstOrDefault(t => t != null && string.Equals(t.name, p, System.StringComparison.OrdinalIgnoreCase));
+            if (cur == null) return null;
+        }
+        return cur;
+    }
+
+    // prefixRegex: "^item\\s*(\\d+)" 또는 "^slot\\s*(\\d+)"
+    private GameObject[] CollectSlotObjects(Transform root, string prefixRegex, int max)
+    {
+        if (root == null) return new GameObject[0];
+        var re = new Regex(prefixRegex, RegexOptions.IgnoreCase);
+
+        var list = root.GetComponentsInChildren<Transform>(true)
+            .Select(t => new {
+                tr = t,
+                m = re.Match(t.name)
+            })
+            .Where(x => x.m.Success)
+            .Select(x => new {
+                go = x.tr.gameObject,
+                num = int.TryParse(x.m.Groups[1].Value, out var n) ? n : int.MaxValue,
+                sib = x.tr.GetSiblingIndex()
+            })
+            .OrderBy(x => x.num)       // Item1, Item2, ... / slot1, slot2, ...
+            .ThenBy(x => x.sib)
+            .Take(max)
+            .Select(x => x.go)
+            .ToArray();
+
+        return list;
+    }
+
+    private void BindSlots(ItemSlot[] slots, GameObject[] gos)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            var s = slots[i];
+            if (i < gos.Length && gos[i] != null)
+            {
+                // Image: 자기 자신 우선, 없으면 자식 중 첫번째
+                var img = gos[i].GetComponent<Image>() ?? gos[i].GetComponentInChildren<Image>(true);
+                // TMP_Text: 이름에 count/num/label 포함한 텍스트 우선
+                var texts = gos[i].GetComponentsInChildren<TMP_Text>(true);
+                var txt = texts.FirstOrDefault(t =>
+                    t.name.ToLower().Contains("count") || t.name.ToLower().Contains("num") || t.name.ToLower().Contains("label"))
+                    ?? texts.FirstOrDefault();
+
+                s.icon = img;
+                s.countLabel = txt;
+            }
+            else
+            {
+                s.icon = null;
+                s.countLabel = null;
+            }
+        }
+    }
+
+    private void BindBagPanelByName(Transform bagRootPref = null)
+    {
+        if (bagPanel != null) return;                     // 이미 연결돼 있으면 패스
+        if (_uiNameIndex == null) BuildUINameIndex();     // 전역 인덱스 없으면 생성
+
+        // 대소문자 무시로 "Bag" (또는 오버라이드 이름)만 찾는다
+        string key = string.IsNullOrEmpty(bagPanelAutoName) ? "Bag" : bagPanelAutoName;
+        var t = FindByNameFromIndex(key, bagRootPref);
+        if (t != null)
+        {
+            bagPanel = t.gameObject;
+            Debug.Log($"[Inventory][BagBind] bagPanel = '{bagPanel.name}'");
+        }
+        else
+        {
+            Debug.LogWarning($"[Inventory][BagBind] '{key}' 오브젝트를 찾지 못했습니다.");
+        }
     }
 }

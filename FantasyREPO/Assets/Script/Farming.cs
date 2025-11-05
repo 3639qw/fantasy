@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Farming : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class Farming : MonoBehaviour
     [Header("Farm Tilemap & Tiles")]
     [SerializeField] protected internal Tilemap farmLand;
     [SerializeField] TileBase grassTile, tilledTile, farmTile, wetfarmTile;
+
+    [Header("Auto-Bind UI (names)")]
+    [SerializeField] private string harvestBarAutoName = "HarvestBar";
 
     [System.Serializable]
     public class CropData
@@ -68,6 +72,7 @@ public class Farming : MonoBehaviour
     {
         gm = GameManager.Instance;
         inv = Inventory.Instance;
+        TryBindHarvestBar();
 
         // 애니메이터/플레이어 상태 참조
         if (gm && gm.player)
@@ -386,6 +391,66 @@ public class Farming : MonoBehaviour
         return ok;
     }
 
+    // 씬/Don’tDestroyOnLoad 객체만 허용(프리팹 에셋 제외)
+    private static bool IsSceneObject(Component c) => c && c.gameObject.scene.IsValid();
+
+    // 전역에서 이름으로 Slider 찾기(활/비활성 + DDOL 포함)
+    private Slider FindSliderByNameGlobal(string name)
+    {
+        if (string.IsNullOrEmpty(name)) return null;
+        var sliders = Resources.FindObjectsOfTypeAll<Slider>();
+        foreach (var s in sliders)
+        {
+            if (!IsSceneObject(s)) continue;
+            if (string.Equals(s.name, name, System.StringComparison.OrdinalIgnoreCase))
+                return s;
+        }
+        return null;
+    }
+
+    private string GetHierarchyPath(Transform t)
+    {
+        if (!t) return "null";
+        var path = t.name;
+        while (t.parent) { t = t.parent; path = t.name + "/" + path; }
+        return path;
+    }
+
+    // 이름으로 HarvestBar 자동 바인딩 + 초기화
+    private void TryBindHarvestBar()
+    {
+        if (harvestBar == null)
+            harvestBar = FindSliderByNameGlobal(harvestBarAutoName);
+
+        if (harvestBar != null)
+        {
+            barRoot   = harvestBar.GetComponent<RectTransform>();
+            barCanvas = harvestBar.GetComponentInParent<Canvas>();
+            cam       = barCanvas ? (barCanvas.worldCamera ?? Camera.main) : Camera.main;
+
+            harvestBar.interactable = false;
+            harvestBar.minValue = 0f;
+            harvestBar.maxValue = 1f;
+            harvestBar.value    = 0f;
+
+            if (barRoot) barRoot.gameObject.SetActive(false);
+
+            Debug.Log($"[Farming][AutoBind] harvestBar = '{harvestBar.name}' ({GetHierarchyPath(harvestBar.transform)})");
+        }
+        else
+        {
+            if (!cam) cam = Camera.main; // 진행바 없어도 동작하도록 카메라 확보
+            Debug.LogWarning($"[Farming][AutoBind] '{harvestBarAutoName}' Slider를 찾지 못했습니다. (진행바 없이 진행)");
+        }
+    }
+
+    void OnEnable()  { SceneManager.sceneLoaded += _OnSceneLoaded; }
+    void OnDisable() { SceneManager.sceneLoaded -= _OnSceneLoaded; }
+    private void _OnSceneLoaded(Scene s, LoadSceneMode m)
+    {
+        TryBindHarvestBar();
+    }
+    
     private bool IsWateringCanSelected() => IsToolSelected(wateringCanItemData);
     private bool IsHoeSelected() => IsToolSelected(hoeItemData);
 }
