@@ -67,7 +67,7 @@ public class ArrowScript : MonoBehaviour
         }
         // 플레이어 외의 다른 오브젝트(예: 벽, 다른 몬스터)와 충돌했을 때도 파괴
         // 필요에 따라 특정 레이어나 태그를 가진 오브젝트에만 반응하도록 수정 가능
-        else if (!other.CompareTag("Enemy") && !other.CompareTag("Arrow")) // 몬스터나 다른 화살과는 충돌하지 않도록
+        else if (!other.CompareTag("Enemy") && !other.CompareTag("Arrow") && !other.CompareTag("Ground")) // 몬스터나 다른 화살과는 충돌하지 않도록
         {
             Destroy(gameObject);
         }

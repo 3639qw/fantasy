@@ -113,6 +113,7 @@ public class Inventory : MonoBehaviour
         AddItemByID("CopperPick");
         AddItemByID("IronPick_001");
         AddItemByID("IronSword_001");
+        AddItemByID("IronAxe_001");
     }
 
     private void LoadAllItemDataToDatabase()

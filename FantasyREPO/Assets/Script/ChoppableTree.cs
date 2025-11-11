@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using System.Collections;
 public class ChoppableTree : MonoBehaviour
 {
     [Header("What to swap to when chopped")]
@@ -8,6 +8,7 @@ public class ChoppableTree : MonoBehaviour
     public bool destroyTreeObject = false;
 
     [Header("Loot")]
+    public GameObject itemWorldPrefab;
     public ItemData logItemData;
     [Min(1)] public int logAmount = 1;
 
@@ -20,11 +21,21 @@ public class ChoppableTree : MonoBehaviour
     private SpriteRenderer _sr;
     private Collider2D _col;
 
+    [Tooltip("타격 시 흔들리는 시간 (예: 0.1초)")]
+    public float shakeDuration = 0.1f;
+    [Tooltip("타격 시 흔들리는 강도 (예: 0.05)")]
+    public float shakeMagnitude = 0.05f;
+
+    private Vector3 _originalPosition; // 바위의 원래 위치
+    private Coroutine _shakeCoroutine; // 현재 실행 중인 쉐이크 코루틴
+
     void Awake()
     {
         _sr  = GetComponent<SpriteRenderer>();
         _col = GetComponent<Collider2D>();
-        _hp  = baseHitsRequired;
+        _hp = baseHitsRequired;
+        
+        _originalPosition = transform.position;
     }
 
     void OnEnable()
@@ -33,6 +44,13 @@ public class ChoppableTree : MonoBehaviour
         _hp = baseHitsRequired;
         _chopped = false;
         _lootGiven = false;
+
+        if (_shakeCoroutine != null)
+        {
+            StopCoroutine(_shakeCoroutine);
+            _shakeCoroutine = null;
+        }
+        transform.position = _originalPosition;
         // 필요 시 원복:
         // if (_col) _col.enabled = true;
         // if (_sr)  _sr.enabled = true;
@@ -48,6 +66,16 @@ public class ChoppableTree : MonoBehaviour
         if (toolPower <= 0) toolPower = 1;
 
         _hp -= toolPower;
+
+        // (이전 쉐이크가 실행 중이면 중지하고 즉시 원위치)
+        if (_shakeCoroutine != null)
+        {
+            StopCoroutine(_shakeCoroutine);
+            transform.position = _originalPosition; 
+        }
+        // (새 쉐이크 코루틴 시작)
+        _shakeCoroutine = StartCoroutine(ShakeEffect());
+
         if (_hp <= 0) ChopOnce();
     }
 
@@ -81,12 +109,21 @@ public class ChoppableTree : MonoBehaviour
 
     void GiveLootOnce()
     {
-        if (_lootGiven) return;
-        _lootGiven = true;
+        if (itemWorldPrefab != null && logItemData != null)
+        {
+            GameObject droppedItemObj = Instantiate(itemWorldPrefab, transform.position, Quaternion.identity);
 
-        var inv = Inventory.Instance ?? FindObjectOfType<Inventory>(true);
-        if (inv && logItemData != null)
-            inv.AddItem(logItemData, logAmount);
+            ItemWorld itemScript = droppedItemObj.GetComponent<ItemWorld>();
+
+            if (itemScript != null)
+            {
+                itemScript.Initialize(logItemData, logAmount);
+            }
+            else
+            {
+                Debug.LogError($"[ChoppableTree] 'ItemWorld_Prefab'에 ItemWorld.cs 스크립트가 없습니다!");
+            }
+        }
     }
 
     void HideSpriteAndDisableCollider()
@@ -98,5 +135,29 @@ public class ChoppableTree : MonoBehaviour
     void DisableColliderOnly()
     {
         if (_col) _col.enabled = false;
+    }
+
+        // ▼▼▼▼▼ 3. [추가] 쉐이크 코루틴 함수 ▼▼▼▼▼
+    private IEnumerator ShakeEffect()
+    {
+        float timer = 0f;
+
+        // 'shakeDuration' (예: 0.1초) 동안 반복
+        while (timer < shakeDuration)
+        {
+            // 'shakeMagnitude' (예: 0.05) 만큼 X, Y 위치를 랜덤하게 흔듦
+            float x = Random.Range(-1f, 1f) * shakeMagnitude;
+            float y = Random.Range(-1f, 1f) * shakeMagnitude;
+            
+            // (2D 게임이므로 z축은 원래 값으로 고정)
+            transform.position = _originalPosition + new Vector3(x, y, 0);
+
+            timer += Time.deltaTime;
+            yield return null; // 다음 프레임까지 대기
+        }
+
+        // [중요] 루프가 끝나면 정확히 원래 위치로 복구
+        transform.position = _originalPosition;
+        _shakeCoroutine = null; // 코루틴 참조 제거
     }
 }

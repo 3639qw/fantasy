@@ -179,8 +179,12 @@ MonoBehaviour:
   stumpSprite: {fileID: -5456246704479660826, guid: 36897368fcba270428cc2463d1db56e2, type: 3}
   stumpPrefab: {fileID: 0}
   destroyTreeObject: 0
-  logItemData: {fileID: 11400000, guid: 4af892ad1e6129b4185913af466ecbe5, type: 2}
+  itemWorldPrefab: {fileID: 2982014987429505703, guid: 0b639f02f9659d94db8282386e67df0f, type: 3}
+  logItemData: {fileID: 11400000, guid: b1ae95344fbeb71408bef5a96b05b1b9, type: 2}
   logAmount: 1
+  baseHitsRequired: 4
+  shakeDuration: 0.1
+  shakeMagnitude: 0.05
 --- !u!1 &7958348909826675162
 GameObject:
   m_ObjectHideFlags: 0

@@ -290,7 +290,7 @@ public class SkeletonAI : MonoBehaviour, IDamageable
         if (arrowPrefab != null && arrowSpawnPoint != null)
         {
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            angle -= 90f; // 남쪽(Z=0)을 기준으로 반시계 방향 회전 보정
+            angle += 90f; // 남쪽(Z=0)을 기준으로 반시계 방향 회전 보정
 
             Quaternion arrowRotation = Quaternion.Euler(0, 0, angle);
 
