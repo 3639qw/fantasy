@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4437238801457376952}
   - component: {fileID: -1101662354100290042}
   - component: {fileID: -4819837595344461701}
+  - component: {fileID: -3451731917305542116}
   m_Layer: 0
   m_Name: EnemyArrow
   m_TagString: Arrow
@@ -175,3 +176,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef8834c232dbc498800fa0c1f34f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowSpeed: 10
+  arrowLifetime: 5
+--- !u!114 &-3451731917305542116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5181542210344588901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd66530627159d4ea016893e84a3d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyClip: {fileID: 8300000, guid: 3cd4d24909998374b9b09c2feb9f0f46, type: 3}
+  hitClip: {fileID: 8300000, guid: 3cd4d24909998374b9b09c2feb9f0f46, type: 3}
+  flyVol: 1
+  hitVol: 0.492
+  flyJitter: 0.01
+  hitJitter: 0.02

@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8806711339753746312}
   - component: {fileID: 756567267749596233}
   - component: {fileID: 3304865364224001749}
-  - component: {fileID: 429053185502714922}
   - component: {fileID: 1393532181946763379}
+  - component: {fileID: 3100260498273242580}
+  - component: {fileID: 4176009616340830328}
   m_Layer: 6
   m_Name: RedSlime(Big)
   m_TagString: Enemy
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 15
   m_Sprite: {fileID: -5156997418569223977, guid: df4cdf817ff44c446a5e686ce27c4c2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -187,24 +188,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &429053185502714922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462275659137871098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1647accdde4554ab0b2dd63bea1e38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleTime: 2
-  wanderRadius: 3
-  chaseRange: 5
-  moveSpeed: 2
-  damage: 5
-  MonsterHP: 30
 --- !u!58 &1393532181946763379
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -240,4 +223,47 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.3
+  m_Radius: 0.5
+--- !u!114 &3100260498273242580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462275659137871098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116936d9f1bc219428d2b3623bf93f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleTime: 2
+  wanderRadius: 3
+  chaseRange: 5
+  moveSpeed: 4
+  damage: 1
+  MonsterHP: 3000
+--- !u!114 &4176009616340830328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462275659137871098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1ad42c06484ce4fb6e7d909c6c6153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3304865364224001749}
+  rb: {fileID: 756567267749596233}
+  moveStateName: Slime_Move
+  dieStateName: Slime_die
+  layerIndex: 0
+  hopClip: {fileID: 8300000, guid: 7c2c4287cdea49d4bbe9aa07f5bf712f, type: 3}
+  dieClip: {fileID: 8300000, guid: 33f7ddb3b2b476941b3190a1fb301fdb, type: 3}
+  hopInterval: 0.42
+  velocityThreshold: 0.05
+  hopVolume: 1
+  hopPitchJitter: 0.03
+  dieVolume: 1
+  diePitchJitter: 0.02
