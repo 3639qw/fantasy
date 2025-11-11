@@ -208,6 +208,10 @@ MonoBehaviour:
   slowChance: 0.3
   slowDuration: 10
   slowIntensity: 0.5
+  itemWorldPrefab: {fileID: 2982014987429505703, guid: 0b639f02f9659d94db8282386e67df0f, type: 3}
+  SlimeDropItem: {fileID: 11400000, guid: 1543ed590926f4f45a4b0e680ab91e20, type: 2}
+  Amount: 1
+  dropChance: 0.4
 --- !u!58 &2855471371886935762
 CircleCollider2D:
   m_ObjectHideFlags: 0

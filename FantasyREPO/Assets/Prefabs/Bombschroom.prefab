@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7415162242681384865}
   m_Layer: 6
   m_Name: Bombschroom
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,5 +209,9 @@ MonoBehaviour:
   attackDamage: 30
   encounterAnimationTime: 0.5
   poisonPrefab: {fileID: 6799364154519677785, guid: 581e38c2cb4e0874ca07c0dd87535d4a, type: 3}
+  itemWorldPrefab: {fileID: 2982014987429505703, guid: 0b639f02f9659d94db8282386e67df0f, type: 3}
+  BombschroomDropItem: {fileID: 11400000, guid: 4eb6d791a48d27e44a8ca98d9ecf35b2, type: 2}
+  Amount: 1
+  dropChance: 0.4
   maxHealth: 10
   currentState: 0

@@ -14818,7 +14818,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player(AnimationFixed) Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3517110697841630533, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}
+    - {fileID: 3525279924123706982, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5476940493618277405, guid: dbcc71a8d21599841b5e1db9416cf342, type: 3}

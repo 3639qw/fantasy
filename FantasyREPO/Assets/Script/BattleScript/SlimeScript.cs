@@ -38,6 +38,12 @@ public class SlimeScript : MonoBehaviour, IDamageable
 
     private GameManager _playerHP;
 
+    [Header("드랍테이블 설정")]
+    public GameObject itemWorldPrefab;
+    public ItemData SlimeDropItem;
+    [Min(1)] public int Amount = 1;
+    public float dropChance = 0.4f;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -169,6 +175,11 @@ public class SlimeScript : MonoBehaviour, IDamageable
                 stateTimer = 0.5f;
                 path.ClearCorners();
                 rb.linearVelocity = Vector2.zero;
+
+                if (Random.Range(0f, 1f) <= dropChance)
+                {
+                    GiveLootOnce();
+                }
                 break;
         }
     }
@@ -264,6 +275,28 @@ public class SlimeScript : MonoBehaviour, IDamageable
         else if (currentState != SlimeState.Attacked)
         {
             ChangeState(SlimeState.Attacked);
+        }
+    }
+    private void GiveLootOnce()
+    {
+        // 1. 프리팹과 데이터가 둘 다 설정되었는지 확인
+        if (itemWorldPrefab != null && SlimeDropItem != null)
+        {
+            // 2. 프리팹을 월드에 생성 (바위의 현재 위치에)
+            GameObject droppedItemObj = Instantiate(itemWorldPrefab, transform.position, Quaternion.identity);
+
+            // 3. 생성된 오브젝트에서 ItemWorld 스크립트를 가져옴
+            ItemWorld itemScript = droppedItemObj.GetComponent<ItemWorld>();
+
+            // 4. 스크립트에 아이템 정보와 수량을 전달
+            if (itemScript != null)
+            {
+                itemScript.Initialize(SlimeDropItem, Amount);
+            }
+            else
+            {
+                Debug.LogError($"[SlimeScript] 'ItemWorld_Prefab'에 ItemWorld.cs 스크립트가 없습니다!");
+            }
         }
     }
 }

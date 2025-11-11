@@ -204,7 +204,14 @@ MonoBehaviour:
   chaseRange: 5
   moveSpeed: 2
   damage: 5
-  MonsterHP: 30
+  MonsterHP: 50
+  slowChance: 0.3
+  slowDuration: 5
+  slowIntensity: 0.7
+  itemWorldPrefab: {fileID: 2982014987429505703, guid: 0b639f02f9659d94db8282386e67df0f, type: 3}
+  SlimeDropItem: {fileID: 11400000, guid: 1543ed590926f4f45a4b0e680ab91e20, type: 2}
+  Amount: 3
+  dropChance: 0.4
 --- !u!58 &1393532181946763379
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -12,9 +12,6 @@ public class Pick : MonoBehaviour
     public float coolTime = 0.5f;
     private float curTime;
 
-    // (하위 호환용) 인스펙터에 남아있는 필드지만 현재 로직에서는 사용하지 않습니다.
-    [Header("도구 선택 게이트(과거 버전 호환용, 현재 미사용)")]
-    [SerializeField] private ItemData pickItemData;
 
     private Animator _anim;
     private PlayerMove _playerMove;

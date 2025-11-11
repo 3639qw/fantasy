@@ -20,6 +20,12 @@ public class BombSchroomScript : MonoBehaviour, IDamageable
     [Header("프리팹 설정")]
     public GameObject poisonPrefab;
 
+    [Header("드랍테이블 설정")]
+    public GameObject itemWorldPrefab;
+    public ItemData BombschroomDropItem;
+    [Min(1)] public int Amount = 1;
+    public float dropChance = 0.4f;
+
     [Header("체력")]
     public float maxHealth = 10f;
     private float currentHealth;
@@ -227,6 +233,29 @@ public class BombSchroomScript : MonoBehaviour, IDamageable
         {
             animator.SetFloat(LastHorizontal, direction.x);
             animator.SetFloat(LastVertical, direction.y);
+        }
+    }
+
+    private void GiveLootOnce()
+    {
+        // 1. 프리팹과 데이터가 둘 다 설정되었는지 확인
+        if (itemWorldPrefab != null && BombschroomDropItem != null)
+        {
+            // 2. 프리팹을 월드에 생성 (바위의 현재 위치에)
+            GameObject droppedItemObj = Instantiate(itemWorldPrefab, transform.position, Quaternion.identity);
+
+            // 3. 생성된 오브젝트에서 ItemWorld 스크립트를 가져옴
+            ItemWorld itemScript = droppedItemObj.GetComponent<ItemWorld>();
+
+            // 4. 스크립트에 아이템 정보와 수량을 전달
+            if (itemScript != null)
+            {
+                itemScript.Initialize(BombschroomDropItem, Amount);
+            }
+            else
+            {
+                Debug.LogError($"[SlimeScript] 'ItemWorld_Prefab'에 ItemWorld.cs 스크립트가 없습니다!");
+            }
         }
     }
 }

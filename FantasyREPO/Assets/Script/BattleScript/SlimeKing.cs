@@ -59,6 +59,11 @@ public class SlimeKing : MonoBehaviour, IDamageable
     [SerializeField] private int _beeCount = 8; // 소환할 벌의 수
     [SerializeField] private float _beeSpawnRadius = 1.5f; // 보스 기준 소환 반경
 
+    [Header("스킬: 독버섯 소환")]
+    [SerializeField] public GameObject Bombschroom;
+
+    private GameObject MonsterGenerator;
+
     private SpriteRenderer _spriteRenderer; // 몬스터의 SpriteRenderer
     private Coroutine _actionRoutine = null; // 공격/스킬 코루틴 참조
 
@@ -365,8 +370,8 @@ public class SlimeKing : MonoBehaviour, IDamageable
         while (jumpTimer < attackJumpDuration)
         {
             // 물리 프레임마다 대기 (이동 처리를 위해)
-            yield return new WaitForFixedUpdate(); 
-            
+            yield return new WaitForFixedUpdate();
+
             jumpTimer += Time.fixedDeltaTime;
             ghostTimer += Time.fixedDeltaTime;
 
@@ -376,6 +381,11 @@ public class SlimeKing : MonoBehaviour, IDamageable
                 //SpawnGhost(_trailGhostPrefab); // 사라지는 잔상(Trail) 생성 더 좋은 방법이 있을까?
                 ghostTimer = 0f;
             }
+        }
+        
+        if (MonsterSpawner.Instance != null)
+        {
+            MonsterSpawner.Instance.SpawnBossMinions(4);
         }
 
         // 3. 종료

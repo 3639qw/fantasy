@@ -24,6 +24,13 @@ public class SkeletonAI : MonoBehaviour, IDamageable
     public float maxHealth = 100f; // 몬스터의 최대 체력 (float으로 변경)
     private float currentHealth; // 몬스터의 현재 체력 (float으로 변경)
 
+    [Header("드랍테이블 설정")]
+    public GameObject itemWorldPrefab;
+    public ItemData SkeletonDropItem;
+    public ItemData SkeletonDropItem2;
+    [Min(1)] public int Amount = 1;
+    public float dropChance = 0.4f;
+
     // 비공개 참조 변수
     private Animator animator; // Animator 컴포넌트 참조
     private Rigidbody2D rb; // Rigidbody2D 컴포넌트 참조
@@ -227,6 +234,11 @@ public class SkeletonAI : MonoBehaviour, IDamageable
                 GetComponent<Collider2D>().enabled = false; // 몬스터의 콜라이더 비활성화
                 animator.SetTrigger(DieTrigger); // 죽음 애니메이션 트리거
                 Destroy(gameObject, 1f); // 일정 시간 후 게임 오브젝트 파괴
+
+                if (Random.Range(0f, 1f) <= dropChance)
+                {
+                    GiveLootOnce();
+                }
                 break;
         }
     }
@@ -388,5 +400,36 @@ public class SkeletonAI : MonoBehaviour, IDamageable
         Gizmos.DrawWireSphere(transform.position, chaseRange); // 추적 범위 표시
         Gizmos.color = Color.red; // 공격 범위 색상 변경
         Gizmos.DrawWireSphere(transform.position, attackRange); // 공격 범위 표시
+    }
+
+        private void GiveLootOnce()
+    {
+        // 1. 프리팹과 데이터가 둘 다 설정되었는지 확인
+        if (itemWorldPrefab != null && SkeletonDropItem != null)
+        {
+            // 2. 프리팹을 월드에 생성 (바위의 현재 위치에)
+            GameObject droppedItemObj = Instantiate(itemWorldPrefab, transform.position, Quaternion.identity);
+
+            // 3. 생성된 오브젝트에서 ItemWorld 스크립트를 가져옴
+            ItemWorld itemScript = droppedItemObj.GetComponent<ItemWorld>();
+
+            // 4. 스크립트에 아이템 정보와 수량을 전달
+            if (itemScript != null)
+            {
+                if (Random.Range(0f, 1f) <= 0.5f)
+                {
+                    itemScript.Initialize(SkeletonDropItem, Amount);
+                }
+                else
+                {
+                    itemScript.Initialize(SkeletonDropItem2, Amount);
+                }
+                
+            }
+            else
+            {
+                Debug.LogError($"[SlimeScript] 'ItemWorld_Prefab'에 ItemWorld.cs 스크립트가 없습니다!");
+            }
+        }
     }
 }
