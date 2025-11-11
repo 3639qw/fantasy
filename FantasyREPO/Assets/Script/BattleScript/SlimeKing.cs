@@ -564,6 +564,12 @@ public class SlimeKing : MonoBehaviour, IDamageable
         PlayerHealthController playerHealth = player.GetComponentInParent<PlayerHealthController>();
         if (GameManager.Instance != null && playerHealth != null)
         {
+            if (CameraShake.Instance != null)
+            {
+                Debug.Log("화면 흔들림!");
+                // (0.25초 동안, 0.4f의 강도로 흔들기 - 값은 원하는대로 조절하세요)
+                CameraShake.Instance.Shake(0.25f, 0.4f);
+            }
             if (!playerState.isJump)
             {
                 playerHealth.TakeDamage(attackDamage);
