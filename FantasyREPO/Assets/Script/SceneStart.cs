@@ -5,7 +5,7 @@ public class SceneStart : MonoBehaviour
 {
 
     public void GameStart(){
-        SceneManager.LoadScene("Overworld");
+        SceneManager.LoadScene("Overworld_MSM");
     }
     public void Quit(){
         Application.Quit();

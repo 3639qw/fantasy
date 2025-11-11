@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Linq;
 
 public static class UIBootstrapper
 {
@@ -7,43 +9,67 @@ public static class UIBootstrapper
 
     private static bool _booted;
 
-    // Domain Reload OFF 대비 초기화
+    // UI를 제외할 씬 목록
+    private static readonly string[] EXCLUDED_SCENES = { "Main", "Main1" };
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void ResetFlag() => _booted = false;
 
     // 씬 로드 전에 UIRoot 보장
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    private static void EnsureUIRoot()
+    private static void Init()
     {
-        if (_booted) return;
+        // 씬 로드시마다 검사 이벤트 연결
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
-        // 이미 살아있으면 패스
-    #if UNITY_2023_1_OR_NEWER
-        var already = Object.FindFirstObjectByType<UIRoot>();
-    #else
-        var already = Object.FindObjectOfType<UIRoot>();
-    #endif
-        if (already) { _booted = true; return; }
+        // 첫 씬 로드 전에 한 번 실행
+        EnsureUIRoot(SceneManager.GetActiveScene());
+    }
 
-        // Resources에서 Canvas.prefab 로드
-        var prefab = Resources.Load<GameObject>(PREFAB_PATH);
-        if (!prefab)
+    // 씬이 로드될 때마다 호출됨
+    private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        EnsureUIRoot(scene);
+    }
+
+    private static void EnsureUIRoot(Scene scene)
+    {
+        string sceneName = scene.name;
+
+        // 예외 씬(로그인/타이틀 등)은 스킵
+        if (EXCLUDED_SCENES.Contains(sceneName))
         {
-            Debug.LogError($"[UIBootstrapper] Resources/{PREFAB_PATH}.prefab 를 찾지 못했습니다.");
+            Debug.Log($"[UIBootstrapper] {sceneName}은(는) UI 자동생성 제외대상");
             return;
         }
 
-        // 인스턴스 생성
+        // 이미 UIRoot가 있으면 중복 생성 방지
+    #if UNITY_2023_1_OR_NEWER
+        var existing = Object.FindFirstObjectByType<UIRoot>();
+    #else
+        var existing = Object.FindObjectOfType<UIRoot>();
+    #endif
+        if (existing)
+        {
+            Debug.Log($"[UIBootstrapper] {sceneName}에 이미 UIRoot 존재 → 패스");
+            _booted = true;
+            return;
+        }
+
+        // ✅ Canvas.prefab 로드 및 인스턴스 생성
+        var prefab = Resources.Load<GameObject>(PREFAB_PATH);
+        if (!prefab)
+        {
+            Debug.LogError($"[UIBootstrapper] Resources/{PREFAB_PATH}.prefab 을(를) 찾지 못했습니다.");
+            return;
+        }
+
         var go = Object.Instantiate(prefab);
+        var root = go.GetComponent<UIRoot>() ?? go.AddComponent<UIRoot>();
 
-        // 프리팹에 UIRoot가 없다면 자동으로 붙여서 DDOL/이벤트시스템까지 보장
-        var root = go.GetComponent<UIRoot>();
-        if (!root) root = go.AddComponent<UIRoot>();
-
-        // 혹시라도 루트가 DDOL을 못 걸었을 경우 대비(중복 안전)
+        // 씬 이동 시에도 유지되도록 DDOL 적용
         if (go.scene.IsValid()) Object.DontDestroyOnLoad(go);
 
         _booted = true;
-        Debug.Log("[UIBootstrapper] UIRoot auto-instantiated.");
+        Debug.Log($"[UIBootstrapper] {sceneName}에 UIRoot 자동 생성 완료!");
     }
 }

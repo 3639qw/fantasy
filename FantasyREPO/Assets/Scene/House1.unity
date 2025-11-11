@@ -176,7 +176,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8, y: 0.48}
+    oldSize: {x: 5, y: 3}
     newSize: {x: 0.8, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2345,67 +2345,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &428857943
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3405444304465839231, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3831742172557757943, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: tilemap
-      value: 
-      objectReference: {fileID: 351513902}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959157725399435310, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ffc8e49a66109584eb3eb349a59822f5, type: 3}
 --- !u!1 &493246172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,7 +2359,7 @@ GameObject:
   - component: {fileID: 493246174}
   - component: {fileID: 493246177}
   m_Layer: 0
-  m_Name: Terrain 21
+  m_Name: Terrain 20
   m_TagString: FullBackground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2500,7 +2439,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 21
+  m_SortingOrder: 20
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3938,7 +3877,6 @@ SceneRoots:
   - {fileID: 1629112442}
   - {fileID: 192243848}
   - {fileID: 1777065719}
-  - {fileID: 428857943}
   - {fileID: 1804215546793694955}
   - {fileID: 9169858103762283063}
   - {fileID: 5466564551955051372}

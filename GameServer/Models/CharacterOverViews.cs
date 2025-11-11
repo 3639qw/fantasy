@@ -12,6 +12,5 @@ namespace GameServer.Models
 
         public List<CharacterInventory> Inventories { get; set; } = new();
         public UserCharacterStatus CharacterStatus { get; set; }
-        public PlayerLocation PlayerLocation { get; set; }
     }
 }

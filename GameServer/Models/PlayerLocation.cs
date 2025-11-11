@@ -1,14 +1,19 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace GameServer.Models
 {
-    public class PlayerLocation
+    [Table("UserSceneData")]
+    public class UserSceneData
     {
-        public long CharacterUniqueID { get; set; }
-        public long UserUniqueID { get; set; }
-        public double? PositionX { get; set; }
-        public double? PositionY { get; set; }
+        [Key]
+        public int ID { get; set; }
 
-        // Navigation
-        public UserCharacterOverview Character { get; set; }
-        public UserAccount UserAccount { get; set; }
+        public int UserUniqueID { get; set; }
+        public string SceneName { get; set; } = "";
+        public float PositionX { get; set; }
+        public float PositionY { get; set; }
+
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 }

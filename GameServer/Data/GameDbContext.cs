@@ -12,7 +12,7 @@ namespace GameServer.Data
         public DbSet<UserCharacterOverview> UserCharacterOverviews { get; set; }
         public DbSet<CharacterInventory> CharacterInventories { get; set; }
         public DbSet<UserCharacterStatus> UserCharacterStatuses { get; set; }
-        public DbSet<PlayerLocation> PlayerLocations { get; set; }
+        public DbSet<UserSceneData> UserSceneData { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,11 +34,7 @@ namespace GameServer.Data
             modelBuilder.Entity<UserCharacterStatus>()
                 .HasKey(s => s.CharacterUniqueID);
 
-            // 5. PlayerLocation (PK: UserUniqueID + CharacterUniqueID)
-            modelBuilder.Entity<PlayerLocation>()
-                .HasKey(pl => new { pl.UserUniqueID, pl.CharacterUniqueID });
-
-            // °ü°è ¼³Á¤
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             modelBuilder.Entity<UserCharacterOverview>()
                 .HasOne(c => c.UserAccount)
                 .WithMany(u => u.Characters)
@@ -67,18 +63,6 @@ namespace GameServer.Data
                 .HasOne(s => s.UserAccount)
                 .WithMany(u => u.CharacterStatuses)
                 .HasForeignKey(s => s.UserUniqueID)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<PlayerLocation>()
-                .HasOne(l => l.Character)
-                .WithOne(c => c.PlayerLocation)
-                .HasForeignKey<PlayerLocation>(l => l.CharacterUniqueID)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<PlayerLocation>()
-                .HasOne(l => l.UserAccount)
-                .WithMany(u => u.PlayerLocations)
-                .HasForeignKey(l => l.UserUniqueID)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

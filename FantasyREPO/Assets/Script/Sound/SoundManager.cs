@@ -27,19 +27,29 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        // 저장된 볼륨 불러오기
-        float savedBGM = PlayerPrefs.GetFloat("BGMVolume", 1f);
-        float savedSFX = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        if (bgmSlider == null)
+            bgmSlider = GameObject.Find("BGMSlider")?.GetComponent<Slider>();
 
-        bgmSlider.value = savedBGM;
-        sfxSlider.value = savedSFX;
+        if (sfxSlider == null)
+            sfxSlider = GameObject.Find("SFXSlider")?.GetComponent<Slider>();
+
+        float savedBGM = PlayerPrefs.GetFloat("BGMSlider", 1f);
+        float savedSFX = PlayerPrefs.GetFloat("SFXSlider", 1f);
+
+        if (bgmSlider != null)
+        {
+            bgmSlider.value = savedBGM;
+            bgmSlider.onValueChanged.AddListener(ApplyBGMVolume);
+        }
+
+        if (sfxSlider != null)
+        {
+            sfxSlider.value = savedSFX;
+            sfxSlider.onValueChanged.AddListener(ApplySFXVolume);
+        }
 
         ApplyBGMVolume(savedBGM);
         ApplySFXVolume(savedSFX);
-
-        // 슬라이더 이벤트 연결
-        bgmSlider.onValueChanged.AddListener(ApplyBGMVolume);
-        sfxSlider.onValueChanged.AddListener(ApplySFXVolume);
     }
 
     public void ApplyBGMVolume(float value)

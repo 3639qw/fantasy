@@ -1045,6 +1045,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669953855}
   m_CullTransparentMesh: 1
+--- !u!1 &682526758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 682526760}
+  - component: {fileID: 682526759}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &682526759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682526758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54736a68788eb6d4c95f5180e8bc5550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &682526760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682526758}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &690576317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1172,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1955233616}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneStart, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
@@ -1517,6 +1561,37 @@ MonoBehaviour:
   registerMail: {fileID: 1764527391}
   registerName: {fileID: 492726398}
   registerNick: {fileID: 1910938727}
+--- !u!1 &920571257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920571258}
+  m_Layer: 0
+  m_Name: 'LoginRoot '
+  m_TagString: NoUIRoot
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &920571258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920571257}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &925745386
 GameObject:
   m_ObjectHideFlags: 0
@@ -5108,7 +5183,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1955233614}
   - component: {fileID: 1955233615}
-  - component: {fileID: 1955233616}
   - component: {fileID: 1955233617}
   m_Layer: 0
   m_Name: UIManager
@@ -5146,18 +5220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loginPanel: {fileID: 1536581252}
   registerPanel: {fileID: 1043134063}
---- !u!114 &1955233616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955233612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b15830da63810094d98051ebd5ae60b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1955233617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5170,10 +5232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cc77ba13d64c842bd7d5d2194712b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoginView: {fileID: 1536581252}
   inputField_ID: {fileID: 2016255535}
   inputField_PW: {fileID: 1725331708}
-  Button_Login: {fileID: 0}
 --- !u!1 &1957344359
 GameObject:
   m_ObjectHideFlags: 0
@@ -6040,3 +6100,5 @@ SceneRoots:
   - {fileID: 306159311}
   - {fileID: 1955233614}
   - {fileID: 1279154228}
+  - {fileID: 682526760}
+  - {fileID: 920571258}
