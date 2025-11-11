@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3355501123740254395}
   - component: {fileID: 2982682284796178062}
   - component: {fileID: 613962649313432053}
+  - component: {fileID: 6044447217087130355}
   m_Layer: 6
   m_Name: Skeleton
   m_TagString: Enemy
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 15
   m_Sprite: {fileID: 4288904503397713336, guid: 8ebdaa8377b2c5844b05a9ac5f33c11a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -211,3 +212,25 @@ MonoBehaviour:
   attackDamage: 10
   maxHealth: 10
   currentState: 0
+--- !u!114 &6044447217087130355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4321274328057603170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c21f1060a4a07348a9b20f4af8a612f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2982682284796178062}
+  bowDrawClip: {fileID: 0}
+  bowReleaseClip: {fileID: 8300000, guid: 3cd4d24909998374b9b09c2feb9f0f46, type: 3}
+  releaseDelay: 0.3
+  attackStateName: Attack
+  layerIndex: 0
+  volDraw: 1
+  volRelease: 1
+  jitterDraw: 0.01
+  jitterRelease: 0.02

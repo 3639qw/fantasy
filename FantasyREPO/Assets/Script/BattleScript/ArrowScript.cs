@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ArrowScript : MonoBehaviour
 {
@@ -37,15 +37,14 @@ public class ArrowScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // 충돌한 오브젝트의 태그가 "Player"인지 확인합니다.
-        if (other.CompareTag("PlayerCollier"))
+        if (other.CompareTag("PlayerCollider") || other.CompareTag("Player"))
         {
-            PlayerHealthController playerHealth = other.GetComponentInParent<PlayerHealthController>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damageAmount); // 플레이어에게 데미지 적용
-                Debug.Log($"플레이어가 화살에 맞음! 데미지: {damageAmount}");
-            }
-            // 화살은 플레이어에게 데미지를 입힌 후 파괴됩니다.
+            var playerHealth = other.GetComponentInParent<PlayerHealthController>();
+            if (playerHealth != null) playerHealth.TakeDamage(damageAmount);
+            Destroy(gameObject);
+        }
+        else if (!other.CompareTag("Enemy") && !other.CompareTag("Arrow"))
+        {
             Destroy(gameObject);
         }
         // 플레이어 외의 다른 오브젝트(예: 벽, 다른 몬스터)와 충돌했을 때도 파괴
