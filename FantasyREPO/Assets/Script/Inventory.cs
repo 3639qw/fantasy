@@ -55,6 +55,10 @@ public class Inventory : MonoBehaviour
     public Sprite EmptySprite => emptySprite;
     [SerializeField] private GameObject bagPanel;
 
+    [Header("플레이어")]
+    [Tooltip("아이템 효과를 적용받을 플레이어 오브젝트")]
+    [SerializeField] private GameObject playerObject;
+
     [SerializeField, Range(1, 10)] private int current = 1;
     public int states => current;
 
@@ -106,6 +110,11 @@ public class Inventory : MonoBehaviour
             AddItemByID("Arrow_001");
         }
         AddItemByID("WoodenBow_001");
+        AddItemByID("Bandage_001");
+        AddItemByID("DetoxPotion_001");
+        AddItemByID("Soap_001");
+        AddItemByID("Panacea_001");
+
     }
 
     private void LoadAllItemDataToDatabase()
@@ -142,6 +151,11 @@ public class Inventory : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha8)) SelectQuick(8);
         else if (Input.GetKeyDown(KeyCode.Alpha9)) SelectQuick(9);
         else if (Input.GetKeyDown(KeyCode.Alpha0)) SelectQuick(10);
+
+        if (Input.GetMouseButtonDown(0)) // 0 = 마우스 왼쪽 버튼
+        {
+            UseSelectedQuickSlotItem();
+        }
 
         if (Input.GetKeyDown(KeyCode.F5))
         {
@@ -703,6 +717,88 @@ private void Attach(ItemSlot[] arr)
         else
         {
             Debug.LogWarning($"[Inventory][BagBind] '{key}' 오브젝트를 찾지 못했습니다.");
+        }
+    }
+    /// <summary>
+    /// 현재 선택된 퀵슬롯의 아이템을 사용합니다. (소모품 전용)
+    /// </summary>
+    public void UseSelectedQuickSlotItem()
+    {
+        // 1. 현재 선택된 퀵슬롯 정보 가져오기
+        if (quickSlots == null || quickSlots.Length == 0) return;
+        var slot = quickSlots[Mathf.Clamp(current - 1, 0, quickSlots.Length - 1)];
+
+        if (slot == null || slot.itemData == null || slot.count <= 0)
+        {
+            // 빈 슬롯이거나 아이템이 없음
+            return;
+        }
+
+        ItemData itemToUse = slot.itemData;
+
+
+        if (itemToUse.itemType != "consumable")
+        {
+            // 소모품이 아니면(예: 무기, 도구) 사용 로직을 실행하지 않음
+            return;
+        }
+
+        // 3. 플레이어 오브젝트가 할당되었는지 확인
+        if (playerObject == null)
+        {
+            // playerObject 변수는 1단계에서 추가했습니다.
+            // 유니티 인스펙터에서 플레이어 오브젝트를 끌어다 놓아야 합니다.
+            Debug.LogError("[Inventory] 'Player Object' 참조가 비어있습니다! 인스펙터에서 할당해주세요.");
+            return;
+        }
+
+        // 4. 플레이어의 StatusCondition 스크립트 가져오기
+        StatusCondition playerStatus = playerObject.GetComponent<StatusCondition>();
+        if (playerStatus == null)
+        {
+            Debug.LogError("아이템을 사용하려 했으나 플레이어에 StatusCondition 스크립트가 없습니다.");
+            return;
+        }
+
+        // 5. [핵심] 아이템 효과 적용 (AntidoteItem.cs의 로직)
+        bool itemSuccessfullyUsed = true; // 아이템을 소모해도 되는지 여부
+
+        switch (itemToUse.curesStatusEffect)
+        {
+            case CuresStatusEffect.None:
+                // 예: 여기서 체력 회복 포션 로직을 처리할 수 있습니다.
+                // playerObject.GetComponent<PlayerHealth>().Heal(itemToUse.healAmount);
+                Debug.Log($"{itemToUse.itemName}을 사용했지만 아무 효과가 없었습니다.");
+                itemSuccessfullyUsed = false; // (실제 효과가 없으므로 소모 안 함)
+                break;
+
+            case CuresStatusEffect.Poison:
+                playerStatus.CurePoison();
+                break;
+
+            case CuresStatusEffect.Bleeding:
+                playerStatus.CureBleeding();
+                break;
+
+            case CuresStatusEffect.Slow:
+                playerStatus.CureSlow();
+                break;
+
+            case CuresStatusEffect.All:
+                playerStatus.CureAll();
+                break;
+
+            default:
+                itemSuccessfullyUsed = false; // 정의되지 않은 효과
+                break;
+        }
+
+        // 6. 효과가 성공적으로 적용되었다면 아이템 1개 소모
+        if (itemSuccessfullyUsed)
+        {
+            // Inventory.cs에 이미 있는 '현재 선택 아이템 소모' 함수를 호출
+            ConsumeSelectedItem(1);
+            Debug.Log($"{itemToUse.itemName}을(를) 사용했습니다.");
         }
     }
 }

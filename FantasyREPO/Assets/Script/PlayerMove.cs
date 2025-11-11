@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     [Header("달리기 발동되는 키")]
     [SerializeField] private KeyCode runKey = KeyCode.LeftShift;
 
-    [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] public float _moveSpeed = 5f;
     [SerializeField] private float _runSpeed = 8f;
     [SerializeField] private Tilemap tilemap; // 이동 경계 타일맵
 

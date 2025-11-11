@@ -20,6 +20,10 @@ public class SlimeScript : MonoBehaviour, IDamageable
     public float damage = 5f;
     public float MonsterHP = 30f;
 
+    public float slowChance = 0.3f; // 30% 확률로 슬로우
+    public float slowDuration = 2f;
+    public float slowIntensity = 0.4f; // 40% 감속
+
     private SlimeState currentState;
     private float stateTimer;
     private Animator animator;
@@ -227,9 +231,18 @@ public class SlimeScript : MonoBehaviour, IDamageable
         if (other.CompareTag("Player"))
         {
             PlayerHealthController playerHealth = other.GetComponentInParent<PlayerHealthController>();
+            StatusCondition playerStatus = other.gameObject.GetComponent<StatusCondition>();
+
             if (GameManager.Instance != null && playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);
+                if (playerStatus != null)
+                {
+                    if (Random.Range(0f, 1f) <= slowChance)
+                    {
+                        playerStatus.ApplySlow(slowDuration, slowIntensity);
+                    }
+                }
             }
             else
             {

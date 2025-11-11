@@ -205,6 +205,9 @@ MonoBehaviour:
   moveSpeed: 2
   damage: 5
   MonsterHP: 30
+  slowChance: 0.3
+  slowDuration: 10
+  slowIntensity: 0.5
 --- !u!58 &2855471371886935762
 CircleCollider2D:
   m_ObjectHideFlags: 0

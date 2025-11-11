@@ -175,3 +175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ef8834c232dbc498800fa0c1f34f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowSpeed: 10
+  arrowLifetime: 5
+  bleedingChance: 1
+  bleedingDuration: 15
+  bleedingTickDamage: 5
+  bleedingInterval: 1

@@ -3,11 +3,18 @@ using UnityEngine;
 public class ArrowScript : MonoBehaviour
 {
     [Header("화살 설정")]
-    public float arrowSpeed = 10f; // 화살의 이동 속도
-    public float arrowLifetime = 5f; // 화살이 자동으로 사라지는 시간 (장면이 너무 복잡해지는 것을 방지)
-    private Vector2 moveDirection; // 화살이 이동할 방향
+    public float arrowSpeed = 10f; 
+    public float arrowLifetime = 5f;
+    private Vector2 moveDirection; 
+
+    [Header("출혈관리")]
+    public float bleedingChance = 0.3f;
+    public float bleedingDuration = 15f;
+    public float bleedingTickDamage = 5f;
+    public float bleedingInterval = 1f;
 
     private float damageAmount; // 화살이 플레이어에게 입힐 데미지 (float으로 변경)
+
 
     void Start()
     {
@@ -37,13 +44,23 @@ public class ArrowScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // 충돌한 오브젝트의 태그가 "Player"인지 확인합니다.
-        if (other.CompareTag("PlayerCollier"))
+        if (other.CompareTag("PlayerCollider"))
         {
             PlayerHealthController playerHealth = other.GetComponentInParent<PlayerHealthController>();
+            
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damageAmount); // 플레이어에게 데미지 적용
                 Debug.Log($"플레이어가 화살에 맞음! 데미지: {damageAmount}");
+                StatusCondition playerStatus = other.gameObject.GetComponentInParent<StatusCondition>();
+
+                if (playerStatus != null)
+                {
+                    if (Random.Range(0f, 1f) <= bleedingChance)
+                    {
+                        playerStatus.ApplyBleeding(bleedingDuration, bleedingTickDamage, bleedingInterval);
+                    }
+                }
             }
             // 화살은 플레이어에게 데미지를 입힌 후 파괴됩니다.
             Destroy(gameObject);

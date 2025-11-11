@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum CuresStatusEffect
+{
+    None,       // 아무것도 치료하지 않음 (예: 일반 포션)
+    Poison,     // 중독 치료
+    Bleeding,   // 출혈 치료
+    Slow,       // 슬로우 치료
+    All         // 모든 상태 이상 치료 (만병통치약)
+}
+
 [CreateAssetMenu(fileName = "New ItemData", menuName = "Inventory/Item Data")]
 public class ItemData : ScriptableObject
 {
@@ -22,6 +32,11 @@ public class ItemData : ScriptableObject
 
     [Tooltip("슬롯당 최대 겹침 수")]
     [Min(1)] public int maxStack = 99;
+
+    [Header("소모품 효과 (Potion 등)")]
+    [Tooltip("이 아이템이 즉시 치료하는 상태 이상")]
+    public CuresStatusEffect curesStatusEffect = CuresStatusEffect.None;
+    public float healAmount;
 
     /* ===========================
      * 정적 레지스트리 (Sprite/ID -> ItemData)
