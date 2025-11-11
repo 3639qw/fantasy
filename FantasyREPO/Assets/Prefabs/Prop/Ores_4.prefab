@@ -101,8 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d36f18ec7c9f4f4db0b0d4f516d7cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oreItemData: {fileID: 11400000, guid: e6bc4f378312dc344a155a3ebe2a245e, type: 2}
-  oreAmount: 1
+  oreItemData: {fileID: 11400000, guid: b5c67e288c11c5043b6760d6be3081a3, type: 2}
+  oreAmount: 3
+  baseHitsRequired: 4
   destroyInstead: 0
 --- !u!70 &2977474287062654471
 CapsuleCollider2D:

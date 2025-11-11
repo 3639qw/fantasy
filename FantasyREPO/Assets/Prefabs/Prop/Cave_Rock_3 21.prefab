@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d36f18ec7c9f4f4db0b0d4f516d7cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oreItemData: {fileID: 11400000, guid: acd42ba1e1a3df84586de2f25dfb969d, type: 2}
-  oreAmount: 1
+  oreItemData: {fileID: 11400000, guid: 853048737b0e79a4b8a017cfcd64e40b, type: 2}
+  oreAmount: 3
+  baseHitsRequired: 4
   destroyInstead: 0
