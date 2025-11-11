@@ -96,24 +96,20 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        // ==========================================================
-        // ✨ 테스트용 초기 아이템 5개 추가
-        // ==========================================================
-        AddItemByID("Watering_Can_001");
-        AddItemByID("IronHoe_001");
-        AddItemByID("IronSword_001");
-        AddItemByID("IronAxe_001");
-        AddItemByID("IronPick_001");
-
         for (int i = 0; i < 30; i++)
         {
             AddItemByID("Arrow_001");
+            AddItemByID("CopperPiece");
+            AddItemByID("CopperOre");
+            AddItemByID("IronOre");
+            AddItemByID("Wood");
+            AddItemByID("SlimePiece");
+            AddItemByID("Bone");
         }
         AddItemByID("WoodenBow_001");
         AddItemByID("Bandage_001");
-        AddItemByID("DetoxPotion_001");
         AddItemByID("Soap_001");
-        AddItemByID("Panacea_001");
+        AddItemByID("DetoxPotion_001");
 
     }
 
@@ -460,6 +456,15 @@ private void Attach(ItemSlot[] arr)
 
     private void TryAutoBindUIFromScene()
     {
+         var scn = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (scn.IndexOf("Main", System.StringComparison.OrdinalIgnoreCase) >= 0)
+        {
+            // 필요하면 제작/가방 패널도 바로 끄기
+            if (bagPanel) bagPanel.SetActive(false);
+            Debug.Log("[Inventory] Main 씬 감지 → UI 자동 바인딩 스킵");
+            return;
+        }
+        
         EnsureSlotsAllocated(quickSlots);
         EnsureSlotsAllocated(bagSlots);
 

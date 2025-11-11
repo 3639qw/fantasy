@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 279831fe258020c4ba68f1fd0b4e229a, type: 3}
-  m_Name: Iron
+  m_Name: SlimePiece
   m_EditorClassIdentifier: 
-  itemID: Iron
-  itemName: Iron
-  itemIcon: {fileID: 4593625171341328509, guid: 1bd6d6a0c36d04f66befa1775a2e77a1, type: 3}
-  description: "\uCCA0"
+  itemID: SlimePiece
+  itemName: SlimePiece
+  itemIcon: {fileID: -1017156321652079111, guid: 1bd6d6a0c36d04f66befa1775a2e77a1, type: 3}
+  description: "\uD3EC\uC158\uC744 \uC870\uC81C\uD558\uB294\uB370 \uC4F0\uC774\uB294
+    \uC2AC\uB77C\uC784\uC870\uAC01\uC785\uB2C8\uB2E4."
   attackPower: 0
   itemType: Resource
   maxStack: 99

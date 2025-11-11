@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 279831fe258020c4ba68f1fd0b4e229a, type: 3}
-  m_Name: Iron
+  m_Name: GoldPotion
   m_EditorClassIdentifier: 
-  itemID: Iron
-  itemName: Iron
-  itemIcon: {fileID: 4593625171341328509, guid: 1bd6d6a0c36d04f66befa1775a2e77a1, type: 3}
-  description: "\uCCA0"
+  itemID: GoldPotion
+  itemName: GoldPotion
+  itemIcon: {fileID: 4781945319961829685, guid: 0f35039a5905a49a4b319f9d2276e8aa, type: 3}
+  description: "\uACE8\uB4DC\uD3EC\uC158\uC785\uB2C8\uB2E4."
   attackPower: 0
-  itemType: Resource
+  itemType: Potion
   maxStack: 99

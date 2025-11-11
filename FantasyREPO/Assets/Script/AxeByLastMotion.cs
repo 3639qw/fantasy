@@ -3,17 +3,17 @@
 public class AxeByLastMotion : MonoBehaviour
 {
     [Header("Chop Settings")]
-    public float interactRange = 2f;       // 플레이어 → 나무 콜라이더까지의 '표면' 거리 허용치
-    public float searchPadding = 1f;       // 탐색 여유 반경 (큰 나무도 찾기 쉽게)
+    public float interactRange = 2f;       // 플레이어 → 나무 콜라이더 표면 거리 허용치
+    public float searchPadding = 1f;       // 탐색 여유 반경
     public string treeTag = "Tree";
     public float cooldown = 0.35f;
 
     [Header("Inventory Gate (optional)")]
     public bool requireAxeSelected = false;
-    public ItemData axeItemData;
+    public ItemData axeItemData;           // 특정 아이템 강제하고 싶을 때만 지정
 
     [Header("Targeting")]
-    public bool preferTreeUnderCursor = true; // 커서가 콜라이더 위면 그 나무 우선
+    public bool preferTreeUnderCursor = true;
 
     [Header("Animation")]
     [SerializeField] private string axeTriggerName = "Axe";
@@ -42,7 +42,6 @@ public class AxeByLastMotion : MonoBehaviour
     {
         if (_cool > 0f) _cool -= Time.deltaTime;
 
-        // 좌클릭 전용
         if (Input.GetMouseButtonDown(0) &&
             _cool <= 0f &&
             (_playerMove == null || !_playerMove.isAttacking) &&
@@ -51,17 +50,21 @@ public class AxeByLastMotion : MonoBehaviour
             var target = FindReachableTree();
             if (!target) return;
 
-            // 방향 계산 (타겟 중심 기준, 너무 가까우면 마우스 방향)
+            // ✅ 현재 선택이 Axe인지 확인 + Attack Power 읽기
+            int toolPower = GetSelectedToolPower_Axe();
+            if (toolPower <= 0) return;
+
+            // 방향 계산 (타겟이 너무 가까우면 마우스 방향)
             Vector2 dir = (target.transform.position - transform.position);
             if (dir.sqrMagnitude < 0.0001f) dir = GetMouseWorldDir();
             else dir.Normalize();
 
-            // 애니메이션 트리거
+            // 애니메이션 트리거 (유지)
             TriggerAxeAnim(dir);
 
-            // 기능 실행
+            // ✅ HP 깎기 (ChopOnce 직접 호출 금지)
             var tree = target.GetComponentInParent<ChoppableTree>();
-            if (tree) tree.ChopOnce();
+            if (tree) tree.Hit(toolPower);
 
             // 락 & 쿨타임
             if (_playerMove) _playerMove.isAttacking = true;
@@ -72,14 +75,12 @@ public class AxeByLastMotion : MonoBehaviour
     // == 콜라이더 기반 타깃팅 ==
     Collider2D FindReachableTree()
     {
-        // 1) 커서가 콜라이더 위면 우선 선택
         if (preferTreeUnderCursor)
         {
             var underCursor = GetTreeUnderCursor();
             if (underCursor && IsReachable(underCursor)) return underCursor;
         }
 
-        // 2) 주변에서 탐색 (searchPadding만큼 넓게)
         var cols = Physics2D.OverlapCircleAll(transform.position, interactRange + searchPadding);
         Collider2D nearest = null;
         float best = float.MaxValue;
@@ -89,14 +90,12 @@ public class AxeByLastMotion : MonoBehaviour
             if (!IsTreeCollider(c)) continue;
             if (!IsReachable(c)) continue;
 
-            // 콜라이더 '표면'까지의 실제 거리로 비교
             float dist = DistanceToColliderSurface(c);
             if (dist < best) { best = dist; nearest = c; }
         }
         return nearest;
     }
 
-    // 커서가 덮고 있는 나무 콜라이더 가져오기
     Collider2D GetTreeUnderCursor()
     {
         var cam = _cam ? _cam : Camera.main;
@@ -109,7 +108,6 @@ public class AxeByLastMotion : MonoBehaviour
         return null;
     }
 
-    // 트리 태그 판정(자식 콜라이더도 허용)
     bool IsTreeCollider(Collider2D c)
     {
         if (!c) return false;
@@ -122,18 +120,13 @@ public class AxeByLastMotion : MonoBehaviour
         return false;
     }
 
-    // 플레이어 위치 ↔ 나무 콜라이더 표면까지의 거리
     float DistanceToColliderSurface(Collider2D treeCol)
     {
         Vector2 closest = treeCol.ClosestPoint(transform.position);
         return Vector2.Distance(closest, transform.position);
     }
 
-    // 도달 판정: 콜라이더 표면까지 거리가 interactRange 이내
-    bool IsReachable(Collider2D treeCol)
-    {
-        return DistanceToColliderSurface(treeCol) <= interactRange;
-    }
+    bool IsReachable(Collider2D treeCol) => DistanceToColliderSurface(treeCol) <= interactRange;
 
     void TriggerAxeAnim(Vector2 dir)
     {
@@ -178,12 +171,86 @@ public class AxeByLastMotion : MonoBehaviour
     }
 #endif
 
+    // ───────── 선택 아이템이 Axe인지 판정 + Attack Power 읽기 ─────────
+
     bool IsAxeSelected()
     {
         var inv = Inventory.Instance;
-        if (inv == null) return true;
-        var selectedItem = inv.GetSelectedItemData();
-        if (axeItemData != null) return selectedItem == axeItemData;
-        return !inv.IsSelectedEmpty();
+        if (inv == null) return true; // 게이트 사용 안 하면 통과
+
+        var selected = inv.GetSelectedItemData();
+        if (axeItemData != null) return selected == axeItemData; // 특정 아이템 강제 모드
+
+        var type = ReadItemType(selected);
+        return !string.IsNullOrEmpty(type) &&
+               type.Equals("Axe", System.StringComparison.OrdinalIgnoreCase);
+    }
+
+    int GetSelectedToolPower_Axe()
+    {
+        var inv = Inventory.Instance;
+        var it  = inv ? inv.GetSelectedItemData() : null;
+        if (it == null) return 0;
+
+        var type = ReadItemType(it);
+        if (string.IsNullOrEmpty(type) || !type.Equals("Axe", System.StringComparison.OrdinalIgnoreCase))
+            return 0;
+
+        int ap = ReadAttackPower(it);
+        return Mathf.Max(1, ap); // 최소 1
+    }
+
+    static string ReadItemType(ItemData it)
+    {
+        if (it == null) return null;
+        var t = it.GetType();
+
+        var f = t.GetField("itemType") ?? t.GetField("ItemType");
+        if (f != null) { var v = f.GetValue(it) as string; if (!string.IsNullOrEmpty(v)) return v; }
+
+        var p = t.GetProperty("itemType") ?? t.GetProperty("ItemType");
+        if (p != null) { var v = p.GetValue(it) as string; if (!string.IsNullOrEmpty(v)) return v; }
+
+        return null;
+    }
+
+    // 다양한 이름/타입 지원 + 이름 기반 폴백(Copper=1, Iron=2)
+    static int ReadAttackPower(ItemData it)
+    {
+        if (it == null) return 1;
+        var t = it.GetType();
+
+        string[] names = {
+            "attackPower","AttackPower",
+            "chopPower","ChopPower",
+            "toolPower","ToolPower",
+            "power","Power",
+            "atk","Atk","ATK",
+            "damage","Damage"
+        };
+
+        object val = null;
+        foreach (var n in names)
+        {
+            var f = t.GetField(n);
+            if (f != null) { val = f.GetValue(it); break; }
+            var p = t.GetProperty(n);
+            if (p != null) { val = p.GetValue(it, null); break; }
+        }
+
+        int result = 0;
+        if (val is int i) result = i;
+        else if (val is float f) result = Mathf.RoundToInt(f);
+        else if (val is double d) result = Mathf.RoundToInt((float)d);
+        else if (val is string s && int.TryParse(s, out var si)) result = si;
+
+        if (result <= 0)
+        {
+            var nm = it.name ?? string.Empty;
+            if (nm.IndexOf("iron", System.StringComparison.OrdinalIgnoreCase) >= 0) result = 2;
+            else if (nm.IndexOf("copper", System.StringComparison.OrdinalIgnoreCase) >= 0) result = 1;
+            else result = 1;
+        }
+        return result;
     }
 }
