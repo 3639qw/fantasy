@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 755115}
   - component: {fileID: 755112}
   - component: {fileID: 755114}
+  - component: {fileID: 755116}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -235,6 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32cf8ff5631338d449d20b8fd777bc9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpSliderName: HP_Slider
+  mpSliderName: MP_Slider
+  stSliderName: ST_Slider
   gaugeHP: {fileID: 0}
   gaugeMP: {fileID: 0}
   gaugeST: {fileID: 0}
@@ -258,6 +262,7 @@ MonoBehaviour:
   tilledTile: {fileID: 11400000, guid: b6e9ad73df5f09f45b6c042b1a819a69, type: 2}
   farmTile: {fileID: 11400000, guid: 8397735bc2b77f94794d64e7bfbc806c, type: 2}
   wetfarmTile: {fileID: 11400000, guid: a8df53157b3ec4f42931deb6a151d508, type: 2}
+  harvestBarAutoName: HarvestBar
   crops:
   - name: "\uBC00"
     seedItemData: {fileID: 0}
@@ -579,6 +584,7 @@ MonoBehaviour:
   current: 1
   quickRootOverride: {fileID: 0}
   bagRootOverride: {fileID: 0}
+  bagPanelAutoName: bag
 --- !u!114 &755115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,6 +598,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveFileName: tilemap_save.json
+--- !u!114 &755116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36a37654fff9fa4aa98a52547b053cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  craftingPanelRoot: {fileID: 0}
+  toggleKey: 114
+  closeKey: 27
+  pauseOnOpen: 0
+  inventory: {fileID: 0}
+  itemResourcesPath: Item
 --- !u!4 &10480043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8789383888999752147, guid: 09b151ff35798e2419a2002f74ce5b32, type: 3}
