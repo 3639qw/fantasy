@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8392528886519603072}
   - component: {fileID: 8877652973335675474}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ToolSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,9 @@ GameObject:
   - component: {fileID: -1115705369917960771}
   - component: {fileID: 3262287080883553010}
   - component: {fileID: 5553453325036627865}
-  m_Layer: 3
+  - component: {fileID: 3525279924123706982}
+  - component: {fileID: 3517110697841630533}
+  m_Layer: 0
   m_Name: Player(AnimationFixed)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -304,7 +306,7 @@ MonoBehaviour:
   _useDashST: 5
   jumpKey: 99
   _useJumpST: 10
-  _playerGhostPrefab: {fileID: 0}
+  _playerGhostPrefab: {fileID: 8113701081497633081, guid: 4dfd67cccbd460044a6211aa1d145a81, type: 3}
   _ghostSpawnInterval: 0.05
   _ghostMaterial: {fileID: 0}
   isAttacking: 0
@@ -326,7 +328,7 @@ MonoBehaviour:
   attackRange: 2
   attackAngle: 180
   coolTime: 0.5
-  swordItemData: {fileID: 0}
+  swordItemData: {fileID: 11400000, guid: fda9612245e9f52489b7404bbba10f38, type: 2}
 --- !u!114 &8068333873629394959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +408,42 @@ MonoBehaviour:
   axeItemData: {fileID: 11400000, guid: 1cfa0f3597704494f836ddb270ad0e10, type: 2}
   preferTreeUnderCursor: 1
   axeTriggerName: Axe
+--- !u!114 &3525279924123706982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569323289389502377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199f1acf97fdbdb44be793719e649383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRange: 2
+  searchPadding: 1
+  treeTag: Tree
+  cooldown: 0.4
+  requireAxeSelected: 1
+  axeItemData: {fileID: 11400000, guid: 1cfa0f3597704494f836ddb270ad0e10, type: 2}
+  preferTreeUnderCursor: 1
+  axeTriggerName: Axe
+--- !u!114 &3517110697841630533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569323289389502377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6726954c30d1a40bb4b9bbe816d544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRange: 2
+  rockTag: Rock
+  coolTime: 0.5
+  pickItemData: {fileID: 11400000, guid: 5e68ca2d1290077468823153a930737b, type: 2}
 --- !u!1 &6606840910316503988
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4734781139142013887}
   - component: {fileID: 8474418614709743984}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: PlayerCollider
   m_TagString: PlayerCollider
   m_Icon: {fileID: 0}
