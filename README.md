@@ -126,4 +126,4 @@
 --- 
 
 ## 게임 시연 영상
-youtube.com/watch?v=OZyQkHwtnyE&feature=youtu.be/0.jpg
+[![이미지 텍스트](https://www.youtube.com/watch?v=OZyQkHwtnyE/0.jpg)](https://www.youtube.com/watch?v=OZyQkHwtnyE)
