@@ -45,19 +45,23 @@ public class Farming : MonoBehaviour
     [Header("Seed/Crop Tilemap")]
     [SerializeField] protected internal Tilemap seedLand;
 
-    [Header("Farming Tool Gate (by ItemData.itemType)")]
-    [Tooltip("콘솔에 게이트 결과를 출력할지")]
+    [Header("Farming Tool Gate (Selected ItemData)")]
+    [SerializeField] private ItemData wateringCanItemData;
+    [SerializeField] private ItemData hoeItemData;
     [SerializeField] private bool debugToolGate = false;
 
-    // Pick.cs 스타일
+    // ================================
+    // Pick.cs 구조 적용 (개간/급수 전용)
+    // ================================
     [Header("개간/급수 애니메이션 & 쿨타임")]
-    [SerializeField] private string hoeTriggerName = "Hoe";
-    [SerializeField] private string wateringTriggerName = "Watering";
-    [SerializeField] private float farmCoolTime = 0.5f;
+    [SerializeField] private string hoeTriggerName = "Hoe";           // 개간 트리거
+    [SerializeField] private string wateringTriggerName = "Watering"; // 급수 트리거
+    [SerializeField] private float farmCoolTime = 0.5f;               // 좌클릭 쿨타임
     private float farmCurTime;
 
     private Animator _anim;
     private PlayerMove _playerMove;
+    // ================================
 
     void Awake()
     {
@@ -70,6 +74,7 @@ public class Farming : MonoBehaviour
         inv = Inventory.Instance;
         TryBindHarvestBar();
 
+        // 애니메이터/플레이어 상태 참조
         if (gm && gm.player)
         {
             _anim = gm.player.GetComponent<Animator>();
@@ -81,7 +86,18 @@ public class Farming : MonoBehaviour
             _playerMove = GetComponent<PlayerMove>();
         }
 
-        if (!harvestBar)
+        if (harvestBar)
+        {
+            barRoot = harvestBar.GetComponent<RectTransform>();
+            barCanvas = harvestBar.GetComponentInParent<Canvas>();
+            cam = barCanvas ? (barCanvas.worldCamera ?? Camera.main) : Camera.main;
+            harvestBar.interactable = false;
+            harvestBar.minValue = 0f;
+            harvestBar.maxValue = 1f;
+            harvestBar.value = 0f;
+            barRoot.gameObject.SetActive(false);
+        }
+        else
         {
             cam = Camera.main;
         }
@@ -89,15 +105,17 @@ public class Farming : MonoBehaviour
 
     void Update()
     {
+        // 개간/급수 쿨타임 감소
         if (farmCurTime > 0f) farmCurTime -= Time.deltaTime;
 
-        // 좌클릭: 개간/급수 (타입 게이트)
+        // 좌클릭: 개간/급수만 처리 (Pick.cs 구조)
         if (Input.GetMouseButtonDown(0) &&
             farmCurTime <= 0f &&
             _playerMove != null && !_playerMove.isAttacking &&
             (IsHoeSelected() || IsWateringCanSelected()))
         {
-            if (TryFarmAction(5f)) return;
+            if (TryFarmAction(5f))   // 필요 ST는 기존 BuildFarm과 동일하게 5f 사용
+                return;
         }
 
         // Space: 기존 수확/심기/앞수확/BuildFarm 유지
@@ -107,10 +125,10 @@ public class Farming : MonoBehaviour
         if (TryHarvestCrop()) return;
         if (!(IsWateringCanSelected() || IsHoeSelected()) && TryHarvestSeedForward()) return;
 
-        CropData cd = FindCropBySeedData(inv?.GetSelectedItemData());
+        CropData cd = FindCropBySeedData(inv.GetSelectedItemData());
         if (cd != null && TryPlantSeed(cd)) return;
 
-        // 스페이스로 하던 기본 개간/급수(호환유지)
+        // 스페이스로 하는 기존 개간/급수 로직도 유지
         BuildFarm(5f);
     }
 
@@ -123,7 +141,7 @@ public class Farming : MonoBehaviour
         Vector3Int pos = farmLand.WorldToCell(gm.player.transform.position);
         TileBase cur = farmLand.GetTile(pos);
 
-        // 개간: tilled -> farm
+        // 개간: tilled -> farm (호미 선택 + "Hoe" 트리거)
         if (cur == tilledTile && IsHoeSelected())
         {
             TriggerFarmAnimTowardMouse(hoeTriggerName);
@@ -135,7 +153,7 @@ public class Farming : MonoBehaviour
             return true;
         }
 
-        // 급수: farm -> wetfarm
+        // 급수: farm -> wetfarm (물뿌리개 선택 + "Watering" 트리거)
         if (cur == farmTile && IsWateringCanSelected())
         {
             TriggerFarmAnimTowardMouse(wateringTriggerName);
@@ -160,10 +178,12 @@ public class Farming : MonoBehaviour
         _anim.SetTrigger(triggerName);
     }
 
+    // 애니메이션 이벤트(EndAttack)에서 호출될 함수
     public void EndFarm()
     {
         if (_anim)
         {
+            // 두 트리거 모두 리셋 (안전)
             _anim.ResetTrigger(hoeTriggerName);
             _anim.ResetTrigger(wateringTriggerName);
             _anim.SetFloat("AttackX", 0f);
@@ -171,6 +191,8 @@ public class Farming : MonoBehaviour
         }
         if (_playerMove) _playerMove.isAttacking = false;
     }
+
+    // Pick.cs와 동일하게 애니메이션 이벤트명이 EndAttack이라면 이것도 잡아줌
     public void EndAttack() => EndFarm();
 
     private Vector2 GetMouseWorldDir()
@@ -186,7 +208,8 @@ public class Farming : MonoBehaviour
         return v.normalized;
     }
 
-    // ====== 기존 로직 유지 (수확/심기 등) ======
+    // ====== 아래부터는 기존 로직 그대로 ======
+
     bool TryHarvestCrop()
     {
         Vector3Int pos = seedLand.WorldToCell(gm.player.transform.position);
@@ -247,7 +270,7 @@ public class Farming : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             done?.Invoke(true);
-            yield break;               // ← return true; 금지
+            yield break;
         }
 
         barRoot.gameObject.SetActive(true);
@@ -257,30 +280,22 @@ public class Farming : MonoBehaviour
         float t = 0f; bool cancel = false;
         while (t < 1f)
         {
-            t += Time.deltaTime; 
-            harvestBar.value = t;
+            t += Time.deltaTime; harvestBar.value = t;
 
             Vector3 scr = cam.WorldToScreenPoint(world);
             if (barCanvas.renderMode == RenderMode.ScreenSpaceOverlay)
                 barRoot.position = scr;
             else
             {
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                    (RectTransform)barCanvas.transform, scr, cam, out var local);
+                RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)barCanvas.transform, scr, cam, out var local);
                 barRoot.anchoredPosition = local;
             }
 
-            if (Vector2.Distance(gm.player.transform.position, world) > cancelDistance)
-            {
-                cancel = true;
-                break;
-            }
+            if (Vector2.Distance(gm.player.transform.position, world) > cancelDistance) { cancel = true; break; }
             yield return null;
         }
-
         barRoot.gameObject.SetActive(false);
         done?.Invoke(!cancel);
-        yield break;                    // 안전하게 종료
     }
 
     bool TryPlantSeed(CropData cd)
@@ -357,48 +372,29 @@ public class Farming : MonoBehaviour
     {
         if (data == null) return null;
         foreach (var c in crops)
+        {
             if (c.seedItemData == data) return c;
+        }
         return null;
     }
 
-    // === 타입 게이트: 선택 아이템의 itemType 비교 ===
-    private bool IsToolTypeSelected(string wantType)
+    private bool IsToolSelected(ItemData toolData)
     {
-        var it   = inv ? inv.GetSelectedItemData() : null;
-        var type = ReadItemType(it);
-        bool ok  = !string.IsNullOrEmpty(type) &&
-                type.Equals(wantType, System.StringComparison.OrdinalIgnoreCase);
+        if (inv == null || inv.IsSelectedEmpty()) return false;
+
+        var selectedItem = inv.GetSelectedItemData();
+        bool ok = (selectedItem != null && selectedItem == toolData);
 
         if (debugToolGate)
-        {
-            // 👇 문제 줄을 안전하게 분리
-            var selName = (it != null ? it.name : "null");
-            Debug.Log($"[ToolGate] selected={selName}, type={type}, want={wantType}, ok={ok}");
-        }
+            Debug.Log($"[ToolGate] selectedItem={(selectedItem?.name)}, tool={(toolData?.name)}, match={ok}");
 
         return ok;
     }
-    private bool IsWateringCanSelected() => IsToolTypeSelected("WateringCan");
-    private bool IsHoeSelected()          => IsToolTypeSelected("Hoe");
 
-    // === 리플렉션 헬퍼: ItemData.itemType 읽기 ===
-    private static string ReadItemType(object it)
-    {
-        if (it == null) return null;
-        var t = it.GetType();
-
-        var f = t.GetField("itemType") ?? t.GetField("ItemType");
-        if (f != null) { var v = f.GetValue(it) as string; if (!string.IsNullOrEmpty(v)) return v; }
-
-        var p = t.GetProperty("itemType") ?? t.GetProperty("ItemType");
-        if (p != null) { var v = p.GetValue(it) as string; if (!string.IsNullOrEmpty(v)) return v; }
-
-        return null;
-    }
-
-    // ====== 진행바/바인딩 유틸 (기존) ======
+    // 씬/Don’tDestroyOnLoad 객체만 허용(프리팹 에셋 제외)
     private static bool IsSceneObject(Component c) => c && c.gameObject.scene.IsValid();
 
+    // 전역에서 이름으로 Slider 찾기(활/비활성 + DDOL 포함)
     private Slider FindSliderByNameGlobal(string name)
     {
         if (string.IsNullOrEmpty(name)) return null;
@@ -420,6 +416,7 @@ public class Farming : MonoBehaviour
         return path;
     }
 
+    // 이름으로 HarvestBar 자동 바인딩 + 초기화
     private void TryBindHarvestBar()
     {
         if (harvestBar == null)
@@ -442,7 +439,7 @@ public class Farming : MonoBehaviour
         }
         else
         {
-            if (!cam) cam = Camera.main;
+            if (!cam) cam = Camera.main; // 진행바 없어도 동작하도록 카메라 확보
             Debug.LogWarning($"[Farming][AutoBind] '{harvestBarAutoName}' Slider를 찾지 못했습니다. (진행바 없이 진행)");
         }
     }
@@ -453,4 +450,7 @@ public class Farming : MonoBehaviour
     {
         TryBindHarvestBar();
     }
+    
+    private bool IsWateringCanSelected() => IsToolSelected(wateringCanItemData);
+    private bool IsHoeSelected() => IsToolSelected(hoeItemData);
 }
