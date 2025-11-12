@@ -7122,7 +7122,6 @@ GameObject:
   - component: {fileID: 255933816}
   - component: {fileID: 255933815}
   - component: {fileID: 255933814}
-  - component: {fileID: 255933818}
   m_Layer: 0
   m_Name: GoCave
   m_TagString: Untagged
@@ -7261,28 +7260,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &255933818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255933813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d356f10a01a71f478210699be7c9f79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Main
-  playerTag: Player
-  triggerKey: 32
-  moveClip: {fileID: 8300000, guid: 6afcf25853347eb4898ac39d5c137f17, type: 3}
-  arriveClip: {fileID: 8300000, guid: 6afcf25853347eb4898ac39d5c137f17, type: 3}
-  moveVol: 1
-  arriveVol: 1
-  delayLoadUntilMoveClipEnds: 1
-  extraDelay: 0
-  oneShotSurviveLoad: 1
 --- !u!1 &288738751
 GameObject:
   m_ObjectHideFlags: 0
@@ -7744,7 +7721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c387a3d78728c43b6e2c8774452075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 464889353}
   maxHP: 100
   maxMP: 50
   maxST: 100
@@ -8401,8 +8378,6 @@ GameObject:
   - component: {fileID: 1253303621}
   - component: {fileID: 1253303620}
   - component: {fileID: 1253303619}
-  - component: {fileID: 1253303623}
-  - component: {fileID: 1253303624}
   m_Layer: 0
   m_Name: InCave3
   m_TagString: Untagged

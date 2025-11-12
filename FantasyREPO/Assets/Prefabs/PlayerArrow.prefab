@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4437238801457376952}
   - component: {fileID: -1101662354100290042}
   - component: {fileID: -6822527130000476741}
-  - component: {fileID: 4554061266726733028}
   m_Layer: 0
   m_Name: PlayerArrow
   m_TagString: Arrow
@@ -178,21 +177,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   lifeTime: 5
---- !u!114 &4554061266726733028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5181542210344588901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd66530627159d4ea016893e84a3d27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flyClip: {fileID: 8300000, guid: 3cd4d24909998374b9b09c2feb9f0f46, type: 3}
-  hitClip: {fileID: 0}
-  flyVol: 0.9
-  hitVol: 1
-  flyJitter: 0.01
-  hitJitter: 0.02
