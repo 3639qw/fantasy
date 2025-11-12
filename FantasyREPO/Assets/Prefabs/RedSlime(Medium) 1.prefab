@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1220040590500421158}
   - component: {fileID: 5437427811044763077}
   - component: {fileID: 2855471371886935762}
+  - component: {fileID: -2731973559774568673}
   m_Layer: 6
   m_Name: RedSlime(Medium) 1
   m_TagString: Enemy
@@ -248,3 +249,28 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.3
+--- !u!114 &-2731973559774568673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535345253248954529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1ad42c06484ce4fb6e7d909c6c6153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1220040590500421158}
+  rb: {fileID: 4863339664046711625}
+  moveStateName: Slime_Move
+  dieStateName: Slime_die
+  layerIndex: 0
+  hopClip: {fileID: 8300000, guid: 7c2c4287cdea49d4bbe9aa07f5bf712f, type: 3}
+  dieClip: {fileID: 8300000, guid: 33f7ddb3b2b476941b3190a1fb301fdb, type: 3}
+  hopInterval: 0.42
+  velocityThreshold: 0.05
+  hopVolume: 1
+  hopPitchJitter: 0.03
+  dieVolume: 1
+  diePitchJitter: 0.02
