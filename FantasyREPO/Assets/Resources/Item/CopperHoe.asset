@@ -15,7 +15,9 @@ MonoBehaviour:
   itemID: CopperHoe
   itemName: CopperHoe
   itemIcon: {fileID: 3542508307251120905, guid: d8e1f48895b344b248c92f77dae42ecf, type: 3}
-  description: "\uAD6C\uB9AC\uACE1\uAD2D\uC774"
-  attackPower: 5
+  description: "\uAD6C\uB9AC\uAD2D\uC774"
+  attackPower: 0
   itemType: Hoe
   maxStack: 1
+  curesStatusEffect: 0
+  healAmount: 0

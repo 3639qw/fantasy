@@ -1,27 +1,25 @@
 using UnityEngine;
-using System.Collections;
 
 public class PlayerBow : MonoBehaviour
 {
-    // [기존 변수]
+    [Header("Damage & Cooldown")]
     public float attackDamage = 10f;
+    public float attackCooldown = 1f;
 
-    [Header("Weapon Gate (Selected ItemData)")]
-    [SerializeField] private ItemData bowItemData;
-    [SerializeField] private ItemData arrowItemData;
+    [Header("Inventory Gate")]
+    [Tooltip("비워두면 타입(Bow)만 검사하고, 채우면 이 아이템과 타입 둘 중 하나라도 만족하면 공격 허용")]
+    [SerializeField] private ItemData bowItemData;     // 선택Bow(옵션)
+    [SerializeField] private ItemData arrowItemData;   // 소모 화살(권장)
+
+    [Header("Arrow")]
+    public GameObject arrowPrefab;
+    public Transform arrowSpawnPoint;
+    public float arrowSpeed = 15f;
 
     private float curTime;
     private PlayerMove _playerMove;
     private Rigidbody2D _rb;
-    private Animator _animator; // Awake에서 할당된 Animator 변수
-
-    public GameObject arrowPrefab;
-    public Transform arrowSpawnPoint;
-    public float attackCooldown = 1f;
-
-    [Header("Bow Settings")]
-    public float arrowSpeed = 15f; // 화살 속도 변수 추가
-
+    private Animator _animator;
 
     void Awake()
     {
@@ -32,103 +30,95 @@ public class PlayerBow : MonoBehaviour
 
     void Update()
     {
-        // 쿨다운 타이머
-        if (curTime > 0)
-        {
-            curTime -= Time.deltaTime;
-        }
+        if (curTime > 0f) curTime -= Time.deltaTime;
 
-        // 공격 입력 확인 (화살 보유 여부 체크 추가)
-        if (Input.GetMouseButtonDown(0) && curTime <= 0 && _playerMove != null && !_playerMove.isAttacking && IsBowSelected() && IsHavingArrow())
+        if (Input.GetMouseButtonDown(0) &&
+            curTime <= 0f &&
+            _playerMove != null && !_playerMove.isAttacking &&
+            IsBowSelected() &&
+            HasArrow())
         {
             PerformAttack();
-            Debug.Log("화살 발사됨!");
         }
     }
 
+    // === 타입 게이트: 선택 아이템의 itemType == "Bow" 이거나 bowItemData와 동일 ===
     private bool IsBowSelected()
     {
         var inv = Inventory.Instance;
-        if (inv == null || inv.IsSelectedEmpty())
-            return false;
+        if (inv == null || inv.IsSelectedEmpty()) return false;
 
-        // [수정] 'bowItemData' 타입을 'ItemData'로 변경
-        ItemData selectedItem = inv.GetSelectedItemData();
+        var sel = inv.GetSelectedItemData();
+        if (sel == null) return false;
 
-        return selectedItem != null && selectedItem == bowItemData;
+        // 1) 지정된 Bow 아이템과 동일하면 OK
+        if (bowItemData && sel == bowItemData) return true;
+
+        // 2) 타입이 Bow면 OK
+        var type = ReadItemType(sel);
+        return !string.IsNullOrEmpty(type) &&
+               type.Equals("Bow", System.StringComparison.OrdinalIgnoreCase);
     }
 
-    private bool IsHavingArrow()
+    // 화살 보유 확인 (arrowItemData를 기준으로 체크)
+    private bool HasArrow()
     {
         var inv = Inventory.Instance;
-        if (inv == null) // 인스턴스 존재 여부만 확인
-            return false;
-        
-        // 새로 추가한 GetItemQuantity 메서드를 호출하여
-        // arrowItemData의 수량이 0보다 큰지 확인합니다.
-        return inv.GetItemQuantity(arrowItemData) > 0;
+        if (inv == null) return false;
+        if (!arrowItemData) return true;                // 화살 아이템을 지정하지 않았다면 소모 안함
+        return inv.HasItem(arrowItemData, 1);
     }
 
     void PerformAttack()
     {
-        // 쿨다운 설정
         curTime = attackCooldown;
-
-        // 플레이어 상태를 '공격 중'으로 변경 (애니메이션 이벤트로 해제)
         _playerMove.isAttacking = true;
 
-        // --- 공격 방향 계산 (기존 코드) ---
-        Vector3 mouseScreenPos = Input.mousePosition;
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
-        Vector2 attackDirection = (Vector2)mouseWorldPos - (Vector2)transform.position;
-        attackDirection.Normalize();
+        // 공격 방향
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 dir = ((Vector2)mouseWorld - (Vector2)transform.position).normalized;
 
-        // --- 애니메이터 설정 (변수명 수정) ---
-        _animator.SetFloat("AttackX", attackDirection.x);
-        _animator.SetFloat("AttackY", attackDirection.y);
+        // 애니메이션
+        _animator.SetFloat("AttackX", dir.x);
+        _animator.SetFloat("AttackY", dir.y);
         _animator.SetTrigger("Bow");
 
-        // --- [추가] 화살 생성 및 발사 로직 ---
+        // 화살 생성/발사
+        Vector3 spawn = arrowSpawnPoint ? arrowSpawnPoint.position : transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90f;
+        var arrow = Instantiate(arrowPrefab, spawn, Quaternion.Euler(0, 0, angle));
 
-        // 화살 생성 위치 (arrowSpawnPoint가 없으면 플레이어 위치)
-        Vector3 spawnPos = arrowSpawnPoint != null ? arrowSpawnPoint.position : transform.position;
+        var rb = arrow.GetComponent<Rigidbody2D>();
+        if (rb) rb.linearVelocity = dir * arrowSpeed;         // Rigidbody2D는 velocity!
 
-        // 화살 회전값 계산
-        float angle = Mathf.Atan2(attackDirection.y, attackDirection.x) * Mathf.Rad2Deg;
-        angle += 90f;
-        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+        // (선택) 화살 스크립트에 데미지 넘기기
+        // var a = arrow.GetComponent<Arrow>(); if (a) a.damage = attackDamage;
 
-        // 화살 생성
-        GameObject arrow = Instantiate(arrowPrefab, spawnPos, rotation);
-        
-        // 화살 Rigidbody2D를 가져와서 속도 적용
-        Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();
-        if (arrowRb != null)
-        {
-            arrowRb.linearVelocity = attackDirection * arrowSpeed;
-        }
-        
-        // (선택 사항) 화살 프리팹에 'Arrow.cs' 같은 스크립트가 있다면
-        // 데미지 값을 넘겨줄 수 있습니다.
-        // Arrow arrowScript = arrow.GetComponent<Arrow>();
-        // if (arrowScript != null)
-        // {
-        //     arrowScript.damage = attackDamage;
-        // }
-
-        // --- [추가] 화살 소모 ---
-        // Inventory.Instance에 아이템을 제거하는 메서드가 있다고 가정합니다.
-        Inventory.Instance.RemoveItem(arrowItemData, 1);
+        // 화살 소모
+        if (arrowItemData) Inventory.Instance.RemoveItem(arrowItemData, 1);
     }
 
-    // --- [추가] 애니메이션 이벤트용 메서드 ---
-    // 'Bow' 애니메이션 클립의 마지막 프레임에
-    // 'OnAttackAnimationFinished' 이름으로 Animation Event를 추가하세요.
+    // 애니메이션 이벤트에서 호출
     public void OnAttackAnimationFinished()
     {
-        if (_playerMove != null)
-        {
-            _playerMove.isAttacking = false;
-        }
+        if (_playerMove) _playerMove.isAttacking = false;
+        _animator.ResetTrigger("Bow");
+        _animator.SetFloat("AttackX", 0f);
+        _animator.SetFloat("AttackY", 0f);
+    }
+
+    // === ItemData.itemType 읽기(필드/프로퍼티 둘 다 지원) ===
+    private static string ReadItemType(object it)
+    {
+        if (it == null) return null;
+        var t = it.GetType();
+
+        var f = t.GetField("itemType") ?? t.GetField("ItemType");
+        if (f != null) { var v = f.GetValue(it) as string; if (!string.IsNullOrEmpty(v)) return v; }
+
+        var p = t.GetProperty("itemType") ?? t.GetProperty("ItemType");
+        if (p != null) { var v = p.GetValue(it, null) as string; if (!string.IsNullOrEmpty(v)) return v; }
+
+        return null;
     }
 }

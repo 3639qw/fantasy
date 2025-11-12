@@ -59,6 +59,11 @@ public class Inventory : MonoBehaviour
     [Tooltip("아이템 효과를 적용받을 플레이어 오브젝트")]
     [SerializeField] private GameObject playerObject;
 
+    [Header("Quick Slot Scroll")]
+    [SerializeField] private bool enableScrollSelect = true;   // 휠 선택 사용 여부
+    [SerializeField] private bool invertScrollDirection = false; // 휠 방향 반전
+    [SerializeField] private bool skipEmptyOnScroll = false;   // 빈 슬롯은 건너뛸지
+
     [SerializeField, Range(1, 10)] private int current = 1;
     public int states => current;
 
@@ -150,7 +155,31 @@ public class Inventory : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha8)) SelectQuick(8);
         else if (Input.GetKeyDown(KeyCode.Alpha9)) SelectQuick(9);
         else if (Input.GetKeyDown(KeyCode.Alpha0)) SelectQuick(10);
+        
+        // ── 마우스 휠로 퀵슬롯 이동 ──
+        if (enableScrollSelect)
+        {
+            int dir = 0;
 
+            // 새 입력 시스템/일반에서도 동작: mouseScrollDelta 우선
+            float dy = Input.mouseScrollDelta.y;
+            if (Mathf.Abs(dy) > 0.01f)
+                dir = (dy > 0f) ? +1 : -1;
+            else
+            {
+                // 레거시 축도 백업으로 체크
+                float ax = Input.GetAxis("Mouse ScrollWheel");
+                if (Mathf.Abs(ax) > 0.01f)
+                    dir = (ax > 0f) ? +1 : -1;
+            }
+
+            if (dir != 0)
+            {
+                if (invertScrollDirection) dir = -dir;
+                ScrollSelect(dir);
+            }
+        }
+        
         if (Input.GetMouseButtonDown(0)) // 0 = 마우스 왼쪽 버튼
         {
             UseSelectedQuickSlotItem();
@@ -809,4 +838,39 @@ private void Attach(ItemSlot[] arr)
             Debug.Log($"{itemToUse.itemName}을(를) 사용했습니다.");
         }
     }
+
+    private void ScrollSelect(int dir)
+    {
+        if (quickSlots == null || quickSlots.Length == 0) return;
+
+        // current는 1-based
+        int idx = current - 1;
+        int n = quickSlots.Length;
+
+        // 최대 n번만 시도 (무한루프 방지)
+        for (int step = 0; step < n; step++)
+        {
+            idx = (idx + dir + n) % n;
+
+            // 빈칸을 건너뛰지 않으면 바로 선택
+            if (!skipEmptyOnScroll)
+            {
+                SelectQuick(idx + 1);
+                return;
+            }
+
+            // 빈칸 건너뛰기 옵션일 때는 아이템 있는 슬롯만 선택
+            var s = quickSlots[idx];
+            if (s != null && s.itemData != null && s.count > 0)
+            {
+                SelectQuick(idx + 1);
+                return;
+            }
+        }
+        // 모두 비어있으면 변화 없음
+    }
+
+    // (선택) 단축 메서드 - 키보드/패드 매핑용
+    public void SelectNextQuick() => ScrollSelect(+1);
+    public void SelectPrevQuick() => ScrollSelect(-1);
 }
