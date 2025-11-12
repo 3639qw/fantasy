@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 279831fe258020c4ba68f1fd0b4e229a, type: 3}
-  m_Name: CopperHoe
+  m_Name: Tree
   m_EditorClassIdentifier: 
-  itemID: CopperHoe
-  itemName: CopperHoe
-  itemIcon: {fileID: 3542508307251120905, guid: d8e1f48895b344b248c92f77dae42ecf, type: 3}
-  description: "\uAD6C\uB9AC\uACE1\uAD2D\uC774"
-  attackPower: 5
-  itemType: Hoe
-  maxStack: 1
+  itemID: Tree
+  itemName: Tree
+  itemIcon: {fileID: -2892574862153022195, guid: 1bd6d6a0c36d04f66befa1775a2e77a1, type: 3}
+  description: "\uB098\uBB34"
+  attackPower: 0
+  itemType: Resource
+  maxStack: 99
