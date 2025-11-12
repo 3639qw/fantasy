@@ -343,6 +343,7 @@ public class SlimeKing : MonoBehaviour, IDamageable
 
         // 2. 점프 공격 (Jump Attack)
         animator.Play("SlimeKing_Attack"); // 실제 공격(점프) 모션
+        SoundManage.instance.PlaySFX("Slime_Jump_Ready");
 
         stateTimer = attackChargeTime + attackJumpDuration + 0.1f; 
         
@@ -405,11 +406,13 @@ public class SlimeKing : MonoBehaviour, IDamageable
 
         float chargeTimer = 0f;
         float ghostSpawnTimer = 0f; // 잔상 생성 간격을 위한 타이머
-
+        SoundManage.instance.PlaySFX("Boss_Skill_Ready");
+        
         while (chargeTimer < attackChargeTime) // 0.25초 동안 반복
         {
             chargeTimer += Time.deltaTime;
             ghostSpawnTimer -= Time.deltaTime;
+            
 
             // 잔상 생성 간격이 되면 "커지는 잔상" 생성
             if (ghostSpawnTimer <= 0f)
@@ -440,6 +443,7 @@ public class SlimeKing : MonoBehaviour, IDamageable
 
                 // 벌 생성
                 GameObject beeObj = Instantiate(_beePrefab, spawnPosition, Quaternion.identity);
+                SoundManage.instance.PlaySFX("Boss_Skill_Bee");
 
                 // 벌 스크립트에 플레이어(타겟) 정보 전달
                 Bee beeScript = beeObj.GetComponent<Bee>();
@@ -576,6 +580,7 @@ public class SlimeKing : MonoBehaviour, IDamageable
         {
             if (CameraShake.Instance != null)
             {
+                SoundManage.instance.PlaySFX("Slime_Jump_Attack");
                 Debug.Log("화면 흔들림!");
                 // (0.25초 동안, 0.4f의 강도로 흔들기 - 값은 원하는대로 조절하세요)
                 CameraShake.Instance.Shake(0.25f, 0.4f);

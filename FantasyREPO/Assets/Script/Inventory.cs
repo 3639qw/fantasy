@@ -138,7 +138,11 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && bagPanel != null)
+        {
             bagPanel.SetActive(!bagPanel.activeSelf);
+            SoundManage.instance.PlaySFX("Inventory_Open");
+        }
+            
 
         if (Input.GetKeyDown(KeyCode.Alpha1)) SelectQuick(1);
         else if (Input.GetKeyDown(KeyCode.Alpha2)) SelectQuick(2);
@@ -806,6 +810,7 @@ private void Attach(ItemSlot[] arr)
         {
             // Inventory.cs에 이미 있는 '현재 선택 아이템 소모' 함수를 호출
             ConsumeSelectedItem(1);
+            SoundManage.instance.PlaySFX("Use_Consumable");
             Debug.Log($"{itemToUse.itemName}을(를) 사용했습니다.");
         }
     }

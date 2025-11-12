@@ -295,6 +295,7 @@ public class SkeletonAI : MonoBehaviour, IDamageable
             Quaternion arrowRotation = Quaternion.Euler(0, 0, angle);
 
             GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowRotation);
+            SoundManage.instance.PlaySFX("Arrow_Shot");
             
             ArrowScript arrowScript = arrow.GetComponent<ArrowScript>();
             if (arrowScript != null)

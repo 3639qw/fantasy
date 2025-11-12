@@ -22,6 +22,7 @@ public class PlayerHealthController : MonoBehaviour
             GameManager.Instance.ConsumeSkill(1, amount);
             Debug.Log($"Player took {amount} damage");
             _animator.SetTrigger("Attacked");
+            SoundManage.instance.PlaySFX("Player_Hurt");
             AttackCool = 30;
             if (GameManager.Instance.HP <= 0)
             {

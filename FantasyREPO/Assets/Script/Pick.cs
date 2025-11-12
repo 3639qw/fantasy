@@ -35,6 +35,7 @@ public class Pick : MonoBehaviour
             IsPickSelected())
         {
             TryMine();
+            SoundManage.instance.PlaySFX("Melee_Attack");
         }
     }
 

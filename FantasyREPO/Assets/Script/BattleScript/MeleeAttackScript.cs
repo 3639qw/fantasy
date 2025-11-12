@@ -70,6 +70,7 @@ public class MeleeAttackScript : MonoBehaviour
                         _animator.SetFloat("AttackX", lastDir.x);
                         _animator.SetFloat("AttackY", lastDir.y);
                         _animator.SetTrigger("Attack");
+                        SoundManage.instance.PlaySFX("Melee_Attack");
 
                         curTime = coolTime;
                         _playerMove.isAttacking = true;

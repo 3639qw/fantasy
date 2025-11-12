@@ -177,6 +177,7 @@ public class BombSchroomScript : MonoBehaviour, IDamageable
         {
             GameObject poisonInstance = Instantiate(poisonPrefab, transform.position, Quaternion.identity);
             PoisonScript poisonScript = poisonInstance.GetComponent<PoisonScript>();
+            SoundManage.instance.PlaySFX("Bombschroom");
             if (poisonScript != null)
             {
                 poisonScript.SetDamage(attackDamage);

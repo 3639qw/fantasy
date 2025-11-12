@@ -100,6 +100,7 @@ public class PlayerBow : MonoBehaviour
 
         // 화살 생성
         GameObject arrow = Instantiate(arrowPrefab, spawnPos, rotation);
+        SoundManage.instance.PlaySFX("Arrow_Shot");
         
         // 화살 Rigidbody2D를 가져와서 속도 적용
         Rigidbody2D arrowRb = arrow.GetComponent<Rigidbody2D>();

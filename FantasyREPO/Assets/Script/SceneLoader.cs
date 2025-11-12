@@ -34,8 +34,9 @@ public class SceneLoader : MonoBehaviour
             {
                 GameObject.FindWithTag("GameController").GetComponent<TilemapSerializer>().SaveTilemapToJson();    
             }
-            
+
             SceneManager.LoadScene(sceneName);
+            SoundManage.instance.PlaySFX("Change_Scene");
         }
         else
         {

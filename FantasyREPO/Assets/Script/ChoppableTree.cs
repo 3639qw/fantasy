@@ -66,6 +66,7 @@ public class ChoppableTree : MonoBehaviour
         if (toolPower <= 0) toolPower = 1;
 
         _hp -= toolPower;
+        SoundManage.instance.PlaySFX("Wood");
 
         // (이전 쉐이크가 실행 중이면 중지하고 즉시 원위치)
         if (_shakeCoroutine != null)

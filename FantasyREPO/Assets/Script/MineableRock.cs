@@ -76,6 +76,7 @@ public class MineableRock : MonoBehaviour
         // Debug.Log($"[Rock] Hit power={toolPower}, hp={_hp}");
 
         // (파티클/사운드 재생은 여기서)
+        SoundManage.instance.PlaySFX("Stone");
 
         if (_hp <= 0)
         {

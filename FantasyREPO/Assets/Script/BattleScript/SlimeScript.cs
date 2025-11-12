@@ -299,4 +299,8 @@ public class SlimeScript : MonoBehaviour, IDamageable
             }
         }
     }
+    private void makeSound()
+    {
+        SoundManage.instance.PlaySFX("Slime_Move");
+    }
 }

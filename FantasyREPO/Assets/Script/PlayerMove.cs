@@ -195,6 +195,11 @@ public class PlayerMove : MonoBehaviour
         _animator.SetFloat(_lastHorizontal, direction.x);
         _animator.SetFloat(_lastVertical, direction.y);
 
+        for (int i = 0; i < 3; i++)
+        {
+            SoundManage.instance.PlaySFX("Dash");
+        }
+
         _playerST.ST -= _useDashST;
         Debug.Log("대시 스테미나 소모됨.");
 

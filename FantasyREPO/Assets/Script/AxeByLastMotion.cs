@@ -61,6 +61,7 @@ public class AxeByLastMotion : MonoBehaviour
 
             // 애니메이션 트리거 (유지)
             TriggerAxeAnim(dir);
+            SoundManage.instance.PlaySFX("Melee_Attack");
 
             // ✅ HP 깎기 (ChopOnce 직접 호출 금지)
             var tree = target.GetComponentInParent<ChoppableTree>();
