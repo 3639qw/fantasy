@@ -122,3 +122,8 @@
 > **Hero’s Harvest**는 단순한 농사 시뮬레이션이 아닙니다.  
 > 농사로 성장하고, 성장으로 전투를 이끌며,  
 > 탐험과 제작이 유기적으로 얽힌 **액션 농사 RPG**입니다. 🌾⚔️  
+
+--- 
+
+## 게임 시연 영상
+youtube.com/watch?v=OZyQkHwtnyE&feature=youtu.be/0.jpg
